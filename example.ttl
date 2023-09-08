@@ -1,0 +1,150 @@
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix language: <http://publications.europa.eu/resource/authority/language/> .
+@prefix filetype: <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix theme: <http://publications.europa.eu/resource/authority/data-theme/> .
+@prefix country: <http://publications.europa.eu/resource/authority/country/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix pu: <https://data.gov.cz/slovník/podmínky-užití/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ovm: <https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/> .
+@prefix typdz: <https://data.gov.cz/slovník/nkod/typ-datové-sady-dle-zdroje/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix application: <http://www.iana.org/assignments/media-types/application/> .
+@prefix text: <http://www.iana.org/assignments/media-types/text/> .
+@prefix eurovoc: <http://eurovoc.europa.eu/> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+@prefix vocab: <https://w3id.org/application-profiles/> .
+@prefix cardinality: <https://w3id.org/application-profiles/cardinalities/> .
+@prefix dap200: <https://mojedata.cz/aplikační-profily/DCAT-AP/2.0.0/> .
+@prefix dap300: <https://mojedata.cz/aplikační-profily/DCAT-AP/3.0.0/> .
+
+# potential issue - multiple vocabulary versions use the same concepts, e.g. dcat:Dataset is the same dataset in v2 and v3
+
+#DCAT-AP 2.0.0
+dap200: a vocab:ApplicationProfile ;
+    vocab:applicationProfileOf <https://www.w3.org/TR/vocab-dcat-2/> ;
+    vocab:usedVocabularies dcterms:, skos:, foaf: .
+
+dap200:1 a vocab:Entity ;
+    vocab:class dcat:Catalog ;
+    vocab:partOf dap200: .
+
+dap200:2 a vocab:Entity ;
+    vocab:class dcat:Dataset ;
+    vocab:partOf dap200: .
+
+dap200:3 a vocab:Attribute ;
+    vocab:domain dap200:1 ;
+    vocab:range rdf:langString ;
+    vocab:property dcterms:title ;
+    skos:prefLabel "Název katalogu"@cs ;
+    vocab:cardinality cardinality:0n ;
+    vocab:partOf dap200: .
+
+dap200:4 a vocab:Attribute ;
+    vocab:domain dap200:2 ;
+    vocab:range rdf:langString ;
+    vocab:property dcterms:title ;
+    skos:prefLabel "Název datové sady"@cs ;
+    vocab:cardinality cardinality:0n ;
+    vocab:partOf dap200: .
+
+dap200:5 a vocab:Attribute ;
+    vocab:domain dap200:1 ;
+    vocab:range dap200:2 ;
+    vocab:property dcat:dataset ;
+    skos:prefLabel "Datová sada v katalogu"@cs ;
+    vocab:cardinality cardinality:1n ;
+    vocab:partOf dap200: .
+
+#DCAT-AP 3.0.0
+dap300: a vocab:ApplicationProfile ;
+    vocab:applicationProfileOf <https://www.w3.org/TR/vocab-dcat-3/> ;
+    vocab:prevVersion dap200: ;
+    vocab:applicationProfileOf dcat: ;
+    vocab:usedVocabularies dcterms:, skos:, foaf: .
+
+dap300:1 a vocab:Entity ;
+    vocab:class dcat:Catalog ;
+    vocab:partOf dap300: .
+
+dap300:2 a vocab:Entity ;
+    vocab:class dcat:Dataset ;
+    vocab:partOf dap300: .
+
+dap300:3 a vocab:Attribute ;
+    vocab:domain dap300:1 ;
+    vocab:range rdf:langString ;
+    vocab:property dcterms:title ;
+    skos:prefLabel "Název katalogu"@cs ;
+    vocab:cardinality cardinality:0n ;
+    vocab:partOf dap300: .
+
+dap300:4 a vocab:Attribute ;
+    vocab:domain dap300:2 ;
+    vocab:range rdf:langString ;
+    vocab:property dcterms:title ;
+    skos:prefLabel "Název datové sady"@cs ;
+    vocab:cardinality cardinality:0n ;
+    vocab:partOf dap300: .
+
+dap300:5 a vocab:Attribute ;
+    vocab:domain dap300:1 ;
+    vocab:range dap300:2 ;
+    vocab:property dcat:dataset ;
+    skos:prefLabel "Datová sada v katalogu"@cs ;
+    vocab:partOf dap300: .
+
+# Položka číselníku
+dap300:6 a vocab:Class ;
+    vocab:class skos:Concept ;
+    skos:prefLabel "Položka číselníku jazyků (jazyk)"@cs ;
+    vocab:codelist <http://publications.europa.eu/resource/dataset/language> ;
+    vocab:partOf dap300: .
+
+# Použití číselníku
+dap300:7 a vocab:Attribute ;
+    vocab:domain dap300:1 ;
+    vocab:range dap300:6 ;
+    vocab:property dcterms:language ;
+    skos:prefLabel "Jazyk katalogu"@cs ;
+    vocab:partOf dap300: .
+
+# Položka číselníku
+dap300:8 a vocab:Class ;
+    vocab:class skos:Concept ;
+    skos:prefLabel "Položka číselníku témat (téma)"@cs ;
+    vocab:codelist <http://publications.europa.eu/resource/dataset/data-theme> ;
+    vocab:partOf dap300: .
+
+# Použití číselníku
+dap300:9 a vocab:Attribute ;
+    vocab:domain dap300:2 ;
+    vocab:range dap300:8 ;
+    vocab:property dcat:theme ;
+    skos:prefLabel "Téma"@cs ;
+    vocab:partOf dap300: .
+
+daphvd: a vocab:ApplicationProfile .
+
+#DCAT-AP-CZ 2
+dapcz2: a vocab:ApplicationProfile ;
+    vocab:applicationProfileOf dap300:, daphvd:;
+    vocab:usedVocabularies dcterms:, skos:, foaf: .
+
+dapcz2:1 a vocab:Class ;
+    vocab:derivedFrom dap200:2 ;
+    vocab:partOf dapcz2: .
+
+#Omezená kardinalita oproti DCAT-AP
+dapcz2:1 a vocab:Attribute ;
+    vocab:domain dapcz2:1 ;
+    vocab:range rdf:langString ;
+    vocab:property dcterms:title ;
+    skos:prefLabel "Název datové sady"@cs ;
+    vocab:cardinality cardinality:01 ;
+    vocab:partOf dapcz2: .
