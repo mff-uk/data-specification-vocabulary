@@ -133,7 +133,7 @@ daphvd: a vocab:ApplicationProfile .
 
 #DCAT-AP-CZ 2
 dapcz2: a vocab:ApplicationProfile ;
-    vocab:applicationProfileOf dap300:, daphvd:;
+    vocab:applicationProfileOf dap200:, daphvd:;
     vocab:usedVocabularies dcterms:, skos:, foaf: .
 
 dapcz2:1 a vocab:Class ;
