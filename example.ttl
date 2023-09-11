@@ -1,163 +1,311 @@
+# see https://drive.google.com/file/d/1o2xKy98YfNde0OUb-NMBMlrMkLUD2EuA/view?usp=sharing for vocabulary model
+# see https://drive.google.com/file/d/1p5kR44Hs-dBWLdT1QKHYDGtGkXIZyYeW/view?usp=sharing for graphical model example
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix eurovoc: <http://eurovoc.europa.eu/> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
 @prefix language: <http://publications.europa.eu/resource/authority/language/> .
 @prefix filetype: <http://publications.europa.eu/resource/authority/file-type/> .
 @prefix theme: <http://publications.europa.eu/resource/authority/data-theme/> .
 @prefix country: <http://publications.europa.eu/resource/authority/country/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix pu: <https://data.gov.cz/slovník/podmínky-užití/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ovm: <https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/> .
-@prefix typdz: <https://data.gov.cz/slovník/nkod/typ-datové-sady-dle-zdroje/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix application: <http://www.iana.org/assignments/media-types/application/> .
 @prefix text: <http://www.iana.org/assignments/media-types/text/> .
-@prefix eurovoc: <http://eurovoc.europa.eu/> .
-@prefix dcatap: <http://data.europa.eu/r5r/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pu: <https://data.gov.cz/slovník/podmínky-užití/> .
 
-@prefix vocab: <https://w3id.org/application-profiles/> .
-@prefix cardinality: <https://w3id.org/application-profiles/cardinalities/> .
-@prefix dap200: <https://mojedata.cz/aplikační-profily/DCAT-AP/2.0.0/model/> .
-@prefix dap300: <https://mojedata.cz/aplikační-profily/DCAT-AP/3.0.0/model/> .
+@prefix vocab: <https://w3id.org/data-specification-vocabulary/> .
+@prefix cardinality: <https://w3id.org/data-specification-vocabulary/cardinalities/> .
+@prefix req-type: <https://w3id.org/data-specification-vocabulary/requirement-type/> .
+@prefix codelist-usage: <https://w3id.org/data-specification-vocabulary/cardinalities/> .
+@prefix dap200: <https://mojedata.cz/aplikační-profily/DCAT-AP/2.0.0/> .
+@prefix dap300: <https://mojedata.cz/aplikační-profily/DCAT-AP/3.0.0/> .
+@prefix dap200m: <https://mojedata.cz/aplikační-profily/DCAT-AP/2.0.0/model/> .
+@prefix dap300m: <https://mojedata.cz/aplikační-profily/DCAT-AP/3.0.0/model/> .
+@prefix dapcz2: <https://mojedata.cz/aplikační-profily/DCAT-AP-CZ/2/> .
+@prefix dapcz2m: <https://mojedata.cz/aplikační-profily/DCAT-AP-CZ/2/model/> .
+@prefix dapcz3: <https://mojedata.cz/aplikační-profily/DCAT-AP-CZ/3/> .
+@prefix dapcz3m: <https://mojedata.cz/aplikační-profily/DCAT-AP-CZ/3/model/> .
+@prefix dapcz: <https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/> .
 
-# potential issue - multiple vocabulary versions use the same concepts, e.g. dcat:Dataset is the same dataset in v2 and v3
+@prefix daphvd: <https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/> .
+@prefix dcat2: <https://www.w3.org/TR/vocab-dcat-2/> .
+@prefix dcat3: <https://www.w3.org/TR/vocab-dcat-3/> .
+
+dcat2: a dcterms:Standard .
+dcat3: a dcterms:Standard .
+dcterms:title rdfs:isDefinedBy dcterms: .
+#dcat:keywords rdfs:isDefinedBy dcat2:, dcat3: . # potential issue - multiple vocabulary versions use (define) the same concepts
+dcat:keywords rdfs:isDefinedBy dcat: . # IRI without versions? IRI of the prefix?
+dcat:Dataset  rdfs:isDefinedBy dcat: .
+dcat:theme rdfs:isDefinedBy dcat: .
+dcterms:spatial rdfs:isDefinedBy dcterms: .
+dcat:distribution rdfs:isDefinedBy dcat: .
+dcat:Distribution rdfs:isDefinedBy dcat: .
+dcat:accessService rdfs:isDefinedBy dcat: .
+dcat:DataService rdfs:isDefinedBy dcat: .
+dcterms:format rdfs:isDefinedBy dcterms: .
+dcat:mediaType rdfs:isDefinedBy dcat: .
+pu:specifikace rdfs:isDefinedBy dapcz: .
+pu:Specifikace rdfs:isDefinedBy dapcz: .
+pu:autorské-dílo rdfs:isDefinedBy dapcz: .
+pu:autor rdfs:isDefinedBy dapcz: .
 
 #DCAT-AP 2.0.0
-dap200: a vocab:ApplicationProfileModel ;
-    vocab:ApplicationProfileModelOf <https://www.w3.org/TR/vocab-dcat-2/> ;
-    vocab:usedVocabularies dcterms:, skos:, foaf: .
+dap200: a prof:Profile ;
+    dcterms:title "DCAT-AP 2.0.0"@en ;
+    prof:isProfileOf dcat2: ;
+    vocab:usedVocabularies dcat:, dcterms:, skos:, foaf: ;
+    vocab:conceptualModel dap200m: ;
+    vocab:controlledVocabularies <http://publications.europa.eu/resource/dataset/data-theme>,
+            <http://publications.europa.eu/resource/dataset/eurovoc>,
+            <http://publications.europa.eu/resource/dataset/continent>,
+            <http://publications.europa.eu/resource/dataset/country>,
+            <http://publications.europa.eu/resource/dataset/place>,
+            <http://publications.europa.eu/resource/dataset/file-type> .
 
-dap200:1 a vocab:ClassUsage ;
-    vocab:class dcat:Catalog ;
-    vocab:partOf dap200: .
+dap200m: a vocab:ConceptualModel .
 
-dap200:2 a vocab:ClassUsage ;
+dap200m:Dataset a vocab:ClassUsage ;
+    skos:prefLabel "Dataset"@en ;
+    vann:usageNote "Dataset in context of DCAT-AP 2"@en ;
+    vocab:implicitClass false ;
+    vocab:technicalLabel "dataset"@en;
     vocab:class dcat:Dataset ;
-    vocab:partOf dap200: .
+    vocab:partOf dap200m: .
 
-dap200:3 a vocab:AttributeUsage ;
-    vocab:domain dap200:1 ;
-    vocab:range rdf:langString ;
-    vocab:property dcterms:title ;
-    skos:prefLabel "Název katalogu"@cs ;
-    vocab:cardinality cardinality:0n ;
-    vocab:partOf dap200: .
+dap200m:Distribution a vocab:ClassUsage ;
+    skos:prefLabel "Distribution"@en ;
+    vann:usageNote "Distribution in context of DCAT-AP 2"@en ;
+    vocab:implicitClass false ;
+    vocab:technicalLabel "distribution"@en;
+    vocab:class dcat:Distribution ;
+    vocab:partOf dap200m: .
 
-dap200:4 a vocab:AttributeUsage ;
-    vocab:domain dap200:2 ;
-    vocab:range rdf:langString ;
-    vocab:property dcterms:title ;
+dap200m:FileDistribution a vocab:ClassUsage ;
+    skos:prefLabel "File Distribution"@en ;
+    vann:usageNote "File distribution in context of DCAT-AP 2"@en ;
+    vocab:implicitClass true ;
+    vocab:implicitSubclassOf dap200m:Distribution ;
+    vocab:technicalLabel "distribution"@en;
+    vocab:class dcat:Distribution ;
+    vocab:partOf dap200m: .
+
+dap200m:ServiceDistribution a vocab:ClassUsage ;
+    skos:prefLabel "Service Distribution"@en ;
+    vann:usageNote "Service distribution in context of DCAT-AP 2"@en ;
+    vocab:implicitClass true ;
+    vocab:implicitSubclassOf dap200m:Distribution ;
+    vocab:technicalLabel "distribution"@en;
+    vocab:class dcat:Distribution ;
+    vocab:partOf dap200m: .
+
+dap200m:DataService a vocab:ClassUsage ;
+    skos:prefLabel "Data Service"@en ;
+    vann:usageNote "DataService in context of DCAT-AP 2"@en ;
+    vocab:implicitClass false ;
+    vocab:technicalLabel "dataservice"@en;
+    vocab:class dcat:DataService ;
+    vocab:partOf dap200m: .
+
+dap200m:datasetName a vocab:PropertyUsage ;
     skos:prefLabel "Název datové sady"@cs ;
-    vocab:cardinality cardinality:0n ;
-    vocab:partOf dap200: .
-
-dap200:5 a vocab:AttributeUsage ;
-    vocab:domain dap200:1 ;
-    vocab:range dap200:2 ;
-    vocab:property dcat:dataset ;
-    skos:prefLabel "Datová sada v katalogu"@cs ;
+    vann:usageNote "Název datové sady"@cs ;
+    vocab:domain dap200m:Dataset ;
+    vocab:range rdf:langString ;
     vocab:cardinality cardinality:1n ;
-    vocab:partOf dap200: .
-
-#DCAT-AP 3.0.0
-dap300: a vocab:ApplicationProfileModel ;
-    vocab:ApplicationProfileModelOf <https://www.w3.org/TR/vocab-dcat-3/> ;
-    vocab:prevVersion dap200: ;
-    vocab:ApplicationProfileModelOf dcat: ;
-    vocab:usedVocabularies dcterms:, skos:, foaf: .
-
-dap300:1 a vocab:ClassUsage ;
-    vocab:class dcat:Catalog ;
-    vocab:partOf dap300: .
-
-dap300:2 a vocab:ClassUsage ;
-    vocab:class dcat:Dataset ;
-    vocab:partOf dap300: .
-
-dap300:3 a vocab:AttributeUsage ;
-    vocab:domain dap300:1 ;
-    vocab:range rdf:langString ;
     vocab:property dcterms:title ;
-    skos:prefLabel "Název katalogu"@cs ;
-    vocab:cardinality cardinality:0n ;
-    vocab:partOf dap300: .
+    vocab:technicalLabel "title"@en;
+    vocab:example "Můj název"@cs ;
+    vocab:partOf dap200m: .
 
-dap300:4 a vocab:AttributeUsage ;
-    vocab:domain dap300:2 ;
+dap200m:datasetKeywords a vocab:PropertyUsage ;
+    skos:prefLabel "Klíčová slova"@cs ;
+    vann:usageNote "Klíčová slova datové sady"@cs ;
+    vocab:domain dap200m:Dataset ;
     vocab:range rdf:langString ;
-    vocab:property dcterms:title ;
-    skos:prefLabel "Název datové sady"@cs ;
     vocab:cardinality cardinality:0n ;
-    vocab:partOf dap300: .
+    vocab:property dcat:keywords ;
+    vocab:technicalLabel "keywords"@en;
+    vocab:example "Moje klíčové slovo"@cs ;
+    vocab:partOf dap200m: .
 
-dap300:5 a vocab:AttributeUsage ;
-    vocab:domain dap300:1 ;
-    vocab:range dap300:2 ;
-    vocab:property dcat:dataset ;
-    skos:prefLabel "Datová sada v katalogu"@cs ;
-    vocab:partOf dap300: .
-
-# Položka číselníku
-dap300:6 a vocab:ClassUsage ;
-    vocab:class skos:Concept ;
-    skos:prefLabel "Položka číselníku jazyků (jazyk)"@cs ;
-    vocab:partOf dap300: .
-
-# Použití číselníku
-dap300:7 a vocab:AttributeUsage ;
-    vocab:domain dap300:1 ;
-    vocab:range dap300:6 ;
-    vocab:property dcterms:language ;
-
-    vocab:requiredCodelist <http://publications.europa.eu/resource/dataset/language> ;
-    #vocab:codelistRequirementFunction vocab:OR ; #for case of multiple required codelists - one item from any of them is vocab:OR, one item from each is vocab:AND
-    #if nonCodeListItemsProhibited true, additional usable codelists
-    #vocab:additionalCodelist <http://publications.europa.eu/resource/dataset/eurovoc> ;
-    vocab:nonCodeListItemsProhibited true ;
-
-    skos:prefLabel "Jazyk katalogu"@cs ;
-    vocab:partOf dap300: .
-
-# Položka číselníku
-dap300:8 a vocab:ClassUsage ;
-    vocab:class skos:Concept ;
-    skos:prefLabel "Položka číselníku témat (téma)"@cs ;
-    vocab:partOf dap300: .
-
-# Použití číselníku
-dap300:9 a vocab:AttributeUsage ;
-    vocab:domain dap300:2 ;
-    vocab:range dap300:8 ;
+dap200m:dataTheme a vocab:PropertyUsage ;
+    skos:prefLabel "téma"@cs ;
+    vocab:domain dap200m:Dataset ;
+    vocab:range skos:Concept ;
+    vocab:cardinality cardinality:1n ;
     vocab:property dcat:theme ;
+    vocab:technicalLabel "téma"@en;
+    vocab:requiredVocabulary <http://publications.europa.eu/resource/dataset/data-theme> ;
+    vocab:additionalVocabulary <http://publications.europa.eu/resource/dataset/eurovoc> ;
+    vocab:requirementType req-type:OR ; # no effect here
+    vocab:partOf dap200m: .
 
-    #at least one item from each required code list
-    vocab:requiredCodelist <http://publications.europa.eu/resource/dataset/data-theme> ;
-    vocab:codelistRequirementFunction vocab:AND ; #for case of multiple required codelists - one item from any of them is vocab:OR, one item from each is vocab:AND
-    #if nonCodeListItemsProhibited false, just recommendation
-    vocab:additionalCodelist <http://publications.europa.eu/resource/dataset/eurovoc> ;
-    vocab:nonCodeListItemsProhibited false ;
+dap200m:spatial a vocab:PropertyUsage ;
+    skos:prefLabel "prostorové pokrytí"@cs ;
+    vocab:domain dap200m:Dataset ;
+    vocab:range skos:Concept ;
+    vocab:cardinality cardinality:1n ;
+    vocab:property dcterms:spatial ;
+    vocab:technicalLabel "prostorové-pokrytí"@en;
+    vocab:requiredVocabulary <http://publications.europa.eu/resource/dataset/continent>,
+            <http://publications.europa.eu/resource/dataset/country>,
+            <http://publications.europa.eu/resource/dataset/place>;
+    vocab:additionalVocabulary <http://ruian.cz/územní-prvky> ;
+    vocab:requirementType req-type:OR ;
+    vocab:partOf dap200m: .
 
-    skos:prefLabel "Téma"@cs ;
-    vocab:partOf dap300: .
+dap200m:distribution a vocab:PropertyUsage ;
+    skos:prefLabel "Distribuce"@cs ;
+    vann:usageNote "Distribuce datové sady"@cs ;
+    vocab:domain dap200m:Dataset ;
+    vocab:range dap200m:Distribution ;
+    vocab:cardinality cardinality:0n ;
+    vocab:property dcat:keywords ;
+    vocab:technicalLabel "distributions"@en;
+    vocab:partOf dap200m: .
 
-daphvd: a vocab:ApplicationProfileModel .
+dap200m:downloadURL a vocab:PropertyUsage ;
+    skos:prefLabel "URL souboru ke stažení"@cs ;
+    vocab:domain dap200m:FileDistribution ;
+    vocab:range rdfs:Resource ;
+    vocab:cardinality cardinality:11 ;
+    vocab:property dcat:downloadURL ;
+    vocab:technicalLabel "downloadURL"@en;
+    vocab:partOf dap200m: .
+
+dap200m:fileAccessURL a vocab:PropertyUsage ;
+    skos:prefLabel "URL souboru ke stažení"@cs ;
+    vocab:domain dap200m:FileDistribution ;
+    vocab:range rdfs:Resource ;
+    vocab:cardinality cardinality:11 ;
+    vocab:property dcat:accessURL ;
+    vocab:technicalLabel "accessURL"@en;
+    vocab:partOf dap200m: .
+
+dap200m:dataFormat a vocab:PropertyUsage ;
+    skos:prefLabel "Formát souboru ke stažení"@cs ;
+    vocab:domain dap200m:FileDistribution ;
+    vocab:range skos:Concept ;
+    vocab:cardinality cardinality:01 ;
+    vocab:property dcterms:format ;
+    vocab:technicalLabel "format"@en;
+    vocab:requiredVocabulary <http://publications.europa.eu/resource/dataset/file-type> ;
+    vocab:requirementType req-type:OR ; # no effect here
+    vocab:partOf dap200m: .
+
+dap200m:mediaType a vocab:PropertyUsage ;
+    skos:prefLabel "Typ média"@cs ;
+    vocab:domain dap200m:FileDistribution ;
+    vocab:range rdfs:Resource ;
+    vocab:cardinality cardinality:11 ;
+    vocab:property dcat:mediaType ;
+    vocab:requiredVocabulary <http://www.iana.org/assignments/media-types/> ;
+    vocab:example <http://www.iana.org/assignments/media-types/application/xml> ;
+    vocab:technicalLabel "media-type"@en;
+    vocab:partOf dap200m: .
+
+dap200m:serviceAccessURL a vocab:PropertyUsage ;
+    skos:prefLabel "URL přístupového bodu služby"@cs ;
+    vocab:domain dap200m:ServiceDistribution ;
+    vocab:range rdfs:Resource ;
+    vocab:cardinality cardinality:11 ;
+    vocab:property dcat:accessURL ;
+    vocab:technicalLabel "accessURL"@en;
+    vocab:partOf dap200m: .
+
+dap200m:serviceAccessURL a vocab:PropertyUsage ;
+    skos:prefLabel "URL přístupového bodu služby"@cs ;
+    vocab:domain dap200m:ServiceDistribution ;
+    vocab:range rdfs:Resource ;
+    vocab:cardinality cardinality:11 ;
+    vocab:property dcat:accessURL ;
+    vocab:technicalLabel "accessURL"@en;
+    vocab:partOf dap200m: .
+
+dap200m:endpointURL a vocab:PropertyUsage ;
+    skos:prefLabel "URL přístupového bodu služby"@cs ;
+    vocab:domain dap200m:DataService ;
+    vocab:range rdfs:Resource ;
+    vocab:cardinality cardinality:11 ;
+    vocab:property dcat:endpointURL ;
+    vocab:technicalLabel "endpointURL"@en;
+    vocab:partOf dap200m: .
+
+daphvd: a prof:Profile .
 
 #DCAT-AP-CZ 2
-dapcz2: a vocab:ApplicationProfileModel ;
-    vocab:ApplicationProfileModelOf dap200:, daphvd:;
-    vocab:usedVocabularies dcterms:, skos:, foaf: .
+#Everything from DCAT-AP copied here, minus media-type plus:
+dapcz2: a prof:Profile ;
+    dcterms:title "DCAT-AP-CZ 2.0.0"@en ;
+    prof:isProfileOf dap200:, daphvd: ; #profil dvou - potenciální konflikty
+    vocab:usedVocabularies dcat:, dcterms:, skos:, foaf: ;
+    vocab:conceptualModel dapcz2m: ;
+    vocab:controlledVocabularies <http://publications.europa.eu/resource/dataset/data-theme>,
+            <http://publications.europa.eu/resource/dataset/eurovoc>,
+            <http://publications.europa.eu/resource/dataset/continent>,
+            <http://publications.europa.eu/resource/dataset/country>,
+            <http://publications.europa.eu/resource/dataset/place>,
+            <http://publications.europa.eu/resource/dataset/file-type> .
 
-dapcz2:1 a vocab:ClassUsage ;
-    vocab:derivedFrom dap200:2 ;
-    vocab:partOf dapcz2: .
+dapcz2m: a vocab:ConceptualModel .
 
-#Omezená kardinalita oproti DCAT-AP
-dapcz2:1 a vocab:AttributeUsage ;
-    vocab:domain dapcz2:1 ;
-    vocab:range rdf:langString ;
-    vocab:property dcterms:title ;
-    skos:prefLabel "Název datové sady"@cs ;
+dapcz2m:Dataset a vocab:ClassUsage ;
+    skos:prefLabel "Dataset"@en ;
+    vann:usageNote "Dataset in context of DCAT-AP-CZ"@en ;
+    vocab:implicitClass false ;
+    vocab:technicalLabel "datová-sada"@cs;
+    vocab:usageOf dap200m:Dataset ; ### !!! usage of usage from another AP
+    vocab:partOf dapcz2m: .
+
+dapcz2m:Distribution a vocab:ClassUsage ;
+    skos:prefLabel "Distribution"@en ;
+    vann:usageNote "Distribution in context of DCAT-AP-CZ"@en ;
+    vocab:implicitClass false ;
+    vocab:technicalLabel "distribuce"@cs;
+    vocab:usageOf dap200m:Distribution ; ### !!! usage of usage from another AP
+    vocab:partOf dapcz2m: .
+
+dapcz2m:PodmínkyUžití a vocab:ClassUsage ;
+    skos:prefLabel "Podmínky užití"@en ;
+    vann:usageNote "Podmínky užití"@cd ;
+    vocab:implicitClass false ;
+    vocab:technicalLabel "podmínky-užití"@en;
+    vocab:class pu:Specifikace ;
+    vocab:partOf dapcz2m: .
+
+dapcz2m:podmínkyUžití a vocab:PropertyUsage ;
+    skos:prefLabel "podmínky užití"@cs ;
+    vocab:domain dapcz2m:Distribution ;
+    vocab:range dapcz2m:PodmínkyUžití ;
+    vocab:cardinality cardinality:11 ;
+    vocab:property pu:specifikace ;
+    vocab:technicalLabel "podmínky-užití"@en;
+    vocab:partOf dapcz2m: .
+
+dapcz2m:podmínkyUžití a vocab:PropertyUsage ;
+    skos:prefLabel "licence autorského díla"@cs ;
+    vocab:domain dapcz2m:PodmínkyUžití ;
+    vocab:range rdfs:Resource ;
+    vocab:cardinality cardinality:11 ;
+    vocab:property pu:autorské-dílo ;
+    vocab:technicalLabel "autorské-dílo"@en;
+    vocab:partOf dapcz2m: .
+
+dapcz2m:podmínkyUžitíAutor a vocab:PropertyUsage ;
+    skos:prefLabel "autor"@cs ;
+    vocab:domain dapcz2m:PodmínkyUžití ;
+    vocab:range rdfs:langString ;
     vocab:cardinality cardinality:01 ;
-    vocab:partOf dapcz2: .
+    vocab:property pu:autor ;
+    vocab:technicalLabel "autor"@en;
+    vocab:partOf dapcz2m: .
