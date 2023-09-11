@@ -19,14 +19,14 @@
 
 @prefix vocab: <https://w3id.org/application-profiles/> .
 @prefix cardinality: <https://w3id.org/application-profiles/cardinalities/> .
-@prefix dap200: <https://mojedata.cz/aplikační-profily/DCAT-AP/2.0.0/> .
-@prefix dap300: <https://mojedata.cz/aplikační-profily/DCAT-AP/3.0.0/> .
+@prefix dap200: <https://mojedata.cz/aplikační-profily/DCAT-AP/2.0.0/model/> .
+@prefix dap300: <https://mojedata.cz/aplikační-profily/DCAT-AP/3.0.0/model/> .
 
 # potential issue - multiple vocabulary versions use the same concepts, e.g. dcat:Dataset is the same dataset in v2 and v3
 
 #DCAT-AP 2.0.0
-dap200: a vocab:ApplicationProfile ;
-    vocab:applicationProfileOf <https://www.w3.org/TR/vocab-dcat-2/> ;
+dap200: a vocab:ApplicationProfileModel ;
+    vocab:ApplicationProfileModelOf <https://www.w3.org/TR/vocab-dcat-2/> ;
     vocab:usedVocabularies dcterms:, skos:, foaf: .
 
 dap200:1 a vocab:Entity ;
@@ -62,10 +62,10 @@ dap200:5 a vocab:Attribute ;
     vocab:partOf dap200: .
 
 #DCAT-AP 3.0.0
-dap300: a vocab:ApplicationProfile ;
-    vocab:applicationProfileOf <https://www.w3.org/TR/vocab-dcat-3/> ;
+dap300: a vocab:ApplicationProfileModel ;
+    vocab:ApplicationProfileModelOf <https://www.w3.org/TR/vocab-dcat-3/> ;
     vocab:prevVersion dap200: ;
-    vocab:applicationProfileOf dcat: ;
+    vocab:ApplicationProfileModelOf dcat: ;
     vocab:usedVocabularies dcterms:, skos:, foaf: .
 
 dap300:1 a vocab:Entity ;
@@ -103,7 +103,11 @@ dap300:5 a vocab:Attribute ;
 dap300:6 a vocab:Class ;
     vocab:class skos:Concept ;
     skos:prefLabel "Položka číselníku jazyků (jazyk)"@cs ;
-    vocab:codelist <http://publications.europa.eu/resource/dataset/language> ;
+    vocab:requiredCodelist <http://publications.europa.eu/resource/dataset/language> ;
+    #vocab:codelistRequirementFunction vocab:OR ; #for case of multiple required codelists - one item from any of them is vocab:OR, one item from each is vocab:AND
+    #if nonCodeListItemsProhibited true, additional usable codelists
+    #vocab:additionalCodelist <http://publications.europa.eu/resource/dataset/eurovoc> ;
+    vocab:nonCodeListItemsProhibited true ;
     vocab:partOf dap300: .
 
 # Použití číselníku
@@ -118,7 +122,12 @@ dap300:7 a vocab:Attribute ;
 dap300:8 a vocab:Class ;
     vocab:class skos:Concept ;
     skos:prefLabel "Položka číselníku témat (téma)"@cs ;
-    vocab:codelist <http://publications.europa.eu/resource/dataset/data-theme> ;
+    #at least one item from each required code list
+    vocab:requiredCodelist <http://publications.europa.eu/resource/dataset/data-theme> ;
+    vocab:codelistRequirementFunction vocab:AND ; #for case of multiple required codelists - one item from any of them is vocab:OR, one item from each is vocab:AND
+    #if nonCodeListItemsProhibited false, just recommendation
+    vocab:additionalCodelist <http://publications.europa.eu/resource/dataset/eurovoc> ;
+    vocab:nonCodeListItemsProhibited false ;
     vocab:partOf dap300: .
 
 # Použití číselníku
@@ -129,11 +138,11 @@ dap300:9 a vocab:Attribute ;
     skos:prefLabel "Téma"@cs ;
     vocab:partOf dap300: .
 
-daphvd: a vocab:ApplicationProfile .
+daphvd: a vocab:ApplicationProfileModel .
 
 #DCAT-AP-CZ 2
-dapcz2: a vocab:ApplicationProfile ;
-    vocab:applicationProfileOf dap200:, daphvd:;
+dapcz2: a vocab:ApplicationProfileModel ;
+    vocab:ApplicationProfileModelOf dap200:, daphvd:;
     vocab:usedVocabularies dcterms:, skos:, foaf: .
 
 dapcz2:1 a vocab:Class ;
