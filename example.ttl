@@ -29,15 +29,15 @@ dap200: a vocab:ApplicationProfileModel ;
     vocab:ApplicationProfileModelOf <https://www.w3.org/TR/vocab-dcat-2/> ;
     vocab:usedVocabularies dcterms:, skos:, foaf: .
 
-dap200:1 a vocab:Entity ;
+dap200:1 a vocab:ClassUsage ;
     vocab:class dcat:Catalog ;
     vocab:partOf dap200: .
 
-dap200:2 a vocab:Entity ;
+dap200:2 a vocab:ClassUsage ;
     vocab:class dcat:Dataset ;
     vocab:partOf dap200: .
 
-dap200:3 a vocab:Attribute ;
+dap200:3 a vocab:AttributeUsage ;
     vocab:domain dap200:1 ;
     vocab:range rdf:langString ;
     vocab:property dcterms:title ;
@@ -45,7 +45,7 @@ dap200:3 a vocab:Attribute ;
     vocab:cardinality cardinality:0n ;
     vocab:partOf dap200: .
 
-dap200:4 a vocab:Attribute ;
+dap200:4 a vocab:AttributeUsage ;
     vocab:domain dap200:2 ;
     vocab:range rdf:langString ;
     vocab:property dcterms:title ;
@@ -53,7 +53,7 @@ dap200:4 a vocab:Attribute ;
     vocab:cardinality cardinality:0n ;
     vocab:partOf dap200: .
 
-dap200:5 a vocab:Attribute ;
+dap200:5 a vocab:AttributeUsage ;
     vocab:domain dap200:1 ;
     vocab:range dap200:2 ;
     vocab:property dcat:dataset ;
@@ -68,15 +68,15 @@ dap300: a vocab:ApplicationProfileModel ;
     vocab:ApplicationProfileModelOf dcat: ;
     vocab:usedVocabularies dcterms:, skos:, foaf: .
 
-dap300:1 a vocab:Entity ;
+dap300:1 a vocab:ClassUsage ;
     vocab:class dcat:Catalog ;
     vocab:partOf dap300: .
 
-dap300:2 a vocab:Entity ;
+dap300:2 a vocab:ClassUsage ;
     vocab:class dcat:Dataset ;
     vocab:partOf dap300: .
 
-dap300:3 a vocab:Attribute ;
+dap300:3 a vocab:AttributeUsage ;
     vocab:domain dap300:1 ;
     vocab:range rdf:langString ;
     vocab:property dcterms:title ;
@@ -84,7 +84,7 @@ dap300:3 a vocab:Attribute ;
     vocab:cardinality cardinality:0n ;
     vocab:partOf dap300: .
 
-dap300:4 a vocab:Attribute ;
+dap300:4 a vocab:AttributeUsage ;
     vocab:domain dap300:2 ;
     vocab:range rdf:langString ;
     vocab:property dcterms:title ;
@@ -92,7 +92,7 @@ dap300:4 a vocab:Attribute ;
     vocab:cardinality cardinality:0n ;
     vocab:partOf dap300: .
 
-dap300:5 a vocab:Attribute ;
+dap300:5 a vocab:AttributeUsage ;
     vocab:domain dap300:1 ;
     vocab:range dap300:2 ;
     vocab:property dcat:dataset ;
@@ -100,41 +100,45 @@ dap300:5 a vocab:Attribute ;
     vocab:partOf dap300: .
 
 # Položka číselníku
-dap300:6 a vocab:Class ;
+dap300:6 a vocab:ClassUsage ;
     vocab:class skos:Concept ;
     skos:prefLabel "Položka číselníku jazyků (jazyk)"@cs ;
+    vocab:partOf dap300: .
+
+# Použití číselníku
+dap300:7 a vocab:AttributeUsage ;
+    vocab:domain dap300:1 ;
+    vocab:range dap300:6 ;
+    vocab:property dcterms:language ;
+
     vocab:requiredCodelist <http://publications.europa.eu/resource/dataset/language> ;
     #vocab:codelistRequirementFunction vocab:OR ; #for case of multiple required codelists - one item from any of them is vocab:OR, one item from each is vocab:AND
     #if nonCodeListItemsProhibited true, additional usable codelists
     #vocab:additionalCodelist <http://publications.europa.eu/resource/dataset/eurovoc> ;
     vocab:nonCodeListItemsProhibited true ;
-    vocab:partOf dap300: .
 
-# Použití číselníku
-dap300:7 a vocab:Attribute ;
-    vocab:domain dap300:1 ;
-    vocab:range dap300:6 ;
-    vocab:property dcterms:language ;
     skos:prefLabel "Jazyk katalogu"@cs ;
     vocab:partOf dap300: .
 
 # Položka číselníku
-dap300:8 a vocab:Class ;
+dap300:8 a vocab:ClassUsage ;
     vocab:class skos:Concept ;
     skos:prefLabel "Položka číselníku témat (téma)"@cs ;
+    vocab:partOf dap300: .
+
+# Použití číselníku
+dap300:9 a vocab:AttributeUsage ;
+    vocab:domain dap300:2 ;
+    vocab:range dap300:8 ;
+    vocab:property dcat:theme ;
+
     #at least one item from each required code list
     vocab:requiredCodelist <http://publications.europa.eu/resource/dataset/data-theme> ;
     vocab:codelistRequirementFunction vocab:AND ; #for case of multiple required codelists - one item from any of them is vocab:OR, one item from each is vocab:AND
     #if nonCodeListItemsProhibited false, just recommendation
     vocab:additionalCodelist <http://publications.europa.eu/resource/dataset/eurovoc> ;
     vocab:nonCodeListItemsProhibited false ;
-    vocab:partOf dap300: .
 
-# Použití číselníku
-dap300:9 a vocab:Attribute ;
-    vocab:domain dap300:2 ;
-    vocab:range dap300:8 ;
-    vocab:property dcat:theme ;
     skos:prefLabel "Téma"@cs ;
     vocab:partOf dap300: .
 
@@ -145,12 +149,12 @@ dapcz2: a vocab:ApplicationProfileModel ;
     vocab:ApplicationProfileModelOf dap200:, daphvd:;
     vocab:usedVocabularies dcterms:, skos:, foaf: .
 
-dapcz2:1 a vocab:Class ;
+dapcz2:1 a vocab:ClassUsage ;
     vocab:derivedFrom dap200:2 ;
     vocab:partOf dapcz2: .
 
 #Omezená kardinalita oproti DCAT-AP
-dapcz2:1 a vocab:Attribute ;
+dapcz2:1 a vocab:AttributeUsage ;
     vocab:domain dapcz2:1 ;
     vocab:range rdf:langString ;
     vocab:property dcterms:title ;
