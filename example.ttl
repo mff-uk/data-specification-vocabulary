@@ -77,7 +77,6 @@ dap200m: a vocab:ConceptualModel .
 dap200m:Dataset a vocab:ClassUsage ;
     skos:prefLabel "Dataset"@en ;
     vann:usageNote "Dataset in context of DCAT-AP 2"@en ;
-    vocab:implicitClass false ;
     vocab:defaultTechnicalLabel "dataset"@en;
     vocab:class dcat:Dataset ;
     vocab:partOf dap200m: .
@@ -85,7 +84,6 @@ dap200m:Dataset a vocab:ClassUsage ;
 dap200m:Distribution a vocab:ClassUsage ;
     skos:prefLabel "Distribution"@en ;
     vann:usageNote "Distribution in context of DCAT-AP 2"@en ;
-    vocab:implicitClass false ;
     vocab:defaultTechnicalLabel "distribution"@en;
     vocab:class dcat:Distribution ;
     vocab:partOf dap200m: .
@@ -93,8 +91,6 @@ dap200m:Distribution a vocab:ClassUsage ;
 dap200m:FileDistribution a vocab:ClassUsage ;
     skos:prefLabel "File Distribution"@en ;
     vann:usageNote "File distribution in context of DCAT-AP 2"@en ;
-    vocab:implicitClass true ;
-    vocab:implicitSubclassOf dap200m:Distribution ;
     vocab:defaultTechnicalLabel "distribution"@en;
     vocab:class dcat:Distribution ;
     vocab:partOf dap200m: .
@@ -102,8 +98,6 @@ dap200m:FileDistribution a vocab:ClassUsage ;
 dap200m:ServiceDistribution a vocab:ClassUsage ;
     skos:prefLabel "Service Distribution"@en ;
     vann:usageNote "Service distribution in context of DCAT-AP 2"@en ;
-    vocab:implicitClass true ;
-    vocab:implicitSubclassOf dap200m:Distribution ;
     vocab:defaultTechnicalLabel "distribution"@en;
     vocab:class dcat:Distribution ;
     vocab:partOf dap200m: .
@@ -111,7 +105,6 @@ dap200m:ServiceDistribution a vocab:ClassUsage ;
 dap200m:DataService a vocab:ClassUsage ;
     skos:prefLabel "Data Service"@en ;
     vann:usageNote "DataService in context of DCAT-AP 2"@en ;
-    vocab:implicitClass false ;
     vocab:defaultTechnicalLabel "dataservice"@en;
     vocab:class dcat:DataService ;
     vocab:partOf dap200m: .
@@ -262,7 +255,6 @@ dapcz2m: a vocab:ConceptualModel .
 dapcz2m:Dataset a vocab:ClassUsage ;
     skos:prefLabel "Dataset"@en ;
     vann:usageNote "Dataset in context of DCAT-AP-CZ"@en ;
-    vocab:implicitClass false ;
     vocab:defaultTechnicalLabel "datová-sada"@cs;
     vocab:usageOf dap200m:Dataset ; ### !!! usage of usage from another AP
     vocab:partOf dapcz2m: .
@@ -270,7 +262,6 @@ dapcz2m:Dataset a vocab:ClassUsage ;
 dapcz2m:Distribution a vocab:ClassUsage ;
     skos:prefLabel "Distribution"@en ;
     vann:usageNote "Distribution in context of DCAT-AP-CZ"@en ;
-    vocab:implicitClass false ;
     vocab:defaultTechnicalLabel "distribuce"@cs;
     vocab:usageOf dap200m:Distribution ; ### !!! usage of usage from another AP
     vocab:partOf dapcz2m: .
@@ -278,7 +269,6 @@ dapcz2m:Distribution a vocab:ClassUsage ;
 dapcz2m:PodmínkyUžití a vocab:ClassUsage ;
     skos:prefLabel "Podmínky užití"@en ;
     vann:usageNote "Podmínky užití"@cd ;
-    vocab:implicitClass false ;
     vocab:defaultTechnicalLabel "podmínky-užití"@en;
     vocab:class pu:Specifikace ;
     vocab:partOf dapcz2m: .
