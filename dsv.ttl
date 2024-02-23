@@ -6,6 +6,7 @@
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 @prefix dsv: <https://w3id.org/dsv#> .
 
