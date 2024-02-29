@@ -112,7 +112,7 @@ dsv:additionalVocabulary a rdf:Property, owl:ObjectProperty ;
     rdfs:range dsv:ControlledVocabulary .
 
 dsv:ControlledVocabularyRequirementType a rdfs:Class, skos:ConceptScheme;
-    rdfs:label "Controlled Vocabulary Requirement Type" @en ;
+    rdfs:label "Controlled Vocabulary Requirement Type"@en ;
     rdfs:description "Controlled Vocabulary Requirement Type"@en .
 
 dsv:ConceptualModel a rdfs:Class;
