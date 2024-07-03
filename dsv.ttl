@@ -1,136 +1,80 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix prof: <http://www.w3.org/ns/dx/prof/> .
-@prefix pav: <http://purl.org/pav/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix : <https://w3id.org/dsv#>.
 
-@prefix dsv: <https://w3id.org/dsv#> .
-
-dsv:Profile a rdfs:Class ;
-    rdfs:label "Profile"@en ;
-    rdfs:description "Entity profile"@en .
-
-dsv:controlledVocabulary a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "uses controlled vocabulary"@en ;
-    rdfs:description "Specifies controlled vocabulary used in the specification."@en ;
-    rdfs:domain dcterms:Standard ;
-    rdfs:range dsv:ControlledVocabulary .
-
-dsv:conceptualModel a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "contains conceptual model"@en ;
-    rdfs:description "Specifies the conceptual model contained in the application profile."@en ;
-    rdfs:domain prof:Profile ;
-    rdfs:range dsv:ConceptualModel .
-
-dsv:profileOf a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "profile of"@en ;
-    rdfs:description "Specifies a parent profile of the current profile."@en ;
-    rdfs:domain dsv:Profile ;
-    rdfs:range dsv:Profile .
-
-dsv:specializes a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "specializes profile"@en ;
-    rdfs:description "Specifies a profile specialized by this profile."@en ;
-    skos:closeMatch rdfs:subClassOf, rdfs:subPropertyOf ;
-    rdfs:domain dsv:Profile ;
-    rdfs:range dsv:Profile .
-
-dsv:InvalidProfile a rdfs:Class ;
-    rdfs:subClassOf dsv:Profile ;
-    rdfs:label "Invalid profile"@en ;
-    rdfs:description "Invalid profile - it breaks consistency rules. This may be useful for representation of profiles with changes that need propagating upstream to be consistent."@en .
-
-dsv:ClassProfile a rdfs:Class ;
-    rdfs:subClassOf dsv:Profile ;
-    rdfs:label "Class profile"@en ;
-    rdfs:description "Class profile"@en .
-
-dsv:class a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "profiled class"@en ;
-    rdfs:description "the profiled class"@en ;
-    rdfs:domain dsv:ClassProfile ;
-    rdfs:range rdfs:Class .
-
-dsv:PropertyProfile a rdfs:Class ;
-    rdfs:subClassOf dsv:Profile ;
-    rdfs:label "Property profile"@en ;
-    rdfs:description "Property profile"@en .
-
-dsv:property a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "profiled property"@en ;
-    rdfs:description "the profiled property"@en ;
-    rdfs:domain dsv:PropertyProfile ;
-    rdfs:range rdf:Property .
-
-dsv:domain a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "domain profile"@en ;
-    rdfs:description "domain profile"@en ;
-    rdfs:domain dsv:PropertyProfile ;
-    rdfs:range dsv:ClassProfile .
-
-dsv:ObjectPropertyProfile a rdfs:Class ;
-    rdfs:subClassOf dsv:PropertyProfile ;
-    rdfs:label "Object property profile"@en ;
-    rdfs:description "Object property profile"@en .
-
-dsv:objectPropertyRange a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "range profile"@en ;
-    rdfs:description "range profile"@en ;
-    rdfs:domain dsv:ObjectPropertyProfile ;
-    rdfs:range dsv:ClassProfile .
-
-dsv:DatatypePropertyProfile a rdfs:Class ;
-    rdfs:subClassOf dsv:PropertyProfile ;
-    rdfs:label "Datatype property profile"@en ;
-    rdfs:description "Datatype property profile"@en .
-
-dsv:datatypePropertyRange a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "data type"@en ;
-    rdfs:description "data type of datatype property"@en ;
-    rdfs:domain dsv:DatatypePropertyProfile ;
-    rdfs:range rdfs:Datatype .
-
-dsv:ControlledVocabulary a rdfs:Class;
-    rdfs:subClassOf skos:ConceptScheme ;
-    rdfs:label "Controlled Vocabulary"@en ;
-    rdfs:description "Controlled Vocabulary"@en .
-
-dsv:requiredVocabulary a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "requiredVocabulary"@en ;
-    rdfs:description "requiredVocabulary"@en ;
-    rdfs:domain dsv:PropertyProfile ;
-    rdfs:range dsv:ControlledVocabulary .
-
-dsv:additionalVocabulary a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "additionalVocabulary"@en ;
-    rdfs:description "additionalVocabulary"@en ;
-    rdfs:domain dsv:PropertyProfile ;
-    rdfs:range dsv:ControlledVocabulary .
-
-dsv:ControlledVocabularyRequirementType a rdfs:Class, skos:ConceptScheme;
-    rdfs:label "Controlled Vocabulary Requirement Type"@en ;
-    rdfs:description "Controlled Vocabulary Requirement Type"@en .
-
-dsv:ConceptualModel a rdfs:Class;
-    rdfs:label "Conceptual Model"@en ;
-    rdfs:description "Conceptual Model"@en .
-
-dsv:DataStructure a rdfs:Class;
-    rdfs:label "Data structure"@en ;
-    rdfs:description "Data structure"@en .
-
-dsv:dataStructure a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "data structure"@en ;
-    rdfs:description "data structure contained in the specifications"@en ;
-    rdfs:domain dcterms:Standard ;
-    rdfs:range dsv:DataStructure .
-
-dsv:artefact a rdf:Property, owl:ObjectProperty ;
-    rdfs:label "artefact"@en ;
-    rdfs:description "artefact of the specifications"@en ;
-    rdfs:domain dcterms:Standard ;
-    rdfs:range prof:ResourceDescriptor .
+:ConceptualModel a owl:Class, rdfs:Class;
+    rdfs:label "Konceptuální model"@cs, "Conceptual model"@en;
+    rdfs:comment "Konceptuální model obsahující profily tříd a vlastností různých slovníků."@cs, "Conceptual model containing profiles of classes and properties of various vocabularies."@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>.
+:Profile a owl:Class, rdfs:Class;
+    rdfs:label "Profil"@cs, "Profile"@en;
+    rdfs:comment "Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu."@cs, "Entity profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc."@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>.
+:profileOf a rdf:Property, owl:ObjectProperty;
+    rdfs:label "profile of"@en;
+    rdfs:comment "Specifies a parent profile of the current profile."@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:domain :Profile;
+    rdfs:range :Profile.
+:inheritsProperties a rdf:Property, owl:ObjectProperty;
+    rdfs:label "inherits properties"@en;
+    rdfs:comment "Specifies, which properties are inherited, i.e. not profiled."@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:domain :Profile;
+    rdfs:range rdf:Property.
+:specializes a rdf:Property, owl:ObjectProperty;
+    rdfs:label "specializes"@en;
+    rdfs:comment "Specifies a profile specialized by this profile."@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:domain :Profile;
+    rdfs:range :Profile.
+:ClassProfile a owl:Class, rdfs:Class;
+    rdfs:label "Profil třídy"@cs, "Class Profile"@en;
+    rdfs:comment "Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes."@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:subClassOf :Profile.
+:class a rdf:Property, owl:ObjectProperty;
+    rdfs:label "profiled class"@en;
+    rdfs:comment "The profiled class."@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:domain :ClassProfile;
+    rdfs:range rdfs:Class.
+:ObjectPropertyProfile a owl:Class, rdfs:Class;
+    rdfs:label "Profil objektové vlastnosti"@cs, "Object Property Profile"@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:subClassOf :PropertyProfile.
+:range a rdf:Property, owl:ObjectProperty;
+    rdfs:label "range"@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:domain :ObjectPropertyProfile;
+    rdfs:range :ClassProfile.
+:DatatypePropertyProfile a owl:Class, rdfs:Class;
+    rdfs:label "Profile atributu"@cs, "Datatype Property Profile"@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:subClassOf :PropertyProfile.
+:datatype a rdf:Property, owl:ObjectProperty;
+    rdfs:label "datatype"@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:domain :DatatypePropertyProfile;
+    rdfs:range rdfs:Datatype.
+:InvalidProfile a owl:Class, rdfs:Class;
+    rdfs:label "Nevalidní profil"@cs, "Invalid profile"@en;
+    rdfs:comment "Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě."@cs, "Invalid profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency."@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:subClassOf :Profile.
+:PropertyProfile a owl:Class, rdfs:Class;
+    rdfs:label "Profil vlastnosti"@cs, "Property Profile"@en;
+    rdfs:comment "Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality."@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:subClassOf :Profile.
+:domain a rdf:Property, owl:ObjectProperty;
+    rdfs:label "domain"@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:domain :PropertyProfile;
+    rdfs:range :ClassProfile.
+:cardinality a rdf:Property, owl:ObjectProperty;
+    rdfs:label "kardinalita"@cs, "cardinality"@en;
+    rdfs:isDefinedBy <https://mff-uk.github.io/data-specification-vocabulary/>;
+    rdfs:domain :PropertyProfile;
+    rdfs:range rdfs:Resource.
