@@ -94,8 +94,8 @@
                 otherLinks: [{
                     key: "Odkazy",
                     data: [{
-                        value: "DSV Default Application Profile (DSV-DAP)",
-                        href: "https://github.com/mff-uk/data-specification-vocabulary/dap/"
+                        value: "DSV Default Application Profile",
+                        href: "https://github.com/mff-uk/data-specification-vocabulary/application-profile"
                     }]
                 }],
               };
@@ -115,8 +115,8 @@
           <strong>Data Specification Vocabulary (DSV)</strong>.</p>
       </section>
       
-      <section id="sotd">
-      </section>
+      <!--<section id="sotd">
+      </section>-->
 
       <section>
         <h1>Vocabulary Overview</h1>
@@ -255,7 +255,7 @@
 
 
         <h2>Properties</h2>
-            <section id="j7u69sjfmqly5uopml">
+            <section id="conceptual-model">
 
               <h4>conceptual model</h4>
 
@@ -278,7 +278,7 @@
                 </tr>
               </table>
             </section>
-            <section id="5k9qr6vfkgjly5upac4">
+            <section id="profile-of">
 
               <h4>profile of</h4>
 
@@ -301,7 +301,7 @@
                 </tr>
               </table>
             </section>
-            <section id="x2epkv1lvjoly5uptxv">
+            <section id="specializes">
 
               <h4>specializes</h4>
 
@@ -324,7 +324,7 @@
                 </tr>
               </table>
             </section>
-            <section id="zhakhpyes2mly5us7ay">
+            <section id="profiled-class">
 
               <h4>profiled class</h4>
 
@@ -347,7 +347,7 @@
                 </tr>
               </table>
             </section>
-            <section id="zea294wx11ely5uxiqs">
+            <section id="datatype">
 
               <h4>datatype</h4>
 
@@ -366,7 +366,7 @@
                 </tr>
               </table>
             </section>
-            <section id="h7hy192nuqtly5uycc1">
+            <section id="range">
 
               <h4>range</h4>
 
@@ -385,7 +385,7 @@
                 </tr>
               </table>
             </section>
-            <section id="d7r5pxu88ylly5uyt49">
+            <section id="domain">
 
               <h4>domain</h4>
 
@@ -404,7 +404,7 @@
                 </tr>
               </table>
             </section>
-            <section id="e4yzzktukhily5v2r0a">
+            <section id="inherits-properties">
 
               <h4>inherits properties</h4>
 
@@ -427,7 +427,7 @@
                 </tr>
               </table>
             </section>
-            <section id="g4mpeurijsly5v4n8s">
+            <section id="cardinality">
 
               <h4>cardinality</h4>
 
@@ -446,7 +446,7 @@
                 </tr>
               </table>
             </section>
-            <section id="gidcldcoyv4ly5xo0gj">
+            <section id="artefact">
 
               <h4>artefact</h4>
 
@@ -466,6 +466,29 @@
                 <tr>
                   <td>Range</td>
                   <td><a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a></td>
+                </tr>
+              </table>
+            </section>
+            <section id="profiled-property">
+
+              <h4>profiled property</h4>
+
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#property">https://w3id.org/dsv#property</a></td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>The property profiled by the property profile.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td><a href="#property-profile">Property Profile</a></td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a></td>
                 </tr>
               </table>
             </section>

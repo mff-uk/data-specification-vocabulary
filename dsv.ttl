@@ -68,3 +68,13 @@
     rdfs:comment "Artefact of the specification"@en;
     rdfs:domain <http://purl.org/dc/terms/Standard>;
     rdfs:range <http://www.w3.org/ns/dx/prof/ResourceDescriptor>.
+:conceptualModel a rdf:Property, owl:ObjectProperty;
+    rdfs:label "conceptual model"@en;
+    rdfs:comment "Specifies the conceptual model contained in the application profile."@en;
+    rdfs:domain <http://www.w3.org/ns/dx/prof/Profile>;
+    rdfs:range <https://w3id.org/dsv#ConceptualModel>.
+:property a rdf:Property, owl:ObjectProperty;
+    rdfs:label "profiled property"@en;
+    rdfs:comment "The property profiled by the property profile."@en;
+    rdfs:domain <https://w3id.org/dsv#PropertyProfile>;
+    rdfs:range rdf:Property.
