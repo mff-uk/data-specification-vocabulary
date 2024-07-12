@@ -3,7 +3,7 @@
 This vocabulary defines vocabulary (classes and properties) and a default application profile for machine processable representation of Data Specifications and Application Profiles.
 DSV and DSV-DAP is currently being implemented in the [Dataspecer](https://dataspecer.com) tool for management of data specifications, management of application profiles and semi-automatic generation of technical artifacts such as data schemas and transformations based on semantic vocabularies.
 
-Since the visual editor is currently under development and the resulting images are not yet properly presentable, here we have a manually created graphical UML Class Diagrams-like representation:
+Since the visual editor is currently under development and the resulting images are not yet properly presentable (see the current state of implementation in the specification below), here we have a manually created graphical UML Class Diagrams-like representation:
 <figure>
   <img
   src="dsv.svg"
