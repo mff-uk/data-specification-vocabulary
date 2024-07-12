@@ -13,6 +13,6 @@ Since the visual editor is currently under development and the resulting images 
 
 As a proof-of-concept, dogfooding and for state-of-implementation demonstration purposes, below you can find generated representations of DSV and DSV-AP from a current version of Dataspecer, DSV-AP represented using DSV-AP:
 - [DSV Vocabulary Specification from Dataspecer](dsv)
-- [DSV Vocabulary in RDF Turtle](dsv.ttl)
+- [DSV Vocabulary using RDFS/OWL in RDF Turtle](dsv.ttl)
 - [DSV Default Application Profile from Dataspecer](dsv-dap)
-- [DSV Default Application Profile using DSV](dsv-dap.ttl)
+- [DSV Default Application Profile using DSV in RDF Turtle](dsv-dap.ttl)
