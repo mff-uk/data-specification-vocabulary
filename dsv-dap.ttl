@@ -1,237 +1,240 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix dsv: <https://w3id.org/dsv#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dsv: <https://w3id.org/dsv#> .
+@prefix dsv-dap: <https://w3id.org/dsv-dap#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 
+dsv-dap:applicationProfileConceptualModel a dsv:ConceptualModel.
 
-<https://w3id.org/dsv-dap#applicationProfileConceptualModel> a dsv:ConceptualModel.
-
-<https://w3id.org/dsv-dap#ConceptualModel> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:ConceptualModel dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
     dsv:class dsv:ConceptualModel.
 
-<https://w3id.org/dsv-dap#Profile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:Profile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
     dsv:class dsv:Profile.
 
-<https://w3id.org/dsv-dap#dct-isPartOf> dsv:domain <https://w3id.org/dsv-dap#Profile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:dct-isPartOf dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     skos:prefLabel "part of"@en;
-    dsv:inheritsProperties <http://purl.org/vocab/vann/usageNote>, dsv:cardinality;
+    dsv:inheritsProperties vann:usageNote, dsv:cardinality;
     dsv:property dct:isPartOf;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ConceptualModel>.
+    dsv:objectPropertyRange dsv-dap:ConceptualModel.
 
-<https://w3id.org/dsv-dap#profileOf> dsv:domain <https://w3id.org/dsv-dap#Profile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:profileOf dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>, dsv:cardinality;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
     dsv:property dsv:profileOf;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Profile>.
+    dsv:objectPropertyRange dsv-dap:Profile.
 
-<https://w3id.org/dsv-dap#specializes> dsv:domain <https://w3id.org/dsv-dap#Profile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:specializes dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>, dsv:cardinality;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
     dsv:property dsv:specializes;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Profile>.
+    dsv:objectPropertyRange dsv-dap:Profile.
 
-<https://w3id.org/dsv-dap#inheritsProperties> dsv:domain <https://w3id.org/dsv-dap#Profile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:inheritsProperties dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>, dsv:cardinality;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
     dsv:property dsv:inheritsProperties;
     a dsv:DatatypePropertyProfile.
 
-<https://w3id.org/dsv-dap#ClassProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:ClassProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
     dsv:class dsv:ClassProfile.
 
-<https://w3id.org/dsv-dap#class> dsv:domain <https://w3id.org/dsv-dap#ClassProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:class dsv:domain dsv-dap:ClassProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>;
-    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
     dsv:property dsv:class;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#rdfs-Class>.
+    dsv:objectPropertyRange dsv-dap:rdfs-Class.
 
-<https://w3id.org/dsv-dap#ObjectPropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:ObjectPropertyProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
     dsv:class dsv:ObjectPropertyProfile.
 
-<https://w3id.org/dsv-dap#range> dsv:domain <https://w3id.org/dsv-dap#ObjectPropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:range dsv:domain dsv-dap:ObjectPropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>;
-    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:0n;
     dsv:property dsv:range;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassProfile>.
+    dsv:objectPropertyRange dsv-dap:ClassProfile.
 
-<https://w3id.org/dsv-dap#DatatypePropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:DatatypePropertyProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
     dsv:class dsv:DatatypePropertyProfile.
 
-<https://w3id.org/dsv-dap#datatype> dsv:domain <https://w3id.org/dsv-dap#DatatypePropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:datatype dsv:domain dsv-dap:DatatypePropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>, dsv:cardinality;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
     dsv:property dsv:datatype;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#rdfs-Datatype>.
+    dsv:objectPropertyRange dsv-dap:rdfs-Datatype.
 
-<https://w3id.org/dsv-dap#InvalidProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:InvalidProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
     dsv:class dsv:InvalidProfile.
 
-<https://w3id.org/dsv-dap#PropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:PropertyProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
     dsv:class dsv:PropertyProfile.
 
-<https://w3id.org/dsv-dap#property> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:property dsv:domain dsv-dap:PropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>;
-    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
     dsv:property dsv:fj643gxf4ulyifmxui;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#rdf-Property>.
+    dsv:objectPropertyRange dsv-dap:rdf-Property.
 
-<https://w3id.org/dsv-dap#domain> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:domain dsv:domain dsv-dap:PropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>, dsv:cardinality;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
     dsv:property dsv:domain;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassProfile>.
+    dsv:objectPropertyRange dsv-dap:ClassProfile.
 
-<https://w3id.org/dsv-dap#cardinality> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:cardinality dsv:domain dsv-dap:PropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>, dsv:cardinality;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
     dsv:property dsv:cardinality;
     a dsv:DatatypePropertyProfile.
 
-<https://w3id.org/dsv-dap#owl-Ontology> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:owl-Ontology dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     skos:prefLabel "Vocabulary"@en;
     a dsv:ClassProfile;
     dsv:class owl:Ontology.
 
-<https://w3id.org/dsv-dap#Profile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:Profile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     skos:prefLabel "Application Profile"@en;
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/dx/prof/Profile>.
+    dsv:class prof:Profile.
 
-<https://w3id.org/dsv-dap#isProfileOf> dsv:domain <https://w3id.org/dsv-dap#Profile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:isProfileOf dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>;
-    dsv:cardinality <https://w3id.org/dsv#1n>;
-    dsv:property <http://www.w3.org/ns/dx/prof/isProfileOf>;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:1n;
+    dsv:property prof:isProfileOf;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#dct-Standard>.
+    dsv:objectPropertyRange dsv-dap:dct-Standard.
 
-<https://w3id.org/dsv-dap#conceptualModel> dsv:domain <https://w3id.org/dsv-dap#Profile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:conceptualModel dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>;
-    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
     dsv:property dsv:x9gmz3k6zgglyifjyta;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ConceptualModel>.
+    dsv:objectPropertyRange dsv-dap:ConceptualModel.
 
-<https://w3id.org/dsv-dap#dct-Standard> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:dct-Standard dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     skos:prefLabel "Data specification"@en;
     a dsv:ClassProfile;
     dsv:class dct:Standard.
 
-<https://w3id.org/dsv-dap#artefact> dsv:domain <https://w3id.org/dsv-dap#dct-Standard>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:artefact dsv:domain dsv-dap:dct-Standard;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>, dsv:cardinality;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
     dsv:property dsv:artefact;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ResourceDescriptor>.
+    dsv:objectPropertyRange dsv-dap:ResourceDescriptor.
 
-<https://w3id.org/dsv-dap#dct-references> dsv:domain <https://w3id.org/dsv-dap#dct-Standard>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:dct-references dsv:domain dsv-dap:dct-Standard;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     skos:prefLabel "reused specification"@en;
-    dsv:inheritsProperties <http://purl.org/vocab/vann/usageNote>, dsv:cardinality;
+    dsv:inheritsProperties vann:usageNote, dsv:cardinality;
     dsv:property dct:references;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#dct-Standard>.
+    dsv:objectPropertyRange dsv-dap:dct-Standard.
 
-<https://w3id.org/dsv-dap#prev> dsv:domain <https://w3id.org/dsv-dap#dct-Standard>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:prev dsv:domain dsv-dap:dct-Standard;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     skos:prefLabel "previous version"@en;
-    dsv:inheritsProperties <http://purl.org/vocab/vann/usageNote>;
-    dsv:cardinality <https://w3id.org/dsv#01>;
-    dsv:property <http://www.w3.org/ns/adms#prev>;
+    dsv:inheritsProperties vann:usageNote;
+    dsv:cardinality dsv:01;
+    dsv:property adms:prev;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#dct-Standard>.
+    dsv:objectPropertyRange dsv-dap:dct-Standard.
 
-<https://w3id.org/dsv-dap#ResourceDescriptor> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:ResourceDescriptor dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/dx/prof/ResourceDescriptor>.
+    dsv:class prof:ResourceDescriptor.
 
-<https://w3id.org/dsv-dap#rdf-Property> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:rdf-Property dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
     dsv:class rdf:Property.
 
-<https://w3id.org/dsv-dap#rdfs-isDefinedBy-property> dsv:domain <https://w3id.org/dsv-dap#rdf-Property>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:rdfs-isDefinedBy-property dsv:domain dsv-dap:rdf-Property;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>;
-    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
     dsv:property rdfs:isDefinedBy;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#owl-Ontology>.
+    dsv:objectPropertyRange dsv-dap:owl-Ontology.
 
-<https://w3id.org/dsv-dap#rdfs-Class> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:rdfs-Class dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
     dsv:class rdfs:Class.
 
-<https://w3id.org/dsv-dap#rdfs-isDefinedBy-Class> dsv:domain <https://w3id.org/dsv-dap#rdfs-Class>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:rdfs-isDefinedBy-Class dsv:domain dsv-dap:rdfs-Class;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, <http://purl.org/vocab/vann/usageNote>;
-    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
     dsv:property rdfs:isDefinedBy;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#owl-Ontology>.
+    dsv:objectPropertyRange dsv-dap:owl-Ontology.
 
-<https://w3id.org/dsv-dap#rdfs-Datatype> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+dsv-dap:rdfs-Datatype dct:isPartOf dsv-dap:applicationProfileConceptualModel;
     a dsv:Profile;
     dsv:inheritsProperties skos:prefLabel;
     a dsv:ClassProfile;
