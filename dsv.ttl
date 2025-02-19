@@ -14,11 +14,24 @@
     rdfs:comment "Specifies a parent profile of the current profile."@en;
     rdfs:domain :Profile;
     rdfs:range :Profile.
-:inheritsProperties a rdf:Property, owl:ObjectProperty;
-    rdfs:label "inherits properties"@en;
-    rdfs:comment "Specifies, which properties are inherited, i.e. not profiled."@en;
+:inheritsProperty a rdf:Property, owl:ObjectProperty;
+    rdfs:label "inherits property"@en;
+    rdfs:comment "Points to a specification detailing, which profile property values (name, definition, usage note, etc.) are inherited from where, if not defined in the profile directly."@en;
     rdfs:domain :Profile;
+    rdfs:range :PropertyInheritance.
+
+:inheritedProperty a rdf:Property, owl:ObjectProperty;
+    rdfs:label "inherited property"@en;
+    rdfs:comment "Identifies property, from which a value will be inherited to the current profile (skos:prefLabel, skos:definition, vann:usageNote, etc.)"@en;
+    rdfs:domain :PropertyInheritance;
     rdfs:range rdf:Property.
+
+:propertyValueFrom a rdf:Property, owl:ObjectProperty;
+    rdfs:label "inherited property value from"@en;
+    rdfs:comment "Identifies resource, which has the property specified by inheritedProperty, and value of which will be inherited."@en;
+    rdfs:domain :PropertyInheritance;
+    rdfs:range rdfs:Resource.
+
 :specializes a rdf:Property, owl:ObjectProperty;
     rdfs:label "specializes"@en;
     rdfs:comment "Specifies a profile specialized by this profile."@en;
