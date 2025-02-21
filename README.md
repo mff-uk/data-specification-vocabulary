@@ -15,8 +15,9 @@ The goals of this specification are two-fold:
 1. Provide means to annotate specifications, relationship to other specifications and descriptions of artifacts the specifications consist of to help machine processability and reusability of the specifications
 2. Provide means to properly describe Application profiles (APs), contexts, in which RDF Classes and properties are reused. DSV allows specification editors to identify, which classes and properties are reused in an application profile and how, and specify any terminological or domain/range changes for the AP context.
 
-[GitHub](https://github.com/mff-uk/data-specification-vocabulary)
-Preferred prefix: `dsv`, stands for `https://w3id.org/dsv#`
+Preferred prefix: `dsv`, stands for `https://w3id.org/dsv#`.
+
+For issues and development, see [GitHub](https://github.com/mff-uk/data-specification-vocabulary).
 
 As a proof-of-concept, dogfooding and for state-of-implementation demonstration purposes, below you can find generated representations of DSV and DSV-AP from a current version of Dataspecer, DSV-AP represented using DSV-AP:
 - [DSV Vocabulary Specification from Dataspecer](dsv)
