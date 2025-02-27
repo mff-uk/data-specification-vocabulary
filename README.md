@@ -24,3 +24,5 @@ As a proof-of-concept, dogfooding and for state-of-implementation demonstration 
 - [DSV Vocabulary using RDFS/OWL in RDF Turtle](dsv.ttl)
 - [DSV Default Application Profile from Dataspecer](dsv-dap)
 - [DSV Default Application Profile using DSV in RDF Turtle](dsv-dap.ttl)
+
+For additional sample specifications, e.g. DCAT Default application profile, see [Specifications](https://mff-uk.github.io/specifications/).
