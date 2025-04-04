@@ -1,6 +1,6 @@
+
+
 <!DOCTYPE html>
-  
-  
   <html>
     <head>
       <meta charset="utf-8" />
@@ -8,69 +8,84 @@
       <meta name="color-scheme" content="light dark">
       <script type="application/ld+json">
         {
-  "@id": ".",
-  "@type": [
-    "http://purl.org/dc/terms/Standard",
-    "http://www.w3.org/2002/07/owl#Ontology"
-  ],
-  "http://purl.org/dc/terms/title": [
-    {
-      "@language": "en",
-      "@value": "Data Specification Vocabulary (DSV)"
-    }
-  ],
-  "https://w3id.org/dsv#artefact": [
-    {
-      "@type": [
-        "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
-      ],
-      "http://www.w3.org/ns/dx/prof/hasArtifact": [
-        {
-          "@id": "../dsv.ttl"
-        }
-      ],
-      "http://www.w3.org/ns/dx/prof/hasRole": [
-        {
-          "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
-        }
-      ]
-    },
-    {
-      "@type": [
-        "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
-      ],
-      "http://www.w3.org/ns/dx/prof/hasArtifact": [
-        {
-          "@id": "."
-        }
-      ],
-      "http://www.w3.org/ns/dx/prof/hasRole": [
-        {
-          "@id": "http://www.w3.org/ns/dx/prof/role/specification"
-        }
-      ]
-    }
-  ],
-  "https://w3id.org/dsv#usedVocabularies": [
-    [
-      {
-        "@id": "https://www.w3.org/TR/dx-prof/rdf/prof.ttl"
-      },
-      {
-        "@id": "https://datagov-cz.github.io/cache-slovniku/rdfs.ttl"
-      },
-      {
-        "@id": "https://datagov-cz.github.io/cache-slovniku/rdf.ttl"
-      },
-      {
-        "@id": "https://www.w3.org/2002/07/owl#"
-      },
-      {
-        "@id": "https://datagov-cz.github.io/cache-slovniku/dublin_core_terms.ttl"
+        "@id": "",
+        "@type": [
+          "http://purl.org/dc/terms/Standard",
+          "http://www.w3.org/2002/07/owl#Ontology"
+        ],
+        "http://purl.org/dc/terms/title": [
+          {
+            "@language": "en",
+            "@value": "Data Specification Vocabulary (DSV)"
+          }
+        ],
+        "https://w3id.org/dsv#artefact": [
+          {
+            "@type": [
+              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+            ],
+            "http://www.w3.org/ns/dx/prof/hasArtifact": [
+              {
+                "@id": "./model.owl.ttl"
+              }
+            ],
+            "http://www.w3.org/ns/dx/prof/hasRole": [
+              {
+                "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
+              }
+            ]
+          },
+          {
+            "@type": [
+              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+            ],
+            "http://www.w3.org/ns/dx/prof/hasArtifact": [
+              {
+                "@id": "./dsv.ttl"
+              }
+            ],
+            "http://www.w3.org/ns/dx/prof/hasRole": [
+              {
+                "@id": "http://www.w3.org/ns/dx/prof/role/schema"
+              }
+            ]
+          },
+          {
+            "@type": [
+              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+            ],
+            "http://www.w3.org/ns/dx/prof/hasArtifact": [
+              {
+                "@id": ""
+              }
+            ],
+            "http://www.w3.org/ns/dx/prof/hasRole": [
+              {
+                "@id": "http://www.w3.org/ns/dx/prof/role/specification"
+              }
+            ]
+          }
+        ],
+        "http://purl.org/dc/terms/references": [
+          [
+            {
+              "@id": "https://www.w3.org/TR/dx-prof/rdf/prof.ttl"
+            },
+            {
+              "@id": "https://datagov-cz.github.io/cache-slovniku/rdfs.ttl"
+            },
+            {
+              "@id": "https://datagov-cz.github.io/cache-slovniku/rdf.ttl"
+            },
+            {
+              "@id": "https://www.w3.org/2002/07/owl#"
+            },
+            {
+              "@id": "https://datagov-cz.github.io/cache-slovniku/dublin_core_terms.ttl"
+            }
+          ]
+        ]
       }
-    ]
-  ]
-}
       </script>
       <script
         src="https://www.w3.org/Tools/respec/respec-w3c"
@@ -80,60 +95,61 @@
       <script class="remove">
         // All config options at https://respec.org/docs/
         var respecConfig = {
-                specStatus: "unofficial",
-                shortName: "dsv-vocab",
-                showPreviousVersion: false,
-                thisVersion: "https://mff-uk.github.io/data-specification-vocabulary/dsv/",
-                latestVersion: "https://mff-uk.github.io/data-specification-vocabulary/dsv/",
-                editors: [{
-                  name: "Jakub Klímek",
-                  orcid: "0000-0001-7234-3051",
-                  company: "Charles University"
-                }],
-                inlineCSS: "true",
-                github: "https://github.com/mff-uk/data-specification-vocabulary",
-                otherLinks: [{
-                    key: "Odkazy",
-                    data: [{
-                        value: "DSV Default Application Profile (DSV-DAP)",
-                        href: "https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/"
-                    }]
-                }],
-              };
+          specStatus: "base",
+          editors: [{ name: "Dataspecer", url: "https://dataspecer.com" }],
+          //github: "some-org/mySpec",
+          shortName: "todo",
+          //xref: "web-platform",
+          //group: "my-working-group",
+        };
       </script>
-          <style>
-      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
-      max-width: 100%;
-      margin: auto;
-      height: auto;
-      }
-    </style>
-    </head>
+      
+      <style>
+        .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+          max-width: 100%;
+          margin: auto;
+          height: auto;
+        }
+      
+        table.simple {
+          margin: auto;
+          border-spacing: 0;
+          border-collapse: collapse;
+        }
+      
+        table.simple th {
+          padding: 3px 10px;
+          text-align: left;
+        }
+      
+        table.simple td {
+          border-top: 1px solid #ddd;
+          padding: 3px 10px;
+        }
+      </style>    </head>
     <body>
+      <p class="copyright"></p>
       <section id="abstract">
         <p>
           This file documents
           <strong>Data Specification Vocabulary (DSV)</strong>.</p>
       </section>
-      
-      <!--<section id="sotd">
-      </section>-->
 
       <section>
-        <h1>Overview</h1>
+        <h2>Overview</h2>
 
           <figure>
-            <img src="./c5d2ee2e-32c6-4c12-abb3-b80410162920.svg" alt="alt text 2" />
-            <figcaption>Overview diagram</figcaption>
+            <img src="./c5d2ee2e-32c6-4c12-abb3-b80410162920.svg" alt="Main view" />
+            <figcaption>Main view</figcaption>
           </figure>
+      </section>
 
+      <section>
         <h2>Classes</h2>
-        This section lists the classes matching the base namespace of this vocabulary.
-        
 
-              <section id="conceptual-model">
+            <section id="ConceptualModel">
               <h4>Conceptual model</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -148,10 +164,9 @@
                   <td>Conceptual model containing profiles of classes and properties of various vocabularies.</td>
                 </tr>
               </table>
-            </section>
-              <section id="profile">
+            </section>            <section id="Profile">
               <h4>Profile</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -167,13 +182,12 @@
                 </tr>
                 <tr>
                   <td>Subclasses</td>
-                  <td><a href="#class-profile">Class Profile</a>, <a href="#property-profile">Property Profile</a>, <a href="#invalid-profile">Invalid profile</a></td>
+                  <td><a href="#ClassProfile">Class Profile</a>, <a href="#PropertyProfile">Property Profile</a>, <a href="#InvalidProfile">Invalid profile</a></td>
                 </tr>
               </table>
-            </section>
-              <section id="class-profile">
+            </section>            <section id="ClassProfile">
               <h4>Class Profile</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -189,13 +203,12 @@
                 </tr>
                 <tr>
                   <td>Subclass of</td>
-                  <td><a href="#profile">Profile</a></td>
+                  <td><a href="#Profile">Profile</a></td>
                 </tr>
               </table>
-            </section>
-              <section id="property-profile">
+            </section>            <section id="PropertyProfile">
               <h4>Property Profile</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -211,17 +224,16 @@
                 </tr>
                 <tr>
                   <td>Subclass of</td>
-                  <td><a href="#profile">Profile</a></td>
+                  <td><a href="#Profile">Profile</a></td>
                 </tr>
                 <tr>
                   <td>Subclasses</td>
-                  <td><a href="#datatype-property-profile">Datatype Property Profile</a>, <a href="#object-property-profile">Object Property Profile</a></td>
+                  <td><a href="#DatatypePropertyProfile">Datatype Property Profile</a>, <a href="#ObjectPropertyProfile">Object Property Profile</a></td>
                 </tr>
               </table>
-            </section>
-              <section id="invalid-profile">
+            </section>            <section id="InvalidProfile">
               <h4>Invalid profile</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -237,13 +249,12 @@
                 </tr>
                 <tr>
                   <td>Subclass of</td>
-                  <td><a href="#profile">Profile</a></td>
+                  <td><a href="#Profile">Profile</a></td>
                 </tr>
               </table>
-            </section>
-              <section id="object-property-profile">
+            </section>            <section id="ObjectPropertyProfile">
               <h4>Object Property Profile</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -255,13 +266,12 @@
                 </tr>
                 <tr>
                   <td>Subclass of</td>
-                  <td><a href="#property-profile">Property Profile</a></td>
+                  <td><a href="#PropertyProfile">Property Profile</a></td>
                 </tr>
               </table>
-            </section>
-              <section id="datatype-property-profile">
+            </section>            <section id="DatatypePropertyProfile">
               <h4>Datatype Property Profile</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -277,17 +287,36 @@
                 </tr>
                 <tr>
                   <td>Subclass of</td>
-                  <td><a href="#property-profile">Property Profile</a></td>
+                  <td><a href="#PropertyProfile">Property Profile</a></td>
+                </tr>
+              </table>
+            </section>            <section id="PropertyValueReuse">
+              <h4>Property Value Reuse</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#PropertyValueReuse">https://w3id.org/dsv#PropertyValueReuse</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>Property Value Reuse</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Specifies, which values of which properties of which resources are reused for the current Profile.
+            E.g. reuse of profile name, reuse of class name, reuse of profile definition, reuse of profile usage note, etc.</td>
                 </tr>
               </table>
             </section>
 
+        </section>
 
+        <section>
         <h2>Properties</h2>
-            <section id="conceptual-model">
-
+            <section id="conceptualModel">
               <h4>conceptual model</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -303,18 +332,24 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a></td>
+                  <td>
+                    <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="#conceptual-model">Conceptual model</a></td>
-                </tr>
+                  <td>
+                    <a href="#ConceptualModel">Conceptual model</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
-            </section>
-            <section id="profile-of">
-
+            </section>            <section id="profileOf">
               <h4>profile of</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -330,18 +365,24 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="#profile">Profile</a></td>
+                  <td>
+                    <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="#profile">Profile</a></td>
-                </tr>
+                  <td>
+                    <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
-            </section>
-            <section id="specializes">
-
+            </section>            <section id="specializes">
               <h4>specializes</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -357,18 +398,24 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="#profile">Profile</a></td>
+                  <td>
+                    <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="#profile">Profile</a></td>
-                </tr>
+                  <td>
+                    <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
-            </section>
-            <section id="profiled-class">
-
+            </section>            <section id="class">
               <h4>profiled class</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -384,18 +431,24 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="#class-profile">Class Profile</a></td>
+                  <td>
+                    <a href="#ClassProfile">Class Profile</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a></td>
-                </tr>
+                  <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
-            </section>
-            <section id="datatype">
-
+            </section>            <section id="datatype">
               <h4>datatype</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -407,18 +460,24 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="#datatype-property-profile">Datatype Property Profile</a></td>
+                  <td>
+                    <a href="#DatatypePropertyProfile">Datatype Property Profile</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a></td>
-                </tr>
+                  <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
-            </section>
-            <section id="range">
-
+            </section>            <section id="range">
               <h4>range</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -430,18 +489,24 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="#object-property-profile">Object Property Profile</a></td>
+                  <td>
+                    <a href="#ObjectPropertyProfile">Object Property Profile</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="#class-profile">Class Profile</a></td>
-                </tr>
+                  <td>
+                    <a href="#ClassProfile">Class Profile</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
-            </section>
-            <section id="domain">
-
+            </section>            <section id="domain">
               <h4>domain</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -453,45 +518,24 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="#property-profile">Property Profile</a></td>
+                  <td>
+                    <a href="#PropertyProfile">Property Profile</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="#class-profile">Class Profile</a></td>
-                </tr>
+                  <td>
+                    <a href="#ClassProfile">Class Profile</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
-            </section>
-            <section id="inherits-properties">
-
-              <h4>inherits properties</h4>
-
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#inheritsProperties">https://w3id.org/dsv#inheritsProperties</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>inherits properties</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Specifies, which properties are inherited, i.e. not profiled.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td><a href="#profile">Profile</a></td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a></td>
-                </tr>
-              </table>
-            </section>
-            <section id="cardinality">
-
+            </section>            <section id="cardinality">
               <h4>cardinality</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -503,18 +547,24 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="#property-profile">Property Profile</a></td>
+                  <td>
+                    <a href="#PropertyProfile">Property Profile</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a></td>
-                </tr>
+                  <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
-            </section>
-            <section id="artefact">
-
+            </section>            <section id="artefact">
               <h4>artefact</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -530,18 +580,24 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="http://purl.org/dc/terms/Standard">Standard</a></td>
+                  <td>
+                    <a href="http://purl.org/dc/terms/Standard">Standard</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a></td>
-                </tr>
+                  <td>
+                    <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
-            </section>
-            <section id="profiled-property">
-
+            </section>            <section id="property">
               <h4>profiled property</h4>
-
+            
               <table class="def">
                 <tr>
                   <td>IRI</td>
@@ -557,25 +613,149 @@
                 </tr>
                 <tr>
                   <td>Domain</td>
-                  <td><a href="#property-profile">Property Profile</a></td>
+                  <td>
+                    <a href="#PropertyProfile">Property Profile</a>
+            
+                    
+                  </td>
                 </tr>
                 <tr>
                   <td>Range</td>
-                  <td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a></td>
+                  <td>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="reusesPropertyValue">
+              <h4>reuses property value</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#reusesPropertyValue">https://w3id.org/dsv#reusesPropertyValue</a></td>
                 </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>reuses property value</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Points to definitions of Property value reuse for this Profile.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="#PropertyValueReuse">Property Value Reuse</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="reusedProperty">
+              <h4>reused property</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#reusedProperty">https://w3id.org/dsv#reusedProperty</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>reused property</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#PropertyValueReuse">Property Value Reuse</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="reusedFromResource">
+              <h4>reused from resource</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#reusedFromResource">https://w3id.org/dsv#reusedFromResource</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>reused from resource</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>The Resource on which there is a property with a value for reuse.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#PropertyValueReuse">Property Value Reuse</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
+            
+                    
+                  </td>
+                  </tr>
               </table>
             </section>
+        </section>
 
-      </section>
 
       <section>
-        <h1>Attachments</h1>
-        <table class="def">
-            <tr>
-              <td>Vocabulary</td>
-              <td><a href="../dsv.ttl">../dsv.ttl</a></td>
-            </tr>
+        <h2>Used prefixes</h2>
+        <table id="table-namespaces" class="simple">
+          <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+          <tbody>
+          </tbody>
         </table>
       </section>
-    </body>
+      <section>
+        <h2>Attachments</h2>
+      
+          <p>This specification includes the following attachments.</p>
+        <table class="def">
+          <thead>
+            <tr>
+              <th>Attachment</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>Vocabulary</td>
+                <td><a href="./model.owl.ttl">./model.owl.ttl</a></td>
+              </tr>
+              <tr>
+                <td>Application profile</td>
+                <td><a href="./dsv.ttl">./dsv.ttl</a></td>
+              </tr>
+          </tbody>
+        </table>
+      </section>    </body>
   </html>
