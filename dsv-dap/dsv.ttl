@@ -1,0 +1,241 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dsv: <https://w3id.org/dsv#> .
+@prefix dsv-dap: <https://w3id.org/dsv-dap#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+dsv-dap:applicationProfileConceptualModel a dsv:ConceptualModel.
+
+dsv-dap:ConceptualModel dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class dsv:ConceptualModel.
+
+dsv-dap:Profile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class dsv:Profile.
+
+dsv-dap:dct-isPartOf dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    skos:prefLabel "part of"@en;
+    dsv:inheritsProperties vann:usageNote, dsv:cardinality;
+    dsv:property dct:isPartOf;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:ConceptualModel.
+
+dsv-dap:profileOf dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
+    dsv:property dsv:profileOf;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:Profile.
+
+dsv-dap:specializes dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
+    dsv:property dsv:specializes;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:Profile.
+
+dsv-dap:inheritsProperties dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
+    dsv:property dsv:inheritsProperties;
+    a dsv:DatatypePropertyProfile.
+
+dsv-dap:ClassProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class dsv:ClassProfile.
+
+dsv-dap:class dsv:domain dsv-dap:ClassProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
+    dsv:property dsv:class;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:rdfs-Class.
+
+dsv-dap:ObjectPropertyProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class dsv:ObjectPropertyProfile.
+
+dsv-dap:range dsv:domain dsv-dap:ObjectPropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:0n;
+    dsv:property dsv:range;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:ClassProfile.
+
+dsv-dap:DatatypePropertyProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class dsv:DatatypePropertyProfile.
+
+dsv-dap:datatype dsv:domain dsv-dap:DatatypePropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
+    dsv:property dsv:datatype;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:rdfs-Datatype.
+
+dsv-dap:InvalidProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class dsv:InvalidProfile.
+
+dsv-dap:PropertyProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class dsv:PropertyProfile.
+
+dsv-dap:property dsv:domain dsv-dap:PropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
+    dsv:property dsv:fj643gxf4ulyifmxui;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:rdf-Property.
+
+dsv-dap:domain dsv:domain dsv-dap:PropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
+    dsv:property dsv:domain;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:ClassProfile.
+
+dsv-dap:cardinality dsv:domain dsv-dap:PropertyProfile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
+    dsv:property dsv:cardinality;
+    a dsv:DatatypePropertyProfile.
+
+dsv-dap:owl-Ontology dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    skos:prefLabel "Vocabulary"@en;
+    a dsv:ClassProfile;
+    dsv:class owl:Ontology.
+
+dsv-dap:Profile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    skos:prefLabel "Application Profile"@en;
+    a dsv:ClassProfile;
+    dsv:class prof:Profile.
+
+dsv-dap:isProfileOf dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:1n;
+    dsv:property prof:isProfileOf;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:dct-Standard.
+
+dsv-dap:conceptualModel dsv:domain dsv-dap:Profile;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
+    dsv:property dsv:x9gmz3k6zgglyifjyta;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:ConceptualModel.
+
+dsv-dap:dct-Standard dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    skos:prefLabel "Data specification"@en;
+    a dsv:ClassProfile;
+    dsv:class dct:Standard.
+
+dsv-dap:artefact dsv:domain dsv-dap:dct-Standard;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
+    dsv:property dsv:artefact;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:ResourceDescriptor.
+
+dsv-dap:dct-references dsv:domain dsv-dap:dct-Standard;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    skos:prefLabel "reused specification"@en;
+    dsv:inheritsProperties vann:usageNote, dsv:cardinality;
+    dsv:property dct:references;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:dct-Standard.
+
+dsv-dap:prev dsv:domain dsv-dap:dct-Standard;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    skos:prefLabel "previous version"@en;
+    dsv:inheritsProperties vann:usageNote;
+    dsv:cardinality dsv:01;
+    dsv:property adms:prev;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:dct-Standard.
+
+dsv-dap:ResourceDescriptor dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class prof:ResourceDescriptor.
+
+dsv-dap:rdf-Property dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class rdf:Property.
+
+dsv-dap:rdfs-isDefinedBy-property dsv:domain dsv-dap:rdf-Property;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
+    dsv:property rdfs:isDefinedBy;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:owl-Ontology.
+
+dsv-dap:rdfs-Class dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class rdfs:Class.
+
+dsv-dap:rdfs-isDefinedBy-Class dsv:domain dsv-dap:rdfs-Class;
+    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
+    dsv:cardinality dsv:11;
+    dsv:property rdfs:isDefinedBy;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange dsv-dap:owl-Ontology.
+
+dsv-dap:rdfs-Datatype dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+    a dsv:Profile;
+    dsv:inheritsProperties skos:prefLabel;
+    a dsv:ClassProfile;
+    dsv:class rdfs:Datatype.
