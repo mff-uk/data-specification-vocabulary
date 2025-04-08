@@ -1,0 +1,23 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dsv-rl: <https://w3id.org/dsv/requirement-level#> .
+
+dsv-rl:ConceptScheme a skos:ConceptScheme;
+  skos:prefLabel "Property requirement levels"@en .
+
+dsv-rl:mandatory
+  a skos:Concept;
+  skos:inScheme dsv-rl:ConceptScheme;
+  skos:prefLabel "Mandatory"@en;
+  skos:notation "mandatory" .
+
+dsv-rl:optional
+  a skos:Concept;
+  skos:inScheme dsv-rl:ConceptScheme;
+  skos:prefLabel "Optional"@en;
+  skos:notation "optional" .
+
+dsv-rl:recommended
+  a skos:Concept;
+  skos:inScheme dsv-rl:ConceptScheme;
+  skos:prefLabel "Recommended"@en;
+  skos:notation "recommended" .

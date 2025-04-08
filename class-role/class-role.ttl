@@ -1,0 +1,17 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dsv-cr: <https://w3id.org/dsv/class-role#> .
+
+dsv-cr:ConceptScheme a skos:ConceptScheme;
+  skos:prefLabel "Class roles"@en .
+
+dsv-cr:main
+  a skos:Concept;
+  skos:inScheme dsv-cr:ConceptScheme;
+  skos:prefLabel "Main"@en;
+  skos:notation "main" .
+
+dsv-cr:supportive
+  a skos:Concept;
+  skos:inScheme dsv-cr:ConceptScheme;
+  skos:prefLabel "Supportive"@en;
+  skos:notation "supportive" .
