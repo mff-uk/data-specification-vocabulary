@@ -24,9 +24,9 @@ For issues and development, see [GitHub](https://github.com/mff-uk/data-specific
 
 As a proof-of-concept, dogfooding and for state-of-implementation demonstration purposes, below you can find generated representations of DSV and DSV-AP from a current version of Dataspecer, DSV-AP represented using DSV-AP:
 - [DSV Vocabulary Specification from Dataspecer](dsv)
-- [DSV Vocabulary using RDFS/OWL in RDF Turtle](dsv.ttl)
+- [DSV Vocabulary using RDFS/OWL in RDF Turtle](dsv/model.owl.ttl)
 - [DSV Default Application Profile from Dataspecer](dsv-dap)
-- [DSV Default Application Profile using DSV in RDF Turtle](dsv-dap.ttl)
+- [DSV Default Application Profile using DSV in RDF Turtle](dsv-dap/dsv.ttl)
 
 For additional sample specifications, e.g. DCAT Default application profile, see [Specifications](https://mff-uk.github.io/specifications/).
 
