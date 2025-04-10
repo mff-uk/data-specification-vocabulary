@@ -50,6 +50,12 @@
     rdfs:comment "Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:subClassOf :Profile.
+:classRole a rdf:Property, owl:ObjectProperty;
+    rdfs:label "class role"@en;
+    rdfs:comment "Class role, e.g. Mandatory, Supportive, etc."@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv#>;
+    rdfs:domain :ClassProfile;
+    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept>.
 :class a rdf:Property, owl:ObjectProperty;
     rdfs:label "profiled class"@en;
     rdfs:comment "The profiled class."@en;
@@ -101,7 +107,13 @@
     rdfs:label "kardinalita"@cs, "cardinality"@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain :PropertyProfile;
-    rdfs:range rdfs:Resource.
+    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept>.
+:requirementLevel a rdf:Property, owl:ObjectProperty;
+    rdfs:label "requirement level"@en;
+    rdfs:comment "Requirement level of the property, typically mandatory, recommended or optional."@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv#>;
+    rdfs:domain :PropertyProfile;
+    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept>.
 :conceptualModel a rdf:Property, owl:ObjectProperty;
     rdfs:label "conceptual model"@en;
     rdfs:comment "Specifies the conceptual model contained in the application profile."@en;
