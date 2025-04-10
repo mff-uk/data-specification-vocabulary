@@ -3,12 +3,15 @@
 This vocabulary defines vocabulary (classes and properties) and a default application profile for machine processable representation of Data Specifications and Application Profiles.
 DSV and DSV-DAP is currently being implemented in the [Dataspecer](https://dataspecer.com) tool for management of data specifications, management of application profiles and semi-automatic generation of technical artifacts such as data schemas and transformations based on semantic vocabularies.
 
-Since the visual editor is currently under development and the resulting images are not yet properly presentable (see the current state of implementation in the specification below), here we have a manually created graphical UML Class Diagrams-like representation:
 <figure>
-  <img
+  <!--<img
   src="dsv.svg"
   alt="Manually created overview of the Data Specification Vocabulary Default Application Profile (DSV-DAP)">
-  <figcaption><a href="https://drive.google.com/file/d/1o2xKy98YfNde0OUb-NMBMlrMkLUD2EuA/view?usp=sharing" title="DSV-DAP diagram in draw.io">Manually created</a> overview of the Data Specification Vocabulary Default Application Profile (DSV-DAP)</figcaption>
+  <figcaption><a href="https://drive.google.com/file/d/1o2xKy98YfNde0OUb-NMBMlrMkLUD2EuA/view?usp=sharing" title="DSV-DAP diagram in draw.io">Manually created</a> overview of the Data Specification Vocabulary Default Application Profile (DSV-DAP)</figcaption>-->
+  <img
+  src="dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg"
+  alt="Overview of the Data Specification Vocabulary Default Application Profile (DSV-DAP)">
+  <figcaption>Overview of the Data Specification Vocabulary Default Application Profile (DSV-DAP)</figcaption>
 </figure>
 
 The goals of this specification are two-fold:
