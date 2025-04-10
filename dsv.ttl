@@ -62,6 +62,7 @@
     rdfs:subClassOf :PropertyProfile.
 :range a rdf:Property, owl:ObjectProperty;
     rdfs:label "range"@en;
+    rdfs:comment "Class profile, which is the range of the object property profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain :ObjectPropertyProfile;
     rdfs:range :ClassProfile.
@@ -92,6 +93,7 @@
     rdfs:range rdf:Property.
 :domain a rdf:Property, owl:ObjectProperty;
     rdfs:label "domain"@en;
+    rdfs:comment "Class profile, which is the domain of the property profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain :PropertyProfile;
     rdfs:range :ClassProfile.

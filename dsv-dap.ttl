@@ -1,241 +1,536 @@
-@prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix dsv: <https://w3id.org/dsv#> .
-@prefix dsv-dap: <https://w3id.org/dsv-dap#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prof: <http://www.w3.org/ns/dx/prof/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dsv: <https://w3id.org/dsv#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 
-dsv-dap:applicationProfileConceptualModel a dsv:ConceptualModel.
 
-dsv-dap:ConceptualModel dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#applicationProfileConceptualModel> a dsv:ConceptualModel.
+
+<https://w3id.org/dsv-dap#ApplicationProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
+    skos:prefLabel "Application Profile"@en;
+    skos:definition "An Application profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties."@en;
+    dsv:specializes <https://w3id.org/dsv-dap#DataSpecification>;
     a dsv:ClassProfile;
-    dsv:class dsv:ConceptualModel.
+    dsv:class <http://www.w3.org/ns/dx/prof/Profile>.
 
-dsv-dap:Profile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf> dsv:domain <https://w3id.org/dsv-dap#ApplicationProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
-    a dsv:ClassProfile;
-    dsv:class dsv:Profile.
-
-dsv-dap:dct-isPartOf dsv:domain dsv-dap:Profile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    skos:prefLabel "part of"@en;
-    dsv:inheritsProperties vann:usageNote, dsv:cardinality;
-    dsv:property dct:isPartOf;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/isProfileOf>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/isProfileOf>
+];
+    dsv:cardinality <https://w3id.org/dsv#1n>;
+    dsv:property <http://www.w3.org/ns/dx/prof/isProfileOf>;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:ConceptualModel.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#DataSpecification>.
 
-dsv-dap:profileOf dsv:domain dsv-dap:Profile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#ApplicationProfile.conceptualModel> dsv:domain <https://w3id.org/dsv-dap#ApplicationProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
-    dsv:property dsv:profileOf;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:conceptualModel
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:conceptualModel
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dsv:conceptualModel;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:Profile.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ConceptualModel>.
 
-dsv-dap:specializes dsv:domain dsv-dap:Profile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
-    dsv:property dsv:specializes;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:Profile.
-
-dsv-dap:inheritsProperties dsv:domain dsv-dap:Profile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
-    dsv:property dsv:inheritsProperties;
-    a dsv:DatatypePropertyProfile.
-
-dsv-dap:ClassProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
-    a dsv:ClassProfile;
-    dsv:class dsv:ClassProfile.
-
-dsv-dap:class dsv:domain dsv-dap:ClassProfile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
-    dsv:cardinality dsv:11;
-    dsv:property dsv:class;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:rdfs-Class.
-
-dsv-dap:ObjectPropertyProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
-    a dsv:ClassProfile;
-    dsv:class dsv:ObjectPropertyProfile.
-
-dsv-dap:range dsv:domain dsv-dap:ObjectPropertyProfile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
-    dsv:cardinality dsv:0n;
-    dsv:property dsv:range;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:ClassProfile.
-
-dsv-dap:DatatypePropertyProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
-    a dsv:ClassProfile;
-    dsv:class dsv:DatatypePropertyProfile.
-
-dsv-dap:datatype dsv:domain dsv-dap:DatatypePropertyProfile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
-    dsv:property dsv:datatype;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:rdfs-Datatype.
-
-dsv-dap:InvalidProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
-    a dsv:ClassProfile;
-    dsv:class dsv:InvalidProfile.
-
-dsv-dap:PropertyProfile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
-    a dsv:ClassProfile;
-    dsv:class dsv:PropertyProfile.
-
-dsv-dap:property dsv:domain dsv-dap:PropertyProfile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
-    dsv:cardinality dsv:11;
-    dsv:property dsv:fj643gxf4ulyifmxui;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:rdf-Property.
-
-dsv-dap:domain dsv:domain dsv-dap:PropertyProfile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
-    dsv:property dsv:domain;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:ClassProfile.
-
-dsv-dap:cardinality dsv:domain dsv-dap:PropertyProfile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
-    dsv:property dsv:cardinality;
-    a dsv:DatatypePropertyProfile.
-
-dsv-dap:owl-Ontology dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#Vocabulary> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     skos:prefLabel "Vocabulary"@en;
+    skos:definition "A Vocabulary consists of definitions of classes and properties, typically with their future re-use in application profiles in mind."@en;
+    dsv:specializes <https://w3id.org/dsv-dap#DataSpecification>;
     a dsv:ClassProfile;
     dsv:class owl:Ontology.
 
-dsv-dap:Profile dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    skos:prefLabel "Application Profile"@en;
-    a dsv:ClassProfile;
-    dsv:class prof:Profile.
-
-dsv-dap:isProfileOf dsv:domain dsv-dap:Profile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
-    dsv:cardinality dsv:1n;
-    dsv:property prof:isProfileOf;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:dct-Standard.
-
-dsv-dap:conceptualModel dsv:domain dsv-dap:Profile;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
-    dsv:cardinality dsv:11;
-    dsv:property dsv:x9gmz3k6zgglyifjyta;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:ConceptualModel.
-
-dsv-dap:dct-Standard dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#DataSpecification> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     skos:prefLabel "Data specification"@en;
+    skos:definition "A Data Specification. Can be a Vocabulary, and/or an Application Profile."@en;
     a dsv:ClassProfile;
-    dsv:class dct:Standard.
+    dsv:class dct:Standard, <http://www.w3.org/ns/adms#Asset>.
 
-dsv-dap:artefact dsv:domain dsv-dap:dct-Standard;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#DataSpecification.artefact> dsv:domain <https://w3id.org/dsv-dap#DataSpecification>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote, dsv:cardinality;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:artefact
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:artefact
+];
+    dsv:cardinality <https://w3id.org/dsv#0n>;
     dsv:property dsv:artefact;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:ResourceDescriptor.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ResourceDescriptor>.
 
-dsv-dap:dct-references dsv:domain dsv-dap:dct-Standard;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#DataSpecification.reusesSpecification> dsv:domain <https://w3id.org/dsv-dap#DataSpecification>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    skos:prefLabel "reused specification"@en;
-    dsv:inheritsProperties vann:usageNote, dsv:cardinality;
+    skos:prefLabel "reuses specification"@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dct:references
+];
+    dsv:cardinality <https://w3id.org/dsv#0n>;
     dsv:property dct:references;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:dct-Standard.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#DataSpecification>.
 
-dsv-dap:prev dsv:domain dsv-dap:dct-Standard;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#ResourceDescriptor> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    skos:prefLabel "previous version"@en;
-    dsv:inheritsProperties vann:usageNote;
-    dsv:cardinality dsv:01;
-    dsv:property adms:prev;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:dct-Standard.
-
-dsv-dap:ResourceDescriptor dct:isPartOf dsv-dap:applicationProfileConceptualModel;
-    a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/ResourceDescriptor>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/ResourceDescriptor>
+];
     a dsv:ClassProfile;
-    dsv:class prof:ResourceDescriptor.
+    dsv:class <http://www.w3.org/ns/dx/prof/ResourceDescriptor>, <http://www.w3.org/ns/adms#AssetDistribution>.
 
-dsv-dap:rdf-Property dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#ConceptualModel> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:ConceptualModel
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:ConceptualModel
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:ConceptualModel.
+
+<https://w3id.org/dsv-dap#Profile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:specializes <https://w3id.org/dsv-dap#Resource>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:Profile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:Profile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:Profile.
+
+<https://w3id.org/dsv-dap#Profile.reusesPropertyValue> dsv:domain <https://w3id.org/dsv-dap#Profile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:reusesPropertyValue
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:reusesPropertyValue
+];
+    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:property dsv:reusesPropertyValue;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#PropertyValueReuse>.
+
+<https://w3id.org/dsv-dap#Profile.isPartOf> dsv:domain <https://w3id.org/dsv-dap#Profile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dct:isPartOf
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dct:isPartOf
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dct:isPartOf;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ConceptualModel>.
+
+<https://w3id.org/dsv-dap#Profile.specializes> dsv:domain <https://w3id.org/dsv-dap#Profile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:specializes
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:specializes
+];
+    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:property dsv:specializes;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Profile>.
+
+<https://w3id.org/dsv-dap#Profile.profileOf> dsv:domain <https://w3id.org/dsv-dap#Profile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:profileOf
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:profileOf
+];
+    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:property dsv:profileOf;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Profile>.
+
+<https://w3id.org/dsv-dap#ClassProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:specializes <https://w3id.org/dsv-dap#Profile>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:ClassProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:ClassProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:ClassProfile.
+
+<https://w3id.org/dsv-dap#ClassProfile.profiledClass> dsv:domain <https://w3id.org/dsv-dap#ClassProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:class
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:class
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dsv:class;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Class>.
+
+<https://w3id.org/dsv-dap#PropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:specializes <https://w3id.org/dsv-dap#Profile>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:PropertyProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:PropertyProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:PropertyProfile.
+
+<https://w3id.org/dsv-dap#PropertyProfile.profiledProperty> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:property
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:property
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dsv:property;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Property>.
+
+<https://w3id.org/dsv-dap#PropertyProfile.domain> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:domain
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:domain
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dsv:domain;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassProfile>.
+
+<https://w3id.org/dsv-dap#PropertyProfile.cardinality> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:cardinality
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:cardinality
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dsv:cardinality;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
+
+<https://w3id.org/dsv-dap#ObjectPropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:specializes <https://w3id.org/dsv-dap#PropertyProfile>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:ObjectPropertyProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:ObjectPropertyProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:ObjectPropertyProfile.
+
+<https://w3id.org/dsv-dap#ObjectPropertyProfile.range> dsv:domain <https://w3id.org/dsv-dap#ObjectPropertyProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:range
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:range
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dsv:range;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassProfile>.
+
+<https://w3id.org/dsv-dap#DatatypePropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:specializes <https://w3id.org/dsv-dap#PropertyProfile>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:DatatypePropertyProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:DatatypePropertyProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:DatatypePropertyProfile.
+
+<https://w3id.org/dsv-dap#DatatypePropertyProfile.datatype> dsv:domain <https://w3id.org/dsv-dap#DatatypePropertyProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:definition "Datatype used with this Datatype property profile."@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:datatype
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dsv:datatype;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Datatype>.
+
+<https://w3id.org/dsv-dap#PropertyValueReuse> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:PropertyValueReuse
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:PropertyValueReuse
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:PropertyValueReuse.
+
+<https://w3id.org/dsv-dap#PropertyValueReuse.reusedFromResource> dsv:domain <https://w3id.org/dsv-dap#PropertyValueReuse>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:reusedFromResource
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:reusedFromResource
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dsv:reusedFromResource;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Resource>.
+
+<https://w3id.org/dsv-dap#PropertyValueReuse.reusedProperty> dsv:domain <https://w3id.org/dsv-dap#PropertyValueReuse>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:reusedProperty
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:reusedProperty
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:property dsv:reusedProperty;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Property>.
+
+<https://w3id.org/dsv-dap#Resource> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource rdfs:Resource
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource rdfs:Resource
+];
+    a dsv:ClassProfile;
+    dsv:class rdfs:Resource.
+
+<https://w3id.org/dsv-dap#Property> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:specializes <https://w3id.org/dsv-dap#Resource>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource rdf:Property
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource rdf:Property
+];
     a dsv:ClassProfile;
     dsv:class rdf:Property.
 
-dsv-dap:rdfs-isDefinedBy-property dsv:domain dsv-dap:rdf-Property;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#Property.isdefinedby> dsv:domain <https://w3id.org/dsv-dap#Property>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
-    dsv:cardinality dsv:11;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource rdfs:isDefinedBy
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource rdfs:isDefinedBy
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
     dsv:property rdfs:isDefinedBy;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:owl-Ontology.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Vocabulary>.
 
-dsv-dap:rdfs-Class dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#Class> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
+    dsv:specializes <https://w3id.org/dsv-dap#Resource>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource rdfs:Class
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource rdfs:Class
+];
     a dsv:ClassProfile;
     dsv:class rdfs:Class.
 
-dsv-dap:rdfs-isDefinedBy-Class dsv:domain dsv-dap:rdfs-Class;
-    dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#Class.isdefinedby> dsv:domain <https://w3id.org/dsv-dap#Class>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel, vann:usageNote;
-    dsv:cardinality dsv:11;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource rdfs:isDefinedBy
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource rdfs:isDefinedBy
+];
+    dsv:cardinality <https://w3id.org/dsv#11>;
     dsv:property rdfs:isDefinedBy;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange dsv-dap:owl-Ontology.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Vocabulary>.
 
-dsv-dap:rdfs-Datatype dct:isPartOf dsv-dap:applicationProfileConceptualModel;
+<https://w3id.org/dsv-dap#InvalidProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:inheritsProperties skos:prefLabel;
+    dsv:specializes <https://w3id.org/dsv-dap#Profile>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:InvalidProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:InvalidProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:InvalidProfile.
+
+<https://w3id.org/dsv-dap#Datatype> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource rdfs:Datatype
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource rdfs:Datatype
+];
     a dsv:ClassProfile;
     dsv:class rdfs:Datatype.
+
+<https://w3id.org/dsv-dap#Concept> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource skos:Concept
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource skos:Concept
+];
+    a dsv:ClassProfile;
+    dsv:class skos:Concept.
