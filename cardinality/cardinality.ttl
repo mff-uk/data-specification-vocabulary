@@ -1,0 +1,29 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dsv-card: <https://w3id.org/dsv/cardinality#> .
+
+dsv-card:ConceptScheme a skos:ConceptScheme;
+  skos:prefLabel "Cardinalities"@en .
+
+dsv-card:1n
+  a skos:Concept;
+  skos:inScheme dsv-card:ConceptScheme;
+  skos:prefLabel "One to Many"@en;
+  skos:notation "1n" .
+
+dsv-card:11
+  a skos:Concept;
+  skos:inScheme dsv-card:ConceptScheme;
+  skos:prefLabel "One to One"@en;
+  skos:notation "11" .
+
+dsv-card:0n
+  a skos:Concept;
+  skos:inScheme dsv-card:ConceptScheme;
+  skos:prefLabel "Zero to Many"@en;
+  skos:notation "0n" .
+
+dsv-card:01
+  a skos:Concept;
+  skos:inScheme dsv-card:ConceptScheme;
+  skos:prefLabel "Zero to One"@en;
+  skos:notation "01" .
