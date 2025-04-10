@@ -29,3 +29,8 @@ As a proof-of-concept, dogfooding and for state-of-implementation demonstration 
 - [DSV Default Application Profile using DSV in RDF Turtle](dsv-dap.ttl)
 
 For additional sample specifications, e.g. DCAT Default application profile, see [Specifications](https://mff-uk.github.io/specifications/).
+
+Included with DSV are also codelists:
+- [Cardinalities](cardinality/cardinality.ttl)
+- [Requirement levels](requirement-level/requirement-level.ttl)
+- [Class roles](class-roles/class-roles.ttl)
