@@ -239,6 +239,23 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Class>.
 
+<https://w3id.org/dsv-dap#ClassProfile.classRole> dsv:domain <https://w3id.org/dsv-dap#ClassProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:classRole
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:classRole
+];
+    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:property dsv:classRole;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
+
 <https://w3id.org/dsv-dap#PropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:specializes <https://w3id.org/dsv-dap#Profile>;
@@ -300,8 +317,25 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:cardinality
 ];
-    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:cardinality <https://w3id.org/dsv#01>;
     dsv:property dsv:cardinality;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
+
+<https://w3id.org/dsv-dap#PropertyProfile.requirementLevel> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:requirementLevel
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dsv:requirementLevel
+];
+    dsv:cardinality <https://w3id.org/dsv#01>;
+    dsv:property dsv:requirementLevel;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
 
