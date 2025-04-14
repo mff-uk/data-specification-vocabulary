@@ -66,7 +66,76 @@
             ]
           }
         ],
+        "http://www.w3.org/ns/dx/prof/hasResource": [
+          {
+            "@type": [
+              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+            ],
+            "http://www.w3.org/ns/dx/prof/hasArtifact": [
+              {
+                "@id": "./model.owl.ttl"
+              }
+            ],
+            "http://www.w3.org/ns/dx/prof/hasRole": [
+              {
+                "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
+              }
+            ]
+          },
+          {
+            "@type": [
+              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+            ],
+            "http://www.w3.org/ns/dx/prof/hasArtifact": [
+              {
+                "@id": "./dsv.ttl"
+              }
+            ],
+            "http://www.w3.org/ns/dx/prof/hasRole": [
+              {
+                "@id": "http://www.w3.org/ns/dx/prof/role/schema"
+              }
+            ]
+          },
+          {
+            "@type": [
+              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+            ],
+            "http://www.w3.org/ns/dx/prof/hasArtifact": [
+              {
+                "@id": ""
+              }
+            ],
+            "http://www.w3.org/ns/dx/prof/hasRole": [
+              {
+                "@id": "http://www.w3.org/ns/dx/prof/role/specification"
+              }
+            ]
+          }
+        ],
         "http://purl.org/dc/terms/references": [
+          [
+            {
+              "@id": "https://www.w3.org/TR/dx-prof/rdf/prof.ttl"
+            },
+            {
+              "@id": "https://datagov-cz.github.io/cache-slovniku/rdfs.ttl"
+            },
+            {
+              "@id": "https://datagov-cz.github.io/cache-slovniku/rdf.ttl"
+            },
+            {
+              "@id": "https://www.w3.org/2002/07/owl#"
+            },
+            {
+              "@id": "https://datagov-cz.github.io/cache-slovniku/dublin_core_terms.ttl"
+            },
+            {
+              "@id": "https://datagov-cz.github.io/cache-slovniku/skos.rdf"
+            }
+          ]
+        ],
+        "http://www.w3.org/ns/dx/prof/isProfileOf": [
           [
             {
               "@id": "https://www.w3.org/TR/dx-prof/rdf/prof.ttl"
@@ -587,39 +656,6 @@
                   <td>Range</td>
                   <td>
                     <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="artefact">
-              <h4>artefact</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#artefact">https://w3id.org/dsv#artefact</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>artefact</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Artefact of the specification</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="http://purl.org/dc/terms/Standard">Standard</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a>
             
                     
                   </td>

@@ -120,9 +120,3 @@
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain <http://www.w3.org/ns/dx/prof/Profile>;
     rdfs:range :ConceptualModel.
-:artefact a rdf:Property, owl:ObjectProperty;
-    rdfs:label "artefact"@en;
-    rdfs:comment "Artefact of the specification"@en;
-    rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain <http://purl.org/dc/terms/Standard>;
-    rdfs:range <http://www.w3.org/ns/dx/prof/ResourceDescriptor>.
