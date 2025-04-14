@@ -120,3 +120,9 @@
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain <http://www.w3.org/ns/dx/prof/Profile>;
     rdfs:range :ConceptualModel.
+:externalDocumentation a rdf:Property, owl:ObjectProperty;
+    rdfs:label "external documentation"@en;
+    rdfs:comment "Link to an external documentation of this resource. Profiles of this resource should preferably link to this URL for documentation."@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv#>;
+    rdfs:domain rdfs:Resource;
+    rdfs:range rdfs:Resource.
