@@ -66,7 +66,67 @@
             ]
           }
         ],
+        "http://www.w3.org/ns/dx/prof/hasResource": [
+          {
+            "@type": [
+              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+            ],
+            "http://www.w3.org/ns/dx/prof/hasArtifact": [
+              {
+                "@id": "./model.owl.ttl"
+              }
+            ],
+            "http://www.w3.org/ns/dx/prof/hasRole": [
+              {
+                "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
+              }
+            ]
+          },
+          {
+            "@type": [
+              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+            ],
+            "http://www.w3.org/ns/dx/prof/hasArtifact": [
+              {
+                "@id": "./dsv.ttl"
+              }
+            ],
+            "http://www.w3.org/ns/dx/prof/hasRole": [
+              {
+                "@id": "http://www.w3.org/ns/dx/prof/role/schema"
+              }
+            ]
+          },
+          {
+            "@type": [
+              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+            ],
+            "http://www.w3.org/ns/dx/prof/hasArtifact": [
+              {
+                "@id": ""
+              }
+            ],
+            "http://www.w3.org/ns/dx/prof/hasRole": [
+              {
+                "@id": "http://www.w3.org/ns/dx/prof/role/specification"
+              }
+            ]
+          }
+        ],
         "http://purl.org/dc/terms/references": [
+          [
+            {
+              "@id": "https://www.w3.org/ns/legacy_adms"
+            },
+            {
+              "@id": "https://datagov-cz.github.io/cache-slovniku/skos.rdf"
+            },
+            {
+              "@id": "https://mff-uk.github.io/data-specification-vocabulary/dsv/"
+            }
+          ]
+        ],
+        "http://www.w3.org/ns/dx/prof/isProfileOf": [
           [
             {
               "@id": "https://www.w3.org/ns/legacy_adms"
@@ -385,60 +445,7 @@
                     <li><a href="#DataSpecification.reusesSpecification"></a></li>
                 </ul>
             
-                <section id="DataSpecification.artefact">
-                  <h4>artefact</h4>
-                
-                  <table class="def">
-                    <tr>
-                      <td>IRI</td>
-                      <td><a href="https://w3id.org/dsv-dap#DataSpecification.artefact">https://w3id.org/dsv-dap#DataSpecification.artefact</a></td>
-                    </tr>
-                    <tr>
-                      <td>Label</td>
-                      <td>artefact</td>
-                    </tr>
-                    <tr>
-                      <td>Definition</td>
-                      <td>Artefact of the specification</td>
-                    </tr>
-                    <tr>
-                      <td>Domain</td>
-                      <td>
-                        <a href="#DataSpecification">Data specification</a>
-                
-                            [1..1]
-                
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Range</td>
-                      <td>
-                        <a href="#ResourceDescriptor">Resource Descriptor</a>
-                
-                            [0..*]
-                
-                    </td>
-                    </tr>
-                
-                
-                
-                      <tr>
-                        <td>Profiles</td>
-                        <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                                <li>
-                                        property
-                      
-                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#artefact">artefact</a> (<a href="https://w3id.org/dsv#artefact">https://w3id.org/dsv#artefact</a>)
-                        <br />Definition: <i>Artefact of the specification</i>
-                
-                                </li>
-                          </ul>
-                        </td>
-                      </tr>
-                
-                  </table>
-                </section>    <section id="DataSpecification.reusesSpecification">
+                <section id="DataSpecification.reusesSpecification">
                   <h4>reuses specification</h4>
                 
                   <table class="def">
@@ -490,6 +497,55 @@
                       </tr>
                 
                   </table>
+                </section>    <section id="DataSpecification.hasResource">
+                  <h4>has resource</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#DataSpecification.hasResource">https://w3id.org/dsv-dap#DataSpecification.hasResource</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>has resource</td>
+                    </tr>
+                    <tr>
+                      <td>Domain</td>
+                      <td>
+                        <a href="#DataSpecification">Data specification</a>
+                
+                            [1..1]
+                
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Range</td>
+                      <td>
+                        <a href="#ResourceDescriptor">Resource Descriptor</a>
+                
+                            [0..*]
+                
+                    </td>
+                    </tr>
+                
+                
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        property
+                      
+                      <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">http://www.w3.org/ns/dx/prof/hasResource</a>)
+                        <br />Definition: <i></i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                  </table>
                 </section>
             </section>            <section id="ResourceDescriptor">
               <h4>Resource Descriptor</h4>
@@ -530,7 +586,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#DataSpecification.artefact"></a></li>
+                    <li><a href="#DataSpecification.hasResource"></a></li>
                 </ul>
             
             
