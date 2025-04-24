@@ -4,6 +4,10 @@
 @prefix dsv: <https://w3id.org/dsv#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix cardinality: <https://w3id.org/dsv/cardinality#>.
+@prefix requirement: <https://w3id.org/dsv/requirement-level#>.
+@prefix role: <https://w3id.org/dsv/class-role#>.
 
 
 <https://w3id.org/dsv-dap#applicationProfileConceptualModel> a dsv:ConceptualModel.
@@ -28,7 +32,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/isProfileOf>
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#1n>;
+    dsv:cardinality cardinality:1n;
     dsv:property <http://www.w3.org/ns/dx/prof/isProfileOf>;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#DataSpecification>.
@@ -45,7 +49,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:conceptualModel
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property dsv:conceptualModel;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#ConceptualModel>.
@@ -74,7 +78,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dct:references
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#0n>;
+    dsv:cardinality cardinality:0n;
     dsv:property dct:references;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#DataSpecification>.
@@ -91,7 +95,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasResource>
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#0n>;
+    dsv:cardinality cardinality:0n;
     dsv:property <http://www.w3.org/ns/dx/prof/hasResource>;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#ResourceDescriptor>.
@@ -151,7 +155,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:reusesPropertyValue
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#0n>;
+    dsv:cardinality cardinality:0n;
     dsv:property dsv:reusesPropertyValue;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#PropertyValueReuse>.
@@ -165,7 +169,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dct:isPartOf
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property dct:isPartOf;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#ConceptualModel>.
@@ -182,7 +186,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:specializes
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#0n>;
+    dsv:cardinality cardinality:0n;
     dsv:property dsv:specializes;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Profile>.
@@ -199,7 +203,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:profileOf
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#0n>;
+    dsv:cardinality cardinality:0n;
     dsv:property dsv:profileOf;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Profile>.
@@ -216,7 +220,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:externalDocumentation
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#01>;
+    dsv:cardinality cardinality:01;
     dsv:property dsv:externalDocumentation;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Resource>.
@@ -248,7 +252,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:class
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property dsv:class;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Class>.
@@ -265,7 +269,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:classRole
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#0n>;
+    dsv:cardinality cardinality:0n;
     dsv:property dsv:classRole;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
@@ -297,7 +301,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:property
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property dsv:property;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Property>.
@@ -314,7 +318,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:domain
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property dsv:domain;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassProfile>.
@@ -331,7 +335,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:cardinality
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#01>;
+    dsv:cardinality cardinality:01;
     dsv:property dsv:cardinality;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
@@ -348,7 +352,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:requirementLevel
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#01>;
+    dsv:cardinality cardinality:01;
     dsv:property dsv:requirementLevel;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
@@ -380,7 +384,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:range
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property dsv:range;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassProfile>.
@@ -409,7 +413,7 @@
   dsv:reusedProperty skos:prefLabel;
   dsv:reusedFromResource dsv:datatype
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property dsv:datatype;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Datatype>.
@@ -440,7 +444,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:reusedFromResource
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property dsv:reusedFromResource;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Resource>.
@@ -457,7 +461,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:reusedProperty
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property dsv:reusedProperty;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Property>.
@@ -500,7 +504,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource rdfs:isDefinedBy
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property rdfs:isDefinedBy;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Vocabulary>.
@@ -529,7 +533,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource rdfs:isDefinedBy
 ];
-    dsv:cardinality <https://w3id.org/dsv/cardinality#11>;
+    dsv:cardinality cardinality:11;
     dsv:property rdfs:isDefinedBy;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Vocabulary>.
