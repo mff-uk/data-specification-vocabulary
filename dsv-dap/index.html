@@ -586,7 +586,60 @@
                         <li><a href="#DataSpecification.reusesSpecification"></a></li>
                     </ul>
                 
-                    <section id="DataSpecification.hasResource">
+                    <section id="DataSpecification.description">
+                      <h4>description</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#DataSpecification.description">https://w3id.org/dsv-dap#DataSpecification.description</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>description</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>An account of the data specification.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#DataSpecification">Data specification</a>
+                    
+                                [0..*]
+                    
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text</a>
+                    
+                                [0..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://purl.org/dc/terms/description">Description</a> (<a href="http://purl.org/dc/terms/description">dcterms:description</a>)
+                            <br />Definition: <i>An account of the resource.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>    <section id="DataSpecification.hasResource">
                       <h4>has resource</h4>
                     
                       <table class="def">
@@ -680,6 +733,59 @@
                           
                           <a href="http://purl.org/dc/terms/references">References</a> (<a href="http://purl.org/dc/terms/references">dcterms:references</a>)
                             <br />Definition: <i>A related resource that is referenced, cited, or otherwise pointed to by the described resource.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>    <section id="DataSpecification.title">
+                      <h4>title</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#DataSpecification.title">https://w3id.org/dsv-dap#DataSpecification.title</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>title</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>A name given to the data specification.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#DataSpecification">Data specification</a>
+                    
+                                [0..*]
+                    
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text</a>
+                    
+                                [1..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://purl.org/dc/terms/title">Title</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
+                            <br />Definition: <i>A name given to the resource.</i>
                     
                                     </li>
                               </ul>
@@ -2135,6 +2241,8 @@
 
         <section>
         <h2>Properties</h2>
+
+
 
 
 

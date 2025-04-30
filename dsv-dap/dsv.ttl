@@ -103,6 +103,26 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#ResourceDescriptor>.
 
+<https://w3id.org/dsv-dap#DataSpecification.title> dsv:domain <https://w3id.org/dsv-dap#DataSpecification>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "title"@en;
+    skos:definition "A name given to the data specification."@en;
+    dsv:cardinality cardinality:11;
+    dsv:property dct:title;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+
+<https://w3id.org/dsv-dap#DataSpecification.description> dsv:domain <https://w3id.org/dsv-dap#DataSpecification>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "description"@en;
+    skos:definition "An account of the data specification."@en;
+    dsv:cardinality cardinality:01;
+    dsv:property dct:description;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+
 <https://w3id.org/dsv-dap#ResourceDescriptor> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:reusesPropertyValue [
