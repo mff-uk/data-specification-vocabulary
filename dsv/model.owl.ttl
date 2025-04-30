@@ -23,33 +23,33 @@
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain :PropertyValueReuse;
     rdfs:range rdf:Property.
-:Profile a owl:Class, rdfs:Class;
-    rdfs:label "Profil"@cs, "Profile"@en;
+:EntityProfile a owl:Class, rdfs:Class;
+    rdfs:label "Profil"@cs, "Entity Profile"@en;
     rdfs:comment "Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu."@cs, "Entity profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>.
 :profileOf a rdf:Property, owl:ObjectProperty;
     rdfs:label "profile of"@en;
     rdfs:comment "Specifies a parent profile of the current profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain :Profile;
-    rdfs:range :Profile.
+    rdfs:domain :EntityProfile;
+    rdfs:range :EntityProfile.
 :reusesPropertyValue a rdf:Property, owl:ObjectProperty;
     rdfs:label "reuses property value"@en;
     rdfs:comment "Points to definitions of Property value reuse for this Profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain :Profile;
+    rdfs:domain :EntityProfile;
     rdfs:range :PropertyValueReuse.
 :specializes a rdf:Property, owl:ObjectProperty;
     rdfs:label "specializes"@en;
     rdfs:comment "Specifies a profile specialized by this profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain :Profile;
-    rdfs:range :Profile.
+    rdfs:domain :EntityProfile;
+    rdfs:range :EntityProfile.
 :ClassProfile a owl:Class, rdfs:Class;
     rdfs:label "Profil třídy"@cs, "Class Profile"@en;
     rdfs:comment "Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf :Profile.
+    rdfs:subClassOf :EntityProfile.
 :classRole a rdf:Property, owl:ObjectProperty;
     rdfs:label "class role"@en;
     rdfs:comment "Class role, e.g. Mandatory, Supportive, etc."@en;
@@ -85,12 +85,12 @@
     rdfs:label "Nevalidní profil"@cs, "Invalid profile"@en;
     rdfs:comment "Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě."@cs, "Invalid profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf :Profile.
+    rdfs:subClassOf :EntityProfile.
 :PropertyProfile a owl:Class, rdfs:Class;
     rdfs:label "Profil vlastnosti"@cs, "Property Profile"@en;
     rdfs:comment "Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf :Profile.
+    rdfs:subClassOf :EntityProfile.
 :property a rdf:Property, owl:ObjectProperty;
     rdfs:label "profiled property"@en;
     rdfs:comment "The property profiled by the property profile."@en;
@@ -118,7 +118,7 @@
     rdfs:label "Application Profile Specification"@en;
     rdfs:comment "An Application Profile Specification contains resources defining and describing an Application Profile, including the human readable documentation, machine readable definition, etc."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf <http://www.w3.org/ns/dx/prof/Profile>.
+    rdfs:subClassOf <http://www.w3.org/ns/dx/prof/ResourceDescriptor>.
 :applicationProfile a rdf:Property, owl:ObjectProperty;
     rdfs:label "application profile"@en;
     rdfs:comment "Specifies the Application Profile contained in the Application Profile Specification"@en;
@@ -129,7 +129,7 @@
     rdfs:label "Vocabulary Specification"@en;
     rdfs:comment "A Vocabulary Specification consists of resources defining and describing a Vocabulary, e.g. definitions of classes and properties, typically with their future re-use in application profiles in mind."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf <http://www.w3.org/ns/dx/prof/Profile>.
+    rdfs:subClassOf <http://www.w3.org/ns/dx/prof/ResourceDescriptor>.
 :vocabulary a rdf:Property, owl:ObjectProperty;
     rdfs:label "vocabulary"@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
