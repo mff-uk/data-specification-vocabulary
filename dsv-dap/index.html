@@ -209,6 +209,24 @@
               <figcaption>View for Data Specification Vocabulary - Default Application Profile (DSV-DAP)</figcaption>
             </figure>
           </a>
+          <a href="./626cb.svg">
+            <figure>
+              <img src="./626cb.svg" alt="" />
+              <figcaption></figcaption>
+            </figure>
+          </a>
+          <a href="./n4roi.svg">
+            <figure>
+              <img src="./n4roi.svg" alt="" />
+              <figcaption></figcaption>
+            </figure>
+          </a>
+          <a href="./8dlkl.svg">
+            <figure>
+              <img src="./8dlkl.svg" alt="" />
+              <figcaption></figcaption>
+            </figure>
+          </a>
       </section>
 
       <section>
@@ -231,7 +249,7 @@
                     </tr>
                     <tr>
                       <td>Definition</td>
-                      <td>An Application profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties.</td>
+                      <td>An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties.</td>
                     </tr>
                 
                       <tr>
@@ -245,41 +263,49 @@
                         <br />Definition: <i></i>
                 
                                 </li>
+                                <li>
+                                        class
+                      
+                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ApplicationProfile">Application Profile</a> (<a href="https://w3id.org/dsv#ApplicationProfile">https://w3id.org/dsv#ApplicationProfile</a>)
+                        <br />Definition: <i>An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties.</i>
+                
+                                </li>
                           </ul>
                         </td>
                       </tr>
                 
                   </table>
                 
+                    <p>Backwards associations</p>
+                    <ul>
+                        <li><a href="#Profile.isPartOf"></a></li>
+                    </ul>
                 
-                    <section id="ApplicationProfile.conceptualModel">
-                      <h4>conceptual model</h4>
+                    <section id="ApplicationProfile.hasSpecification">
+                      <h4>has specification</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#ApplicationProfile.conceptualModel">https://w3id.org/dsv-dap#ApplicationProfile.conceptualModel</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#ApplicationProfile.hasSpecification">https://w3id.org/dsv-dap#ApplicationProfile.hasSpecification</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
-                          <td>conceptual model</td>
-                        </tr>
-                        <tr>
-                          <td>Definition</td>
-                          <td>Specifies the conceptual model contained in the application profile.</td>
+                          <td>has specification</td>
                         </tr>
                         <tr>
                           <td>Domain</td>
                           <td>
                             <a href="#ApplicationProfile">Application Profile</a>
                     
-                            
+                                [1..1]
+                    
                           </td>
                         </tr>
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#ConceptualModel">Conceptual model</a>
+                            <a href="#ApplicationProfileSpecification">Application Profile Specification</a>
                     
                                 [1..1]
                     
@@ -295,8 +321,8 @@
                                     <li>
                                             property
                           
-                          <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#conceptualModel">conceptual model</a> (<a href="https://w3id.org/dsv#conceptualModel">https://w3id.org/dsv#conceptualModel</a>)
-                            <br />Definition: <i>Specifies the conceptual model contained in the application profile.</i>
+                          <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">http://www.w3.org/ns/dx/prof/hasResource</a>)
+                            <br />Definition: <i></i>
                     
                                     </li>
                               </ul>
@@ -327,9 +353,9 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#DataSpecification">Data specification</a>
+                            <a href="#Profile">Profile</a>
                     
-                                [1..*]
+                                [0..*]
                     
                         </td>
                         </tr>
@@ -353,6 +379,53 @@
                     
                       </table>
                     </section>
+                </section>                <section id="ApplicationProfileSpecification">
+                  <h4>Application Profile Specification</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#ApplicationProfileSpecification">https://w3id.org/dsv-dap#ApplicationProfileSpecification</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>Application Profile Specification</td>
+                    </tr>
+                    <tr>
+                      <td>Definition</td>
+                      <td>An Application Profile Specification contains resources defining and describing an Application Profile, including the human readable documentation, machine readable definition, etc.</td>
+                    </tr>
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        class
+                      
+                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ApplicationProfileSpecification">Application Profile Specification</a> (<a href="https://w3id.org/dsv#ApplicationProfileSpecification">https://w3id.org/dsv#ApplicationProfileSpecification</a>)
+                        <br />Definition: <i>An Application Profile Specification contains resources defining and describing an Application Profile, including the human readable documentation, machine readable definition, etc.</i>
+                
+                                </li>
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">http://www.w3.org/ns/dx/prof/ResourceDescriptor</a>)
+                        <br />Definition: <i></i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                  </table>
+                
+                    <p>Backwards associations</p>
+                    <ul>
+                        <li><a href="#ApplicationProfile.hasSpecification"></a></li>
+                    </ul>
+                
+                
                 </section>                <section id="ClassProfile">
                   <h4>Class Profile</h4>
                 
@@ -498,49 +571,8 @@
                     
                       </table>
                     </section>
-                </section>                <section id="ConceptualModel">
-                  <h4>Conceptual model</h4>
-                
-                  <table class="def">
-                    <tr>
-                      <td>IRI</td>
-                      <td><a href="https://w3id.org/dsv-dap#ConceptualModel">https://w3id.org/dsv-dap#ConceptualModel</a></td>
-                    </tr>
-                    <tr>
-                      <td>Label</td>
-                      <td>Conceptual model</td>
-                    </tr>
-                    <tr>
-                      <td>Definition</td>
-                      <td>Conceptual model containing profiles of classes and properties of various vocabularies.</td>
-                    </tr>
-                
-                      <tr>
-                        <td>Profiles</td>
-                        <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                                <li>
-                                        class
-                      
-                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ConceptualModel">Conceptual model</a> (<a href="https://w3id.org/dsv#ConceptualModel">https://w3id.org/dsv#ConceptualModel</a>)
-                        <br />Definition: <i>Conceptual model containing profiles of classes and properties of various vocabularies.</i>
-                
-                                </li>
-                          </ul>
-                        </td>
-                      </tr>
-                
-                  </table>
-                
-                    <p>Backwards associations</p>
-                    <ul>
-                        <li><a href="#ApplicationProfile.conceptualModel"></a></li>
-                        <li><a href="#Profile.isPartOf"></a></li>
-                    </ul>
-                
-                
                 </section>                <section id="DataSpecification">
-                  <h4>Data specification</h4>
+                  <h4>Data Specification</h4>
                 
                   <table class="def">
                     <tr>
@@ -549,11 +581,11 @@
                     </tr>
                     <tr>
                       <td>Label</td>
-                      <td>Data specification</td>
+                      <td>Data Specification</td>
                     </tr>
                     <tr>
                       <td>Definition</td>
-                      <td>A Data Specification. Can be a Vocabulary, and/or an Application Profile.</td>
+                      <td>A Data Specification. Can be a Vocabulary Specification, and/or an Application Profile Specification.</td>
                     </tr>
                 
                       <tr>
@@ -563,15 +595,8 @@
                                 <li>
                                         class
                       
-                      <a href="http://www.w3.org/ns/adms#Asset">Asset</a> (<a href="http://www.w3.org/ns/adms#Asset">adms:Asset</a>)
-                        <br />Definition: <i>An Asset is an abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work). Assets can be versioned. Every time the intellectual content of an asset changes, the result is considered to be a new asset that can be linked to previous and next versions of the Asset. The physical embodiment of an Asset is called an Asset Distribution. A particular Asset may have zero or more Asset Distributions..</i>
-                
-                                </li>
-                                <li>
-                                        class
-                      
-                      <a href="http://purl.org/dc/terms/Standard">Standard</a> (<a href="http://purl.org/dc/terms/Standard">dcterms:Standard</a>)
-                        <br />Definition: <i>A reference point against which other things can be evaluated or compared.</i>
+                      <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">http://www.w3.org/ns/dx/prof/ResourceDescriptor</a>)
+                        <br />Definition: <i></i>
                 
                                 </li>
                           </ul>
@@ -580,11 +605,6 @@
                 
                   </table>
                 
-                    <p>Backwards associations</p>
-                    <ul>
-                        <li><a href="#ApplicationProfile.isProfileOf"></a></li>
-                        <li><a href="#DataSpecification.reusesSpecification"></a></li>
-                    </ul>
                 
                     <section id="DataSpecification.description">
                       <h4>description</h4>
@@ -600,12 +620,12 @@
                         </tr>
                         <tr>
                           <td>Definition</td>
-                          <td>An account of the data specification.</td>
+                          <td>An account of the Data Specification.</td>
                         </tr>
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#DataSpecification">Data specification</a>
+                            <a href="#DataSpecification">Data Specification</a>
                     
                                 [0..*]
                     
@@ -616,7 +636,7 @@
                           <td>
                             <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text</a>
                     
-                                [0..1]
+                                [1..1]
                     
                         </td>
                         </tr>
@@ -632,107 +652,6 @@
                           
                           <a href="http://purl.org/dc/terms/description">Description</a> (<a href="http://purl.org/dc/terms/description">dcterms:description</a>)
                             <br />Definition: <i>An account of the resource.</i>
-                    
-                                    </li>
-                              </ul>
-                            </td>
-                          </tr>
-                    
-                      </table>
-                    </section>    <section id="DataSpecification.hasResource">
-                      <h4>has resource</h4>
-                    
-                      <table class="def">
-                        <tr>
-                          <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#DataSpecification.hasResource">https://w3id.org/dsv-dap#DataSpecification.hasResource</a></td>
-                        </tr>
-                        <tr>
-                          <td>Label</td>
-                          <td>has resource</td>
-                        </tr>
-                        <tr>
-                          <td>Domain</td>
-                          <td>
-                            <a href="#DataSpecification">Data specification</a>
-                    
-                                [1..1]
-                    
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Range</td>
-                          <td>
-                            <a href="#ResourceDescriptor">Resource Descriptor</a>
-                    
-                                [0..*]
-                    
-                        </td>
-                        </tr>
-                    
-                    
-                    
-                          <tr>
-                            <td>Profiles</td>
-                            <td>
-                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                                    <li>
-                                            property
-                          
-                          <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">http://www.w3.org/ns/dx/prof/hasResource</a>)
-                            <br />Definition: <i></i>
-                    
-                                    </li>
-                              </ul>
-                            </td>
-                          </tr>
-                    
-                      </table>
-                    </section>    <section id="DataSpecification.reusesSpecification">
-                      <h4>reuses specification</h4>
-                    
-                      <table class="def">
-                        <tr>
-                          <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#DataSpecification.reusesSpecification">https://w3id.org/dsv-dap#DataSpecification.reusesSpecification</a></td>
-                        </tr>
-                        <tr>
-                          <td>Label</td>
-                          <td>reuses specification</td>
-                        </tr>
-                        <tr>
-                          <td>Definition</td>
-                          <td>A related resource that is referenced, cited, or otherwise pointed to by the described resource.</td>
-                        </tr>
-                        <tr>
-                          <td>Domain</td>
-                          <td>
-                            <a href="#DataSpecification">Data specification</a>
-                    
-                            
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Range</td>
-                          <td>
-                            <a href="#DataSpecification">Data specification</a>
-                    
-                                [0..*]
-                    
-                        </td>
-                        </tr>
-                    
-                    
-                    
-                          <tr>
-                            <td>Profiles</td>
-                            <td>
-                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                                    <li>
-                                            property
-                          
-                          <a href="http://purl.org/dc/terms/references">References</a> (<a href="http://purl.org/dc/terms/references">dcterms:references</a>)
-                            <br />Definition: <i>A related resource that is referenced, cited, or otherwise pointed to by the described resource.</i>
                     
                                     </li>
                               </ul>
@@ -759,7 +678,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#DataSpecification">Data specification</a>
+                            <a href="#DataSpecification">Data Specification</a>
                     
                                 [0..*]
                     
@@ -878,21 +797,21 @@
                     
                       </table>
                     </section>
-                </section>                <section id="InvalidProfile">
-                  <h4>Invalid profile</h4>
+                </section>                <section id="InvalidEntityProfile">
+                  <h4>Invalid Entity Profile</h4>
                 
                   <table class="def">
                     <tr>
                       <td>IRI</td>
-                      <td><a href="https://w3id.org/dsv-dap#InvalidProfile">https://w3id.org/dsv-dap#InvalidProfile</a></td>
+                      <td><a href="https://w3id.org/dsv-dap#InvalidEntityProfile">https://w3id.org/dsv-dap#InvalidEntityProfile</a></td>
                     </tr>
                     <tr>
                       <td>Label</td>
-                      <td>Invalid profile</td>
+                      <td>Invalid Entity Profile</td>
                     </tr>
                     <tr>
                       <td>Definition</td>
-                      <td>Invalid profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</td>
+                      <td>Invalid Entity Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</td>
                     </tr>
                 
                       <tr>
@@ -902,8 +821,8 @@
                                 <li>
                                         class
                       
-                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#InvalidProfile">Invalid profile</a> (<a href="https://w3id.org/dsv#InvalidProfile">https://w3id.org/dsv#InvalidProfile</a>)
-                        <br />Definition: <i>Invalid profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</i>
+                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#InvalidEntityProfile">Invalid Entity Profile</a> (<a href="https://w3id.org/dsv#InvalidEntityProfile">https://w3id.org/dsv#InvalidEntityProfile</a>)
+                        <br />Definition: <i>Invalid Entity Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</i>
                 
                                 </li>
                           </ul>
@@ -998,17 +917,17 @@
                     
                       </table>
                     </section>
-                </section>                <section id="Profile">
-                  <h4>Profile</h4>
+                </section>                <section id="EntityProfile">
+                  <h4>Entity Profile</h4>
                 
                   <table class="def">
                     <tr>
                       <td>IRI</td>
-                      <td><a href="https://w3id.org/dsv-dap#Profile">https://w3id.org/dsv-dap#Profile</a></td>
+                      <td><a href="https://w3id.org/dsv-dap#EntityProfile">https://w3id.org/dsv-dap#EntityProfile</a></td>
                     </tr>
                     <tr>
                       <td>Label</td>
-                      <td>Profile</td>
+                      <td>Entity Profile</td>
                     </tr>
                     <tr>
                       <td>Definition</td>
@@ -1022,7 +941,7 @@
                                 <li>
                                         class
                       
-                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#Profile">Profile</a> (<a href="https://w3id.org/dsv#Profile">https://w3id.org/dsv#Profile</a>)
+                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#EntityProfile">Entity Profile</a> (<a href="https://w3id.org/dsv#EntityProfile">https://w3id.org/dsv#EntityProfile</a>)
                         <br />Definition: <i>Entity profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc.</i>
                 
                                 </li>
@@ -1057,7 +976,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                                 [0..*]
                     
@@ -1110,7 +1029,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                             
                           </td>
@@ -1162,7 +1081,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                             
                           </td>
@@ -1170,7 +1089,7 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#ConceptualModel">Conceptual model</a>
+                            <a href="#ApplicationProfile">Application Profile</a>
                     
                                 [1..1]
                     
@@ -1214,7 +1133,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                             
                           </td>
@@ -1267,7 +1186,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                             
                           </td>
@@ -1275,7 +1194,7 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                                 [0..*]
                     
@@ -1319,7 +1238,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                             
                           </td>
@@ -1371,7 +1290,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                             
                           </td>
@@ -1379,7 +1298,7 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                                 [0..*]
                     
@@ -1423,7 +1342,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#Profile">Profile</a>
+                            <a href="#EntityProfile">Entity Profile</a>
                     
                                 [0..*]
                     
@@ -1450,6 +1369,197 @@
                           
                           <a href="http://www.w3.org/2004/02/skos/core#scopeNote">scope note</a> (<a href="http://www.w3.org/2004/02/skos/core#scopeNote">skos:scopeNote</a>)
                             <br />Definition: <i></i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>
+                </section>                <section id="Profile">
+                  <h4>Profile</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#Profile">https://w3id.org/dsv-dap#Profile</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>Profile</td>
+                    </tr>
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a> (<a href="http://www.w3.org/ns/dx/prof/Profile">http://www.w3.org/ns/dx/prof/Profile</a>)
+                        <br />Definition: <i></i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                  </table>
+                
+                    <p>Backwards associations</p>
+                    <ul>
+                        <li><a href="#ApplicationProfile.isProfileOf"></a></li>
+                    </ul>
+                
+                    <section id="Profile.description">
+                      <h4>description</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#Profile.description">https://w3id.org/dsv-dap#Profile.description</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>description</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>An account of the profile.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#Profile">Profile</a>
+                    
+                                [0..*]
+                    
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text</a>
+                    
+                                [0..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://purl.org/dc/terms/description">Description</a> (<a href="http://purl.org/dc/terms/description">dcterms:description</a>)
+                            <br />Definition: <i>An account of the resource.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>    <section id="Profile.hasResource">
+                      <h4>has resource</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#Profile.hasResource">https://w3id.org/dsv-dap#Profile.hasResource</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>has resource</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#Profile">Profile</a>
+                    
+                                [1..1]
+                    
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="#ResourceDescriptor">Resource Descriptor</a>
+                    
+                                [0..*]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">http://www.w3.org/ns/dx/prof/hasResource</a>)
+                            <br />Definition: <i></i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>    <section id="Profile.title">
+                      <h4>title</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#Profile.title">https://w3id.org/dsv-dap#Profile.title</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>title</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>A name given to the Profile.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#Profile">Profile</a>
+                    
+                                [0..*]
+                    
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text</a>
+                    
+                                [1..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://purl.org/dc/terms/title">Title</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
+                            <br />Definition: <i>A name given to the resource.</i>
                     
                                     </li>
                               </ul>
@@ -1840,6 +1950,150 @@
                     
                       </table>
                     </section>
+                </section>                <section id="Vocabulary">
+                  <h4>Vocabulary</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#Vocabulary">https://w3id.org/dsv-dap#Vocabulary</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>Vocabulary</td>
+                    </tr>
+                    <tr>
+                      <td>Definition</td>
+                      <td>The class of vocabularies.</td>
+                    </tr>
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/2002/07/owl#Ontology">Ontology</a> (<a href="http://www.w3.org/2002/07/owl#Ontology">owl:Ontology</a>)
+                        <br />Definition: <i>The class of ontologies.</i>
+                
+                                </li>
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a> (<a href="http://www.w3.org/ns/dx/prof/Profile">http://www.w3.org/ns/dx/prof/Profile</a>)
+                        <br />Definition: <i></i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                  </table>
+                
+                    <p>Backwards associations</p>
+                    <ul>
+                        <li><a href="#Property.isdefinedby"></a></li>
+                        <li><a href="#Class.isdefinedby"></a></li>
+                    </ul>
+                
+                    <section id="Ontology.hasSpecification">
+                      <h4>has specification</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#Ontology.hasSpecification">https://w3id.org/dsv-dap#Ontology.hasSpecification</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>has specification</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#Vocabulary">Vocabulary</a>
+                    
+                                [1..1]
+                    
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="#VocabularySpecification">Vocabulary Specification</a>
+                    
+                                [1..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">http://www.w3.org/ns/dx/prof/hasResource</a>)
+                            <br />Definition: <i></i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>
+                </section>                <section id="VocabularySpecification">
+                  <h4>Vocabulary Specification</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#VocabularySpecification">https://w3id.org/dsv-dap#VocabularySpecification</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>Vocabulary Specification</td>
+                    </tr>
+                    <tr>
+                      <td>Definition</td>
+                      <td>A Vocabulary Specification consists of resources defining and describing a Vocabulary, e.g. definitions of classes and properties, typically with their future re-use in application profiles in mind.</td>
+                    </tr>
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        class
+                      
+                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#VocabularySpecification">Vocabulary Specification</a> (<a href="https://w3id.org/dsv#VocabularySpecification">https://w3id.org/dsv#VocabularySpecification</a>)
+                        <br />Definition: <i>A Vocabulary Specification consists of resources defining and describing a Vocabulary, e.g. definitions of classes and properties, typically with their future re-use in application profiles in mind.</i>
+                
+                                </li>
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">http://www.w3.org/ns/dx/prof/ResourceDescriptor</a>)
+                        <br />Definition: <i></i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                  </table>
+                
+                    <p>Backwards associations</p>
+                    <ul>
+                        <li><a href="#Ontology.hasSpecification"></a></li>
+                    </ul>
+                
+                
                 </section>          </section>
 
           <section>
@@ -2188,48 +2442,7 @@
                 
                     <p>Backwards associations</p>
                     <ul>
-                        <li><a href="#DataSpecification.hasResource"></a></li>
-                    </ul>
-                
-                
-                </section>                <section id="Vocabulary">
-                  <h4>Vocabulary</h4>
-                
-                  <table class="def">
-                    <tr>
-                      <td>IRI</td>
-                      <td><a href="https://w3id.org/dsv-dap#Vocabulary">https://w3id.org/dsv-dap#Vocabulary</a></td>
-                    </tr>
-                    <tr>
-                      <td>Label</td>
-                      <td>Vocabulary</td>
-                    </tr>
-                    <tr>
-                      <td>Definition</td>
-                      <td>A Vocabulary consists of definitions of classes and properties, typically with their future re-use in application profiles in mind.</td>
-                    </tr>
-                
-                      <tr>
-                        <td>Profiles</td>
-                        <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                                <li>
-                                        class
-                      
-                      <a href="http://www.w3.org/2002/07/owl#Ontology">Ontology</a> (<a href="http://www.w3.org/2002/07/owl#Ontology">owl:Ontology</a>)
-                        <br />Definition: <i>The class of ontologies.</i>
-                
-                                </li>
-                          </ul>
-                        </td>
-                      </tr>
-                
-                  </table>
-                
-                    <p>Backwards associations</p>
-                    <ul>
-                        <li><a href="#Property.isdefinedby"></a></li>
-                        <li><a href="#Class.isdefinedby"></a></li>
+                        <li><a href="#Profile.hasResource"></a></li>
                     </ul>
                 
                 
@@ -2268,6 +2481,8 @@
 
 
 
+
+
         </section>
 
 
@@ -2276,12 +2491,12 @@
         <table id="table-namespaces" class="simple">
           <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
           <tbody>
-              <tr><td><code>adms</code></td><td><a href=http://www.w3.org/ns/adms#><code>http://www.w3.org/ns/adms#</code></a></td></tr>
               <tr><td><code>dcterms</code></td><td><a href=http://purl.org/dc/terms/><code>http://purl.org/dc/terms/</code></a></td></tr>
               <tr><td><code>skos</code></td><td><a href=http://www.w3.org/2004/02/skos/core#><code>http://www.w3.org/2004/02/skos/core#</code></a></td></tr>
+              <tr><td><code>owl</code></td><td><a href=http://www.w3.org/2002/07/owl#><code>http://www.w3.org/2002/07/owl#</code></a></td></tr>
               <tr><td><code>rdfs</code></td><td><a href=http://www.w3.org/2000/01/rdf-schema#><code>http://www.w3.org/2000/01/rdf-schema#</code></a></td></tr>
               <tr><td><code>rdf</code></td><td><a href=http://www.w3.org/1999/02/22-rdf-syntax-ns#><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></a></td></tr>
-              <tr><td><code>owl</code></td><td><a href=http://www.w3.org/2002/07/owl#><code>http://www.w3.org/2002/07/owl#</code></a></td></tr>
+              <tr><td><code>adms</code></td><td><a href=http://www.w3.org/ns/adms#><code>http://www.w3.org/ns/adms#</code></a></td></tr>
           </tbody>
         </table>
       </section>
