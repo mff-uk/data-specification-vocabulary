@@ -238,45 +238,9 @@
       <section>
         <h2>Classes</h2>
 
-            <section id="ConceptualModel">
-              <h4>Conceptual model</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#ConceptualModel">https://w3id.org/dsv#ConceptualModel</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>Conceptual model</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Conceptual model containing profiles of classes and properties of various vocabularies.</td>
-                </tr>
-              </table>
-            </section>            <section id="Profile">
-              <h4>Profile</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#Profile">https://w3id.org/dsv#Profile</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>Profile</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Entity profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc.</td>
-                </tr>
-                <tr>
-                  <td>Subclasses</td>
-                  <td><a href="#ClassProfile">Class Profile</a>, <a href="#PropertyProfile">Property Profile</a>, <a href="#InvalidProfile">Invalid profile</a></td>
-                </tr>
-              </table>
-            </section>            <section id="ClassProfile">
+
+
+            <section id="ClassProfile">
               <h4>Class Profile</h4>
             
               <table class="def">
@@ -297,29 +261,42 @@
                   <td><a href="#Profile">Profile</a></td>
                 </tr>
               </table>
-            </section>            <section id="PropertyProfile">
-              <h4>Property Profile</h4>
+            </section>            <section id="ConceptualModel">
+              <h4>Conceptual model</h4>
             
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#PropertyProfile">https://w3id.org/dsv#PropertyProfile</a></td>
+                  <td><a href="https://w3id.org/dsv#ConceptualModel">https://w3id.org/dsv#ConceptualModel</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
-                  <td>Property Profile</td>
+                  <td>Conceptual model</td>
                 </tr>
                 <tr>
                   <td>Definition</td>
-                  <td>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</td>
+                  <td>Conceptual model containing profiles of classes and properties of various vocabularies.</td>
+                </tr>
+              </table>
+            </section>            <section id="DatatypePropertyProfile">
+              <h4>Datatype Property Profile</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#DatatypePropertyProfile">https://w3id.org/dsv#DatatypePropertyProfile</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>Datatype Property Profile</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>Subclass of</td>
-                  <td><a href="#Profile">Profile</a></td>
-                </tr>
-                <tr>
-                  <td>Subclasses</td>
-                  <td><a href="#DatatypePropertyProfile">Datatype Property Profile</a>, <a href="#ObjectPropertyProfile">Object Property Profile</a></td>
+                  <td><a href="#PropertyProfile">Property Profile</a></td>
                 </tr>
               </table>
             </section>            <section id="InvalidProfile">
@@ -360,25 +337,50 @@
                   <td><a href="#PropertyProfile">Property Profile</a></td>
                 </tr>
               </table>
-            </section>            <section id="DatatypePropertyProfile">
-              <h4>Datatype Property Profile</h4>
+            </section>            <section id="Profile">
+              <h4>Profile</h4>
             
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#DatatypePropertyProfile">https://w3id.org/dsv#DatatypePropertyProfile</a></td>
+                  <td><a href="https://w3id.org/dsv#Profile">https://w3id.org/dsv#Profile</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
-                  <td>Datatype Property Profile</td>
+                  <td>Profile</td>
                 </tr>
                 <tr>
                   <td>Definition</td>
-                  <td></td>
+                  <td>Entity profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc.</td>
+                </tr>
+                <tr>
+                  <td>Subclasses</td>
+                  <td><a href="#ClassProfile">Class Profile</a>, <a href="#PropertyProfile">Property Profile</a>, <a href="#InvalidProfile">Invalid profile</a></td>
+                </tr>
+              </table>
+            </section>            <section id="PropertyProfile">
+              <h4>Property Profile</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#PropertyProfile">https://w3id.org/dsv#PropertyProfile</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>Property Profile</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</td>
                 </tr>
                 <tr>
                   <td>Subclass of</td>
-                  <td><a href="#PropertyProfile">Property Profile</a></td>
+                  <td><a href="#Profile">Profile</a></td>
+                </tr>
+                <tr>
+                  <td>Subclasses</td>
+                  <td><a href="#DatatypePropertyProfile">Datatype Property Profile</a>, <a href="#ObjectPropertyProfile">Object Property Profile</a></td>
                 </tr>
               </table>
             </section>            <section id="PropertyValueReuse">
@@ -405,234 +407,7 @@
 
         <section>
         <h2>Properties</h2>
-            <section id="conceptualModel">
-              <h4>conceptual model</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#conceptualModel">https://w3id.org/dsv#conceptualModel</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>conceptual model</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Specifies the conceptual model contained in the application profile.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="#ConceptualModel">Conceptual model</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="profileOf">
-              <h4>profile of</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#profileOf">https://w3id.org/dsv#profileOf</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>profile of</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Specifies a parent profile of the current profile.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#Profile">Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="#Profile">Profile</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="specializes">
-              <h4>specializes</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#specializes">https://w3id.org/dsv#specializes</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>specializes</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Specifies a profile specialized by this profile.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#Profile">Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="#Profile">Profile</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="class">
-              <h4>profiled class</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#class">https://w3id.org/dsv#class</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>profiled class</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>The profiled class.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#ClassProfile">Class Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="datatype">
-              <h4>datatype</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#datatype">https://w3id.org/dsv#datatype</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>datatype</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#DatatypePropertyProfile">Datatype Property Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="range">
-              <h4>range</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#range">https://w3id.org/dsv#range</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>range</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Class profile, which is the range of the object property profile.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#ObjectPropertyProfile">Object Property Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="#ClassProfile">Class Profile</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="domain">
-              <h4>domain</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#domain">https://w3id.org/dsv#domain</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>domain</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Class profile, which is the domain of the property profile.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#PropertyProfile">Property Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="#ClassProfile">Class Profile</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="cardinality">
+            <section id="cardinality">
               <h4>cardinality</h4>
             
               <table class="def">
@@ -643,167 +418,6 @@
                 <tr>
                   <td>Label</td>
                   <td>cardinality</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#PropertyProfile">Property Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="property">
-              <h4>profiled property</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#property">https://w3id.org/dsv#property</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>profiled property</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>The property profiled by the property profile.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#PropertyProfile">Property Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="reusesPropertyValue">
-              <h4>reuses property value</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#reusesPropertyValue">https://w3id.org/dsv#reusesPropertyValue</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>reuses property value</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Points to definitions of Property value reuse for this Profile.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#Profile">Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="#PropertyValueReuse">Property Value Reuse</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="reusedProperty">
-              <h4>reused property</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#reusedProperty">https://w3id.org/dsv#reusedProperty</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>reused property</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#PropertyValueReuse">Property Value Reuse</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="reusedFromResource">
-              <h4>reused from resource</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#reusedFromResource">https://w3id.org/dsv#reusedFromResource</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>reused from resource</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>The Resource on which there is a property with a value for reuse.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="#PropertyValueReuse">Property Value Reuse</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="requirementLevel">
-              <h4>requirement level</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#requirementLevel">https://w3id.org/dsv#requirementLevel</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>requirement level</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Requirement level of the property, typically mandatory, recommended or optional.</td>
                 </tr>
                 <tr>
                   <td>Domain</td>
@@ -855,6 +469,101 @@
                   </td>
                   </tr>
               </table>
+            </section>            <section id="conceptualModel">
+              <h4>conceptual model</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#conceptualModel">https://w3id.org/dsv#conceptualModel</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>conceptual model</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Specifies the conceptual model contained in the application profile.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="#ConceptualModel">Conceptual model</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="datatype">
+              <h4>datatype</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#datatype">https://w3id.org/dsv#datatype</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>datatype</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#DatatypePropertyProfile">Datatype Property Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="domain">
+              <h4>domain</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#domain">https://w3id.org/dsv#domain</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>domain</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Class profile, which is the domain of the property profile.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#PropertyProfile">Property Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="#ClassProfile">Class Profile</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
             </section>            <section id="externalDocumentation">
               <h4>external documentation</h4>
             
@@ -883,6 +592,299 @@
                   <td>Range</td>
                   <td>
                     <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="profileOf">
+              <h4>profile of</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#profileOf">https://w3id.org/dsv#profileOf</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>profile of</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Specifies a parent profile of the current profile.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="class">
+              <h4>profiled class</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#class">https://w3id.org/dsv#class</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>profiled class</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>The profiled class.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#ClassProfile">Class Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="property">
+              <h4>profiled property</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#property">https://w3id.org/dsv#property</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>profiled property</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>The property profiled by the property profile.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#PropertyProfile">Property Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="range">
+              <h4>range</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#range">https://w3id.org/dsv#range</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>range</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Class profile, which is the range of the object property profile.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#ObjectPropertyProfile">Object Property Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="#ClassProfile">Class Profile</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="requirementLevel">
+              <h4>requirement level</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#requirementLevel">https://w3id.org/dsv#requirementLevel</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>requirement level</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Requirement level of the property, typically mandatory, recommended or optional.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#PropertyProfile">Property Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="reusedFromResource">
+              <h4>reused from resource</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#reusedFromResource">https://w3id.org/dsv#reusedFromResource</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>reused from resource</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>The Resource on which there is a property with a value for reuse.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#PropertyValueReuse">Property Value Reuse</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="reusedProperty">
+              <h4>reused property</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#reusedProperty">https://w3id.org/dsv#reusedProperty</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>reused property</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#PropertyValueReuse">Property Value Reuse</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="reusesPropertyValue">
+              <h4>reuses property value</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#reusesPropertyValue">https://w3id.org/dsv#reusesPropertyValue</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>reuses property value</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Points to definitions of Property value reuse for this Profile.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="#PropertyValueReuse">Property Value Reuse</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="specializes">
+              <h4>specializes</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#specializes">https://w3id.org/dsv#specializes</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>specializes</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Specifies a profile specialized by this profile.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="#Profile">Profile</a>
             
                     
                   </td>
