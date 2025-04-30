@@ -81,9 +81,9 @@
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain :DatatypePropertyProfile;
     rdfs:range rdfs:Datatype.
-:InvalidProfile a owl:Class, rdfs:Class;
-    rdfs:label "Nevalidní profil"@cs, "Invalid profile"@en;
-    rdfs:comment "Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě."@cs, "Invalid profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency."@en;
+:InvalidEntityProfile a owl:Class, rdfs:Class;
+    rdfs:label "Nevalidní profil"@cs, "Invalid Entity Profile"@en;
+    rdfs:comment "Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě."@cs, "Invalid Entity Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:subClassOf :EntityProfile.
 :PropertyProfile a owl:Class, rdfs:Class;
