@@ -240,7 +240,45 @@
 
 
 
-            <section id="ClassProfile">
+            <section id="ApplicationProfile">
+              <h4>Application Profile</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#ApplicationProfile">https://w3id.org/dsv#ApplicationProfile</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>Application Profile</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties.</td>
+                </tr>
+              </table>
+            </section>            <section id="ApplicationProfileSpecification">
+              <h4>Application Profile Specification</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#ApplicationProfileSpecification">https://w3id.org/dsv#ApplicationProfileSpecification</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>Application Profile Specification</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>An Application Profile Specification contains resources defining and describing an Application Profile, including the human readable documentation, machine readable definition, etc.</td>
+                </tr>
+                <tr>
+                  <td>Subclass of</td>
+                  <td><a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a></td>
+                </tr>
+              </table>
+            </section>            <section id="ClassProfile">
               <h4>Class Profile</h4>
             
               <table class="def">
@@ -259,23 +297,6 @@
                 <tr>
                   <td>Subclass of</td>
                   <td><a href="#Profile">Profile</a></td>
-                </tr>
-              </table>
-            </section>            <section id="ConceptualModel">
-              <h4>Conceptual model</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#ConceptualModel">https://w3id.org/dsv#ConceptualModel</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>Conceptual model</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Conceptual model containing profiles of classes and properties of various vocabularies.</td>
                 </tr>
               </table>
             </section>            <section id="DatatypePropertyProfile">
@@ -401,13 +422,67 @@
             E.g. reuse of profile name, reuse of class name, reuse of profile definition, reuse of profile usage note, etc.</td>
                 </tr>
               </table>
+            </section>            <section id="VocabularySpecification">
+              <h4>Vocabulary Specification</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#VocabularySpecification">https://w3id.org/dsv#VocabularySpecification</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>Vocabulary Specification</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>A Vocabulary Specification consists of resources defining and describing a Vocabulary, e.g. definitions of classes and properties, typically with their future re-use in application profiles in mind.</td>
+                </tr>
+                <tr>
+                  <td>Subclass of</td>
+                  <td><a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a></td>
+                </tr>
+              </table>
             </section>
 
         </section>
 
         <section>
         <h2>Properties</h2>
-            <section id="cardinality">
+            <section id="applicationProfile">
+              <h4>application profile</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#applicationProfile">https://w3id.org/dsv#applicationProfile</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>application profile</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>Specifies the Application Profile contained in the Application Profile Specification</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#ApplicationProfileSpecification">Application Profile Specification</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="#ApplicationProfile">Application Profile</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="cardinality">
               <h4>cardinality</h4>
             
               <table class="def">
@@ -464,39 +539,6 @@
                   <td>Range</td>
                   <td>
                     <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            
-                    
-                  </td>
-                  </tr>
-              </table>
-            </section>            <section id="conceptualModel">
-              <h4>conceptual model</h4>
-            
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#conceptualModel">https://w3id.org/dsv#conceptualModel</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>conceptual model</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Specifies the conceptual model contained in the application profile.</td>
-                </tr>
-                <tr>
-                  <td>Domain</td>
-                  <td>
-                    <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a>
-            
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>Range</td>
-                  <td>
-                    <a href="#ConceptualModel">Conceptual model</a>
             
                     
                   </td>
@@ -885,6 +927,35 @@
                   <td>Range</td>
                   <td>
                     <a href="#Profile">Profile</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="vocabulary">
+              <h4>vocabulary</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#vocabulary">https://w3id.org/dsv#vocabulary</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>vocabulary</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#VocabularySpecification">Vocabulary Specification</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/2002/07/owl#Ontology">Ontology</a>
             
                     
                   </td>

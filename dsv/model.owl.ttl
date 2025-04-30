@@ -4,9 +4,9 @@
 @prefix : <https://w3id.org/dsv#>.
 
 <https://w3id.org/dsv#> a owl:Ontology.
-:ConceptualModel a owl:Class, rdfs:Class;
-    rdfs:label "Konceptuální model"@cs, "Conceptual model"@en;
-    rdfs:comment "Konceptuální model obsahující profily tříd a vlastností různých slovníků."@cs, "Conceptual model containing profiles of classes and properties of various vocabularies."@en;
+:ApplicationProfile a owl:Class, rdfs:Class;
+    rdfs:label "Konceptuální model"@cs, "Application Profile"@en;
+    rdfs:comment "Konceptuální model obsahující profily tříd a vlastností různých slovníků."@cs, "An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>.
 :PropertyValueReuse a owl:Class, rdfs:Class;
     rdfs:label "Property Value Reuse"@en;
@@ -114,12 +114,27 @@
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain :PropertyProfile;
     rdfs:range <http://www.w3.org/2004/02/skos/core#Concept>.
-:conceptualModel a rdf:Property, owl:ObjectProperty;
-    rdfs:label "conceptual model"@en;
-    rdfs:comment "Specifies the conceptual model contained in the application profile."@en;
+:ApplicationProfileSpecification a owl:Class, rdfs:Class;
+    rdfs:label "Application Profile Specification"@en;
+    rdfs:comment "An Application Profile Specification contains resources defining and describing an Application Profile, including the human readable documentation, machine readable definition, etc."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain <http://www.w3.org/ns/dx/prof/Profile>;
-    rdfs:range :ConceptualModel.
+    rdfs:subClassOf <http://www.w3.org/ns/dx/prof/Profile>.
+:applicationProfile a rdf:Property, owl:ObjectProperty;
+    rdfs:label "application profile"@en;
+    rdfs:comment "Specifies the Application Profile contained in the Application Profile Specification"@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv#>;
+    rdfs:domain :ApplicationProfileSpecification;
+    rdfs:range :ApplicationProfile.
+:VocabularySpecification a owl:Class, rdfs:Class;
+    rdfs:label "Vocabulary Specification"@en;
+    rdfs:comment "A Vocabulary Specification consists of resources defining and describing a Vocabulary, e.g. definitions of classes and properties, typically with their future re-use in application profiles in mind."@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv#>;
+    rdfs:subClassOf <http://www.w3.org/ns/dx/prof/Profile>.
+:vocabulary a rdf:Property, owl:ObjectProperty;
+    rdfs:label "vocabulary"@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv#>;
+    rdfs:domain :VocabularySpecification;
+    rdfs:range owl:Ontology.
 :externalDocumentation a rdf:Property, owl:ObjectProperty;
     rdfs:label "external documentation"@en;
     rdfs:comment "Link to an external documentation of this resource. Profiles of this resource should preferably link to this URL for documentation."@en;
