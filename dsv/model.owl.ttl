@@ -114,27 +114,16 @@
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain :PropertyProfile;
     rdfs:range <http://www.w3.org/2004/02/skos/core#Concept>.
-:ApplicationProfileSpecification a owl:Class, rdfs:Class;
-    rdfs:label "Application Profile Specification"@en;
-    rdfs:comment "An Application Profile Specification contains resources defining and describing an Application Profile, including the human readable documentation, machine readable definition, etc."@en;
+:ApplicationProfileSpecificationDocument a owl:Class, rdfs:Class;
+    rdfs:label "Application Profile Specification Document"@en;
+    rdfs:comment "An Application Profile Specification Document contains human-readable version of an Application Profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:subClassOf <http://www.w3.org/ns/dx/prof/ResourceDescriptor>.
-:applicationProfile a rdf:Property, owl:ObjectProperty;
-    rdfs:label "application profile"@en;
-    rdfs:comment "Specifies the Application Profile contained in the Application Profile Specification"@en;
-    rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain :ApplicationProfileSpecification;
-    rdfs:range :ApplicationProfile.
-:VocabularySpecification a owl:Class, rdfs:Class;
-    rdfs:label "Vocabulary Specification"@en;
-    rdfs:comment "A Vocabulary Specification consists of resources defining and describing a Vocabulary, e.g. definitions of classes and properties, typically with their future re-use in application profiles in mind."@en;
+:VocabularySpecificationDocument a owl:Class, rdfs:Class;
+    rdfs:label "Vocabulary Specification Document"@en;
+    rdfs:comment "A Vocabulary Specification Document is a human-readable representation of a Vocabulary."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:subClassOf <http://www.w3.org/ns/dx/prof/ResourceDescriptor>.
-:vocabulary a rdf:Property, owl:ObjectProperty;
-    rdfs:label "vocabulary"@en;
-    rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain :VocabularySpecification;
-    rdfs:range owl:Ontology.
 :externalDocumentation a rdf:Property, owl:ObjectProperty;
     rdfs:label "external documentation"@en;
     rdfs:comment "Link to an external documentation of this resource. Profiles of this resource should preferably link to this URL for documentation."@en;
