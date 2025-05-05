@@ -3,55 +3,75 @@
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix role: <http://www.w3.org/ns/dx/prof/role/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix file-type: <http://publications.europa.eu/resource/authority/file-type/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-<http://w3id.org/dsv-dap#> a dsv:ApplicationProfile, prof:Profile ;
-    prof:hasResource <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/> , # Specification document
-                     <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/spec>, # Specification file
-                     <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/dsv>, # DSV file
-                     <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/vocabulary>, # Vocabulary file
-                     <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/shacl> , # SHACL file
-                     <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b> , # Image 1
-                     <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/626cb> ; # Image 2
-    prof:hasToken "dcat-dap"^^xsd:token .
-
-                     
-<https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/> a dsv:ApplicationProfileSpecificationDocument, prof:ProfileDescriptor ;
-    dcterms:title "Data Specification Vocabulary - Default Application Profile"@en;
-    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/> ;
+<http://w3id.org/dsv#> a owl:Ontology, prof:Profile ;
+    prof:hasResource <https://mff-uk.github.io/data-specification-vocabulary/dsv/> , # Specification document
+                     <https://mff-uk.github.io/data-specification-vocabulary/dsv/spec>, # Specification file
+                     <https://mff-uk.github.io/data-specification-vocabulary/dsv/vocabulary>, # Vocabulary file
+                     <https://mff-uk.github.io/data-specification-vocabulary/dsv/626cb> ; # Image 2
+    prof:isProfileOf <http://www.w3.org/2004/02/skos/core#>, # SKOS
+                     <http://purl.org/dc/terms/> , # Dublin Core
+                     <https://www.w3.org/2002/07/owl#> , # OWL
+                     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> , # RDF
+                     <http://www.w3.org/2000/01/rdf-schema#> , # RDFS
+                     <http://www.w3.org/ns/dx/prof/> ; # PROF
+    prof:hasToken "dsv"^^xsd:token .
+                
+<https://mff-uk.github.io/data-specification-vocabulary/dsv/> a dsv:VocabularySpecificationDocument, prof:ResourceDescriptor ;
+    dcterms:title "Data Specification Vocabulary"@en;
+    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv/> ;
     prof:hasRole role:Guidance ;
-    dcterms:format <http://publications.europa.eu/resource/authority/file-type/HTML> .
+    dcterms:format file-type:HTML .
 
-<https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/spec> a prof:ProfileDescriptor ; # DSV Specification file
+<https://mff-uk.github.io/data-specification-vocabulary/dsv/spec> a prof:ResourceDescriptor ; # DSV Specification file
     dcterms:title "DSV Specification file"@en;
-    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/spec.ttl> ; # Downloadable file
+    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv/spec.ttl> ; # Downloadable file
     prof:hasRole role:Specification ;
-    dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dcterms:format file-type:RDF_TURTLE ;
     dcterms:conformsTo <https://w3id.org/dsv-dap#> .
 
-<https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/dsv> a prof:ProfileDescriptor ; # Application profile specification
-    dcterms:title "DSV AP file"@en;
-    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/dsv.ttl> ; # Downloadable file
-    prof:hasRole role:Specification ;
-    dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-    dcterms:conformsTo <https://w3id.org/dsv-dap#> .
-
-<https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/vocabulary> a prof:ProfileDescriptor ; # Vocabulary specification
+<https://mff-uk.github.io/data-specification-vocabulary/dsv/vocabulary> a prof:ResourceDescriptor ; # Vocabulary specification
     dcterms:title "RDFS+OWL file"@en;
-    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/model.owl.ttl> ; # Downloadable file
+    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv/model.owl.ttl> ; # Downloadable file
     prof:hasRole role:Vocabulary ;
-    dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dcterms:format file-type:RDF_TURTLE ;
     dcterms:conformsTo <http://www.w3.org/2000/01/rdf-schema#>,  <http://www.w3.org/2002/07/owl> . # RDFS and OWL
 
-<https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/shacl> a prof:ProfileDescriptor ; # SHACL specification
-    dcterms:title "SHACL file"@en;
-    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/shacl.ttl> ; # Downloadable file
-    prof:hasRole role:Schema ;
-    dcterms:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-    dcterms:conformsTo <http://www.w3.org/ns/shacl#> . # SHACL
-
-<https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b> a prof:ProfileDescriptor ; # Image 1
+<https://mff-uk.github.io/data-specification-vocabulary/dsv/80bb66a5-4182-4250-90c2-90b7f0b05a7b> a prof:ResourceDescriptor ; # Image 1
     dcterms:title "Image 1"@en;
-    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg> ; # Downloadable file
+    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg> ; # Downloadable file
     prof:hasRole role:Guidance ;
-    dcterms:format <http://publications.europa.eu/resource/authority/file-type/SVG> ;
+    dcterms:format file-type:SVG ;
     dcterms:conformsTo <https://www.w3.org/TR/SVG/> . # SVG
+
+<http://www.w3.org/2004/02/skos/core#> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+                      prof:hasArtifact <https://datagov-cz.github.io/cache-slovniku/skos.rdf> ] ; # different due to CORS
+    prof:hasToken "skos"^^xsd:token .
+
+<http://purl.org/dc/terms/> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+                      prof:hasArtifact <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl> ] ; # different due to CORS
+    prof:hasToken "dcterms"^^xsd:token .
+
+<https://www.w3.org/2002/07/owl#> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+                      prof:hasArtifact <https://www.w3.org/2002/07/owl#> ] ; # same - CORS supported
+    prof:hasToken "owl"^^xsd:token .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+                      prof:hasArtifact <https://datagov-cz.github.io/cache-slovniku/rdf.ttl> ] ; # different due to CORS
+    prof:hasToken "rdf"^^xsd:token .
+
+<http://www.w3.org/2000/01/rdf-schema#> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+                      prof:hasArtifact <https://datagov-cz.github.io/cache-slovniku/rdfs.ttl> ] ; # different due to CORS
+    prof:hasToken "rdfs"^^xsd:token .
+
+<http://www.w3.org/ns/dx/prof/> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+                      prof:hasArtifact <https://www.w3.org/TR/dx-prof/rdf/prof.ttl> ] ; # different due to CORS
+    prof:hasToken "prof"^^xsd:token .
