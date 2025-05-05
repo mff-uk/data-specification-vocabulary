@@ -44,6 +44,51 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Resource>.
 
+<https://w3id.org/dsv-dap#ResourceDescriptor.hasRole> dsv:domain <https://w3id.org/dsv-dap#ResourceDescriptor>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasRole>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasRole>
+];
+    dsv:cardinality cardinality:01;
+    dsv:property <http://www.w3.org/ns/dx/prof/hasRole>;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ResourceRole>.
+
+<https://w3id.org/dsv-dap#ResourceDescriptor.format> dsv:domain <https://w3id.org/dsv-dap#ResourceDescriptor>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "format"@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dct:format
+];
+    dsv:cardinality cardinality:01;
+    dsv:property dct:format;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Format>.
+
+<https://w3id.org/dsv-dap#ResourceDescriptor.conformsTo> dsv:domain <https://w3id.org/dsv-dap#ResourceDescriptor>;
+    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "conforms To"@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource dct:conformsTo
+];
+    dsv:cardinality cardinality:0n;
+    dsv:property dct:conformsTo;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ApplicationProfile>.
+
 <https://w3id.org/dsv-dap#EntityProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:reusesPropertyValue [
@@ -227,7 +272,7 @@
     dsv:cardinality cardinality:0n;
     dsv:property dsv:classRole;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassRole>.
 
 <https://w3id.org/dsv-dap#PropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
@@ -294,7 +339,7 @@
     dsv:cardinality cardinality:01;
     dsv:property dsv:cardinality;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Cardinality>.
 
 <https://w3id.org/dsv-dap#PropertyProfile.requirementLevel> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
     dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
@@ -311,7 +356,7 @@
     dsv:cardinality cardinality:01;
     dsv:property dsv:requirementLevel;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Concept>.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#RequirementLevel>.
 
 <https://w3id.org/dsv-dap#ObjectPropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
@@ -528,21 +573,6 @@
     dsv:class rdfs:Datatype;
     dsv:classRole role:supportive.
 
-<https://w3id.org/dsv-dap#Concept> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource skos:Concept
-], [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource skos:Concept
-];
-    a dsv:ClassProfile;
-    dsv:class skos:Concept;
-    dsv:classRole role:supportive.
-
 <https://w3id.org/dsv-dap#Vocabulary> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     skos:prefLabel "Vocabulary"@en;
@@ -741,3 +771,50 @@
     dsv:property <http://www.w3.org/ns/dx/prof/hasToken>;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#token>.
+
+<https://w3id.org/dsv-dap#ResourceRole> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/ResourceRole>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/ResourceRole>
+];
+    a dsv:ClassProfile;
+    dsv:class <http://www.w3.org/ns/dx/prof/ResourceRole>.
+
+<https://w3id.org/dsv-dap#ClassRole> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "Class Role"@en;
+    skos:definition "Class Role, e.g. Mandatory or Supportive."@en;
+    a dsv:ClassProfile;
+    dsv:class skos:Concept;
+    dsv:classRole role:supportive.
+
+<https://w3id.org/dsv-dap#RequirementLevel> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "Requirement Level"@en;
+    skos:definition "Requirement Level of a property profile."@en;
+    a dsv:ClassProfile;
+    dsv:class skos:Concept;
+    dsv:classRole role:supportive.
+
+<https://w3id.org/dsv-dap#Cardinality> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "Cardinality"@en;
+    skos:definition "Cardinality, e.g. 0..* or 1..1"@en;
+    a dsv:ClassProfile;
+    dsv:class skos:Concept;
+    dsv:classRole role:supportive.
+
+<https://w3id.org/dsv-dap#Format> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "Format"@en;
+    skos:definition "An idea or notion; a unit of thought."@en;
+    skos:scopeNote "The file format, physical medium, or dimensions of the resource."@en;
+    a dsv:ClassProfile;
+    dsv:class skos:Concept;
+    dsv:classRole role:supportive.

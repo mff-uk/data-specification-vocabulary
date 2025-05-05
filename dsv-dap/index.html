@@ -280,6 +280,7 @@
                 
                     <p>Backwards associations</p>
                     <ul>
+                        <li><a href="#ResourceDescriptor.conformsTo"></a></li>
                         <li><a href="#EntityProfile.isPartOf"></a></li>
                     </ul>
                 
@@ -503,7 +504,7 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#Concept">Concept</a>
+                            <a href="#ClassRole">Class Role</a>
                     
                                 [0..*]
                     
@@ -1445,7 +1446,7 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#Concept">Concept</a>
+                            <a href="#Cardinality">Cardinality</a>
                     
                                 [0..1]
                     
@@ -1601,7 +1602,7 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#Concept">Concept</a>
+                            <a href="#RequirementLevel">Requirement Level</a>
                     
                                 [0..1]
                     
@@ -2184,7 +2185,47 @@
           <section>
             <h3>Supportive classes</h3>
 
-                <section id="Class">
+                <section id="Cardinality">
+                  <h4>Cardinality</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#Cardinality">https://w3id.org/dsv-dap#Cardinality</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>Cardinality</td>
+                    </tr>
+                    <tr>
+                      <td>Definition</td>
+                      <td>Cardinality, e.g. 0..* or 1..1</td>
+                    </tr>
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
+                        <br />Definition: <i>An idea or notion; a unit of thought.</i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                  </table>
+                
+                    <p>Backwards associations</p>
+                    <ul>
+                        <li><a href="#PropertyProfile.cardinality"></a></li>
+                    </ul>
+                
+                
+                </section>                <section id="Class">
                   <h4>Class</h4>
                 
                   <table class="def">
@@ -2276,21 +2317,21 @@
                     
                       </table>
                     </section>
-                </section>                <section id="Concept">
-                  <h4>Concept</h4>
+                </section>                <section id="ClassRole">
+                  <h4>Class Role</h4>
                 
                   <table class="def">
                     <tr>
                       <td>IRI</td>
-                      <td><a href="https://w3id.org/dsv-dap#Concept">https://w3id.org/dsv-dap#Concept</a></td>
+                      <td><a href="https://w3id.org/dsv-dap#ClassRole">https://w3id.org/dsv-dap#ClassRole</a></td>
                     </tr>
                     <tr>
                       <td>Label</td>
-                      <td>Concept</td>
+                      <td>Class Role</td>
                     </tr>
                     <tr>
                       <td>Definition</td>
-                      <td>An idea or notion; a unit of thought.</td>
+                      <td>Class Role, e.g. Mandatory or Supportive.</td>
                     </tr>
                 
                       <tr>
@@ -2312,9 +2353,7 @@
                 
                     <p>Backwards associations</p>
                     <ul>
-                        <li><a href="#PropertyProfile.cardinality"></a></li>
                         <li><a href="#ClassProfile.classRole"></a></li>
-                        <li><a href="#PropertyProfile.requirementLevel"></a></li>
                     </ul>
                 
                 
@@ -2355,6 +2394,50 @@
                     <p>Backwards associations</p>
                     <ul>
                         <li><a href="#DatatypePropertyProfile.datatype"></a></li>
+                    </ul>
+                
+                
+                </section>                <section id="Format">
+                  <h4>Format</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#Format">https://w3id.org/dsv-dap#Format</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>Format</td>
+                    </tr>
+                    <tr>
+                      <td>Definition</td>
+                      <td>An idea or notion; a unit of thought.</td>
+                    </tr>
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
+                        <br />Definition: <i>An idea or notion; a unit of thought.</i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                    <tr>
+                      <td>Usage note</td>
+                      <td>The file format, physical medium, or dimensions of the resource.</td>
+                    </tr>
+                  </table>
+                
+                    <p>Backwards associations</p>
+                    <ul>
+                        <li><a href="#ResourceDescriptor.format"></a></li>
                     </ul>
                 
                 
@@ -2451,6 +2534,46 @@
                     
                       </table>
                     </section>
+                </section>                <section id="RequirementLevel">
+                  <h4>Requirement Level</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#RequirementLevel">https://w3id.org/dsv-dap#RequirementLevel</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>Requirement Level</td>
+                    </tr>
+                    <tr>
+                      <td>Definition</td>
+                      <td>Requirement Level of a property profile.</td>
+                    </tr>
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
+                        <br />Definition: <i>An idea or notion; a unit of thought.</i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                  </table>
+                
+                    <p>Backwards associations</p>
+                    <ul>
+                        <li><a href="#PropertyProfile.requirementLevel"></a></li>
+                    </ul>
+                
+                
                 </section>                <section id="Resource">
                   <h4>Resource</h4>
                 
@@ -2539,7 +2662,111 @@
                         <li><a href="#SemanticDataSpecification.hasResource"></a></li>
                     </ul>
                 
-                    <section id="ResourceDescriptor.hasArtifact">
+                    <section id="ResourceDescriptor.conformsTo">
+                      <h4>conforms To</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#ResourceDescriptor.conformsTo">https://w3id.org/dsv-dap#ResourceDescriptor.conformsTo</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>conforms To</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>An established standard to which the described resource conforms.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#ResourceDescriptor">Resource Descriptor</a>
+                    
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="#ApplicationProfile">Application Profile</a>
+                    
+                                [0..*]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://purl.org/dc/terms/conformsTo">Conforms To</a> (<a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a>)
+                            <br />Definition: <i>An established standard to which the described resource conforms.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>    <section id="ResourceDescriptor.format">
+                      <h4>format</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#ResourceDescriptor.format">https://w3id.org/dsv-dap#ResourceDescriptor.format</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>format</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>The file format, physical medium, or dimensions of the resource.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#ResourceDescriptor">Resource Descriptor</a>
+                    
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="#Format">Format</a>
+                    
+                                [0..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://purl.org/dc/terms/format">Format</a> (<a href="http://purl.org/dc/terms/format">dcterms:format</a>)
+                            <br />Definition: <i>The file format, physical medium, or dimensions of the resource.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>    <section id="ResourceDescriptor.hasArtifact">
                       <h4>has artifact</h4>
                     
                       <table class="def">
@@ -2591,15 +2818,110 @@
                           </tr>
                     
                       </table>
+                    </section>    <section id="ResourceDescriptor.hasRole">
+                      <h4>has role</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#ResourceDescriptor.hasRole">https://w3id.org/dsv-dap#ResourceDescriptor.hasRole</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>has role</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>The function of an artifact described by a Resource Descriptor, such as specification, guidance etc.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#ResourceDescriptor">Resource Descriptor</a>
+                    
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="#ResourceRole">Resource Role</a>
+                    
+                                [0..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://www.w3.org/ns/dx/prof/hasRole">has role</a> (<a href="http://www.w3.org/ns/dx/prof/hasRole">http://www.w3.org/ns/dx/prof/hasRole</a>)
+                            <br />Definition: <i>The function of an artifact described by a Resource Descriptor, such as specification, guidance etc.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
                     </section>
                 </section>          </section>
 
 
-
+            <section id="ResourceRole">
+              <h4>Resource Role</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv-dap#ResourceRole">https://w3id.org/dsv-dap#ResourceRole</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>Resource Role</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>A role that an profile resource, described by a Resource Descriptor, plays</td>
+                </tr>
+            
+                  <tr>
+                    <td>Profiles</td>
+                    <td>
+                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                            <li>
+                                    class
+                  
+                  <a href="http://www.w3.org/ns/dx/prof/ResourceRole">Resource Role</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceRole">http://www.w3.org/ns/dx/prof/ResourceRole</a>)
+                    <br />Definition: <i>A role that an profile resource, described by a Resource Descriptor, plays</i>
+            
+                            </li>
+                      </ul>
+                    </td>
+                  </tr>
+            
+              </table>
+            
+                <p>Backwards associations</p>
+                <ul>
+                    <li><a href="#ResourceDescriptor.hasRole"></a></li>
+                </ul>
+            
+            
+            </section>
         </section>
 
         <section>
         <h2>Properties</h2>
+
+
+
 
 
 
