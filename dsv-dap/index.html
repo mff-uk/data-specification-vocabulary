@@ -281,7 +281,7 @@
                     <p>Backwards associations</p>
                     <ul>
                         <li><a href="#ResourceDescriptor.conformsTo"></a></li>
-                        <li><a href="#EntityProfile.isPartOf"></a></li>
+                        <li><a href="#TermProfile.isPartOf"></a></li>
                     </ul>
                 
                     <section id="ApplicationProfile.hasSpecification">
@@ -808,21 +808,21 @@
                     
                       </table>
                     </section>
-                </section>                <section id="InvalidEntityProfile">
-                  <h4>Invalid Entity Profile</h4>
+                </section>                <section id="InvalidTermProfile">
+                  <h4>Invalid Term Profile</h4>
                 
                   <table class="def">
                     <tr>
                       <td>IRI</td>
-                      <td><a href="https://w3id.org/dsv-dap#InvalidEntityProfile">https://w3id.org/dsv-dap#InvalidEntityProfile</a></td>
+                      <td><a href="https://w3id.org/dsv-dap#InvalidTermProfile">https://w3id.org/dsv-dap#InvalidTermProfile</a></td>
                     </tr>
                     <tr>
                       <td>Label</td>
-                      <td>Invalid Entity Profile</td>
+                      <td>Invalid Term Profile</td>
                     </tr>
                     <tr>
                       <td>Definition</td>
-                      <td>Invalid Entity Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</td>
+                      <td>Invalid Term Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</td>
                     </tr>
                 
                       <tr>
@@ -832,8 +832,8 @@
                                 <li>
                                         class
                       
-                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#InvalidEntityProfile">Invalid Entity Profile</a> (<a href="https://w3id.org/dsv#InvalidEntityProfile">https://w3id.org/dsv#InvalidEntityProfile</a>)
-                        <br />Definition: <i>Invalid Entity Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</i>
+                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#InvalidTermProfile">Invalid Term Profile</a> (<a href="https://w3id.org/dsv#InvalidTermProfile">https://w3id.org/dsv#InvalidTermProfile</a>)
+                        <br />Definition: <i>Invalid Term Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</i>
                 
                                 </li>
                           </ul>
@@ -928,21 +928,21 @@
                     
                       </table>
                     </section>
-                </section>                <section id="EntityProfile">
-                  <h4>Entity Profile</h4>
+                </section>                <section id="TermProfile">
+                  <h4>Term Profile</h4>
                 
                   <table class="def">
                     <tr>
                       <td>IRI</td>
-                      <td><a href="https://w3id.org/dsv-dap#EntityProfile">https://w3id.org/dsv-dap#EntityProfile</a></td>
+                      <td><a href="https://w3id.org/dsv-dap#TermProfile">https://w3id.org/dsv-dap#TermProfile</a></td>
                     </tr>
                     <tr>
                       <td>Label</td>
-                      <td>Entity Profile</td>
+                      <td>Term Profile</td>
                     </tr>
                     <tr>
                       <td>Definition</td>
-                      <td>Entity profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc.</td>
+                      <td>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</td>
                     </tr>
                 
                       <tr>
@@ -952,8 +952,8 @@
                                 <li>
                                         class
                       
-                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#EntityProfile">Entity Profile</a> (<a href="https://w3id.org/dsv#EntityProfile">https://w3id.org/dsv#EntityProfile</a>)
-                        <br />Definition: <i>Entity profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc.</i>
+                      <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">https://w3id.org/dsv#TermProfile</a>)
+                        <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
                 
                                 </li>
                           </ul>
@@ -964,17 +964,17 @@
                 
                     <p>Backwards associations</p>
                     <ul>
-                        <li><a href="#EntityProfile.profileOf"></a></li>
-                        <li><a href="#EntityProfile.specializes"></a></li>
+                        <li><a href="#TermProfile.profileOf"></a></li>
+                        <li><a href="#TermProfile.specializes"></a></li>
                     </ul>
                 
-                    <section id="EntityProfile.definition">
+                    <section id="TermProfile.definition">
                       <h4>definition</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#EntityProfile.definition">https://w3id.org/dsv-dap#EntityProfile.definition</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#TermProfile.definition">https://w3id.org/dsv-dap#TermProfile.definition</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
@@ -987,7 +987,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                                 [0..*]
                     
@@ -1021,13 +1021,13 @@
                           </tr>
                     
                       </table>
-                    </section>    <section id="EntityProfile.externalDocumentation">
+                    </section>    <section id="TermProfile.externalDocumentation">
                       <h4>external documentation</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#EntityProfile.externalDocumentation">https://w3id.org/dsv-dap#EntityProfile.externalDocumentation</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#TermProfile.externalDocumentation">https://w3id.org/dsv-dap#TermProfile.externalDocumentation</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
@@ -1040,7 +1040,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                             
                           </td>
@@ -1073,13 +1073,13 @@
                           </tr>
                     
                       </table>
-                    </section>    <section id="EntityProfile.isPartOf">
+                    </section>    <section id="TermProfile.isPartOf">
                       <h4>is part of</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#EntityProfile.isPartOf">https://w3id.org/dsv-dap#EntityProfile.isPartOf</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#TermProfile.isPartOf">https://w3id.org/dsv-dap#TermProfile.isPartOf</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
@@ -1092,7 +1092,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                             
                           </td>
@@ -1125,13 +1125,13 @@
                           </tr>
                     
                       </table>
-                    </section>    <section id="EntityProfile.preferredLabel">
+                    </section>    <section id="TermProfile.preferredLabel">
                       <h4>preferred label</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#EntityProfile.preferredLabel">https://w3id.org/dsv-dap#EntityProfile.preferredLabel</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#TermProfile.preferredLabel">https://w3id.org/dsv-dap#TermProfile.preferredLabel</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
@@ -1144,7 +1144,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                             
                           </td>
@@ -1178,13 +1178,13 @@
                           </tr>
                     
                       </table>
-                    </section>    <section id="EntityProfile.profileOf">
+                    </section>    <section id="TermProfile.profileOf">
                       <h4>profile of</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#EntityProfile.profileOf">https://w3id.org/dsv-dap#EntityProfile.profileOf</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#TermProfile.profileOf">https://w3id.org/dsv-dap#TermProfile.profileOf</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
@@ -1197,7 +1197,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                             
                           </td>
@@ -1205,7 +1205,7 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                                 [0..*]
                     
@@ -1230,13 +1230,13 @@
                           </tr>
                     
                       </table>
-                    </section>    <section id="EntityProfile.reusesPropertyValue">
+                    </section>    <section id="TermProfile.reusesPropertyValue">
                       <h4>reuses property value</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#EntityProfile.reusesPropertyValue">https://w3id.org/dsv-dap#EntityProfile.reusesPropertyValue</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#TermProfile.reusesPropertyValue">https://w3id.org/dsv-dap#TermProfile.reusesPropertyValue</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
@@ -1249,7 +1249,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                             
                           </td>
@@ -1282,13 +1282,13 @@
                           </tr>
                     
                       </table>
-                    </section>    <section id="EntityProfile.specializes">
+                    </section>    <section id="TermProfile.specializes">
                       <h4>specializes</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#EntityProfile.specializes">https://w3id.org/dsv-dap#EntityProfile.specializes</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#TermProfile.specializes">https://w3id.org/dsv-dap#TermProfile.specializes</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
@@ -1301,7 +1301,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                             
                           </td>
@@ -1309,7 +1309,7 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                                 [0..*]
                     
@@ -1334,13 +1334,13 @@
                           </tr>
                     
                       </table>
-                    </section>    <section id="EntityProfile.usageNote">
+                    </section>    <section id="TermProfile.usageNote">
                       <h4>usage note</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#EntityProfile.usageNote">https://w3id.org/dsv-dap#EntityProfile.usageNote</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#TermProfile.usageNote">https://w3id.org/dsv-dap#TermProfile.usageNote</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
@@ -1353,7 +1353,7 @@
                         <tr>
                           <td>Domain</td>
                           <td>
-                            <a href="#EntityProfile">Entity Profile</a>
+                            <a href="#TermProfile">Term Profile</a>
                     
                                 [0..*]
                     
@@ -1666,7 +1666,7 @@
                 
                     <p>Backwards associations</p>
                     <ul>
-                        <li><a href="#EntityProfile.reusesPropertyValue"></a></li>
+                        <li><a href="#TermProfile.reusesPropertyValue"></a></li>
                     </ul>
                 
                     <section id="PropertyValueReuse.reusedFromResource">
@@ -2610,7 +2610,7 @@
                 
                     <p>Backwards associations</p>
                     <ul>
-                        <li><a href="#EntityProfile.externalDocumentation"></a></li>
+                        <li><a href="#TermProfile.externalDocumentation"></a></li>
                         <li><a href="#ResourceDescriptor.hasArtifact"></a></li>
                         <li><a href="#PropertyValueReuse.reusedFromResource"></a></li>
                     </ul>

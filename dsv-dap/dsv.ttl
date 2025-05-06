@@ -89,22 +89,22 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#ApplicationProfile>.
 
-<https://w3id.org/dsv-dap#EntityProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+<https://w3id.org/dsv-dap#TermProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource dsv:EntityProfile
+  dsv:reusedFromResource dsv:TermProfile
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource dsv:EntityProfile
+  dsv:reusedFromResource dsv:TermProfile
 ];
     a dsv:ClassProfile;
-    dsv:class dsv:EntityProfile;
+    dsv:class dsv:TermProfile;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#EntityProfile.reusesPropertyValue> dsv:domain <https://w3id.org/dsv-dap#EntityProfile>;
+<https://w3id.org/dsv-dap#TermProfile.reusesPropertyValue> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
     dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:reusesPropertyValue [
@@ -121,7 +121,7 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#PropertyValueReuse>.
 
-<https://w3id.org/dsv-dap#EntityProfile.isPartOf> dsv:domain <https://w3id.org/dsv-dap#EntityProfile>;
+<https://w3id.org/dsv-dap#TermProfile.isPartOf> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
     dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     skos:prefLabel "is part of"@en;
@@ -135,7 +135,7 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#ApplicationProfile>.
 
-<https://w3id.org/dsv-dap#EntityProfile.specializes> dsv:domain <https://w3id.org/dsv-dap#EntityProfile>;
+<https://w3id.org/dsv-dap#TermProfile.specializes> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
     dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:reusesPropertyValue [
@@ -150,9 +150,9 @@
     dsv:cardinality cardinality:0n;
     dsv:property dsv:specializes;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#EntityProfile>.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#TermProfile>.
 
-<https://w3id.org/dsv-dap#EntityProfile.profileOf> dsv:domain <https://w3id.org/dsv-dap#EntityProfile>;
+<https://w3id.org/dsv-dap#TermProfile.profileOf> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
     dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:reusesPropertyValue [
@@ -167,9 +167,9 @@
     dsv:cardinality cardinality:0n;
     dsv:property dsv:profileOf;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#EntityProfile>.
+    dsv:objectPropertyRange <https://w3id.org/dsv-dap#TermProfile>.
 
-<https://w3id.org/dsv-dap#EntityProfile.externalDocumentation> dsv:domain <https://w3id.org/dsv-dap#EntityProfile>;
+<https://w3id.org/dsv-dap#TermProfile.externalDocumentation> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
     dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:reusesPropertyValue [
@@ -186,7 +186,7 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Resource>.
 
-<https://w3id.org/dsv-dap#EntityProfile.preferredLabel> dsv:domain <https://w3id.org/dsv-dap#EntityProfile>;
+<https://w3id.org/dsv-dap#TermProfile.preferredLabel> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
     dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     skos:definition "Preferred label of this profile."@en;
@@ -200,7 +200,7 @@
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
-<https://w3id.org/dsv-dap#EntityProfile.definition> dsv:domain <https://w3id.org/dsv-dap#EntityProfile>;
+<https://w3id.org/dsv-dap#TermProfile.definition> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
     dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     skos:definition "Definition of this profile."@en;
@@ -214,7 +214,7 @@
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
-<https://w3id.org/dsv-dap#EntityProfile.usageNote> dsv:domain <https://w3id.org/dsv-dap#EntityProfile>;
+<https://w3id.org/dsv-dap#TermProfile.usageNote> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
     dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
     skos:prefLabel "usage note"@en;
@@ -226,7 +226,7 @@
 
 <https://w3id.org/dsv-dap#ClassProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#EntityProfile>;
+    dsv:specializes <https://w3id.org/dsv-dap#TermProfile>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -276,7 +276,7 @@
 
 <https://w3id.org/dsv-dap#PropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#EntityProfile>;
+    dsv:specializes <https://w3id.org/dsv-dap#TermProfile>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -545,17 +545,17 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#Vocabulary>.
 
-<https://w3id.org/dsv-dap#InvalidEntityProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
+<https://w3id.org/dsv-dap#InvalidTermProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
-    skos:prefLabel "Nevalidní profil"@cs, "Invalid Entity Profile"@en;
-    dsv:specializes <https://w3id.org/dsv-dap#EntityProfile>;
+    skos:prefLabel "Nevalidní profil"@cs, "Invalid Term Profile"@en;
+    dsv:specializes <https://w3id.org/dsv-dap#TermProfile>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource dsv:InvalidEntityProfile
+  dsv:reusedFromResource dsv:InvalidTermProfile
 ];
     a dsv:ClassProfile;
-    dsv:class dsv:InvalidEntityProfile;
+    dsv:class dsv:InvalidTermProfile;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#Datatype> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
