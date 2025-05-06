@@ -23,33 +23,33 @@
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain :PropertyValueReuse;
     rdfs:range rdf:Property.
-:EntityProfile a owl:Class, rdfs:Class;
-    rdfs:label "Profil"@cs, "Entity Profile"@en;
-    rdfs:comment "Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu."@cs, "Entity profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc."@en;
+:TermProfile a owl:Class, rdfs:Class;
+    rdfs:label "Profil"@cs, "Term Profile"@en;
+    rdfs:comment "Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu."@cs, "Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>.
 :profileOf a rdf:Property, owl:ObjectProperty;
     rdfs:label "profile of"@en;
     rdfs:comment "Specifies a parent profile of the current profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain :EntityProfile;
-    rdfs:range :EntityProfile.
+    rdfs:domain :TermProfile;
+    rdfs:range :TermProfile.
 :reusesPropertyValue a rdf:Property, owl:ObjectProperty;
     rdfs:label "reuses property value"@en;
     rdfs:comment "Points to definitions of Property value reuse for this Profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain :EntityProfile;
+    rdfs:domain :TermProfile;
     rdfs:range :PropertyValueReuse.
 :specializes a rdf:Property, owl:ObjectProperty;
     rdfs:label "specializes"@en;
     rdfs:comment "Specifies a profile specialized by this profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:domain :EntityProfile;
-    rdfs:range :EntityProfile.
+    rdfs:domain :TermProfile;
+    rdfs:range :TermProfile.
 :ClassProfile a owl:Class, rdfs:Class;
     rdfs:label "Profil třídy"@cs, "Class Profile"@en;
     rdfs:comment "Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf :EntityProfile.
+    rdfs:subClassOf :TermProfile.
 :classRole a rdf:Property, owl:ObjectProperty;
     rdfs:label "class role"@en;
     rdfs:comment "Class role, e.g. Mandatory, Supportive, etc."@en;
@@ -85,12 +85,12 @@
     rdfs:label "Nevalidní profil"@cs, "Invalid Entity Profile"@en;
     rdfs:comment "Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě."@cs, "Invalid Entity Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf :EntityProfile.
+    rdfs:subClassOf :TermProfile.
 :PropertyProfile a owl:Class, rdfs:Class;
     rdfs:label "Profil vlastnosti"@cs, "Property Profile"@en;
     rdfs:comment "Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf :EntityProfile.
+    rdfs:subClassOf :TermProfile.
 :property a rdf:Property, owl:ObjectProperty;
     rdfs:label "profiled property"@en;
     rdfs:comment "The property profiled by the property profile."@en;
