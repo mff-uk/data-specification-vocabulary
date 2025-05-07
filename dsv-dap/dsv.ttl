@@ -592,7 +592,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasResource>
 ];
-    dsv:cardinality cardinality:11;
+    dsv:cardinality cardinality:1n;
     dsv:property <http://www.w3.org/ns/dx/prof/hasResource>;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#VocabularySpecificationDocument>.
@@ -623,7 +623,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasResource>
 ];
-    dsv:cardinality cardinality:11;
+    dsv:cardinality cardinality:1n;
     dsv:property <http://www.w3.org/ns/dx/prof/hasResource>;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://w3id.org/dsv-dap#ApplicationProfileSpecificationDocument>.
@@ -784,7 +784,8 @@
   dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/ResourceRole>
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/dx/prof/ResourceRole>.
+    dsv:class <http://www.w3.org/ns/dx/prof/ResourceRole>;
+    dsv:classRole role:supportive.
 
 <https://w3id.org/dsv-dap#ClassRole> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
     a dsv:Profile;
