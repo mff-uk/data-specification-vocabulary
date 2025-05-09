@@ -7,10 +7,10 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 <http://w3id.org/dsv#> a owl:Ontology, prof:Profile ;
-    prof:hasResource <https://mff-uk.github.io/data-specification-vocabulary/dsv/> , # Specification document
-                     <https://mff-uk.github.io/data-specification-vocabulary/dsv/spec>, # Specification file
-                     <https://mff-uk.github.io/data-specification-vocabulary/dsv/vocabulary>, # Vocabulary file
-                     <https://mff-uk.github.io/data-specification-vocabulary/dsv/626cb> ; # Image 2
+    prof:hasResource <http://w3id.org/dsv/> , # Specification document
+                     <http://w3id.org/dsv/#spec>, # Specification file
+                     <http://w3id.org/dsv/#vocabulary>, # Vocabulary file
+                     <http://w3id.org/dsv/#626cb> ; # Image 2
     prof:isProfileOf <http://www.w3.org/2004/02/skos/core#>, # SKOS
                      <http://purl.org/dc/terms/> , # Dublin Core
                      <https://www.w3.org/2002/07/owl#> , # OWL
@@ -19,27 +19,27 @@
                      <http://www.w3.org/ns/dx/prof/> ; # PROF
     prof:hasToken "dsv"^^xsd:token .
                 
-<https://mff-uk.github.io/data-specification-vocabulary/dsv/> a dsv:VocabularySpecificationDocument, prof:ResourceDescriptor ;
+<http://w3id.org/dsv/> a dsv:VocabularySpecificationDocument, prof:ResourceDescriptor ;
     dcterms:title "Data Specification Vocabulary"@en;
     prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv/> ;
     prof:hasRole role:Guidance ;
     dcterms:format file-type:HTML .
 
-<https://mff-uk.github.io/data-specification-vocabulary/dsv/spec> a prof:ResourceDescriptor ; # DSV Specification file
+<http://w3id.org/dsv/#spec> a prof:ResourceDescriptor ; # DSV Specification file
     dcterms:title "DSV Specification file"@en;
     prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv/spec.ttl> ; # Downloadable file
     prof:hasRole role:Specification ;
     dcterms:format file-type:RDF_TURTLE ;
     dcterms:conformsTo <https://w3id.org/dsv-dap#> .
 
-<https://mff-uk.github.io/data-specification-vocabulary/dsv/vocabulary> a prof:ResourceDescriptor ; # Vocabulary specification
+<http://w3id.org/dsv/#vocabulary> a prof:ResourceDescriptor ; # Vocabulary specification
     dcterms:title "RDFS+OWL file"@en;
     prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv/model.owl.ttl> ; # Downloadable file
     prof:hasRole role:Vocabulary ;
     dcterms:format file-type:RDF_TURTLE ;
     dcterms:conformsTo <http://www.w3.org/2000/01/rdf-schema#>,  <http://www.w3.org/2002/07/owl> . # RDFS and OWL
 
-<https://mff-uk.github.io/data-specification-vocabulary/dsv/80bb66a5-4182-4250-90c2-90b7f0b05a7b> a prof:ResourceDescriptor ; # Image 1
+<http://w3id.org/dsv/#80bb66a5-4182-4250-90c2-90b7f0b05a7b> a prof:ResourceDescriptor ; # Image 1
     dcterms:title "Image 1"@en;
     prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg> ; # Downloadable file
     prof:hasRole role:Guidance ;
