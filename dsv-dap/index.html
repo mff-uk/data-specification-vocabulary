@@ -2075,8 +2075,7 @@
                 
                     <p>Backwards associations</p>
                     <ul>
-                        <li><a href="#Property.isdefinedby"></a></li>
-                        <li><a href="#Class.isdefinedby"></a></li>
+                        <li><a href="#Resource.isdefinedby"></a></li>
                     </ul>
                 
                     <section id="Vocabulary.hasSpecification">
@@ -2253,6 +2252,13 @@
                         <br />Definition: <i>The class of classes.</i>
                 
                                 </li>
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/2002/07/owl#Class">Class</a> (<a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)
+                        <br />Definition: <i>The class of OWL classes.</i>
+                
+                                </li>
                           </ul>
                         </td>
                       </tr>
@@ -2261,24 +2267,27 @@
                 
                     <p>Backwards associations</p>
                     <ul>
+                        <li><a href="#Property.domain"></a></li>
                         <li><a href="#ClassProfile.profiledClass"></a></li>
+                        <li><a href="#Objectproperty.range"></a></li>
+                        <li><a href="#Class.subclassof"></a></li>
                     </ul>
                 
-                    <section id="Class.isdefinedby">
-                      <h4>is defined by</h4>
+                    <section id="Class.subclassof">
+                      <h4>subClassOf</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#Class.isdefinedby">https://w3id.org/dsv-dap#Class.isdefinedby</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#Class.subclassof">https://w3id.org/dsv-dap#Class.subclassof</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
-                          <td>is defined by</td>
+                          <td>subClassOf</td>
                         </tr>
                         <tr>
                           <td>Definition</td>
-                          <td>The defininition of the subject resource.</td>
+                          <td>The subject is a subclass of a class.</td>
                         </tr>
                         <tr>
                           <td>Domain</td>
@@ -2291,9 +2300,9 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#Vocabulary">Vocabulary</a>
+                            <a href="#Class">Class</a>
                     
-                                [1..1]
+                                [0..*]
                     
                         </td>
                         </tr>
@@ -2307,8 +2316,8 @@
                                     <li>
                                             property
                           
-                          <a href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">isDefinedBy</a> (<a href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">rdfs:isDefinedBy</a>)
-                            <br />Definition: <i>The defininition of the subject resource.</i>
+                          <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">subClassOf</a> (<a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a>)
+                            <br />Definition: <i>The subject is a subclass of a class.</i>
                     
                                     </li>
                               </ul>
@@ -2394,6 +2403,7 @@
                     <p>Backwards associations</p>
                     <ul>
                         <li><a href="#DatatypePropertyProfile.datatype"></a></li>
+                        <li><a href="#Datatypeproperty.range"></a></li>
                     </ul>
                 
                 
@@ -2479,23 +2489,24 @@
                     <ul>
                         <li><a href="#PropertyProfile.profiledProperty"></a></li>
                         <li><a href="#PropertyValueReuse.reusedProperty"></a></li>
+                        <li><a href="#Property.subpropertyof"></a></li>
                     </ul>
                 
-                    <section id="Property.isdefinedby">
-                      <h4>is defined by</h4>
+                    <section id="Property.domain">
+                      <h4>domain</h4>
                     
                       <table class="def">
                         <tr>
                           <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#Property.isdefinedby">https://w3id.org/dsv-dap#Property.isdefinedby</a></td>
+                          <td><a href="https://w3id.org/dsv-dap#Property.domain">https://w3id.org/dsv-dap#Property.domain</a></td>
                         </tr>
                         <tr>
                           <td>Label</td>
-                          <td>is defined by</td>
+                          <td>domain</td>
                         </tr>
                         <tr>
                           <td>Definition</td>
-                          <td>The defininition of the subject resource.</td>
+                          <td>A domain of the subject property.</td>
                         </tr>
                         <tr>
                           <td>Domain</td>
@@ -2508,9 +2519,9 @@
                         <tr>
                           <td>Range</td>
                           <td>
-                            <a href="#Vocabulary">Vocabulary</a>
+                            <a href="#Class">Class</a>
                     
-                                [1..1]
+                                [0..1]
                     
                         </td>
                         </tr>
@@ -2524,8 +2535,60 @@
                                     <li>
                                             property
                           
-                          <a href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">isDefinedBy</a> (<a href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">rdfs:isDefinedBy</a>)
-                            <br />Definition: <i>The defininition of the subject resource.</i>
+                          <a href="http://www.w3.org/2000/01/rdf-schema#domain">domain</a> (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>)
+                            <br />Definition: <i>A domain of the subject property.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>    <section id="Property.subpropertyof">
+                      <h4>subPropertyOf</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#Property.subpropertyof">https://w3id.org/dsv-dap#Property.subpropertyof</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>subPropertyOf</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>The subject is a subproperty of a property.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#Property">Property</a>
+                    
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="#Property">Property</a>
+                    
+                                [0..*]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">subPropertyOf</a> (<a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a>)
+                            <br />Definition: <i>The subject is a subproperty of a property.</i>
                     
                                     </li>
                               </ul>
@@ -2615,7 +2678,165 @@
                         <li><a href="#PropertyValueReuse.reusedFromResource"></a></li>
                     </ul>
                 
-                
+                    <section id="Resource.comment">
+                      <h4>comment</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#Resource.comment">https://w3id.org/dsv-dap#Resource.comment</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>comment</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>A description of the subject resource.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#Resource">Resource</a>
+                    
+                                [0..*]
+                    
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text</a>
+                    
+                                [0..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://www.w3.org/2000/01/rdf-schema#comment">comment</a> (<a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a>)
+                            <br />Definition: <i>A description of the subject resource.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>    <section id="Resource.isdefinedby">
+                      <h4>is defined by</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#Resource.isdefinedby">https://w3id.org/dsv-dap#Resource.isdefinedby</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>is defined by</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>The defininition of the subject resource.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#Resource">Resource</a>
+                    
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="#Vocabulary">Vocabulary</a>
+                    
+                                [1..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">isDefinedBy</a> (<a href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">rdfs:isDefinedBy</a>)
+                            <br />Definition: <i>The defininition of the subject resource.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>    <section id="Resource.label">
+                      <h4>label</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#Resource.label">https://w3id.org/dsv-dap#Resource.label</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>label</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>A human-readable name for the subject.</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#Resource">Resource</a>
+                    
+                                [0..*]
+                    
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text</a>
+                    
+                                [1..1]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://www.w3.org/2000/01/rdf-schema#label">label</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
+                            <br />Definition: <i>A human-readable name for the subject.</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
+                    </section>
                 </section>                <section id="ResourceDescriptor">
                   <h4>Resource Descriptor</h4>
                 
@@ -2914,11 +3135,193 @@
                 </section>          </section>
 
 
-
+            <section id="DatatypeProperty">
+              <h4>DatatypeProperty</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv-dap#DatatypeProperty">https://w3id.org/dsv-dap#DatatypeProperty</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>DatatypeProperty</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>The class of data properties.</td>
+                </tr>
+            
+                  <tr>
+                    <td>Profiles</td>
+                    <td>
+                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                            <li>
+                                    class
+                  
+                  <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">DatatypeProperty</a> (<a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)
+                    <br />Definition: <i>The class of data properties.</i>
+            
+                            </li>
+                      </ul>
+                    </td>
+                  </tr>
+            
+              </table>
+            
+            
+                <section id="Datatypeproperty.range">
+                  <h4>range</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#Datatypeproperty.range">https://w3id.org/dsv-dap#Datatypeproperty.range</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>range</td>
+                    </tr>
+                    <tr>
+                      <td>Definition</td>
+                      <td>A range of the subject property.</td>
+                    </tr>
+                    <tr>
+                      <td>Domain</td>
+                      <td>
+                        <a href="#DatatypeProperty">DatatypeProperty</a>
+                
+                        
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Range</td>
+                      <td>
+                        <a href="#Datatype">Datatype</a>
+                
+                            [0..1]
+                
+                    </td>
+                    </tr>
+                
+                
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        property
+                      
+                      <a href="http://www.w3.org/2000/01/rdf-schema#range">range</a> (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>)
+                        <br />Definition: <i>A range of the subject property.</i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                  </table>
+                </section>
+            </section>            <section id="ObjectProperty">
+              <h4>ObjectProperty</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv-dap#ObjectProperty">https://w3id.org/dsv-dap#ObjectProperty</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>ObjectProperty</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>The class of object properties.</td>
+                </tr>
+            
+                  <tr>
+                    <td>Profiles</td>
+                    <td>
+                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                            <li>
+                                    class
+                  
+                  <a href="http://www.w3.org/2002/07/owl#ObjectProperty">ObjectProperty</a> (<a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)
+                    <br />Definition: <i>The class of object properties.</i>
+            
+                            </li>
+                      </ul>
+                    </td>
+                  </tr>
+            
+              </table>
+            
+            
+                <section id="Objectproperty.range">
+                  <h4>range</h4>
+                
+                  <table class="def">
+                    <tr>
+                      <td>IRI</td>
+                      <td><a href="https://w3id.org/dsv-dap#Objectproperty.range">https://w3id.org/dsv-dap#Objectproperty.range</a></td>
+                    </tr>
+                    <tr>
+                      <td>Label</td>
+                      <td>range</td>
+                    </tr>
+                    <tr>
+                      <td>Definition</td>
+                      <td>A range of the subject property.</td>
+                    </tr>
+                    <tr>
+                      <td>Domain</td>
+                      <td>
+                        <a href="#ObjectProperty">ObjectProperty</a>
+                
+                        
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Range</td>
+                      <td>
+                        <a href="#Class">Class</a>
+                
+                            [0..1]
+                
+                    </td>
+                    </tr>
+                
+                
+                
+                      <tr>
+                        <td>Profiles</td>
+                        <td>
+                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                <li>
+                                        property
+                      
+                      <a href="http://www.w3.org/2000/01/rdf-schema#range">range</a> (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>)
+                        <br />Definition: <i>A range of the subject property.</i>
+                
+                                </li>
+                          </ul>
+                        </td>
+                      </tr>
+                
+                  </table>
+                </section>
+            </section>
         </section>
 
         <section>
         <h2>Properties</h2>
+
+
+
+
+
+
 
 
 
