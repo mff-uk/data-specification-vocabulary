@@ -8,6 +8,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 
 <https://w3id.org/dsv#> a owl:Ontology ;
     dcterms:title "Data Specification Vocabulary"@en ;
@@ -142,12 +143,12 @@
     rdfs:label "Application Profile Specification Document"@en;
     rdfs:comment "An Application Profile Specification Document contains human-readable version of an Application Profile."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf <http://www.w3.org/ns/dx/prof/ResourceDescriptor>.
+    rdfs:subClassOf prof:ResourceDescriptor.
 :VocabularySpecificationDocument a owl:Class, rdfs:Class;
     rdfs:label "Vocabulary Specification Document"@en;
     rdfs:comment "A Vocabulary Specification Document is a human-readable representation of a Vocabulary."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
-    rdfs:subClassOf <http://www.w3.org/ns/dx/prof/ResourceDescriptor>.
+    rdfs:subClassOf prof:ResourceDescriptor.
 :externalDocumentation a rdf:Property, owl:ObjectProperty;
     rdfs:label "external documentation"@en;
     rdfs:comment "Link to an external documentation of this resource. Profiles of this resource should preferably link to this URL for documentation."@en;
