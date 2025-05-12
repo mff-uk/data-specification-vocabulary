@@ -8,131 +8,217 @@
       <meta name="color-scheme" content="light dark">
       <script type="application/ld+json">
         {
-        "@id": "",
+        "@id": "https://w3id.org/dsv-dap/",
         "@type": [
-          "http://purl.org/dc/terms/Standard",
-          "http://www.w3.org/2002/07/owl#Ontology"
+          "dsv:ApplicationProfileSpecificationDocument",
+          "adms:AssetDistribution",
+          "prof:ResourceDescriptor"
         ],
-        "http://purl.org/dc/terms/title": [
+        "hasArtifact": ".",
+        "hasRole": "role:Guidance",
+        "format": "format:HTML",
+        "inSpecificationOf": [
           {
-            "@language": "en",
-            "@value": "Data Specification Vocabulary - Default Application Profile (DSV-DAP)"
-          }
-        ],
-        "https://w3id.org/dsv#artefact": [
-          {
+            "@id": "https://w3id.org/dsv-dap#",
             "@type": [
-              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
+              "dsv:ApplicationProfile",
+              "prof:Profile"
             ],
-            "http://www.w3.org/ns/dx/prof/hasArtifact": [
-              {
-                "@id": "./model.owl.ttl"
-              }
-            ],
-            "http://www.w3.org/ns/dx/prof/hasRole": [
-              {
-                "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
-              }
-            ]
-          },
-          {
-            "@type": [
-              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
-            ],
-            "http://www.w3.org/ns/dx/prof/hasArtifact": [
-              {
-                "@id": "./dsv.ttl"
-              }
-            ],
-            "http://www.w3.org/ns/dx/prof/hasRole": [
-              {
-                "@id": "http://www.w3.org/ns/dx/prof/role/schema"
-              }
-            ]
-          },
-          {
-            "@type": [
-              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
-            ],
-            "http://www.w3.org/ns/dx/prof/hasArtifact": [
-              {
-                "@id": ""
-              }
-            ],
-            "http://www.w3.org/ns/dx/prof/hasRole": [
-              {
-                "@id": "http://www.w3.org/ns/dx/prof/role/specification"
-              }
-            ]
-          }
-        ],
-        "http://www.w3.org/ns/dx/prof/hasResource": [
-          {
-            "@type": [
-              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
-            ],
-            "http://www.w3.org/ns/dx/prof/hasArtifact": [
-              {
-                "@id": "./model.owl.ttl"
-              }
-            ],
-            "http://www.w3.org/ns/dx/prof/hasRole": [
-              {
-                "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
-              }
-            ]
-          },
-          {
-            "@type": [
-              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
-            ],
-            "http://www.w3.org/ns/dx/prof/hasArtifact": [
-              {
-                "@id": "./dsv.ttl"
-              }
-            ],
-            "http://www.w3.org/ns/dx/prof/hasRole": [
-              {
-                "@id": "http://www.w3.org/ns/dx/prof/role/schema"
-              }
-            ]
-          },
-          {
-            "@type": [
-              "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
-            ],
-            "http://www.w3.org/ns/dx/prof/hasArtifact": [
-              {
-                "@id": ""
-              }
-            ],
-            "http://www.w3.org/ns/dx/prof/hasRole": [
-              {
-                "@id": "http://www.w3.org/ns/dx/prof/role/specification"
-              }
-            ]
-          }
-        ],
-        "http://purl.org/dc/terms/references": [
-          [
-            {
-              "@id": "https://www.w3.org/ns/legacy_adms"
+            "title": {
+              "en": "dsv-dap"
             },
-            {
-              "@id": "https://mff-uk.github.io/data-specification-vocabulary/dsv/"
-            }
-          ]
+            "isProfileOf": [
+              {
+                "hasArtifact": [
+                  "https://www.w3.org/ns/legacy_adms"
+                ]
+              },
+              {
+                "@id": "https://w3id.org/dsv#",
+                "hasArtifact": [
+                  "https://mff-uk.github.io/data-specification-vocabulary/dsv/"
+                ]
+              }
+            ],
+            "hasSpecification": [
+              "https://w3id.org/dsv-dap/"
+            ],
+            "hasResource": [
+              {
+                "@id": "https://w3id.org/dsv-dap/#dsv",
+                "@type": [
+                  "adms:AssetDistribution",
+                  "prof:ResourceDescriptor"
+                ],
+                "hasArtifact": "./dsv.ttl",
+                "hasRole": "role:Guidance",
+                "format": "format:RDF_TURTLE",
+                "conformsTo": [
+                  "dsv:ApplicationProfileSpecificationDocument",
+                  "prof:Profile"
+                ]
+              },
+              {
+                "@id": "https://w3id.org/dsv-dap/#80bb66a5-4182-4250-90c2-90b7f0b05a7b",
+                "@type": [
+                  "adms:AssetDistribution",
+                  "prof:ResourceDescriptor"
+                ],
+                "hasArtifact": "./80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg",
+                "hasRole": "role:Guidance",
+                "format": "format:SVG",
+                "conformsTo": "https://www.w3.org/TR/SVG/"
+              },
+              {
+                "@id": "https://w3id.org/dsv-dap/#626cb",
+                "@type": [
+                  "adms:AssetDistribution",
+                  "prof:ResourceDescriptor"
+                ],
+                "hasArtifact": "./626cb.svg",
+                "hasRole": "role:Guidance",
+                "format": "format:SVG",
+                "conformsTo": "https://www.w3.org/TR/SVG/"
+              },
+              {
+                "@id": "https://w3id.org/dsv-dap/#n4roi",
+                "@type": [
+                  "adms:AssetDistribution",
+                  "prof:ResourceDescriptor"
+                ],
+                "hasArtifact": "./n4roi.svg",
+                "hasRole": "role:Guidance",
+                "format": "format:SVG",
+                "conformsTo": "https://www.w3.org/TR/SVG/"
+              },
+              {
+                "@id": "https://w3id.org/dsv-dap/#8dlkl",
+                "@type": [
+                  "adms:AssetDistribution",
+                  "prof:ResourceDescriptor"
+                ],
+                "hasArtifact": "./8dlkl.svg",
+                "hasRole": "role:Guidance",
+                "format": "format:SVG",
+                "conformsTo": "https://www.w3.org/TR/SVG/"
+              },
+              {
+                "@id": "https://w3id.org/dsv-dap/",
+                "@type": [
+                  "dsv:ApplicationProfileSpecificationDocument",
+                  "adms:AssetDistribution",
+                  "prof:ResourceDescriptor"
+                ],
+                "hasArtifact": ".",
+                "hasRole": "role:Guidance",
+                "format": "format:HTML"
+              }
+            ]
+          }
         ],
-        "http://www.w3.org/ns/dx/prof/isProfileOf": [
-          [
-            {
-              "@id": "https://www.w3.org/ns/legacy_adms"
-            },
-            {
-              "@id": "https://mff-uk.github.io/data-specification-vocabulary/dsv/"
+        "@context": {
+          "@version": 1.1,
+          "prof": "http://www.w3.org/ns/dx/prof/",
+          "role": "prof:role/",
+          "dsv": "https://w3id.org/dsv#",
+          "format": {
+            "@id": "http://purl.org/dc/terms/format",
+            "@type": "@id"
+          },
+          "owl": "http://www.w3.org/2002/07/owl#",
+          "adms": "http://www.w3.org/ns/adms#",
+          "title": {
+            "@id": "http://purl.org/dc/terms/title",
+            "@container": "@language"
+          },
+          "description": {
+            "@id": "http://purl.org/dc/terms/description",
+            "@container": "@language"
+          },
+          "conformsTo": {
+            "@id": "http://purl.org/dc/terms/conformsTo",
+            "@type": "@id",
+            "@container": "@set"
+          },
+          "hasRole": {
+            "@id": "prof:hasRole",
+            "@type": "@id"
+          },
+          "hasArtifact": {
+            "@id": "prof:hasArtifact",
+            "@type": "@id"
+          },
+          "inSpecificationOf": {
+            "@reverse": "prof:hasResource",
+            "@type": "@id",
+            "@context": {
+              "title": {
+                "@id": "http://purl.org/dc/terms/title",
+                "@container": "@language"
+              },
+              "description": {
+                "@id": "http://purl.org/dc/terms/description",
+                "@container": "@language"
+              },
+              "hasToken": {
+                "@id": "prof:hasToken",
+                "@type": "xsd:token"
+              },
+              "isProfileOf": {
+                "@id": "prof:isProfileOf",
+                "@container": "@set",
+                "@context": {
+                  "title": {
+                    "@id": "http://purl.org/dc/terms/title",
+                    "@container": "@language"
+                  },
+                  "hasResource": {
+                    "@id": "prof:hasResource",
+                    "@type": "@id",
+                    "@container": "@set"
+                  }
+                }
+              },
+              "hasSpecification": {
+                "@id": "prof:hasResource",
+                "@container": "@set",
+                "@context": {
+                  "hasArtifact": {
+                    "@id": "prof:hasArtifact",
+                    "@type": "@id"
+                  }
+                }
+              },
+              "hasResource": {
+                "@id": "prof:hasResource",
+                "@container": "@set",
+                "@context": {
+                  "conformsTo": {
+                    "@id": "http://purl.org/dc/terms/conformsTo",
+                    "@type": "@id",
+                    "@container": "@set"
+                  },
+                  "format": {
+                    "@id": "http://purl.org/dc/terms/format",
+                    "@type": "@id"
+                  },
+                  "hasRole": {
+                    "@id": "prof:hasRole",
+                    "@type": "@id"
+                  },
+                  "hasArtifact": {
+                    "@id": "prof:hasArtifact",
+                    "@type": "@id"
+                  },
+                  "isResourceOf": {
+                    "@reverse": "prof:hasResource",
+                    "@type": "@id"
+                  }
+                }
+              }
             }
-          ]
-        ]
+          }
+        }
       }
       </script>
       <script
@@ -337,58 +423,6 @@
                           </tr>
                     
                       </table>
-                    </section>    <section id="ApplicationProfile.isProfileOf">
-                      <h4>is profile of</h4>
-                    
-                      <table class="def">
-                        <tr>
-                          <td>IRI</td>
-                          <td><a href="https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf">https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf</a></td>
-                        </tr>
-                        <tr>
-                          <td>Label</td>
-                          <td>is profile of</td>
-                        </tr>
-                        <tr>
-                          <td>Definition</td>
-                          <td>A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage</td>
-                        </tr>
-                        <tr>
-                          <td>Domain</td>
-                          <td>
-                            <a href="#ApplicationProfile">Application Profile</a>
-                    
-                            
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Range</td>
-                          <td>
-                            <a href="#SemanticDataSpecification">Semantic Data Specification</a>
-                    
-                                [0..*]
-                    
-                        </td>
-                        </tr>
-                    
-                    
-                    
-                          <tr>
-                            <td>Profiles</td>
-                            <td>
-                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
-                                    <li>
-                                            property
-                          
-                          <a href="http://www.w3.org/ns/dx/prof/isProfileOf">is profile of</a> (<a href="http://www.w3.org/ns/dx/prof/isProfileOf">http://www.w3.org/ns/dx/prof/isProfileOf</a>)
-                            <br />Definition: <i>A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage</i>
-                    
-                                    </li>
-                              </ul>
-                            </td>
-                          </tr>
-                    
-                      </table>
                     </section>
                 </section>                <section id="ApplicationProfileSpecificationDocument">
                   <h4>Application Profile Specification Document</h4>
@@ -423,6 +457,13 @@
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ApplicationProfileSpecificationDocument">Application Profile Specification Document</a> (<a href="https://w3id.org/dsv#ApplicationProfileSpecificationDocument">https://w3id.org/dsv#ApplicationProfileSpecificationDocument</a>)
                         <br />Definition: <i>An Application Profile Specification Document contains human-readable version of an Application Profile.</i>
+                
+                                </li>
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/ns/adms#AssetDistribution">Asset Distribution</a> (<a href="http://www.w3.org/ns/adms#AssetDistribution">adms:AssetDistribution</a>)
+                        <br />Definition: <i>An Asset Distribution represents a particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). An Asset Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Asset Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Asset Distributions themselves are not versioned.</i>
                 
                                 </li>
                           </ul>
@@ -1976,6 +2017,58 @@
                           <td>Used to store the preferred prefix, e.g., registered at prefix.cc.</td>
                         </tr>
                       </table>
+                    </section>    <section id="ApplicationProfile.isProfileOf">
+                      <h4>is profile of</h4>
+                    
+                      <table class="def">
+                        <tr>
+                          <td>IRI</td>
+                          <td><a href="https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf">https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf</a></td>
+                        </tr>
+                        <tr>
+                          <td>Label</td>
+                          <td>is profile of</td>
+                        </tr>
+                        <tr>
+                          <td>Definition</td>
+                          <td>A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage</td>
+                        </tr>
+                        <tr>
+                          <td>Domain</td>
+                          <td>
+                            <a href="#SemanticDataSpecification">Semantic Data Specification</a>
+                    
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Range</td>
+                          <td>
+                            <a href="#SemanticDataSpecification">Semantic Data Specification</a>
+                    
+                                [0..*]
+                    
+                        </td>
+                        </tr>
+                    
+                    
+                    
+                          <tr>
+                            <td>Profiles</td>
+                            <td>
+                              <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                                    <li>
+                                            property
+                          
+                          <a href="http://www.w3.org/ns/dx/prof/isProfileOf">is profile of</a> (<a href="http://www.w3.org/ns/dx/prof/isProfileOf">http://www.w3.org/ns/dx/prof/isProfileOf</a>)
+                            <br />Definition: <i>A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage</i>
+                    
+                                    </li>
+                              </ul>
+                            </td>
+                          </tr>
+                    
+                      </table>
                     </section>    <section id="SemanticDataSpecifcation.title">
                       <h4>title</h4>
                     
@@ -2165,6 +2258,13 @@
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#VocabularySpecificationDocument">Vocabulary Specification Document</a> (<a href="https://w3id.org/dsv#VocabularySpecificationDocument">https://w3id.org/dsv#VocabularySpecificationDocument</a>)
                         <br />Definition: <i>A Vocabulary Specification Document is a human-readable representation of a Vocabulary.</i>
+                
+                                </li>
+                                <li>
+                                        class
+                      
+                      <a href="http://www.w3.org/ns/adms#AssetDistribution">Asset Distribution</a> (<a href="http://www.w3.org/ns/adms#AssetDistribution">adms:AssetDistribution</a>)
+                        <br />Definition: <i>An Asset Distribution represents a particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). An Asset Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Asset Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Asset Distributions themselves are not versioned.</i>
                 
                                 </li>
                           </ul>
@@ -3364,13 +3464,13 @@
         <table id="table-namespaces" class="simple">
           <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
           <tbody>
+              <tr><td><code>adms</code></td><td><a href=http://www.w3.org/ns/adms#><code>http://www.w3.org/ns/adms#</code></a></td></tr>
               <tr><td><code>dcterms</code></td><td><a href=http://purl.org/dc/terms/><code>http://purl.org/dc/terms/</code></a></td></tr>
               <tr><td><code>skos</code></td><td><a href=http://www.w3.org/2004/02/skos/core#><code>http://www.w3.org/2004/02/skos/core#</code></a></td></tr>
               <tr><td><code>xsd</code></td><td><a href=http://www.w3.org/2001/XMLSchema#><code>http://www.w3.org/2001/XMLSchema#</code></a></td></tr>
               <tr><td><code>owl</code></td><td><a href=http://www.w3.org/2002/07/owl#><code>http://www.w3.org/2002/07/owl#</code></a></td></tr>
               <tr><td><code>rdfs</code></td><td><a href=http://www.w3.org/2000/01/rdf-schema#><code>http://www.w3.org/2000/01/rdf-schema#</code></a></td></tr>
               <tr><td><code>rdf</code></td><td><a href=http://www.w3.org/1999/02/22-rdf-syntax-ns#><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></a></td></tr>
-              <tr><td><code>adms</code></td><td><a href=http://www.w3.org/ns/adms#><code>http://www.w3.org/ns/adms#</code></a></td></tr>
           </tbody>
         </table>
       </section>
@@ -3386,10 +3486,6 @@
             </tr>
           </thead>
           <tbody>
-              <tr>
-                <td>Vocabulary</td>
-                <td><a href="./model.owl.ttl">./model.owl.ttl</a></td>
-              </tr>
               <tr>
                 <td>Application profile</td>
                 <td><a href="./dsv.ttl">./dsv.ttl</a></td>

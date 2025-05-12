@@ -8,62 +8,60 @@
 @prefix cardinality: <https://w3id.org/dsv/cardinality#>.
 @prefix requirement: <https://w3id.org/dsv/requirement-level#>.
 @prefix role: <https://w3id.org/dsv/class-role#>.
+@prefix prof: <http://www.w3.org/ns/dx/prof/>.
+@prefix : <https://w3id.org/dsv-dap#>.
 
 
-<https://w3id.org/dsv-dap#applicationProfileConceptualModel> a dsv:ConceptualModel.
-
-<https://w3id.org/dsv-dap#ResourceDescriptor> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#> a prof:Profile, dsv:ApplicationProfile.
+:ResourceDescriptor dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/ResourceDescriptor>
+  dsv:reusedFromResource prof:ResourceDescriptor
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/ResourceDescriptor>
+  dsv:reusedFromResource prof:ResourceDescriptor
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/adms#AssetDistribution>, <http://www.w3.org/ns/dx/prof/ResourceDescriptor>;
     dsv:classRole role:supportive.
 
-<https://w3id.org/dsv-dap#ResourceDescriptor.hasArtifact> dsv:domain <https://w3id.org/dsv-dap#ResourceDescriptor>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#ResourceDescriptor.hasArtifact> dsv:domain :ResourceDescriptor;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasArtifact>
+  dsv:reusedFromResource prof:hasArtifact
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasArtifact>
+  dsv:reusedFromResource prof:hasArtifact
 ];
     dsv:cardinality cardinality:11;
-    dsv:property <http://www.w3.org/ns/dx/prof/hasArtifact>;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Resource>.
+    dsv:objectPropertyRange :Resource.
 
-<https://w3id.org/dsv-dap#ResourceDescriptor.hasRole> dsv:domain <https://w3id.org/dsv-dap#ResourceDescriptor>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#ResourceDescriptor.hasRole> dsv:domain :ResourceDescriptor;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasRole>
+  dsv:reusedFromResource prof:hasRole
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasRole>
+  dsv:reusedFromResource prof:hasRole
 ];
     dsv:cardinality cardinality:01;
-    dsv:property <http://www.w3.org/ns/dx/prof/hasRole>;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ResourceRole>.
+    dsv:objectPropertyRange :ResourceRole.
 
-<https://w3id.org/dsv-dap#ResourceDescriptor.format> dsv:domain <https://w3id.org/dsv-dap#ResourceDescriptor>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#ResourceDescriptor.format> dsv:domain :ResourceDescriptor;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "format"@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -71,13 +69,12 @@
   dsv:reusedFromResource dct:format
 ];
     dsv:cardinality cardinality:01;
-    dsv:property dct:format;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Format>.
+    dsv:objectPropertyRange :Format.
 
-<https://w3id.org/dsv-dap#ResourceDescriptor.conformsTo> dsv:domain <https://w3id.org/dsv-dap#ResourceDescriptor>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#ResourceDescriptor.conformsTo> dsv:domain :ResourceDescriptor;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "conforms To"@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -85,12 +82,11 @@
   dsv:reusedFromResource dct:conformsTo
 ];
     dsv:cardinality cardinality:0n;
-    dsv:property dct:conformsTo;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ApplicationProfile>.
-
-<https://w3id.org/dsv-dap#TermProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+    dsv:objectPropertyRange :ApplicationProfile.
+:TermProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :Resource;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -101,12 +97,11 @@
   dsv:reusedFromResource dsv:TermProfile
 ];
     a dsv:ClassProfile;
-    dsv:class dsv:TermProfile;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#TermProfile.reusesPropertyValue> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#TermProfile.reusesPropertyValue> dsv:domain :TermProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -117,13 +112,12 @@
   dsv:reusedFromResource dsv:reusesPropertyValue
 ];
     dsv:cardinality cardinality:0n;
-    dsv:property dsv:reusesPropertyValue;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#PropertyValueReuse>.
+    dsv:objectPropertyRange :PropertyValueReuse.
 
-<https://w3id.org/dsv-dap#TermProfile.isPartOf> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#TermProfile.isPartOf> dsv:domain :TermProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "is part of"@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -131,13 +125,12 @@
   dsv:reusedFromResource dct:isPartOf
 ];
     dsv:cardinality cardinality:11;
-    dsv:property dct:isPartOf;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ApplicationProfile>.
+    dsv:objectPropertyRange :ApplicationProfile.
 
-<https://w3id.org/dsv-dap#TermProfile.specializes> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#TermProfile.specializes> dsv:domain :TermProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -148,13 +141,12 @@
   dsv:reusedFromResource dsv:specializes
 ];
     dsv:cardinality cardinality:0n;
-    dsv:property dsv:specializes;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#TermProfile>.
+    dsv:objectPropertyRange :TermProfile.
 
-<https://w3id.org/dsv-dap#TermProfile.profileOf> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#TermProfile.profileOf> dsv:domain :TermProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -165,13 +157,12 @@
   dsv:reusedFromResource dsv:profileOf
 ];
     dsv:cardinality cardinality:0n;
-    dsv:property dsv:profileOf;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#TermProfile>.
+    dsv:objectPropertyRange :TermProfile.
 
-<https://w3id.org/dsv-dap#TermProfile.externalDocumentation> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#TermProfile.externalDocumentation> dsv:domain :TermProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -182,51 +173,46 @@
   dsv:reusedFromResource dsv:externalDocumentation
 ];
     dsv:cardinality cardinality:01;
-    dsv:property dsv:externalDocumentation;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Resource>.
+    dsv:objectPropertyRange :Resource.
 
-<https://w3id.org/dsv-dap#TermProfile.preferredLabel> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#TermProfile.preferredLabel> dsv:domain :TermProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:definition "Preferred label of this profile."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource skos:prefLabel
+  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#prefLabel#attribute>
 ];
     dsv:cardinality cardinality:01;
-    dsv:property skos:prefLabel;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
-<https://w3id.org/dsv-dap#TermProfile.definition> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#TermProfile.definition> dsv:domain :TermProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:definition "Definition of this profile."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource skos:definition
+  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#definition#attribute>
 ];
     dsv:cardinality cardinality:01;
-    dsv:property skos:definition;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
-<https://w3id.org/dsv-dap#TermProfile.usageNote> dsv:domain <https://w3id.org/dsv-dap#TermProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#TermProfile.usageNote> dsv:domain :TermProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "usage note"@en;
     skos:definition "Usage note of this profile."@en;
     dsv:cardinality cardinality:01;
-    dsv:property skos:scopeNote;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
-
-<https://w3id.org/dsv-dap#ClassProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#TermProfile>;
+:ClassProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -237,12 +223,11 @@
   dsv:reusedFromResource dsv:ClassProfile
 ];
     a dsv:ClassProfile;
-    dsv:class dsv:ClassProfile;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#ClassProfile.profiledClass> dsv:domain <https://w3id.org/dsv-dap#ClassProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#ClassProfile.profiledClass> dsv:domain :ClassProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -253,13 +238,12 @@
   dsv:reusedFromResource dsv:class
 ];
     dsv:cardinality cardinality:11;
-    dsv:property dsv:class;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Class>.
+    dsv:objectPropertyRange :Class.
 
-<https://w3id.org/dsv-dap#ClassProfile.classRole> dsv:domain <https://w3id.org/dsv-dap#ClassProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#ClassProfile.classRole> dsv:domain :ClassProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -270,13 +254,11 @@
   dsv:reusedFromResource dsv:classRole
 ];
     dsv:cardinality cardinality:0n;
-    dsv:property dsv:classRole;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassRole>.
-
-<https://w3id.org/dsv-dap#PropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#TermProfile>;
+    dsv:objectPropertyRange :ClassRole.
+:PropertyProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -287,12 +269,11 @@
   dsv:reusedFromResource dsv:PropertyProfile
 ];
     a dsv:ClassProfile;
-    dsv:class dsv:PropertyProfile;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#PropertyProfile.profiledProperty> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#PropertyProfile.profiledProperty> dsv:domain :PropertyProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -303,13 +284,12 @@
   dsv:reusedFromResource dsv:property
 ];
     dsv:cardinality cardinality:11;
-    dsv:property dsv:property;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Property>.
+    dsv:objectPropertyRange :Property.
 
-<https://w3id.org/dsv-dap#PropertyProfile.domain> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#PropertyProfile.domain> dsv:domain :PropertyProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -320,13 +300,12 @@
   dsv:reusedFromResource dsv:domain
 ];
     dsv:cardinality cardinality:11;
-    dsv:property dsv:domain;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassProfile>.
+    dsv:objectPropertyRange :ClassProfile.
 
-<https://w3id.org/dsv-dap#PropertyProfile.cardinality> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#PropertyProfile.cardinality> dsv:domain :PropertyProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -337,13 +316,12 @@
   dsv:reusedFromResource dsv:cardinality
 ];
     dsv:cardinality cardinality:01;
-    dsv:property dsv:cardinality;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Cardinality>.
+    dsv:objectPropertyRange :Cardinality.
 
-<https://w3id.org/dsv-dap#PropertyProfile.requirementLevel> dsv:domain <https://w3id.org/dsv-dap#PropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#PropertyProfile.requirementLevel> dsv:domain :PropertyProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -354,13 +332,11 @@
   dsv:reusedFromResource dsv:requirementLevel
 ];
     dsv:cardinality cardinality:01;
-    dsv:property dsv:requirementLevel;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#RequirementLevel>.
-
-<https://w3id.org/dsv-dap#ObjectPropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#PropertyProfile>;
+    dsv:objectPropertyRange :RequirementLevel.
+:ObjectPropertyProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :PropertyProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -371,12 +347,11 @@
   dsv:reusedFromResource dsv:ObjectPropertyProfile
 ];
     a dsv:ClassProfile;
-    dsv:class dsv:ObjectPropertyProfile;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#ObjectPropertyProfile.range> dsv:domain <https://w3id.org/dsv-dap#ObjectPropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#ObjectPropertyProfile.range> dsv:domain :ObjectPropertyProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -387,13 +362,11 @@
   dsv:reusedFromResource dsv:range
 ];
     dsv:cardinality cardinality:11;
-    dsv:property dsv:range;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ClassProfile>.
-
-<https://w3id.org/dsv-dap#DatatypePropertyProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#PropertyProfile>;
+    dsv:objectPropertyRange :ClassProfile.
+:DatatypePropertyProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :PropertyProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -404,12 +377,11 @@
   dsv:reusedFromResource dsv:DatatypePropertyProfile
 ];
     a dsv:ClassProfile;
-    dsv:class dsv:DatatypePropertyProfile;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#DatatypePropertyProfile.datatype> dsv:domain <https://w3id.org/dsv-dap#DatatypePropertyProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#DatatypePropertyProfile.datatype> dsv:domain :DatatypePropertyProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:definition "Datatype used with this Datatype property profile."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -417,12 +389,10 @@
   dsv:reusedFromResource dsv:datatype
 ];
     dsv:cardinality cardinality:11;
-    dsv:property dsv:datatype;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Datatype>.
-
-<https://w3id.org/dsv-dap#PropertyValueReuse> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+    dsv:objectPropertyRange :Datatype.
+:PropertyValueReuse dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -433,12 +403,11 @@
   dsv:reusedFromResource dsv:PropertyValueReuse
 ];
     a dsv:ClassProfile;
-    dsv:class dsv:PropertyValueReuse;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#PropertyValueReuse.reusedFromResource> dsv:domain <https://w3id.org/dsv-dap#PropertyValueReuse>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#PropertyValueReuse.reusedFromResource> dsv:domain :PropertyValueReuse;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -449,13 +418,12 @@
   dsv:reusedFromResource dsv:reusedFromResource
 ];
     dsv:cardinality cardinality:11;
-    dsv:property dsv:reusedFromResource;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Resource>.
+    dsv:objectPropertyRange :Resource.
 
-<https://w3id.org/dsv-dap#PropertyValueReuse.reusedProperty> dsv:domain <https://w3id.org/dsv-dap#PropertyValueReuse>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#PropertyValueReuse.reusedProperty> dsv:domain :PropertyValueReuse;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -466,12 +434,10 @@
   dsv:reusedFromResource dsv:reusedProperty
 ];
     dsv:cardinality cardinality:11;
-    dsv:property dsv:reusedProperty;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Property>.
-
-<https://w3id.org/dsv-dap#Resource> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+    dsv:objectPropertyRange :Property.
+:Resource dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -482,12 +448,11 @@
   dsv:reusedFromResource rdfs:Resource
 ];
     a dsv:ClassProfile;
-    dsv:class rdfs:Resource;
     dsv:classRole role:supportive.
 
-<https://w3id.org/dsv-dap#Resource.isdefinedby> dsv:domain <https://w3id.org/dsv-dap#Resource>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#Resource.isdefinedby> dsv:domain :Resource;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "is defined by"@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
@@ -495,13 +460,12 @@
   dsv:reusedFromResource rdfs:isDefinedBy
 ];
     dsv:cardinality cardinality:11;
-    dsv:property rdfs:isDefinedBy;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Vocabulary>.
+    dsv:objectPropertyRange :Vocabulary.
 
-<https://w3id.org/dsv-dap#Resource.label> dsv:domain <https://w3id.org/dsv-dap#Resource>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#Resource.label> dsv:domain :Resource;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -512,13 +476,12 @@
   dsv:reusedFromResource rdfs:label
 ];
     dsv:cardinality cardinality:11;
-    dsv:property rdfs:label;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
-<https://w3id.org/dsv-dap#Resource.comment> dsv:domain <https://w3id.org/dsv-dap#Resource>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#Resource.comment> dsv:domain :Resource;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -529,13 +492,11 @@
   dsv:reusedFromResource rdfs:comment
 ];
     dsv:cardinality cardinality:01;
-    dsv:property rdfs:comment;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
-
-<https://w3id.org/dsv-dap#Property> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#Resource>;
+:Property dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :Resource;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -546,12 +507,11 @@
   dsv:reusedFromResource rdf:Property
 ];
     a dsv:ClassProfile;
-    dsv:class rdf:Property;
     dsv:classRole role:supportive.
 
-<https://w3id.org/dsv-dap#Property.subpropertyof> dsv:domain <https://w3id.org/dsv-dap#Property>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#Property.subpropertyof> dsv:domain :Property;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -562,13 +522,12 @@
   dsv:reusedFromResource rdfs:subPropertyOf
 ];
     dsv:cardinality cardinality:0n;
-    dsv:property rdfs:subPropertyOf;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Property>.
+    dsv:objectPropertyRange :Property.
 
-<https://w3id.org/dsv-dap#Property.domain> dsv:domain <https://w3id.org/dsv-dap#Property>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#Property.domain> dsv:domain :Property;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -579,13 +538,11 @@
   dsv:reusedFromResource rdfs:domain
 ];
     dsv:cardinality cardinality:01;
-    dsv:property rdfs:domain;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Class>.
-
-<https://w3id.org/dsv-dap#Class> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#Resource>;
+    dsv:objectPropertyRange :Class.
+:Class dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :Resource;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -596,12 +553,11 @@
   dsv:reusedFromResource rdfs:Class
 ];
     a dsv:ClassProfile;
-    dsv:class rdfs:Class, owl:Class;
     dsv:classRole role:supportive.
 
-<https://w3id.org/dsv-dap#Class.subclassof> dsv:domain <https://w3id.org/dsv-dap#Class>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#Class.subclassof> dsv:domain :Class;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -612,25 +568,21 @@
   dsv:reusedFromResource rdfs:subClassOf
 ];
     dsv:cardinality cardinality:0n;
-    dsv:property rdfs:subClassOf;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Class>.
-
-<https://w3id.org/dsv-dap#InvalidTermProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+    dsv:objectPropertyRange :Class.
+:InvalidTermProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "Nevalidní profil"@cs, "Invalid Term Profile"@en;
-    dsv:specializes <https://w3id.org/dsv-dap#TermProfile>;
+    dsv:specializes :TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource dsv:InvalidTermProfile
 ];
     a dsv:ClassProfile;
-    dsv:class dsv:InvalidTermProfile;
     dsv:classRole role:main.
-
-<https://w3id.org/dsv-dap#Datatype> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+:Datatype dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -641,36 +593,31 @@
   dsv:reusedFromResource rdfs:Datatype
 ];
     a dsv:ClassProfile;
-    dsv:class rdfs:Datatype;
     dsv:classRole role:supportive.
-
-<https://w3id.org/dsv-dap#Vocabulary> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+:Vocabulary dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "Vocabulary"@en;
     skos:definition "The class of vocabularies."@en;
-    dsv:specializes <https://w3id.org/dsv-dap#SemanticDataSpecification>;
+    dsv:specializes :SemanticDataSpecification;
     a dsv:ClassProfile;
-    dsv:class owl:Ontology, <http://www.w3.org/ns/dx/prof/Profile>;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#Vocabulary.hasSpecification> dsv:domain <https://w3id.org/dsv-dap#Vocabulary>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#Vocabulary.hasSpecification> dsv:domain :Vocabulary;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "has specification"@en;
     dsv:specializes <https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasResource>
+  dsv:reusedFromResource prof:hasResource
 ];
     dsv:cardinality cardinality:1n;
-    dsv:property <http://www.w3.org/ns/dx/prof/hasResource>;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#VocabularySpecificationDocument>.
-
-<https://w3id.org/dsv-dap#ApplicationProfile> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#SemanticDataSpecification>;
+    dsv:objectPropertyRange :VocabularySpecificationDocument.
+:ApplicationProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :SemanticDataSpecification;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -681,44 +628,24 @@
   dsv:reusedFromResource dsv:ApplicationProfile
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/dx/prof/Profile>, dsv:ApplicationProfile;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#ApplicationProfile.hasSpecification> dsv:domain <https://w3id.org/dsv-dap#ApplicationProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#ApplicationProfile.hasSpecification> dsv:domain :ApplicationProfile;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "has specification"@en;
     dsv:specializes <https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource>;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasResource>
+  dsv:reusedFromResource prof:hasResource
 ];
     dsv:cardinality cardinality:1n;
-    dsv:property <http://www.w3.org/ns/dx/prof/hasResource>;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ApplicationProfileSpecificationDocument>.
-
-<https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf> dsv:domain <https://w3id.org/dsv-dap#ApplicationProfile>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/isProfileOf>
-], [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/isProfileOf>
-];
-    dsv:cardinality cardinality:0n;
-    dsv:property <http://www.w3.org/ns/dx/prof/isProfileOf>;
-    a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#SemanticDataSpecification>.
-
-<https://w3id.org/dsv-dap#ApplicationProfileSpecificationDocument> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#ResourceDescriptor>, <https://w3id.org/dsv-dap#DataSpecificationDocument>;
+    dsv:objectPropertyRange :ApplicationProfileSpecificationDocument.
+:ApplicationProfileSpecificationDocument dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :ResourceDescriptor, :DataSpecificationDocument;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -729,12 +656,10 @@
   dsv:reusedFromResource dsv:ApplicationProfileSpecificationDocument
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/dx/prof/ResourceDescriptor>, dsv:ApplicationProfileSpecificationDocument;
     dsv:classRole role:main.
-
-<https://w3id.org/dsv-dap#VocabularySpecificationDocument> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#ResourceDescriptor>, <https://w3id.org/dsv-dap#DataSpecificationDocument>;
+:VocabularySpecificationDocument dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :ResourceDescriptor, :DataSpecificationDocument;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -745,155 +670,149 @@
   dsv:reusedFromResource dsv:VocabularySpecificationDocument
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/dx/prof/ResourceDescriptor>, dsv:VocabularySpecificationDocument;
     dsv:classRole role:main.
-
-<https://w3id.org/dsv-dap#DataSpecificationDocument> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+:DataSpecificationDocument dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "Data Specification Document"@en;
     skos:definition "A Data Specification Document."@en;
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/dx/prof/ResourceDescriptor>;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#DataSpecificationDocument.title> dsv:domain <https://w3id.org/dsv-dap#DataSpecificationDocument>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#DataSpecificationDocument.title> dsv:domain :DataSpecificationDocument;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "title"@en;
     skos:definition "A name given to the Data Specification Document."@en;
     dsv:cardinality cardinality:11;
-    dsv:property dct:title;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
-<https://w3id.org/dsv-dap#DataSpecificationDocument.description> dsv:domain <https://w3id.org/dsv-dap#DataSpecificationDocument>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#DataSpecificationDocument.description> dsv:domain :DataSpecificationDocument;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "description"@en;
     skos:definition "An account of the Data Specification Document."@en;
     dsv:cardinality cardinality:11;
-    dsv:property dct:description;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
-
-<https://w3id.org/dsv-dap#SemanticDataSpecification> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+:SemanticDataSpecification dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "Semantic Data Specification"@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/Profile>
+  dsv:reusedFromResource prof:Profile
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/dx/prof/Profile>;
     dsv:classRole role:main.
 
-<https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource> dsv:domain <https://w3id.org/dsv-dap#SemanticDataSpecification>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource> dsv:domain :SemanticDataSpecification;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasResource>
+  dsv:reusedFromResource prof:hasResource
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasResource>
+  dsv:reusedFromResource prof:hasResource
 ];
     dsv:cardinality cardinality:0n;
-    dsv:property <http://www.w3.org/ns/dx/prof/hasResource>;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#ResourceDescriptor>.
+    dsv:objectPropertyRange :ResourceDescriptor.
 
-<https://w3id.org/dsv-dap#SemanticDataSpecifcation.title> dsv:domain <https://w3id.org/dsv-dap#SemanticDataSpecification>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#SemanticDataSpecifcation.title> dsv:domain :SemanticDataSpecification;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "title"@en;
     skos:definition "A name given to the Semantic Data Specification."@en;
     dsv:cardinality cardinality:11;
-    dsv:property dct:title;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
-<https://w3id.org/dsv-dap#SemanticDataSpecification.description> dsv:domain <https://w3id.org/dsv-dap#SemanticDataSpecification>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#SemanticDataSpecification.description> dsv:domain :SemanticDataSpecification;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "description"@en;
     skos:definition "An account of the Semantic Data Specification."@en;
     dsv:cardinality cardinality:01;
-    dsv:property dct:description;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
 
-<https://w3id.org/dsv-dap#SemanticDataSpecification.hasToken> dsv:domain <https://w3id.org/dsv-dap#SemanticDataSpecification>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf> dsv:domain :SemanticDataSpecification;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource prof:isProfileOf
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource prof:isProfileOf
+];
+    dsv:cardinality cardinality:0n;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :SemanticDataSpecification.
+
+<https://w3id.org/dsv-dap#SemanticDataSpecification.hasToken> dsv:domain :SemanticDataSpecification;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:scopeNote "Used to store the preferred prefix, e.g., registered at prefix.cc."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasToken>
+  dsv:reusedFromResource prof:hasToken
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/hasToken>
+  dsv:reusedFromResource prof:hasToken
 ];
     dsv:cardinality cardinality:01;
-    dsv:property <http://www.w3.org/ns/dx/prof/hasToken>;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#token>.
-
-<https://w3id.org/dsv-dap#ResourceRole> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+:ResourceRole dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/ResourceRole>
+  dsv:reusedFromResource prof:ResourceRole
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <http://www.w3.org/ns/dx/prof/ResourceRole>
+  dsv:reusedFromResource prof:ResourceRole
 ];
     a dsv:ClassProfile;
-    dsv:class <http://www.w3.org/ns/dx/prof/ResourceRole>;
     dsv:classRole role:supportive.
-
-<https://w3id.org/dsv-dap#ClassRole> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+:ClassRole dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "Class Role"@en;
     skos:definition "Class Role, e.g. Mandatory or Supportive."@en;
     a dsv:ClassProfile;
-    dsv:class skos:Concept;
     dsv:classRole role:supportive.
-
-<https://w3id.org/dsv-dap#RequirementLevel> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+:RequirementLevel dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "Requirement Level"@en;
     skos:definition "Requirement Level of a property profile."@en;
     a dsv:ClassProfile;
-    dsv:class skos:Concept;
     dsv:classRole role:supportive.
-
-<https://w3id.org/dsv-dap#Cardinality> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+:Cardinality dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "Cardinality"@en;
     skos:definition "Cardinality, e.g. 0..* or 1..1"@en;
     a dsv:ClassProfile;
-    dsv:class skos:Concept;
     dsv:classRole role:supportive.
-
-<https://w3id.org/dsv-dap#Format> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+:Format dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     skos:prefLabel "Format"@en;
     skos:definition "An idea or notion; a unit of thought."@en;
     skos:scopeNote "The file format, physical medium, or dimensions of the resource."@en;
     a dsv:ClassProfile;
-    dsv:class skos:Concept;
     dsv:classRole role:supportive.
-
-<https://w3id.org/dsv-dap#ObjectProperty> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#Property>;
+:ObjectProperty dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :Property;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -903,12 +822,11 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource owl:ObjectProperty
 ];
-    a dsv:ClassProfile;
-    dsv:class owl:ObjectProperty.
+    a dsv:ClassProfile.
 
-<https://w3id.org/dsv-dap#Objectproperty.range> dsv:domain <https://w3id.org/dsv-dap#ObjectProperty>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#Objectproperty.range> dsv:domain :ObjectProperty;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -919,13 +837,11 @@
   dsv:reusedFromResource rdfs:range
 ];
     dsv:cardinality cardinality:01;
-    dsv:property rdfs:range;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Class>.
-
-<https://w3id.org/dsv-dap#DatatypeProperty> dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:specializes <https://w3id.org/dsv-dap#Property>;
+    dsv:objectPropertyRange :Class.
+:DatatypeProperty dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
+    dsv:specializes :Property;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -935,12 +851,11 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource owl:DatatypeProperty
 ];
-    a dsv:ClassProfile;
-    dsv:class owl:DatatypeProperty.
+    a dsv:ClassProfile.
 
-<https://w3id.org/dsv-dap#Datatypeproperty.range> dsv:domain <https://w3id.org/dsv-dap#DatatypeProperty>;
-    dct:isPartOf <https://w3id.org/dsv-dap#applicationProfileConceptualModel>;
-    a dsv:Profile;
+<https://w3id.org/dsv-dap#Datatypeproperty.range> dsv:domain :DatatypeProperty;
+    dct:isPartOf <https://w3id.org/dsv-dap#>;
+    a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -951,6 +866,5 @@
   dsv:reusedFromResource rdfs:range
 ];
     dsv:cardinality cardinality:01;
-    dsv:property rdfs:range;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange <https://w3id.org/dsv-dap#Datatype>.
+    dsv:objectPropertyRange :Datatype.
