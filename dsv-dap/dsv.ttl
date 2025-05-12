@@ -183,7 +183,7 @@
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#prefLabel#attribute>
+  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#prefLabel>
 ];
     dsv:cardinality cardinality:01;
     a dsv:DatatypePropertyProfile;
@@ -196,7 +196,7 @@
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#definition#attribute>
+  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#definition>
 ];
     dsv:cardinality cardinality:01;
     a dsv:DatatypePropertyProfile;
