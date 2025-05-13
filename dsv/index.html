@@ -1,292 +1,306 @@
 
 
 <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="utf-8" />
-      <title>Data Specification Vocabulary (DSV)</title>
-      <meta name="color-scheme" content="light dark">
-      <script type="application/ld+json">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Data Specification Vocabulary (DSV)</title>
+    <meta name="color-scheme" content="light dark">
+    <script type="application/ld+json">
+      {
+      "@id": "https://w3id.org/dsv/",
+      "@type": [
+        "dsv:VocabularySpecificationDocument",
+        "adms:AssetDistribution",
+        "prof:ResourceDescriptor"
+      ],
+      "hasArtifact": ".",
+      "hasRole": "role:Guidance",
+      "format": "filetype:HTML",
+      "inSpecificationOf": [
         {
-        "@id": "https://w3id.org/dsv/",
-        "@type": [
-          "dsv:VocabularySpecificationDocument",
-          "adms:AssetDistribution",
-          "prof:ResourceDescriptor"
-        ],
-        "hasArtifact": ".",
-        "hasRole": "role:Guidance",
-        "format": "format:HTML",
-        "inSpecificationOf": [
-          {
-            "@id": "https://w3id.org/dsv#",
-            "@type": [
-              "owl:Ontology",
-              "prof:Profile"
-            ],
-            "title": {
-              "en": "Data Specification Vocabulary (DSV)"
-            },
-            "isProfileOf": [
-              {
-                "hasArtifact": [
-                  "https://www.w3.org/TR/dx-prof/rdf/prof.ttl"
-                ]
-              },
-              {
-                "hasArtifact": [
-                  "https://datagov-cz.github.io/cache-slovniku/rdfs.ttl"
-                ]
-              },
-              {
-                "hasArtifact": [
-                  "https://datagov-cz.github.io/cache-slovniku/rdf.ttl"
-                ]
-              },
-              {
-                "hasArtifact": [
-                  "https://www.w3.org/2002/07/owl#"
-                ]
-              },
-              {
-                "hasArtifact": [
-                  "https://datagov-cz.github.io/cache-slovniku/dublin_core_terms.ttl"
-                ]
-              },
-              {
-                "hasArtifact": [
-                  "https://datagov-cz.github.io/cache-slovniku/skos.rdf"
-                ]
-              }
-            ],
-            "hasSpecification": [
-              "https://w3id.org/dsv/"
-            ],
-            "hasResource": [
-              {
-                "@id": "https://w3id.org/dsv/#spec",
-                "@type": [
-                  "adms:AssetDistribution",
-                  "prof:ResourceDescriptor"
-                ],
-                "hasArtifact": "./model.owl.ttl",
-                "hasRole": "role:Vocabulary",
-                "format": "format:RDF_TURTLE",
-                "conformsTo": [
-                  "http://www.w3.org/2000/01/rdf-schema#",
-                  "http://www.w3.org/2002/07/owl"
-                ]
-              },
-              {
-                "@id": "https://w3id.org/dsv/#c5d2ee2e-32c6-4c12-abb3-b80410162920",
-                "@type": [
-                  "adms:AssetDistribution",
-                  "prof:ResourceDescriptor"
-                ],
-                "hasArtifact": "./c5d2ee2e-32c6-4c12-abb3-b80410162920.svg",
-                "hasRole": "role:Guidance",
-                "format": "format:SVG",
-                "conformsTo": "https://www.w3.org/TR/SVG/"
-              },
-              {
-                "@id": "https://w3id.org/dsv/",
-                "@type": [
-                  "dsv:VocabularySpecificationDocument",
-                  "adms:AssetDistribution",
-                  "prof:ResourceDescriptor"
-                ],
-                "hasArtifact": ".",
-                "hasRole": "role:Guidance",
-                "format": "format:HTML"
-              }
-            ]
-          }
-        ],
-        "@context": {
-          "@version": 1.1,
-          "prof": "http://www.w3.org/ns/dx/prof/",
-          "role": "prof:role/",
-          "dsv": "https://w3id.org/dsv#",
-          "format": {
-            "@id": "http://purl.org/dc/terms/format",
-            "@type": "@id"
-          },
-          "owl": "http://www.w3.org/2002/07/owl#",
-          "adms": "http://www.w3.org/ns/adms#",
+          "@id": "https://w3id.org/dsv#",
+          "@type": [
+            "owl:Ontology",
+            "prof:Profile"
+          ],
           "title": {
-            "@id": "http://purl.org/dc/terms/title",
-            "@container": "@language"
+            "en": "Data Specification Vocabulary (DSV)"
           },
           "description": {
-            "@id": "http://purl.org/dc/terms/description",
-            "@container": "@language"
+            "en": "This specification defines terms needed to describe application profiles,"
           },
-          "conformsTo": {
-            "@id": "http://purl.org/dc/terms/conformsTo",
-            "@type": "@id",
-            "@container": "@set"
-          },
-          "hasRole": {
-            "@id": "prof:hasRole",
-            "@type": "@id"
-          },
-          "hasArtifact": {
-            "@id": "prof:hasArtifact",
-            "@type": "@id"
-          },
-          "inSpecificationOf": {
-            "@reverse": "prof:hasResource",
-            "@type": "@id",
-            "@context": {
-              "title": {
-                "@id": "http://purl.org/dc/terms/title",
-                "@container": "@language"
-              },
-              "description": {
-                "@id": "http://purl.org/dc/terms/description",
-                "@container": "@language"
-              },
-              "hasToken": {
-                "@id": "prof:hasToken",
-                "@type": "xsd:token"
-              },
-              "isProfileOf": {
-                "@id": "prof:isProfileOf",
-                "@container": "@set",
-                "@context": {
-                  "title": {
-                    "@id": "http://purl.org/dc/terms/title",
-                    "@container": "@language"
-                  },
-                  "hasResource": {
-                    "@id": "prof:hasResource",
-                    "@type": "@id",
-                    "@container": "@set"
-                  }
+          "isProfileOf": [
+            {
+              "hasArtifact": [
+                "https://www.w3.org/TR/dx-prof/rdf/prof.ttl"
+              ]
+            },
+            {
+              "hasArtifact": [
+                "https://datagov-cz.github.io/cache-slovniku/rdfs.ttl"
+              ]
+            },
+            {
+              "hasArtifact": [
+                "https://datagov-cz.github.io/cache-slovniku/rdf.ttl"
+              ]
+            },
+            {
+              "hasArtifact": [
+                "https://www.w3.org/2002/07/owl#"
+              ]
+            },
+            {
+              "hasArtifact": [
+                "https://datagov-cz.github.io/cache-slovniku/dublin_core_terms.ttl"
+              ]
+            },
+            {
+              "hasArtifact": [
+                "https://datagov-cz.github.io/cache-slovniku/skos.rdf"
+              ]
+            }
+          ],
+          "hasResource": [
+            {
+              "@id": "https://w3id.org/dsv/#spec",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./model.owl.ttl",
+              "hasRole": "role:Vocabulary",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": [
+                "http://www.w3.org/2000/01/rdf-schema#",
+                "http://www.w3.org/2002/07/owl"
+              ]
+            },
+            {
+              "@id": "https://w3id.org/dsv/#c5d2ee2e-32c6-4c12-abb3-b80410162920",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./c5d2ee2e-32c6-4c12-abb3-b80410162920.svg",
+              "hasRole": "role:Guidance",
+              "format": "filetype:SVG",
+              "conformsTo": "https://www.w3.org/TR/SVG/"
+            },
+            {
+              "@id": "https://w3id.org/dsv/",
+              "@type": [
+                "dsv:VocabularySpecificationDocument",
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": ".",
+              "hasRole": "role:Guidance",
+              "format": "filetype:HTML"
+            }
+          ]
+        }
+      ],
+      "@context": {
+        "@version": 1.1,
+        "prof": "http://www.w3.org/ns/dx/prof/",
+        "role": "prof:role/",
+        "dsv": "https://w3id.org/dsv#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "adms": "http://www.w3.org/ns/adms#",
+        "filetype": "http://publications.europa.eu/resource/authority/file-type/",
+        "title": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@container": "@language"
+        },
+        "description": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@container": "@language"
+        },
+        "conformsTo": {
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "format": {
+          "@id": "http://purl.org/dc/terms/format",
+          "@type": "@id"
+        },
+        "hasRole": {
+          "@id": "prof:hasRole",
+          "@type": "@id"
+        },
+        "hasArtifact": {
+          "@id": "prof:hasArtifact",
+          "@type": "@id"
+        },
+        "inSpecificationOf": {
+          "@reverse": "prof:hasResource",
+          "@type": "@id",
+          "@context": {
+            "title": {
+              "@id": "http://purl.org/dc/terms/title",
+              "@container": "@language"
+            },
+            "description": {
+              "@id": "http://purl.org/dc/terms/description",
+              "@container": "@language"
+            },
+            "hasToken": {
+              "@id": "prof:hasToken",
+              "@type": "xsd:token"
+            },
+            "isProfileOf": {
+              "@id": "prof:isProfileOf",
+              "@container": "@set",
+              "@context": {
+                "title": {
+                  "@id": "http://purl.org/dc/terms/title",
+                  "@container": "@language"
+                },
+                "hasResource": {
+                  "@id": "prof:hasResource",
+                  "@type": "@id",
+                  "@container": "@set"
                 }
-              },
-              "hasSpecification": {
-                "@id": "prof:hasResource",
-                "@container": "@set",
-                "@context": {
-                  "hasArtifact": {
-                    "@id": "prof:hasArtifact",
-                    "@type": "@id"
-                  }
-                }
-              },
-              "hasResource": {
-                "@id": "prof:hasResource",
-                "@container": "@set",
-                "@context": {
-                  "conformsTo": {
-                    "@id": "http://purl.org/dc/terms/conformsTo",
-                    "@type": "@id",
-                    "@container": "@set"
-                  },
-                  "format": {
-                    "@id": "http://purl.org/dc/terms/format",
-                    "@type": "@id"
-                  },
-                  "hasRole": {
-                    "@id": "prof:hasRole",
-                    "@type": "@id"
-                  },
-                  "hasArtifact": {
-                    "@id": "prof:hasArtifact",
-                    "@type": "@id"
-                  },
-                  "isResourceOf": {
-                    "@reverse": "prof:hasResource",
-                    "@type": "@id"
-                  }
+              }
+            },
+            "hasResource": {
+              "@id": "prof:hasResource",
+              "@container": "@set",
+              "@context": {
+                "conformsTo": {
+                  "@id": "http://purl.org/dc/terms/conformsTo",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "format": {
+                  "@id": "http://purl.org/dc/terms/format",
+                  "@type": "@id"
+                },
+                "hasRole": {
+                  "@id": "prof:hasRole",
+                  "@type": "@id"
+                },
+                "hasArtifact": {
+                  "@id": "prof:hasArtifact",
+                  "@type": "@id"
                 }
               }
             }
           }
         }
       }
-      </script>
-      <script
-        src="https://www.w3.org/Tools/respec/respec-w3c"
-        class="remove"
-        defer
-      ></script>
-      <script class="remove">
-        // All config options at https://respec.org/docs/
-        var respecConfig = {
-          specStatus: "base",
-          shortName: "dsv",               
-          showPreviousVersion: false,
-          thisVersion: "https://mff-uk.github.io/data-specification-vocabulary/dsv/",
-          latestVersion: "https://mff-uk.github.io/data-specification-vocabulary/dsv/",
-          editors: [{
-            name: "Jakub Klímek",
-            orcid: "0000-0001-7234-3051",
-            company:    "Charles University",
-            companyURL: "https://www.mff.cuni.cz"
-          }],
-          inlineCSS: "true",
-          github: "https://github.com/mff-uk/data-specification-vocabulary/",
-          otherLinks: [{
-              key: "Links",
-              data: [{
-                  value: "Dataspecer",
-                  href: "https://dataspecer.com"
-              },{
-                  value: "Data Specification Vocabulary Default Application Profile (DSV-DAP)",
-                  href: "https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/"
-              }]
-          }]
-        };
-      </script>
+    }
+    </script>
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      class="remove"
+      defer
+    ></script>
+    <script class="remove">
+      // All config options at https://respec.org/docs/
+      var respecConfig = {
+        specStatus: "base",
+        shortName: "dsv",               
+        showPreviousVersion: false,
+        thisVersion: "https://mff-uk.github.io/data-specification-vocabulary/dsv/",
+        latestVersion: "https://mff-uk.github.io/data-specification-vocabulary/dsv/",
+        editors: [{
+          name: "Jakub Klímek",
+          orcid: "0000-0001-7234-3051",
+          company:    "Charles University",
+          companyURL: "https://www.mff.cuni.cz"
+        }],
+        inlineCSS: "true",
+        github: "https://github.com/mff-uk/data-specification-vocabulary/",
+        otherLinks: [{
+            key: "Links",
+            data: [{
+                value: "Dataspecer",
+                href: "https://dataspecer.com"
+            },{
+                value: "Data Specification Vocabulary Default Application Profile (DSV-DAP)",
+                href: "https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/"
+            },{
+                value: "Sample specifications",
+                href: "https://mff-uk.github.io/specifications/"
+            }]
+        }]
+      };
+    </script>
+    
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+        max-width: 100%;
+        margin: auto;
+        height: auto;
+      }
+    
+      table.simple {
+        margin: auto;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+    
+      table.simple th {
+        padding: 3px 10px;
+        text-align: left;
+      }
+    
+      table.simple td {
+        border-top: 1px solid #ddd;
+        padding: 3px 10px;
+      }
+    </style>  </head>
+  <body>
+    <p class="copyright"></p>
+    <section id="abstract">
+      <p>
+        This vocabulary defines vocabulary (classes and properties) and a default application profile for machine processable representation of Data Specifications and Application Profiles. DSV and DSV-DAP is currently being implemented in the <a href="https://dataspecer.com">Dataspecer</a> tool for management of data specifications, management of application profiles and semi-automatic generation of technical artifacts such as data schemas and transformations based on semantic vocabularies.
+      </p>
       
-      <style>
-        .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
-          max-width: 100%;
-          margin: auto;
-          height: auto;
-        }
+      <p>
+      The goals of this specification are two-fold:
       
-        table.simple {
-          margin: auto;
-          border-spacing: 0;
-          border-collapse: collapse;
-        }
+      <ol>
+        <li>
+          Provide means to annotate specifications, relationship to other specifications and descriptions of artifacts the specifications consist of to help machine processability and reusability of the specifications
+        </li>
+        <li>
+          Provide means to properly describe Application profiles (APs), contexts, in which RDF classes and properties are reused. DSV allows specification editors to identify, which classes and properties are reused in an application profile and how, and specify any terminological or domain/range changes for the AP context.
+        </li>
+      </ol>
+      </p>
       
-        table.simple th {
-          padding: 3px 10px;
-          text-align: left;
-        }
+      <p>
+        Preferred prefix: <code>dsv</code>, stands for <code>https://w3id.org/dsv#</code>.
+      </p>
       
-        table.simple td {
-          border-top: 1px solid #ddd;
-          padding: 3px 10px;
-        }
-      </style>    </head>
-    <body>
-      <p class="copyright"></p>
-      <section id="abstract">
-        <p>
-          This file documents
-          <strong>Data Specification Vocabulary (DSV)</strong>.</p>
-      </section>
+      <p>
+        This specification and the specification of <a href="https://w3id.org/dsv-dap/">DSV-DAP</a> are both described using DSV-DAP.
+      <p>    </section>
 
-      <section>
-        <h2>Overview</h2>
+    <section>
+      <h2>Overview</h2>
 
-          <a href="./c5d2ee2e-32c6-4c12-abb3-b80410162920.svg">
-            <figure>
-              <img src="./c5d2ee2e-32c6-4c12-abb3-b80410162920.svg" alt="Main view" />
-              <figcaption>Main view</figcaption>
-            </figure>
-          </a>
-      </section>
+        <a href="./c5d2ee2e-32c6-4c12-abb3-b80410162920.svg">
+          <figure>
+            <img src="./c5d2ee2e-32c6-4c12-abb3-b80410162920.svg" alt="Main view" />
+            <figcaption>Main view</figcaption>
+          </figure>
+        </a>
+    </section>
+
+    
+    
+
+    
+    
 
       <section>
         <h2>Classes</h2>
-
-
 
             <section id="ApplicationProfile">
               <h4>Application Profile</h4>
@@ -294,7 +308,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#ApplicationProfile">https://w3id.org/dsv#ApplicationProfile</a></td>
+                  <td><a href="https://w3id.org/dsv#ApplicationProfile">dsv:ApplicationProfile</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -311,7 +325,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#ApplicationProfileSpecificationDocument">https://w3id.org/dsv#ApplicationProfileSpecificationDocument</a></td>
+                  <td><a href="https://w3id.org/dsv#ApplicationProfileSpecificationDocument">dsv:ApplicationProfileSpecificationDocument</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -332,7 +346,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#ClassProfile">https://w3id.org/dsv#ClassProfile</a></td>
+                  <td><a href="https://w3id.org/dsv#ClassProfile">dsv:ClassProfile</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -353,7 +367,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#DatatypePropertyProfile">https://w3id.org/dsv#DatatypePropertyProfile</a></td>
+                  <td><a href="https://w3id.org/dsv#DatatypePropertyProfile">dsv:DatatypePropertyProfile</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -374,7 +388,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#InvalidTermProfile">https://w3id.org/dsv#InvalidTermProfile</a></td>
+                  <td><a href="https://w3id.org/dsv#InvalidTermProfile">dsv:InvalidTermProfile</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -395,7 +409,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#ObjectPropertyProfile">https://w3id.org/dsv#ObjectPropertyProfile</a></td>
+                  <td><a href="https://w3id.org/dsv#ObjectPropertyProfile">dsv:ObjectPropertyProfile</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -412,7 +426,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#PropertyProfile">https://w3id.org/dsv#PropertyProfile</a></td>
+                  <td><a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -437,7 +451,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#PropertyValueReuse">https://w3id.org/dsv#PropertyValueReuse</a></td>
+                  <td><a href="https://w3id.org/dsv#PropertyValueReuse">dsv:PropertyValueReuse</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -455,7 +469,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#TermProfile">https://w3id.org/dsv#TermProfile</a></td>
+                  <td><a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -476,7 +490,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#VocabularySpecificationDocument">https://w3id.org/dsv#VocabularySpecificationDocument</a></td>
+                  <td><a href="https://w3id.org/dsv#VocabularySpecificationDocument">dsv:VocabularySpecificationDocument</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -491,11 +505,9 @@
                   <td><a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a></td>
                 </tr>
               </table>
-            </section>
+            </section>      </section>
 
-        </section>
-
-        <section>
+      <section>
         <h2>Properties</h2>
             <section id="cardinality">
               <h4>cardinality</h4>
@@ -503,7 +515,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#cardinality">https://w3id.org/dsv#cardinality</a></td>
+                  <td><a href="https://w3id.org/dsv#cardinality">dsv:cardinality</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -532,7 +544,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#classRole">https://w3id.org/dsv#classRole</a></td>
+                  <td><a href="https://w3id.org/dsv#classRole">dsv:classRole</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -565,7 +577,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#datatype">https://w3id.org/dsv#datatype</a></td>
+                  <td><a href="https://w3id.org/dsv#datatype">dsv:datatype</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -594,7 +606,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#domain">https://w3id.org/dsv#domain</a></td>
+                  <td><a href="https://w3id.org/dsv#domain">dsv:domain</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -627,7 +639,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#externalDocumentation">https://w3id.org/dsv#externalDocumentation</a></td>
+                  <td><a href="https://w3id.org/dsv#externalDocumentation">dsv:externalDocumentation</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -660,7 +672,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#profileOf">https://w3id.org/dsv#profileOf</a></td>
+                  <td><a href="https://w3id.org/dsv#profileOf">dsv:profileOf</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -693,7 +705,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#class">https://w3id.org/dsv#class</a></td>
+                  <td><a href="https://w3id.org/dsv#class">dsv:class</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -726,7 +738,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#property">https://w3id.org/dsv#property</a></td>
+                  <td><a href="https://w3id.org/dsv#property">dsv:property</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -759,7 +771,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#range">https://w3id.org/dsv#range</a></td>
+                  <td><a href="https://w3id.org/dsv#range">dsv:range</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -792,7 +804,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#requirementLevel">https://w3id.org/dsv#requirementLevel</a></td>
+                  <td><a href="https://w3id.org/dsv#requirementLevel">dsv:requirementLevel</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -825,7 +837,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#reusedFromResource">https://w3id.org/dsv#reusedFromResource</a></td>
+                  <td><a href="https://w3id.org/dsv#reusedFromResource">dsv:reusedFromResource</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -858,7 +870,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#reusedProperty">https://w3id.org/dsv#reusedProperty</a></td>
+                  <td><a href="https://w3id.org/dsv#reusedProperty">dsv:reusedProperty</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -887,7 +899,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#reusesPropertyValue">https://w3id.org/dsv#reusesPropertyValue</a></td>
+                  <td><a href="https://w3id.org/dsv#reusesPropertyValue">dsv:reusesPropertyValue</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -920,7 +932,7 @@
               <table class="def">
                 <tr>
                   <td>IRI</td>
-                  <td><a href="https://w3id.org/dsv#specializes">https://w3id.org/dsv#specializes</a></td>
+                  <td><a href="https://w3id.org/dsv#specializes">dsv:specializes</a></td>
                 </tr>
                 <tr>
                   <td>Label</td>
@@ -947,35 +959,35 @@
                   </td>
                   </tr>
               </table>
-            </section>
-        </section>
+            </section>      </section>
 
 
-      <section>
-        <h2>Used prefixes</h2>
-        <table id="table-namespaces" class="simple">
-          <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
-          <tbody>
-          </tbody>
-        </table>
-      </section>
-      <section>
-        <h2>Attachments</h2>
-      
-          <p>This specification includes the following attachments.</p>
-        <table class="def">
-          <thead>
+    <section>
+      <h2>Used prefixes</h2>
+      <table id="table-namespaces" class="simple">
+        <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+        <tbody>
+            <tr><td><code>dsv</code></td><td><a href=https://w3id.org/dsv#><code>https://w3id.org/dsv#</code></a></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Attachments</h2>
+    
+        <p>This specification includes the following attachments.</p>
+      <table class="def">
+        <thead>
+          <tr>
+            <th>Attachment</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
             <tr>
-              <th>Attachment</th>
-              <th>Link</th>
+              <td>Vocabulary</td>
+              <td><a href="./model.owl.ttl">./model.owl.ttl</a></td>
             </tr>
-          </thead>
-          <tbody>
-              <tr>
-                <td>Vocabulary</td>
-                <td><a href="./model.owl.ttl">./model.owl.ttl</a></td>
-              </tr>
-          </tbody>
-        </table>
-      </section>    </body>
-  </html>
+        </tbody>
+      </table>
+    </section>  </body>
+</html>
