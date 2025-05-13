@@ -41,7 +41,7 @@
 ];
     dsv:cardinality cardinality:11;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange :Resource.
+    dsv:objectPropertyRange :Term.
 
 <https://w3id.org/dsv-dap#ResourceDescriptor.hasRole> dsv:domain :ResourceDescriptor;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -86,7 +86,7 @@
     dsv:objectPropertyRange :ApplicationProfile.
 :TermProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
-    dsv:specializes :Resource;
+    dsv:specializes :Term;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -174,7 +174,7 @@
 ];
     dsv:cardinality cardinality:01;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange :Resource.
+    dsv:objectPropertyRange :Term.
 
 <https://w3id.org/dsv-dap#TermProfile.preferredLabel> dsv:domain :TermProfile;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -183,11 +183,11 @@
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#prefLabel>
+  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#prefLabel#attribute>
 ];
-    dsv:cardinality cardinality:01;
+    dsv:cardinality cardinality:0n;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+    dsv:datatypePropertyRange rdf:langString.
 
 <https://w3id.org/dsv-dap#TermProfile.definition> dsv:domain :TermProfile;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -196,20 +196,20 @@
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#definition>
+  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#definition#attribute>
 ];
-    dsv:cardinality cardinality:01;
+    dsv:cardinality cardinality:0n;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+    dsv:datatypePropertyRange rdf:langString.
 
 <https://w3id.org/dsv-dap#TermProfile.usageNote> dsv:domain :TermProfile;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "usage note"@en;
     skos:definition "Usage note of this profile."@en;
-    dsv:cardinality cardinality:01;
+    dsv:cardinality cardinality:0n;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+    dsv:datatypePropertyRange rdf:langString.
 :ClassProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     dsv:specializes :TermProfile;
@@ -419,7 +419,7 @@
 ];
     dsv:cardinality cardinality:11;
     a dsv:ObjectPropertyProfile;
-    dsv:objectPropertyRange :Resource.
+    dsv:objectPropertyRange :Term.
 
 <https://w3id.org/dsv-dap#PropertyValueReuse.reusedProperty> dsv:domain :PropertyValueReuse;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -436,13 +436,11 @@
     dsv:cardinality cardinality:11;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Property.
-:Resource dct:isPartOf <https://w3id.org/dsv-dap#>;
+:Term dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
+    skos:prefLabel "Term"@en;
+    skos:scopeNote "In the context of DSV, Term is used as a common denominator for Classes, Properties and their profiles."@en;
     dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource rdfs:Resource
-], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource rdfs:Resource
@@ -450,7 +448,7 @@
     a dsv:ClassProfile;
     dsv:classRole role:supportive.
 
-<https://w3id.org/dsv-dap#Resource.isdefinedby> dsv:domain :Resource;
+<https://w3id.org/dsv-dap#Term.isdefinedby> dsv:domain :Term;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "is defined by"@en;
@@ -463,7 +461,7 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Vocabulary.
 
-<https://w3id.org/dsv-dap#Resource.label> dsv:domain :Resource;
+<https://w3id.org/dsv-dap#Term.label> dsv:domain :Term;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
@@ -475,28 +473,21 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource rdfs:label
 ];
-    dsv:cardinality cardinality:11;
+    dsv:cardinality cardinality:1n;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+    dsv:datatypePropertyRange rdf:langString.
 
-<https://w3id.org/dsv-dap#Resource.comment> dsv:domain :Resource;
+<https://w3id.org/dsv-dap#Term.definition> dsv:domain :Term;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource rdfs:comment
-], [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource rdfs:comment
-];
-    dsv:cardinality cardinality:01;
+    skos:prefLabel "definition"@en;
+    skos:definition "A definition of the subject resource."@en;
+    dsv:cardinality cardinality:0n;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+    dsv:datatypePropertyRange rdf:langString.
 :Property dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
-    dsv:specializes :Resource;
+    dsv:specializes :Term;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -542,7 +533,7 @@
     dsv:objectPropertyRange :Class.
 :Class dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
-    dsv:specializes :Resource;
+    dsv:specializes :Term;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
@@ -683,18 +674,18 @@
     a dsv:TermProfile;
     skos:prefLabel "title"@en;
     skos:definition "A name given to the Data Specification Document."@en;
-    dsv:cardinality cardinality:11;
+    dsv:cardinality cardinality:1n;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+    dsv:datatypePropertyRange rdf:langString.
 
 <https://w3id.org/dsv-dap#DataSpecificationDocument.description> dsv:domain :DataSpecificationDocument;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "description"@en;
     skos:definition "An account of the Data Specification Document."@en;
-    dsv:cardinality cardinality:11;
+    dsv:cardinality cardinality:0n;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+    dsv:datatypePropertyRange rdf:langString.
 :SemanticDataSpecification dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "Semantic Data Specification"@en;
@@ -727,18 +718,18 @@
     a dsv:TermProfile;
     skos:prefLabel "title"@en;
     skos:definition "A name given to the Semantic Data Specification."@en;
-    dsv:cardinality cardinality:11;
+    dsv:cardinality cardinality:1n;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+    dsv:datatypePropertyRange rdf:langString.
 
 <https://w3id.org/dsv-dap#SemanticDataSpecification.description> dsv:domain :SemanticDataSpecification;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "description"@en;
     skos:definition "An account of the Semantic Data Specification."@en;
-    dsv:cardinality cardinality:01;
+    dsv:cardinality cardinality:0n;
     a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+    dsv:datatypePropertyRange rdf:langString.
 
 <https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf> dsv:domain :SemanticDataSpecification;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -822,7 +813,8 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource owl:ObjectProperty
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#Objectproperty.range> dsv:domain :ObjectProperty;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -851,7 +843,8 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource owl:DatatypeProperty
 ];
-    a dsv:ClassProfile.
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#Datatypeproperty.range> dsv:domain :DatatypeProperty;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
