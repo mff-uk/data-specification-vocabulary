@@ -25,6 +25,7 @@
   dsv:reusedFromResource prof:ResourceDescriptor
 ];
     a dsv:ClassProfile;
+    dsv:class <http://www.w3.org/ns/adms#AssetDistribution>, prof:ResourceDescriptor;
     dsv:classRole role:supportive.
 
 <https://w3id.org/dsv-dap#ResourceDescriptor.hasArtifact> dsv:domain :ResourceDescriptor;
@@ -40,6 +41,7 @@
   dsv:reusedFromResource prof:hasArtifact
 ];
     dsv:cardinality cardinality:11;
+    dsv:property prof:hasArtifact;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Term.
 
@@ -56,6 +58,7 @@
   dsv:reusedFromResource prof:hasRole
 ];
     dsv:cardinality cardinality:01;
+    dsv:property prof:hasRole;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ResourceRole.
 
@@ -69,6 +72,7 @@
   dsv:reusedFromResource dct:format
 ];
     dsv:cardinality cardinality:01;
+    dsv:property dct:format;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Format.
 
@@ -82,6 +86,7 @@
   dsv:reusedFromResource dct:conformsTo
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property dct:conformsTo;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ApplicationProfile.
 :TermProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -97,6 +102,7 @@
   dsv:reusedFromResource dsv:TermProfile
 ];
     a dsv:ClassProfile;
+    dsv:class dsv:TermProfile;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#TermProfile.reusesPropertyValue> dsv:domain :TermProfile;
@@ -112,6 +118,7 @@
   dsv:reusedFromResource dsv:reusesPropertyValue
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property dsv:reusesPropertyValue;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :PropertyValueReuse.
 
@@ -125,6 +132,7 @@
   dsv:reusedFromResource dct:isPartOf
 ];
     dsv:cardinality cardinality:11;
+    dsv:property dct:isPartOf;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ApplicationProfile.
 
@@ -141,6 +149,7 @@
   dsv:reusedFromResource dsv:specializes
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property dsv:specializes;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :TermProfile.
 
@@ -157,6 +166,7 @@
   dsv:reusedFromResource dsv:profileOf
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property dsv:profileOf;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :TermProfile.
 
@@ -173,6 +183,7 @@
   dsv:reusedFromResource dsv:externalDocumentation
 ];
     dsv:cardinality cardinality:01;
+    dsv:property dsv:externalDocumentation;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Term.
 
@@ -183,9 +194,10 @@
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#prefLabel#attribute>
+  dsv:reusedFromResource skos:prefLabel
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property skos:prefLabel;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 
@@ -196,9 +208,10 @@
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource <http://www.w3.org/2004/02/skos/core#definition#attribute>
+  dsv:reusedFromResource skos:definition
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property skos:definition;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 
@@ -208,6 +221,7 @@
     skos:prefLabel "usage note"@en;
     skos:definition "Usage note of this profile."@en;
     dsv:cardinality cardinality:0n;
+    dsv:property skos:scopeNote;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 :ClassProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -223,6 +237,7 @@
   dsv:reusedFromResource dsv:ClassProfile
 ];
     a dsv:ClassProfile;
+    dsv:class dsv:ClassProfile;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#ClassProfile.profiledClass> dsv:domain :ClassProfile;
@@ -238,6 +253,7 @@
   dsv:reusedFromResource dsv:class
 ];
     dsv:cardinality cardinality:11;
+    dsv:property dsv:class;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Class.
 
@@ -254,6 +270,7 @@
   dsv:reusedFromResource dsv:classRole
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property dsv:classRole;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ClassRole.
 :PropertyProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -269,6 +286,7 @@
   dsv:reusedFromResource dsv:PropertyProfile
 ];
     a dsv:ClassProfile;
+    dsv:class dsv:PropertyProfile;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#PropertyProfile.profiledProperty> dsv:domain :PropertyProfile;
@@ -284,6 +302,7 @@
   dsv:reusedFromResource dsv:property
 ];
     dsv:cardinality cardinality:11;
+    dsv:property dsv:property;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Property.
 
@@ -300,6 +319,7 @@
   dsv:reusedFromResource dsv:domain
 ];
     dsv:cardinality cardinality:11;
+    dsv:property dsv:domain;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ClassProfile.
 
@@ -316,6 +336,7 @@
   dsv:reusedFromResource dsv:cardinality
 ];
     dsv:cardinality cardinality:01;
+    dsv:property dsv:cardinality;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Cardinality.
 
@@ -332,6 +353,7 @@
   dsv:reusedFromResource dsv:requirementLevel
 ];
     dsv:cardinality cardinality:01;
+    dsv:property dsv:requirementLevel;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :RequirementLevel.
 :ObjectPropertyProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -347,6 +369,7 @@
   dsv:reusedFromResource dsv:ObjectPropertyProfile
 ];
     a dsv:ClassProfile;
+    dsv:class dsv:ObjectPropertyProfile;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#ObjectPropertyProfile.range> dsv:domain :ObjectPropertyProfile;
@@ -362,6 +385,7 @@
   dsv:reusedFromResource dsv:range
 ];
     dsv:cardinality cardinality:11;
+    dsv:property dsv:range;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ClassProfile.
 :DatatypePropertyProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -377,6 +401,7 @@
   dsv:reusedFromResource dsv:DatatypePropertyProfile
 ];
     a dsv:ClassProfile;
+    dsv:class dsv:DatatypePropertyProfile;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#DatatypePropertyProfile.datatype> dsv:domain :DatatypePropertyProfile;
@@ -389,6 +414,7 @@
   dsv:reusedFromResource dsv:datatype
 ];
     dsv:cardinality cardinality:11;
+    dsv:property dsv:datatype;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Datatype.
 :PropertyValueReuse dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -403,6 +429,7 @@
   dsv:reusedFromResource dsv:PropertyValueReuse
 ];
     a dsv:ClassProfile;
+    dsv:class dsv:PropertyValueReuse;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#PropertyValueReuse.reusedFromResource> dsv:domain :PropertyValueReuse;
@@ -418,6 +445,7 @@
   dsv:reusedFromResource dsv:reusedFromResource
 ];
     dsv:cardinality cardinality:11;
+    dsv:property dsv:reusedFromResource;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Term.
 
@@ -434,6 +462,7 @@
   dsv:reusedFromResource dsv:reusedProperty
 ];
     dsv:cardinality cardinality:11;
+    dsv:property dsv:reusedProperty;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Property.
 :Term dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -446,6 +475,7 @@
   dsv:reusedFromResource rdfs:Resource
 ];
     a dsv:ClassProfile;
+    dsv:class rdfs:Resource;
     dsv:classRole role:supportive.
 
 <https://w3id.org/dsv-dap#Term.isdefinedby> dsv:domain :Term;
@@ -458,6 +488,7 @@
   dsv:reusedFromResource rdfs:isDefinedBy
 ];
     dsv:cardinality cardinality:11;
+    dsv:property rdfs:isDefinedBy;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Vocabulary.
 
@@ -474,6 +505,7 @@
   dsv:reusedFromResource rdfs:label
 ];
     dsv:cardinality cardinality:1n;
+    dsv:property rdfs:label;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 
@@ -483,6 +515,7 @@
     skos:prefLabel "definition"@en;
     skos:definition "A definition of the subject resource."@en;
     dsv:cardinality cardinality:0n;
+    dsv:property rdfs:comment;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 :Property dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -498,6 +531,7 @@
   dsv:reusedFromResource rdf:Property
 ];
     a dsv:ClassProfile;
+    dsv:class rdf:Property;
     dsv:classRole role:supportive.
 
 <https://w3id.org/dsv-dap#Property.subpropertyof> dsv:domain :Property;
@@ -513,6 +547,7 @@
   dsv:reusedFromResource rdfs:subPropertyOf
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property rdfs:subPropertyOf;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Property.
 
@@ -529,6 +564,7 @@
   dsv:reusedFromResource rdfs:domain
 ];
     dsv:cardinality cardinality:01;
+    dsv:property rdfs:domain;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Class.
 :Class dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -544,6 +580,7 @@
   dsv:reusedFromResource rdfs:Class
 ];
     a dsv:ClassProfile;
+    dsv:class rdfs:Class, owl:Class;
     dsv:classRole role:supportive.
 
 <https://w3id.org/dsv-dap#Class.subclassof> dsv:domain :Class;
@@ -559,6 +596,7 @@
   dsv:reusedFromResource rdfs:subClassOf
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property rdfs:subClassOf;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Class.
 :InvalidTermProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -571,6 +609,7 @@
   dsv:reusedFromResource dsv:InvalidTermProfile
 ];
     a dsv:ClassProfile;
+    dsv:class dsv:InvalidTermProfile;
     dsv:classRole role:main.
 :Datatype dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
@@ -584,6 +623,7 @@
   dsv:reusedFromResource rdfs:Datatype
 ];
     a dsv:ClassProfile;
+    dsv:class rdfs:Datatype;
     dsv:classRole role:supportive.
 :Vocabulary dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
@@ -591,6 +631,7 @@
     skos:definition "The class of vocabularies."@en;
     dsv:specializes :SemanticDataSpecification;
     a dsv:ClassProfile;
+    dsv:class owl:Ontology, prof:Profile;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#Vocabulary.hasSpecification> dsv:domain :Vocabulary;
@@ -604,6 +645,7 @@
   dsv:reusedFromResource prof:hasResource
 ];
     dsv:cardinality cardinality:1n;
+    dsv:property prof:hasResource;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :VocabularySpecificationDocument.
 :ApplicationProfile dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -619,6 +661,7 @@
   dsv:reusedFromResource dsv:ApplicationProfile
 ];
     a dsv:ClassProfile;
+    dsv:class prof:Profile, dsv:ApplicationProfile;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#ApplicationProfile.hasSpecification> dsv:domain :ApplicationProfile;
@@ -632,6 +675,7 @@
   dsv:reusedFromResource prof:hasResource
 ];
     dsv:cardinality cardinality:1n;
+    dsv:property prof:hasResource;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ApplicationProfileSpecificationDocument.
 :ApplicationProfileSpecificationDocument dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -647,6 +691,7 @@
   dsv:reusedFromResource dsv:ApplicationProfileSpecificationDocument
 ];
     a dsv:ClassProfile;
+    dsv:class prof:ResourceDescriptor, dsv:ApplicationProfileSpecificationDocument, <http://www.w3.org/ns/adms#AssetDistribution>;
     dsv:classRole role:main.
 :VocabularySpecificationDocument dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
@@ -661,12 +706,14 @@
   dsv:reusedFromResource dsv:VocabularySpecificationDocument
 ];
     a dsv:ClassProfile;
+    dsv:class prof:ResourceDescriptor, dsv:VocabularySpecificationDocument, <http://www.w3.org/ns/adms#AssetDistribution>;
     dsv:classRole role:main.
 :DataSpecificationDocument dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "Data Specification Document"@en;
     skos:definition "A Data Specification Document."@en;
     a dsv:ClassProfile;
+    dsv:class prof:ResourceDescriptor;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#DataSpecificationDocument.title> dsv:domain :DataSpecificationDocument;
@@ -675,6 +722,7 @@
     skos:prefLabel "title"@en;
     skos:definition "A name given to the Data Specification Document."@en;
     dsv:cardinality cardinality:1n;
+    dsv:property dct:title;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 
@@ -684,6 +732,7 @@
     skos:prefLabel "description"@en;
     skos:definition "An account of the Data Specification Document."@en;
     dsv:cardinality cardinality:0n;
+    dsv:property dct:description;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 :SemanticDataSpecification dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -695,6 +744,7 @@
   dsv:reusedFromResource prof:Profile
 ];
     a dsv:ClassProfile;
+    dsv:class prof:Profile;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource> dsv:domain :SemanticDataSpecification;
@@ -710,6 +760,7 @@
   dsv:reusedFromResource prof:hasResource
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property prof:hasResource;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ResourceDescriptor.
 
@@ -719,6 +770,7 @@
     skos:prefLabel "title"@en;
     skos:definition "A name given to the Semantic Data Specification."@en;
     dsv:cardinality cardinality:1n;
+    dsv:property dct:title;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 
@@ -728,6 +780,7 @@
     skos:prefLabel "description"@en;
     skos:definition "An account of the Semantic Data Specification."@en;
     dsv:cardinality cardinality:0n;
+    dsv:property dct:description;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 
@@ -744,6 +797,7 @@
   dsv:reusedFromResource prof:isProfileOf
 ];
     dsv:cardinality cardinality:0n;
+    dsv:property prof:isProfileOf;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :SemanticDataSpecification.
 
@@ -761,6 +815,7 @@
   dsv:reusedFromResource prof:hasToken
 ];
     dsv:cardinality cardinality:01;
+    dsv:property prof:hasToken;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#token>.
 :ResourceRole dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -775,24 +830,28 @@
   dsv:reusedFromResource prof:ResourceRole
 ];
     a dsv:ClassProfile;
+    dsv:class prof:ResourceRole;
     dsv:classRole role:supportive.
 :ClassRole dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "Class Role"@en;
     skos:definition "Class Role, e.g. Mandatory or Supportive."@en;
     a dsv:ClassProfile;
+    dsv:class skos:Concept;
     dsv:classRole role:supportive.
 :RequirementLevel dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "Requirement Level"@en;
     skos:definition "Requirement Level of a property profile."@en;
     a dsv:ClassProfile;
+    dsv:class skos:Concept;
     dsv:classRole role:supportive.
 :Cardinality dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "Cardinality"@en;
     skos:definition "Cardinality, e.g. 0..* or 1..1"@en;
     a dsv:ClassProfile;
+    dsv:class skos:Concept;
     dsv:classRole role:supportive.
 :Format dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
@@ -800,6 +859,7 @@
     skos:definition "An idea or notion; a unit of thought."@en;
     skos:scopeNote "The file format, physical medium, or dimensions of the resource."@en;
     a dsv:ClassProfile;
+    dsv:class skos:Concept;
     dsv:classRole role:supportive.
 :ObjectProperty dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
@@ -814,6 +874,7 @@
   dsv:reusedFromResource owl:ObjectProperty
 ];
     a dsv:ClassProfile;
+    dsv:class owl:ObjectProperty;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#Objectproperty.range> dsv:domain :ObjectProperty;
@@ -829,6 +890,7 @@
   dsv:reusedFromResource rdfs:range
 ];
     dsv:cardinality cardinality:01;
+    dsv:property rdfs:range;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Class.
 :DatatypeProperty dct:isPartOf <https://w3id.org/dsv-dap#>;
@@ -844,6 +906,7 @@
   dsv:reusedFromResource owl:DatatypeProperty
 ];
     a dsv:ClassProfile;
+    dsv:class owl:DatatypeProperty;
     dsv:classRole role:main.
 
 <https://w3id.org/dsv-dap#Datatypeproperty.range> dsv:domain :DatatypeProperty;
@@ -859,5 +922,6 @@
   dsv:reusedFromResource rdfs:range
 ];
     dsv:cardinality cardinality:01;
+    dsv:property rdfs:range;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :Datatype.
