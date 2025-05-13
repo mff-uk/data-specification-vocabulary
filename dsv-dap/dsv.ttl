@@ -764,7 +764,7 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange :ResourceDescriptor.
 
-<https://w3id.org/dsv-dap#SemanticDataSpecifcation.title> dsv:domain :SemanticDataSpecification;
+<https://w3id.org/dsv-dap#SemanticDataSpecification.title> dsv:domain :SemanticDataSpecification;
     dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     skos:prefLabel "title"@en;
