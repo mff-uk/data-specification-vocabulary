@@ -13,7 +13,7 @@
     dcterms:title "Data Specification Vocabulary"@en ;
     dcterms:description "Data Specification Vocabulary (DSV) is a vocabulary for describing semantic data specifications, namely vocabularies and application profiles."@en ;
     dcterms:issued "2024-10-01"^^xsd:date ;
-    dcterms:modified "2025-05-08"^^xsd:date ;
+    dcterms:modified "2025-05-14"^^xsd:date ;
     owl:versionInfo 1.0 ;
     rdfs:comment "See also DSV Default Application Profile for a more complete information on how to use this vocabulary."@en ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
@@ -22,7 +22,7 @@
     dcterms:publisher <http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University> ;
     vann:preferredNamespacePrefix "dsv" ;
     vann:preferredNamespaceUri "https://w3id.org/dsv#" ;
-    vs:term_status "release candidate" .
+    vs:term_status "stable" .
 
     <http://www.wikidata.org/entity/Q57585169> a foaf:Person .
     <http://www.wikidata.org/entity/Q57232642> a foaf:Person .
@@ -88,6 +88,7 @@
     rdfs:range rdfs:Class.
 :ObjectPropertyProfile a owl:Class, rdfs:Class;
     rdfs:label "Profil objektové vlastnosti"@cs, "Object Property Profile"@en;
+    rdfs:comment "Profile of an object property allows specification editors to specify profile-specific name, definition, usage note, domain, range, and cardinality."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:subClassOf :PropertyProfile.
 :range a rdf:Property, owl:ObjectProperty;
@@ -98,6 +99,7 @@
     rdfs:range :ClassProfile.
 :DatatypePropertyProfile a owl:Class, rdfs:Class;
     rdfs:label "Profile atributu"@cs, "Datatype Property Profile"@en;
+    rdfs:comment "Profile of a datatype property allows specification editors to specify profile-specific name, definition, usage note, domain, datatype, and cardinality."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:subClassOf :PropertyProfile.
 :datatype a rdf:Property, owl:ObjectProperty;
