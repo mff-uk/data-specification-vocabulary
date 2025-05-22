@@ -1,0 +1,41 @@
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dsv: <https://w3id.org/dsv#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix cardinality: <https://w3id.org/dsv/cardinality#>.
+@prefix requirement: <https://w3id.org/dsv/requirement-level#>.
+@prefix role: <https://w3id.org/dsv/class-role#>.
+@prefix prof: <http://www.w3.org/ns/dx/prof/>.
+@prefix : <https://mff-uk.github.io/specifications/dcat-ap/#>.
+
+
+<https://mff-uk.github.io/specifications/dcat-ap/#> a prof:Profile, dsv:ApplicationProfile.
+:Catalogue dct:isPartOf <https://mff-uk.github.io/specifications/dcat-ap/#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Catalogue"@en, "Catalogo"@it, "Catalogue"@fr, "Catálogo"@es, "Katalog"@cs, "Κατάλογος"@el, "فهرس قوائم البيانات"@ar, "カタログ"@ja, "Katalog"@da;
+    skos:definition "A catalogue or repository that hosts the Datasets or Data Services being described."@en, "Una colección curada de metadatos sobre recursos (por ejemplo, conjuntos de datos y servicios de datos en el contexto de un catálogo de datos)."@es, "Una raccolta curata di metadati sulle risorse (ad es. sui dataset e relativi servizi nel contesto di cataloghi di dati)."@it, "Une collection élaborée de métadonnées sur les jeux de données"@fr, "Řízená kolekce metadat o datových sadách a datových službách"@cs, "Μια επιμελημένη συλλογή μεταδεδομένων περί συνόλων δεδομένων"@el, "مجموعة من توصيفات قوائم البيانات"@ar, "データ・カタログは、データセットに関するキュレートされたメタデータの集合です。"@ja, "En udvalgt og arrangeret samling af metadata om ressourcer (fx datasæt og datatjenester i kontekst af et datakatalog). "@da;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap/#Catalog>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap/#Catalog>
+];
+    dsv:externalDocumentation <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue>;
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
+
+<https://mff-uk.github.io/specifications/dcat-ap/#Catalogue.homepage> dsv:domain :Catalogue;
+    dct:isPartOf <https://mff-uk.github.io/specifications/dcat-ap/#>;
+    a dsv:TermProfile;
+    skos:definition "A web page that acts as the main page for the Catalogue."@en;
+    skos:scopeNote ""@en;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap/#Catalog.homepage>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap/#Catalog.homepage>
+];
+    dsv:externalDocumentation <https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Catalogue.homepage>;
+    dsv:cardinality cardinality:01;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :Document.
