@@ -14,7 +14,8 @@
     dcterms:description "Data Specification Vocabulary (DSV) is a vocabulary for describing semantic data specifications, namely vocabularies and application profiles."@en ;
     dcterms:issued "2024-10-01"^^xsd:date ;
     dcterms:modified "2025-05-14"^^xsd:date ;
-    owl:versionInfo 1.0 ;
+    owl:versionIRI <https://w3id.org/dsv/1.0.0#> ;
+    owl:versionInfo "1.0.0" ;
     rdfs:comment "See also DSV Default Application Profile for a more complete information on how to use this vocabulary."@en ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
     dcterms:creator <http://www.wikidata.org/entity/Q57585169> ;
