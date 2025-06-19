@@ -14,7 +14,7 @@
   <owl:Ontology rdf:about="https://w3id.org/dsv#">
     <foaf:depiction rdf:resource="https://mff-uk.github.io/data-specification-vocabulary/dsv/c5d2ee2e-32c6-4c12-abb3-b80410162920.svg"/>
     <dcterms:source rdf:resource="https://w3id.org/dsv-dap#"/>
-    <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/Published"/>
+    <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
     <vs:term_status>stable</vs:term_status>
     <vann:preferredNamespaceUri>https://w3id.org/dsv#</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>dsv</vann:preferredNamespacePrefix>

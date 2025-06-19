@@ -33,7 +33,7 @@
                 "@id": "https://w3id.org/dsv-dap#"
             },
             "bibo:status": {
-                "@id": "bibo:status/Published"
+                "@id": "bibo:status/published"
             },
             "vs:term_status": "stable",
             "vann:preferredNamespaceUri": "https://w3id.org/dsv#",
