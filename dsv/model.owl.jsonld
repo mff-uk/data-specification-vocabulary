@@ -1,888 +1,675 @@
-[
-  {
-    "@id": "https://w3id.org/dsv#externalDocumentation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Link to an external documentation of this resource. Profiles of this resource should preferably link to this URL for documentation."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "external documentation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology",
-      "http://www.w3.org/ns/dx/prof/Profile"
-    ],
-    "http://creativecommons.org/ns#license": [
-      {
-        "@id": "http://creativecommons.org/licenses/by/4.0/"
-      }
-    ],
-    "http://purl.org/dc/terms/contributor": [
-      {
-        "@id": "http://www.wikidata.org/entity/Q57232642"
-      },
-      {
-        "@id": "https://orcid.org/0000-0003-4843-2470"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@id": "http://www.wikidata.org/entity/Q57585169"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@language": "en",
-        "@value": "Data Specification Vocabulary (DSV) is a vocabulary for describing semantic data specifications, namely vocabularies and application profiles."
-      }
-    ],
-    "http://purl.org/dc/terms/issued": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2024-10-01"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-05-14"
-      }
-    ],
-    "http://purl.org/dc/terms/publisher": [
-      {
-        "@id": "http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "Data Specification Vocabulary"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#versionIRI": [
-      {
-        "@id": "https://w3id.org/dsv/1.0.0#"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#versionInfo": [
-      {
-        "@value": "1.0.0"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "See also DSV Default Application Profile for a more complete information on how to use this vocabulary."
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
-      {
-        "@value": "dsv"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespaceUri": [
-      {
-        "@value": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-        "@value": "stable"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#VocabularySpecificationDocument",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A Vocabulary Specification Document is a human-readable representation of a Vocabulary."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Vocabulary Specification Document"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#ApplicationProfileSpecificationDocument",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "An Application Profile Specification Document contains human-readable version of an Application Profile."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Application Profile Specification Document"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/dx/prof/ResourceDescriptor"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#requirementLevel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Requirement level of the property, typically mandatory, recommended or optional."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#PropertyProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "requirement level"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#PropertyProfile",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Property Profile"
-      },
-      {
-        "@language": "cs",
-        "@value": "Profil vlastnosti"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/dsv#TermProfile"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#cardinality",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#PropertyProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "cardinality"
-      },
-      {
-        "@language": "cs",
-        "@value": "kardinalita"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#domain",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Class profile, which is the domain of the property profile."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#PropertyProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "domain"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dsv#ClassProfile"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#ClassProfile",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Class Profile"
-      },
-      {
-        "@language": "cs",
-        "@value": "Profil třídy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/dsv#TermProfile"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#property",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The property profiled by the property profile."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#PropertyProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "profiled property"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#TermProfile",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles."
-      },
-      {
-        "@language": "cs",
-        "@value": "Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Term Profile"
-      },
-      {
-        "@language": "cs",
-        "@value": "Profil"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#InvalidTermProfile",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Invalid Term Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency."
-      },
-      {
-        "@language": "cs",
-        "@value": "Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Invalid Term Profile"
-      },
-      {
-        "@language": "cs",
-        "@value": "Nevalidní profil"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/dsv#TermProfile"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#datatype",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#DatatypePropertyProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "datatype"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Datatype"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#DatatypePropertyProfile",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Profile of a datatype property allows specification editors to specify profile-specific name, definition, usage note, domain, datatype, and cardinality."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Datatype Property Profile"
-      },
-      {
-        "@language": "cs",
-        "@value": "Profile atributu"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/dsv#PropertyProfile"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#range",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Class profile, which is the range of the object property profile."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#ObjectPropertyProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "range"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dsv#ClassProfile"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#ObjectPropertyProfile",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Profile of an object property allows specification editors to specify profile-specific name, definition, usage note, domain, range, and cardinality."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Object Property Profile"
-      },
-      {
-        "@language": "cs",
-        "@value": "Profil objektové vlastnosti"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/dsv#PropertyProfile"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#class",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The profiled class."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#ClassProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "profiled class"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Class"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#classRole",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Class role, e.g. Mandatory, Supportive, etc."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#ClassProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "class role"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#specializes",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Specifies a profile specialized by this profile."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#TermProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "specializes"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dsv#TermProfile"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#reusesPropertyValue",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Points to definitions of Property value reuse for this Profile."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#TermProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "reuses property value"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dsv#PropertyValueReuse"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#PropertyValueReuse",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Specifies, which values of which properties of which resources are reused for the current Profile.\nE.g. reuse of profile name, reuse of class name, reuse of profile definition, reuse of profile usage note, etc."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Property Value Reuse"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#profileOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Specifies a parent profile of the current profile."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#TermProfile"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "profile of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/dsv#TermProfile"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#reusedProperty",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#PropertyValueReuse"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "reused property"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#reusedFromResource",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The Resource on which there is a property with a value for reuse."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/dsv#PropertyValueReuse"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "reused from resource"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/dsv#ApplicationProfile",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties."
-      },
-      {
-        "@language": "cs",
-        "@value": "Konceptuální model obsahující profily tříd a vlastností různých slovníků."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/dsv#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Application Profile"
-      },
-      {
-        "@language": "cs",
-        "@value": "Konceptuální model"
-      }
-    ]
-  },
-  {
-    "@id": "http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Organization"
-    ]
-  },
-  {
-    "@id": "https://orcid.org/0000-0003-4843-2470",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Person"
-    ]
-  },
-  {
-    "@id": "http://www.wikidata.org/entity/Q57232642",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Person"
-    ]
-  },
-  {
-    "@id": "http://www.wikidata.org/entity/Q57585169",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Person"
-    ]
-  }
-]
+{
+    "@graph": [
+        {
+            "@id": "https://w3id.org/dsv#externalDocumentation",
+            "rdfs:range": {
+                "@id": "rdfs:Resource"
+            },
+            "rdfs:domain": {
+                "@id": "rdfs:Resource"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Link to an external documentation of this resource. Profiles of this resource should preferably link to this URL for documentation."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "external documentation"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#",
+            "vs:term_status": "stable",
+            "@type": [
+                "owl:Ontology",
+                "prof:Profile"
+            ],
+            "dcterms:title": {
+                "@language": "en",
+                "@value": "Data Specification Vocabulary"
+            },
+            "dcterms:description": {
+                "@language": "en",
+                "@value": "Data Specification Vocabulary (DSV) is a vocabulary for describing semantic data specifications, namely vocabularies and application profiles."
+            },
+            "dcterms:issued": {
+                "@value": "2024-10-01",
+                "@type": "xsd:date"
+            },
+            "dcterms:modified": {
+                "@value": "2025-05-14",
+                "@type": "xsd:date"
+            },
+            "owl:versionIRI": {
+                "@id": "https://w3id.org/dsv/1.0.0#"
+            },
+            "owl:versionInfo": "1.0.0",
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "See also DSV Default Application Profile for a more complete information on how to use this vocabulary."
+            },
+            "cc:license": {
+                "@id": "http://creativecommons.org/licenses/by/4.0/"
+            },
+            "dcterms:creator": {
+                "@id": "http://www.wikidata.org/entity/Q57585169"
+            },
+            "dcterms:contributor": [
+                {
+                    "@id": "http://www.wikidata.org/entity/Q57232642"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0003-4843-2470"
+                }
+            ],
+            "dcterms:publisher": {
+                "@id": "http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University"
+            },
+            "vann:preferredNamespacePrefix": "dsv",
+            "vann:preferredNamespaceUri": "https://w3id.org/dsv#"
+        },
+        {
+            "@id": "https://w3id.org/dsv#VocabularySpecificationDocument",
+            "rdfs:subClassOf": {
+                "@id": "prof:ResourceDescriptor"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A Vocabulary Specification Document is a human-readable representation of a Vocabulary."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Vocabulary Specification Document"
+            },
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#ApplicationProfileSpecificationDocument",
+            "rdfs:subClassOf": {
+                "@id": "prof:ResourceDescriptor"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "An Application Profile Specification Document contains human-readable version of an Application Profile."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Application Profile Specification Document"
+            },
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#requirementLevel",
+            "rdfs:range": {
+                "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#PropertyProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Requirement level of the property, typically mandatory, recommended or optional."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "requirement level"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#PropertyProfile",
+            "rdfs:subClassOf": {
+                "@id": "https://w3id.org/dsv#TermProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality."
+            },
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Property Profile"
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Profil vlastnosti"
+                }
+            ],
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#cardinality",
+            "rdfs:range": {
+                "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#PropertyProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cardinality"
+                },
+                {
+                    "@language": "cs",
+                    "@value": "kardinalita"
+                }
+            ],
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#domain",
+            "rdfs:range": {
+                "@id": "https://w3id.org/dsv#ClassProfile"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#PropertyProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Class profile, which is the domain of the property profile."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "domain"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#ClassProfile",
+            "rdfs:subClassOf": {
+                "@id": "https://w3id.org/dsv#TermProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes."
+            },
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Class Profile"
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Profil třídy"
+                }
+            ],
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#property",
+            "rdfs:range": {
+                "@id": "rdf:Property"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#PropertyProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The property profiled by the property profile."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "profiled property"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#TermProfile",
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles."
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Term Profile"
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Profil"
+                }
+            ],
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#InvalidTermProfile",
+            "rdfs:subClassOf": {
+                "@id": "https://w3id.org/dsv#TermProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Invalid Term Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency."
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Invalid Term Profile"
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Nevalidní profil"
+                }
+            ],
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#datatype",
+            "rdfs:range": {
+                "@id": "rdfs:Datatype"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#DatatypePropertyProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "datatype"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#DatatypePropertyProfile",
+            "rdfs:subClassOf": {
+                "@id": "https://w3id.org/dsv#PropertyProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Profile of a datatype property allows specification editors to specify profile-specific name, definition, usage note, domain, datatype, and cardinality."
+            },
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Datatype Property Profile"
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Profile atributu"
+                }
+            ],
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#range",
+            "rdfs:range": {
+                "@id": "https://w3id.org/dsv#ClassProfile"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#ObjectPropertyProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Class profile, which is the range of the object property profile."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "range"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#ObjectPropertyProfile",
+            "rdfs:subClassOf": {
+                "@id": "https://w3id.org/dsv#PropertyProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Profile of an object property allows specification editors to specify profile-specific name, definition, usage note, domain, range, and cardinality."
+            },
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Object Property Profile"
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Profil objektové vlastnosti"
+                }
+            ],
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#class",
+            "rdfs:range": {
+                "@id": "rdfs:Class"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#ClassProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The profiled class."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "profiled class"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#classRole",
+            "rdfs:range": {
+                "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#ClassProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Class role, e.g. Mandatory, Supportive, etc."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "class role"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#specializes",
+            "rdfs:range": {
+                "@id": "https://w3id.org/dsv#TermProfile"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#TermProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Specifies a profile specialized by this profile."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "specializes"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#reusesPropertyValue",
+            "rdfs:range": {
+                "@id": "https://w3id.org/dsv#PropertyValueReuse"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#TermProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Points to definitions of Property value reuse for this Profile."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "reuses property value"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#PropertyValueReuse",
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Specifies, which values of which properties of which resources are reused for the current Profile.\nE.g. reuse of profile name, reuse of class name, reuse of profile definition, reuse of profile usage note, etc."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Property Value Reuse"
+            },
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#profileOf",
+            "rdfs:range": {
+                "@id": "https://w3id.org/dsv#TermProfile"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#TermProfile"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Specifies a parent profile of the current profile."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "profile of"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#reusedProperty",
+            "rdfs:range": {
+                "@id": "rdf:Property"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#PropertyValueReuse"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "reused property"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#reusedFromResource",
+            "rdfs:range": {
+                "@id": "rdfs:Resource"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv#PropertyValueReuse"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The Resource on which there is a property with a value for reuse."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "reused from resource"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv#ApplicationProfile",
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties."
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Konceptuální model obsahující profily tříd a vlastností různých slovníků."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Application Profile"
+                },
+                {
+                    "@language": "cs",
+                    "@value": "Konceptuální model"
+                }
+            ],
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University",
+            "@type": "foaf:Organization"
+        },
+        {
+            "@id": "https://orcid.org/0000-0003-4843-2470",
+            "@type": "foaf:Person"
+        },
+        {
+            "@id": "http://www.wikidata.org/entity/Q57232642",
+            "@type": "foaf:Person"
+        },
+        {
+            "@id": "http://www.wikidata.org/entity/Q57585169",
+            "@type": "foaf:Person"
+        }
+    ],
+    "@context": {
+        "cc": "http://creativecommons.org/ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "vann": "http://purl.org/vocab/vann/",
+        "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+        "prof": "http://www.w3.org/ns/dx/prof/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "@vocab": "https://w3id.org/dsv#"
+    }
+}
