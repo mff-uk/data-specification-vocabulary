@@ -1,5 +1,7 @@
 # Data Specification Vocabulary (DSV) and its Default Application Profile (DSV-DAP)
 
+![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
+
 <figure>
   <a href="dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg"><img
   src="dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg"
