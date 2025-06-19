@@ -154,6 +154,7 @@ E.g. reuse of profile name, reuse of class name, reuse of profile definition, re
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
     <rdfs:domain rdf:resource="https://w3id.org/dsv#DatatypePropertyProfile"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">A datatype of the values of the Datatype Property Profile.</rdfs:comment>
     <rdfs:label xml:lang="en">datatype</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </owl:ObjectProperty>
@@ -169,6 +170,7 @@ E.g. reuse of profile name, reuse of class name, reuse of profile definition, re
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:domain rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Cardinality of the Property Profile.</rdfs:comment>
     <rdfs:label xml:lang="en">cardinality</rdfs:label>
     <rdfs:label xml:lang="cs">kardinalita</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -193,6 +195,7 @@ E.g. reuse of profile name, reuse of class name, reuse of profile definition, re
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:domain rdf:resource="https://w3id.org/dsv#PropertyValueReuse"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">The Property from which a value is reused.</rdfs:comment>
     <rdfs:label xml:lang="en">reused property</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </owl:ObjectProperty>

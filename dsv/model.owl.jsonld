@@ -188,6 +188,10 @@
             "rdfs:isDefinedBy": {
                 "@id": "https://w3id.org/dsv#"
             },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Cardinality of the Property Profile."
+            },
             "rdfs:label": [
                 {
                     "@language": "en",
@@ -351,6 +355,10 @@
             },
             "rdfs:isDefinedBy": {
                 "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "A datatype of the values of the Datatype Property Profile."
             },
             "rdfs:label": {
                 "@language": "en",
@@ -587,6 +595,10 @@
             },
             "rdfs:isDefinedBy": {
                 "@id": "https://w3id.org/dsv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The Property from which a value is reused."
             },
             "rdfs:label": {
                 "@language": "en",
