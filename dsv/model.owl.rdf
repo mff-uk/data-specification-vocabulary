@@ -3,6 +3,7 @@
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns="https://w3id.org/dsv#"
     xmlns:cc="http://creativecommons.org/ns#"
@@ -13,7 +14,7 @@
   <owl:Ontology rdf:about="https://w3id.org/dsv#">
     <foaf:depiction rdf:resource="https://mff-uk.github.io/data-specification-vocabulary/dsv/c5d2ee2e-32c6-4c12-abb3-b80410162920.svg"/>
     <dcterms:source rdf:resource="https://w3id.org/dsv-dap#"/>
-    <vs:status>stable</vs:status>
+    <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/Published"/>
     <vs:term_status>stable</vs:term_status>
     <vann:preferredNamespaceUri>https://w3id.org/dsv#</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>dsv</vann:preferredNamespacePrefix>

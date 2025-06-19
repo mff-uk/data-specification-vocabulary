@@ -32,7 +32,9 @@
             "dcterms:source": {
                 "@id": "https://w3id.org/dsv-dap#"
             },
-            "vs:status": "stable",
+            "bibo:status": {
+                "@id": "bibo:status/Published"
+            },
             "vs:term_status": "stable",
             "vann:preferredNamespaceUri": "https://w3id.org/dsv#",
             "vann:preferredNamespacePrefix": "dsv",
@@ -693,6 +695,7 @@
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "dcterms": "http://purl.org/dc/terms/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bibo": "http://purl.org/ontology/bibo/",
         "vann": "http://purl.org/vocab/vann/",
         "prof": "http://www.w3.org/ns/dx/prof/",
         "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
