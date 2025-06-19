@@ -11,17 +11,23 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:prof="http://www.w3.org/ns/dx/prof/">
   <owl:Ontology rdf:about="https://w3id.org/dsv#">
+    <vs:status>stable</vs:status>
     <vs:term_status>stable</vs:term_status>
+    <vann:preferredNamespaceUri>https://w3id.org/dsv#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>dsv</vann:preferredNamespacePrefix>
     <rdf:type rdf:resource="http://www.w3.org/ns/dx/prof/Profile"/>
     <dcterms:title xml:lang="en">Data Specification Vocabulary</dcterms:title>
     <dcterms:description xml:lang="en">Data Specification Vocabulary (DSV) is a vocabulary for describing semantic data specifications, namely vocabularies and application profiles.</dcterms:description>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2024-10-01</dcterms:issued>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2024-10-01</dcterms:created>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2025-05-14</dcterms:modified>
     <owl:versionIRI rdf:resource="https://w3id.org/dsv/1.0.0#"/>
     <owl:versionInfo>1.0.0</owl:versionInfo>
     <rdfs:comment xml:lang="en">See also DSV Default Application Profile for a more complete information on how to use this vocabulary.</rdfs:comment>
+    <dcterms:bibliographicCitation xml:lang="en">Klímek, J., Stenchlák, Š., &amp; Škoda, P. (2025). Data Specification Vocabulary (Version 1.0.0). https://w3id.org/dsv#</dcterms:bibliographicCitation>
     <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
     <dcterms:creator>
       <foaf:Person rdf:about="http://www.wikidata.org/entity/Q57585169"/>
@@ -35,8 +41,6 @@
     <dcterms:publisher>
       <foaf:Organization rdf:about="http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University"/>
     </dcterms:publisher>
-    <vann:preferredNamespacePrefix>dsv</vann:preferredNamespacePrefix>
-    <vann:preferredNamespaceUri>https://w3id.org/dsv#</vann:preferredNamespaceUri>
   </owl:Ontology>
   <rdfs:Class rdf:about="https://w3id.org/dsv#ClassProfile">
     <rdfs:subClassOf>

@@ -26,7 +26,10 @@
         },
         {
             "@id": "https://w3id.org/dsv#",
-            "vs:term_status": "stable",
+            "sw:status": "stable",
+            "sw:term_status": "stable",
+            "vann:preferredNamespaceUri": "https://w3id.org/dsv#",
+            "vann:preferredNamespacePrefix": "dsv",
             "@type": [
                 "owl:Ontology",
                 "prof:Profile"
@@ -43,6 +46,10 @@
                 "@value": "2024-10-01",
                 "@type": "xsd:date"
             },
+            "dcterms:created": {
+                "@value": "2024-10-01",
+                "@type": "xsd:date"
+            },
             "dcterms:modified": {
                 "@value": "2025-05-14",
                 "@type": "xsd:date"
@@ -54,6 +61,10 @@
             "rdfs:comment": {
                 "@language": "en",
                 "@value": "See also DSV Default Application Profile for a more complete information on how to use this vocabulary."
+            },
+            "dcterms:bibliographicCitation": {
+                "@language": "en",
+                "@value": "Klímek, J., Stenchlák, Š., & Škoda, P. (2025). Data Specification Vocabulary (Version 1.0.0). https://w3id.org/dsv#"
             },
             "cc:license": {
                 "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -71,9 +82,7 @@
             ],
             "dcterms:publisher": {
                 "@id": "http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University"
-            },
-            "vann:preferredNamespacePrefix": "dsv",
-            "vann:preferredNamespaceUri": "https://w3id.org/dsv#"
+            }
         },
         {
             "@id": "https://w3id.org/dsv#VocabularySpecificationDocument",
@@ -661,14 +670,15 @@
     ],
     "@context": {
         "cc": "http://creativecommons.org/ns#",
+        "sw": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "dcterms": "http://purl.org/dc/terms/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "vann": "http://purl.org/vocab/vann/",
-        "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
         "prof": "http://www.w3.org/ns/dx/prof/",
+        "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
         "foaf": "http://xmlns.com/foaf/0.1/",
         "@vocab": "https://w3id.org/dsv#"
     }
