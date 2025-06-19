@@ -27,7 +27,9 @@
     vann:preferredNamespacePrefix "dsv" ;
     vann:preferredNamespaceUri "https://w3id.org/dsv#" ;
     vs:term_status "stable" ;
-    vs:status "stable" .
+    vs:status "stable" ;
+    dcterms:source <https://w3id.org/dsv-dap#> ;
+    foaf:depiction <https://mff-uk.github.io/data-specification-vocabulary/dsv/c5d2ee2e-32c6-4c12-abb3-b80410162920.svg> .
 
     <http://www.wikidata.org/entity/Q57585169> a foaf:Person .
     <http://www.wikidata.org/entity/Q57232642> a foaf:Person .

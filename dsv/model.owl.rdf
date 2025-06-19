@@ -11,6 +11,8 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:prof="http://www.w3.org/ns/dx/prof/">
   <owl:Ontology rdf:about="https://w3id.org/dsv#">
+    <foaf:depiction rdf:resource="https://mff-uk.github.io/data-specification-vocabulary/dsv/c5d2ee2e-32c6-4c12-abb3-b80410162920.svg"/>
+    <dcterms:source rdf:resource="https://w3id.org/dsv-dap#"/>
     <vs:status>stable</vs:status>
     <vs:term_status>stable</vs:term_status>
     <vann:preferredNamespaceUri>https://w3id.org/dsv#</vann:preferredNamespaceUri>
