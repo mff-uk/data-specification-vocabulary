@@ -26,8 +26,8 @@
         },
         {
             "@id": "https://w3id.org/dsv#",
-            "sw:status": "stable",
-            "sw:term_status": "stable",
+            "vs:status": "stable",
+            "vs:term_status": "stable",
             "vann:preferredNamespaceUri": "https://w3id.org/dsv#",
             "vann:preferredNamespacePrefix": "dsv",
             "@type": [
@@ -682,7 +682,6 @@
     ],
     "@context": {
         "cc": "http://creativecommons.org/ns#",
-        "sw": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",

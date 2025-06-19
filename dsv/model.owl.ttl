@@ -6,7 +6,6 @@
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -28,7 +27,7 @@
     vann:preferredNamespacePrefix "dsv" ;
     vann:preferredNamespaceUri "https://w3id.org/dsv#" ;
     vs:term_status "stable" ;
-    sw:status "stable" .
+    vs:status "stable" .
 
     <http://www.wikidata.org/entity/Q57585169> a foaf:Person .
     <http://www.wikidata.org/entity/Q57232642> a foaf:Person .
