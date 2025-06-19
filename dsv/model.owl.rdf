@@ -1,246 +1,235 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <rdf:Description rdf:about="https://w3id.org/dsv#domain">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Class profile, which is the domain of the property profile.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#ClassProfile"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">domain</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#cardinality">
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">kardinalita</label>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">cardinality</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#property">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">The property profiled by the property profile.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">profiled property</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.wikidata.org/entity/Q57585169">
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#ApplicationProfileSpecificationDocument">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An Application Profile Specification Document contains human-readable version of an Application Profile.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Application Profile Specification Document</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#DatatypePropertyProfile">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Profile of a datatype property allows specification editors to specify profile-specific name, definition, usage note, domain, datatype, and cardinality.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Profile atributu</label>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Datatype Property Profile</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.wikidata.org/entity/Q57232642">
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#requirementLevel">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Requirement level of the property, typically mandatory, recommended or optional.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">requirement level</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#PropertyValueReuse">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Specifies, which values of which properties of which resources are reused for the current Profile.
-E.g. reuse of profile name, reuse of class name, reuse of profile definition, reuse of profile usage note, etc.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Property Value Reuse</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#InvalidTermProfile">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě.</comment>
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Invalid Term Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Nevalidní profil</label>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Invalid Term Profile</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#ObjectPropertyProfile">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Profile of an object property allows specification editors to specify profile-specific name, definition, usage note, domain, range, and cardinality.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Profil objektové vlastnosti</label>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Object Property Profile</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#classRole">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Class role, e.g. Mandatory, Supportive, etc.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#ClassProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">class role</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#reusedFromResource">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">The Resource on which there is a property with a value for reuse.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#PropertyValueReuse"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">reused from resource</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#datatype">
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#DatatypePropertyProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">datatype</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://orcid.org/0000-0003-4843-2470">
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#range">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Class profile, which is the range of the object property profile.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#ClassProfile"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#ObjectPropertyProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">range</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#reusesPropertyValue">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Points to definitions of Property value reuse for this Profile.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#PropertyValueReuse"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">reuses property value</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#VocabularySpecificationDocument">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">A Vocabulary Specification Document is a human-readable representation of a Vocabulary.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Vocabulary Specification Document</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#externalDocumentation">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Link to an external documentation of this resource. Profiles of this resource should preferably link to this URL for documentation.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">external documentation</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#ClassProfile">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Profil třídy</label>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Class Profile</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#ApplicationProfile">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Konceptuální model obsahující profily tříd a vlastností různých slovníků.</comment>
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Konceptuální model</label>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Application Profile</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#TermProfile">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</comment>
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Profil</label>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Term Profile</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#reusedProperty">
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#PropertyValueReuse"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">reused property</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#specializes">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Specifies a profile specialized by this profile.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">specializes</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University">
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#PropertyProfile">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="cs">Profil vlastnosti</label>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Property Profile</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#class">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">The profiled class.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#ClassProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">profiled class</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#profileOf">
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Specifies a parent profile of the current profile.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#"/>
-        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <label xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">profile of</label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/dsv#">
-        <versionInfo xmlns="http://www.w3.org/2002/07/owl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</versionInfo>
-        <license xmlns="http://creativecommons.org/ns#" rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">See also DSV Default Application Profile for a more complete information on how to use this vocabulary.</comment>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/ns/dx/prof/Profile"/>
-        <type xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-        <publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University"/>
-        <contributor xmlns="http://purl.org/dc/terms/" rdf:resource="http://www.wikidata.org/entity/Q57232642"/>
-        <contributor xmlns="http://purl.org/dc/terms/" rdf:resource="https://orcid.org/0000-0003-4843-2470"/>
-        <versionIRI xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="https://w3id.org/dsv/1.0#"/>
-        <term_status xmlns="http://www.w3.org/2003/06/sw-vocab-status/ns#">stable</term_status>
-        <title xmlns="http://purl.org/dc/terms/" xml:lang="en">Data Specification Vocabulary</title>
-        <modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-14</modified>
-        <preferredNamespaceUri xmlns="http://purl.org/vocab/vann/">https://w3id.org/dsv#</preferredNamespaceUri>
-        <creator xmlns="http://purl.org/dc/terms/" rdf:resource="http://www.wikidata.org/entity/Q57585169"/>
-        <description xmlns="http://purl.org/dc/terms/" xml:lang="en">Data Specification Vocabulary (DSV) is a vocabulary for describing semantic data specifications, namely vocabularies and application profiles.</description>
-        <issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-01</issued>
-        <preferredNamespacePrefix xmlns="http://purl.org/vocab/vann/">dsv</preferredNamespacePrefix>
-    </rdf:Description>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="https://w3id.org/dsv#"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:prof="http://www.w3.org/ns/dx/prof/">
+  <owl:Ontology rdf:about="https://w3id.org/dsv#">
+    <vs:term_status>stable</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dx/prof/Profile"/>
+    <dcterms:title xml:lang="en">Data Specification Vocabulary</dcterms:title>
+    <dcterms:description xml:lang="en">Data Specification Vocabulary (DSV) is a vocabulary for describing semantic data specifications, namely vocabularies and application profiles.</dcterms:description>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2024-10-01</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2025-05-14</dcterms:modified>
+    <owl:versionIRI rdf:resource="https://w3id.org/dsv/1.0.0#"/>
+    <owl:versionInfo>1.0.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">See also DSV Default Application Profile for a more complete information on how to use this vocabulary.</rdfs:comment>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.wikidata.org/entity/Q57585169"/>
+    </dcterms:creator>
+    <dcterms:contributor>
+      <foaf:Person rdf:about="http://www.wikidata.org/entity/Q57232642"/>
+    </dcterms:contributor>
+    <dcterms:contributor>
+      <foaf:Person rdf:about="https://orcid.org/0000-0003-4843-2470"/>
+    </dcterms:contributor>
+    <dcterms:publisher>
+      <foaf:Organization rdf:about="http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University"/>
+    </dcterms:publisher>
+    <vann:preferredNamespacePrefix>dsv</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://w3id.org/dsv#</vann:preferredNamespaceUri>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#ClassProfile">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://w3id.org/dsv#TermProfile"/>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes.</rdfs:comment>
+    <rdfs:label xml:lang="en">Class Profile</rdfs:label>
+    <rdfs:label xml:lang="cs">Profil třídy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#InvalidTermProfile">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://w3id.org/dsv#TermProfile"/>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Invalid Term Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</rdfs:comment>
+    <rdfs:comment xml:lang="cs">Neplatný profil je profil, který porušuje pravidla pro správné profilování. To může být z dobrého důvodu, jako je dočasná nekonzistence, která se má teprve projevit na profilované entitě.</rdfs:comment>
+    <rdfs:label xml:lang="en">Invalid Term Profile</rdfs:label>
+    <rdfs:label xml:lang="cs">Nevalidní profil</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#PropertyValueReuse">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Specifies, which values of which properties of which resources are reused for the current Profile.
+E.g. reuse of profile name, reuse of class name, reuse of profile definition, reuse of profile usage note, etc.</rdfs:comment>
+    <rdfs:label xml:lang="en">Property Value Reuse</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#PropertyProfile">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://w3id.org/dsv#TermProfile"/>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</rdfs:comment>
+    <rdfs:label xml:lang="en">Property Profile</rdfs:label>
+    <rdfs:label xml:lang="cs">Profil vlastnosti</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#TermProfile">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</rdfs:comment>
+    <rdfs:comment xml:lang="cs">Profil entity. Umožňuje blíže specifikovat některé její vlastnost v kontextu aplikačního profilu.</rdfs:comment>
+    <rdfs:label xml:lang="en">Term Profile</rdfs:label>
+    <rdfs:label xml:lang="cs">Profil</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#VocabularySpecificationDocument">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">A Vocabulary Specification Document is a human-readable representation of a Vocabulary.</rdfs:comment>
+    <rdfs:label xml:lang="en">Vocabulary Specification Document</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#ApplicationProfileSpecificationDocument">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dx/prof/ResourceDescriptor"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">An Application Profile Specification Document contains human-readable version of an Application Profile.</rdfs:comment>
+    <rdfs:label xml:lang="en">Application Profile Specification Document</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#ApplicationProfile">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties.</rdfs:comment>
+    <rdfs:comment xml:lang="cs">Konceptuální model obsahující profily tříd a vlastností různých slovníků.</rdfs:comment>
+    <rdfs:label xml:lang="en">Application Profile</rdfs:label>
+    <rdfs:label xml:lang="cs">Konceptuální model</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#ObjectPropertyProfile">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Profile of an object property allows specification editors to specify profile-specific name, definition, usage note, domain, range, and cardinality.</rdfs:comment>
+    <rdfs:label xml:lang="en">Object Property Profile</rdfs:label>
+    <rdfs:label xml:lang="cs">Profil objektové vlastnosti</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://w3id.org/dsv#DatatypePropertyProfile">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Profile of a datatype property allows specification editors to specify profile-specific name, definition, usage note, domain, datatype, and cardinality.</rdfs:comment>
+    <rdfs:label xml:lang="en">Datatype Property Profile</rdfs:label>
+    <rdfs:label xml:lang="cs">Profile atributu</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Class>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#domain">
+    <rdfs:range rdf:resource="https://w3id.org/dsv#ClassProfile"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Class profile, which is the domain of the property profile.</rdfs:comment>
+    <rdfs:label xml:lang="en">domain</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#class">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#ClassProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">The profiled class.</rdfs:comment>
+    <rdfs:label xml:lang="en">profiled class</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#classRole">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#ClassProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Class role, e.g. Mandatory, Supportive, etc.</rdfs:comment>
+    <rdfs:label xml:lang="en">class role</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#datatype">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#DatatypePropertyProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:label xml:lang="en">datatype</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#reusesPropertyValue">
+    <rdfs:range rdf:resource="https://w3id.org/dsv#PropertyValueReuse"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Points to definitions of Property value reuse for this Profile.</rdfs:comment>
+    <rdfs:label xml:lang="en">reuses property value</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#cardinality">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:label xml:lang="en">cardinality</rdfs:label>
+    <rdfs:label xml:lang="cs">kardinalita</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#profileOf">
+    <rdfs:range rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Specifies a parent profile of the current profile.</rdfs:comment>
+    <rdfs:label xml:lang="en">profile of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#requirementLevel">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Requirement level of the property, typically mandatory, recommended or optional.</rdfs:comment>
+    <rdfs:label xml:lang="en">requirement level</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#reusedProperty">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#PropertyValueReuse"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:label xml:lang="en">reused property</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#property">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#PropertyProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">The property profiled by the property profile.</rdfs:comment>
+    <rdfs:label xml:lang="en">profiled property</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#specializes">
+    <rdfs:range rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Specifies a profile specialized by this profile.</rdfs:comment>
+    <rdfs:label xml:lang="en">specializes</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#externalDocumentation">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Link to an external documentation of this resource. Profiles of this resource should preferably link to this URL for documentation.</rdfs:comment>
+    <rdfs:label xml:lang="en">external documentation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#reusedFromResource">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#PropertyValueReuse"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">The Resource on which there is a property with a value for reuse.</rdfs:comment>
+    <rdfs:label xml:lang="en">reused from resource</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/dsv#range">
+    <rdfs:range rdf:resource="https://w3id.org/dsv#ClassProfile"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv#ObjectPropertyProfile"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv#"/>
+    <rdfs:comment xml:lang="en">Class profile, which is the range of the object property profile.</rdfs:comment>
+    <rdfs:label xml:lang="en">range</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
 </rdf:RDF>
