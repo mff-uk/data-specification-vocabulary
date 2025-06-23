@@ -9,10 +9,41 @@
 @prefix requirement: <https://w3id.org/dsv/requirement-level#>.
 @prefix role: <https://w3id.org/dsv/class-role#>.
 @prefix prof: <http://www.w3.org/ns/dx/prof/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <https://w3id.org/dsv-dap#>.
 
 
-<https://w3id.org/dsv-dap#> a prof:Profile, dsv:ApplicationProfile.
+<https://w3id.org/dsv-dap#> a prof:Profile, dsv:ApplicationProfile;
+    dct:title "Data Specification Vocabulary - Default Application Profile"@en ;
+    dct:description "Data Specification Vocabulary - Default Application Profile (DSV-DAP) is an application profile for describing semantic data specifications, namely vocabularies and application profiles."@en ;
+    dct:issued "2024-10-01"^^xsd:date ;
+    dct:created "2024-10-01"^^xsd:date ;
+    dct:modified "2025-05-14"^^xsd:date ;
+    owl:versionIRI <https://w3id.org/dsv-dap/1.0.0#> ;
+    owl:versionInfo "1.0.0" ;
+    rdfs:comment "See also DSV for a vocabulary supporting this application profile."@en ;
+    dct:bibliographicCitation "Klímek, J., Stenchlák, Š., & Škoda, P. (2025). Data Specification Vocabulary Default Application Profile (Version 1.0.0). https://w3id.org/dsv-dap#"@en ;
+    cc:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:creator <http://www.wikidata.org/entity/Q57585169> ;
+    dct:contributor <http://www.wikidata.org/entity/Q57232642>, <https://orcid.org/0000-0003-4843-2470> ;
+    dct:publisher <http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University> ;
+    vann:preferredNamespacePrefix "dsv-dap" ;
+    vann:preferredNamespaceUri "https://w3id.org/dsv-dap#" ;
+    vs:term_status "stable" ;
+    bibo:status <http://purl.org/ontology/bibo/status/published> ;
+    dct:source <https://w3id.org/dsv-dap#> ;
+    foaf:depiction <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/8dlkl.svg> ,
+    <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg>,
+    <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/626cb.svg> .
+
+    <http://www.wikidata.org/entity/Q57585169> a foaf:Person .
+    <http://www.wikidata.org/entity/Q57232642> a foaf:Person .
+    <https://orcid.org/0000-0003-4843-2470> a foaf:Person .
+    <http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University> a foaf:Organization .
 :ResourceDescriptor dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
