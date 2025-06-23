@@ -394,8 +394,8 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#ResourceDescriptor.conformsTo"></a></li>
-                    <li><a href="#TermProfile.isPartOf"></a></li>
+                    <li>from domain <a href="#ResourceDescriptor"></a> → <a href="#ResourceDescriptor.conformsTo"></a></li>
+                    <li>from domain <a href="#TermProfile"></a> → <a href="#TermProfile.isPartOf"></a></li>
                 </ul>
             
                 <section id="ApplicationProfile.hasSpecification">
@@ -520,7 +520,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#ApplicationProfile.hasSpecification"></a></li>
+                    <li>from domain <a href="#ApplicationProfile"></a> → <a href="#ApplicationProfile.hasSpecification"></a></li>
                 </ul>
             
             
@@ -567,8 +567,8 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#PropertyProfile.domain"></a></li>
-                    <li><a href="#ObjectPropertyProfile.range"></a></li>
+                    <li>from domain <a href="#PropertyProfile"></a> → <a href="#PropertyProfile.domain"></a></li>
+                    <li>from domain <a href="#ObjectPropertyProfile"></a> → <a href="#ObjectPropertyProfile.range"></a></li>
                 </ul>
             
                 <section id="ClassProfile.classRole">
@@ -946,7 +946,7 @@
                                         property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#datatype">datatype</a> (<a href="https://w3id.org/dsv#datatype">dsv:datatype</a>)
-                        <br />Definition: <i></i>
+                        <br />Definition: <i>A datatype of the values of the Datatype Property Profile.</i>
                 
                                 </li>
                           </ul>
@@ -1366,6 +1366,10 @@
                       <td>cardinality</td>
                     </tr>
                     <tr>
+                      <td>Definition</td>
+                      <td>Cardinality of the Property Profile.</td>
+                    </tr>
+                    <tr>
                       <td>Domain</td>
                       <td>
                         <a href="#PropertyProfile">Property Profile</a>
@@ -1393,7 +1397,7 @@
                                         property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#cardinality">cardinality</a> (<a href="https://w3id.org/dsv#cardinality">dsv:cardinality</a>)
-                        <br />Definition: <i></i>
+                        <br />Definition: <i>Cardinality of the Property Profile.</i>
                 
                                 </li>
                           </ul>
@@ -1624,7 +1628,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#TermProfile.reusesPropertyValue"></a></li>
+                    <li>from domain <a href="#TermProfile"></a> → <a href="#TermProfile.reusesPropertyValue"></a></li>
                 </ul>
             
                 <section id="PropertyValueReuse.reusedFromResource">
@@ -1706,6 +1710,10 @@
                       <td>reused property</td>
                     </tr>
                     <tr>
+                      <td>Definition</td>
+                      <td>The Property from which a value is reused.</td>
+                    </tr>
+                    <tr>
                       <td>Domain</td>
                       <td>
                         <a href="#PropertyValueReuse">Property Value Reuse</a>
@@ -1733,7 +1741,7 @@
                                         property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#reusedProperty">reused property</a> (<a href="https://w3id.org/dsv#reusedProperty">dsv:reusedProperty</a>)
-                        <br />Definition: <i></i>
+                        <br />Definition: <i>The Property from which a value is reused.</i>
                 
                                 </li>
                           </ul>
@@ -1789,7 +1797,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#ApplicationProfile.isProfileOf"></a></li>
+                    <li>from domain <a href="#SemanticDataSpecification"></a> → <a href="#ApplicationProfile.isProfileOf"></a></li>
                 </ul>
             
                 <section id="SemanticDataSpecification.description">
@@ -2139,8 +2147,8 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#TermProfile.profileOf"></a></li>
-                    <li><a href="#TermProfile.specializes"></a></li>
+                    <li>from domain <a href="#TermProfile"></a> → <a href="#TermProfile.profileOf"></a></li>
+                    <li>from domain <a href="#TermProfile"></a> → <a href="#TermProfile.specializes"></a></li>
                 </ul>
             
                 <section id="TermProfile.definition">
@@ -2673,7 +2681,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#Term.isdefinedby"></a></li>
+                    <li>from domain <a href="#Term"></a> → <a href="#Term.isdefinedby"></a></li>
                 </ul>
             
                 <section id="Vocabulary.hasSpecification">
@@ -2798,7 +2806,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#Vocabulary.hasSpecification"></a></li>
+                    <li>from domain <a href="#Vocabulary"></a> → <a href="#Vocabulary.hasSpecification"></a></li>
                 </ul>
             
             
@@ -2850,7 +2858,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#PropertyProfile.cardinality"></a></li>
+                    <li>from domain <a href="#PropertyProfile"></a> → <a href="#PropertyProfile.cardinality"></a></li>
                 </ul>
             
             
@@ -2906,10 +2914,10 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#Property.domain"></a></li>
-                    <li><a href="#ClassProfile.profiledClass"></a></li>
-                    <li><a href="#Objectproperty.range"></a></li>
-                    <li><a href="#Class.subclassof"></a></li>
+                    <li>from domain <a href="#Property"></a> → <a href="#Property.domain"></a></li>
+                    <li>from domain <a href="#ClassProfile"></a> → <a href="#ClassProfile.profiledClass"></a></li>
+                    <li>from domain <a href="#ObjectProperty"></a> → <a href="#Objectproperty.range"></a></li>
+                    <li>from domain <a href="#Class"></a> → <a href="#Class.subclassof"></a></li>
                 </ul>
             
                 <section id="Class.subclassof">
@@ -3015,7 +3023,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#ClassProfile.classRole"></a></li>
+                    <li>from domain <a href="#ClassProfile"></a> → <a href="#ClassProfile.classRole"></a></li>
                 </ul>
             
             
@@ -3062,8 +3070,8 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#DatatypePropertyProfile.datatype"></a></li>
-                    <li><a href="#Datatypeproperty.range"></a></li>
+                    <li>from domain <a href="#DatatypePropertyProfile"></a> → <a href="#DatatypePropertyProfile.datatype"></a></li>
+                    <li>from domain <a href="#DatatypeProperty"></a> → <a href="#Datatypeproperty.range"></a></li>
                 </ul>
             
             
@@ -3114,7 +3122,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#ResourceDescriptor.format"></a></li>
+                    <li>from domain <a href="#ResourceDescriptor"></a> → <a href="#ResourceDescriptor.format"></a></li>
                 </ul>
             
             
@@ -3161,9 +3169,9 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#PropertyProfile.profiledProperty"></a></li>
-                    <li><a href="#PropertyValueReuse.reusedProperty"></a></li>
-                    <li><a href="#Property.subpropertyof"></a></li>
+                    <li>from domain <a href="#PropertyProfile"></a> → <a href="#PropertyProfile.profiledProperty"></a></li>
+                    <li>from domain <a href="#PropertyValueReuse"></a> → <a href="#PropertyValueReuse.reusedProperty"></a></li>
+                    <li>from domain <a href="#Property"></a> → <a href="#Property.subpropertyof"></a></li>
                 </ul>
             
                 <section id="Property.domain">
@@ -3328,7 +3336,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#PropertyProfile.requirementLevel"></a></li>
+                    <li>from domain <a href="#PropertyProfile"></a> → <a href="#PropertyProfile.requirementLevel"></a></li>
                 </ul>
             
             
@@ -3384,7 +3392,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#SemanticDataSpecification.hasResource"></a></li>
+                    <li>from domain <a href="#SemanticDataSpecification"></a> → <a href="#SemanticDataSpecification.hasResource"></a></li>
                 </ul>
             
                 <section id="ResourceDescriptor.conformsTo">
@@ -3667,7 +3675,7 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#ResourceDescriptor.hasRole"></a></li>
+                    <li>from domain <a href="#ResourceDescriptor"></a> → <a href="#ResourceDescriptor.hasRole"></a></li>
                 </ul>
             
             
@@ -3718,9 +3726,9 @@
             
                 <p>Backwards associations</p>
                 <ul>
-                    <li><a href="#TermProfile.externalDocumentation"></a></li>
-                    <li><a href="#ResourceDescriptor.hasArtifact"></a></li>
-                    <li><a href="#PropertyValueReuse.reusedFromResource"></a></li>
+                    <li>from domain <a href="#TermProfile"></a> → <a href="#TermProfile.externalDocumentation"></a></li>
+                    <li>from domain <a href="#ResourceDescriptor"></a> → <a href="#ResourceDescriptor.hasArtifact"></a></li>
+                    <li>from domain <a href="#PropertyValueReuse"></a> → <a href="#PropertyValueReuse.reusedFromResource"></a></li>
                 </ul>
             
                 <section id="Term.definition">
