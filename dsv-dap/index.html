@@ -109,6 +109,28 @@
               "hasArtifact": ".",
               "hasRole": "role:Guidance",
               "format": "filetype:HTML"
+            },
+            {
+              "@id": "f8f20994-a236-475f-839e-5b994681813b#jsonschema",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./schema.json",
+              "hasRole": "role:schema",
+              "format": "https://json-schema.org/draft/2020-12/schema",
+              "conformsTo": "https://json-schema.org/draft/2020-12/schema"
+            },
+            {
+              "@id": "f8f20994-a236-475f-839e-5b994681813b#jsonLd",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./context.jsonld",
+              "hasRole": "role:schema",
+              "format": "http://www.w3.org/ns/json-ld",
+              "conformsTo": "http://www.w3.org/ns/json-ld"
             }
           ]
         }
@@ -367,25 +389,72 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a> (<a href="http://www.w3.org/ns/dx/prof/Profile">prof:Profile</a>)
                     <br />Definition: <i>A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
             
             This definition includes what are often called &quot;application profiles&quot;, &quot;metadata application profiles&quot;, or &quot;metadata profiles&quot;.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://purl.org/dc/terms/Standard">Standard</a> (<a href="http://purl.org/dc/terms/Standard">dcterms:Standard</a>)
+                    <br />Definition: <i>A reference point against which other things can be evaluated or compared.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ApplicationProfile">Application Profile</a> (<a href="https://w3id.org/dsv#ApplicationProfile">dsv:ApplicationProfile</a>)
                     <br />Definition: <i>An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#SemanticDataSpecification">Semantic Data Specification</a> (<a href="https://w3id.org/dsv-dap#SemanticDataSpecification">dsv-dap:SemanticDataSpecification</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a> (<a href="http://www.w3.org/ns/dx/prof/Profile">prof:Profile</a>)
+                    <br />Definition: <i>A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
+            
+            This definition includes what are often called &quot;application profiles&quot;, &quot;metadata application profiles&quot;, or &quot;metadata profiles&quot;.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://purl.org/dc/terms/Standard">Standard</a> (<a href="http://purl.org/dc/terms/Standard">dcterms:Standard</a>)
+                    <br />Definition: <i>A reference point against which other things can be evaluated or compared.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -443,16 +512,38 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">prof:hasResource</a>)
                         <br />Definition: <i>A resource which describes the nature of an artifact and the role it plays in relation to the Profile</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
+                              <li>
+                                        specializes
+                      
+                      property profile
+                      <a href="#SemanticDataSpecification.hasResource">has resource</a> (<a href="https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource">dsv-dap:SemanticDataSpecification.hasResource</a>)
+                        <ul style="list-style-type: disclosure-closed;">
+                            <li>
+                                        profiles
+                      property
+                      
+                      <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">prof:hasResource</a>)
+                        <br />Definition: <i>A resource which describes the nature of an artifact and the role it plays in relation to the Profile</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
+                
+                            </li>
+                        </ul>
+                
+                              </li>
                           </ul>
                         </td>
                       </tr>
@@ -488,30 +579,98 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
                     <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ApplicationProfileSpecificationDocument">Application Profile Specification Document</a> (<a href="https://w3id.org/dsv#ApplicationProfileSpecificationDocument">dsv:ApplicationProfileSpecificationDocument</a>)
                     <br />Definition: <i>An Application Profile Specification Document contains human-readable version of an Application Profile.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
+                    <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/adms#AssetDistribution">Asset Distribution</a> (<a href="http://www.w3.org/ns/adms#AssetDistribution">adms:AssetDistribution</a>)
                     <br />Definition: <i>An Asset Distribution represents a particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). An Asset Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Asset Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Asset Distributions themselves are not versioned.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#ResourceDescriptor">Resource Descriptor</a> (<a href="https://w3id.org/dsv-dap#ResourceDescriptor">dsv-dap:ResourceDescriptor</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/ns/adms#AssetDistribution">Asset Distribution</a> (<a href="http://www.w3.org/ns/adms#AssetDistribution">adms:AssetDistribution</a>)
+                    <br />Definition: <i>An Asset Distribution represents a particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). An Asset Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Asset Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Asset Distributions themselves are not versioned.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
+                    <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#DataSpecificationDocument">Data Specification Document</a> (<a href="https://w3id.org/dsv-dap#DataSpecificationDocument">dsv-dap:DataSpecificationDocument</a>)
+                    <br />Definition: <i>A human-readable Data Specification Document.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
+                    <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -549,16 +708,67 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ClassProfile">Class Profile</a> (<a href="https://w3id.org/dsv#ClassProfile">dsv:ClassProfile</a>)
                     <br />Definition: <i>Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv-dap#TermProfile">dsv-dap:TermProfile</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -615,14 +825,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#classRole">class role</a> (<a href="https://w3id.org/dsv#classRole">dsv:classRole</a>)
                         <br />Definition: <i>Class role, e.g. Mandatory, Supportive, etc.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -674,14 +887,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#class">profiled class</a> (<a href="https://w3id.org/dsv#class">dsv:class</a>)
                         <br />Definition: <i>The profiled class.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -715,14 +931,17 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
                     <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                       </ul>
@@ -777,14 +996,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://purl.org/dc/terms/description">Description</a> (<a href="http://purl.org/dc/terms/description">dcterms:description</a>)
                         <br />Definition: <i>An account of the resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -837,14 +1059,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://purl.org/dc/terms/title">Title</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
                         <br />Definition: <i>A name given to the resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -878,16 +1103,106 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#DatatypePropertyProfile">Datatype Property Profile</a> (<a href="https://w3id.org/dsv#DatatypePropertyProfile">dsv:DatatypePropertyProfile</a>)
                     <br />Definition: <i>Profile of a datatype property allows specification editors to specify profile-specific name, definition, usage note, domain, datatype, and cardinality.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Property Profile</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
+                    <br />Definition: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#PropertyProfile">Property Profile</a> (<a href="https://w3id.org/dsv-dap#PropertyProfile">dsv-dap:PropertyProfile</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Property Profile</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
+                    <br />Definition: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv-dap#TermProfile">dsv-dap:TermProfile</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -939,14 +1254,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#datatype">datatype</a> (<a href="https://w3id.org/dsv#datatype">dsv:datatype</a>)
                         <br />Definition: <i>A datatype of the values of the Datatype Property Profile.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -980,16 +1298,87 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">DatatypeProperty</a> (<a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)
                     <br />Definition: <i>The class of data properties.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a> (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">rdf:Property</a>)
+                    <br />Definition: <i>The class of RDF properties.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Property">Property</a> (<a href="https://w3id.org/dsv-dap#Property">dsv-dap:Property</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a> (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">rdf:Property</a>)
+                    <br />Definition: <i>The class of RDF properties.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -1041,14 +1430,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2000/01/rdf-schema#range">range</a> (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>)
                         <br />Definition: <i>A range of the subject property.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1082,16 +1474,67 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#InvalidTermProfile">Invalid Term Profile</a> (<a href="https://w3id.org/dsv#InvalidTermProfile">dsv:InvalidTermProfile</a>)
                     <br />Definition: <i>Invalid Term Profile is a profile, which breaks profile compliance rules. This may be for a good reason such as temporary, to be propagated upstream, inconsistency.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv-dap#TermProfile">dsv-dap:TermProfile</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -1125,16 +1568,106 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ObjectPropertyProfile">Object Property Profile</a> (<a href="https://w3id.org/dsv#ObjectPropertyProfile">dsv:ObjectPropertyProfile</a>)
                     <br />Definition: <i>Profile of an object property allows specification editors to specify profile-specific name, definition, usage note, domain, range, and cardinality.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Property Profile</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
+                    <br />Definition: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#PropertyProfile">Property Profile</a> (<a href="https://w3id.org/dsv-dap#PropertyProfile">dsv-dap:PropertyProfile</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Property Profile</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
+                    <br />Definition: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv-dap#TermProfile">dsv-dap:TermProfile</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -1186,14 +1719,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#range">range</a> (<a href="https://w3id.org/dsv#range">dsv:range</a>)
                         <br />Definition: <i>Class profile, which is the range of the object property profile.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1227,16 +1763,87 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2002/07/owl#ObjectProperty">ObjectProperty</a> (<a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)
                     <br />Definition: <i>The class of object properties.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a> (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">rdf:Property</a>)
+                    <br />Definition: <i>The class of RDF properties.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Property">Property</a> (<a href="https://w3id.org/dsv-dap#Property">dsv-dap:Property</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a> (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">rdf:Property</a>)
+                    <br />Definition: <i>The class of RDF properties.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -1288,14 +1895,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2000/01/rdf-schema#range">range</a> (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>)
                         <br />Definition: <i>A range of the subject property.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1329,16 +1939,67 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyProfile">Property Profile</a> (<a href="https://w3id.org/dsv#PropertyProfile">dsv:PropertyProfile</a>)
                     <br />Definition: <i>Profile of a property allows specification editors to specify profile specific name, definition, usage note, domain, range and cardinality.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv-dap#TermProfile">dsv-dap:TermProfile</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                    <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -1390,14 +2051,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#cardinality">cardinality</a> (<a href="https://w3id.org/dsv#cardinality">dsv:cardinality</a>)
                         <br />Definition: <i>Cardinality of the Property Profile.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1449,14 +2113,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#domain">domain</a> (<a href="https://w3id.org/dsv#domain">dsv:domain</a>)
                         <br />Definition: <i>Class profile, which is the domain of the property profile.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1508,14 +2175,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#property">profiled property</a> (<a href="https://w3id.org/dsv#property">dsv:property</a>)
                         <br />Definition: <i>The property profiled by the property profile.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1567,14 +2237,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#requirementLevel">requirement level</a> (<a href="https://w3id.org/dsv#requirementLevel">dsv:requirementLevel</a>)
                         <br />Definition: <i>Requirement level of the property, typically mandatory, recommended or optional.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1609,15 +2282,18 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#PropertyValueReuse">Property Value Reuse</a> (<a href="https://w3id.org/dsv#PropertyValueReuse">dsv:PropertyValueReuse</a>)
                     <br />Definition: <i>Specifies, which values of which properties of which resources are reused for the current Profile.
             E.g. reuse of profile name, reuse of class name, reuse of profile definition, reuse of profile usage note, etc.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                       </ul>
@@ -1675,14 +2351,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#reusedFromResource">reused from resource</a> (<a href="https://w3id.org/dsv#reusedFromResource">dsv:reusedFromResource</a>)
                         <br />Definition: <i>The Resource on which there is a property with a value for reuse.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1734,14 +2413,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#reusedProperty">reused property</a> (<a href="https://w3id.org/dsv#reusedProperty">dsv:reusedProperty</a>)
                         <br />Definition: <i>The Property from which a value is reused.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1777,16 +2459,29 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a> (<a href="http://www.w3.org/ns/dx/prof/Profile">prof:Profile</a>)
                     <br />Definition: <i>A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
             
             This definition includes what are often called &quot;application profiles&quot;, &quot;metadata application profiles&quot;, or &quot;metadata profiles&quot;.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://purl.org/dc/terms/Standard">Standard</a> (<a href="http://purl.org/dc/terms/Standard">dcterms:Standard</a>)
+                    <br />Definition: <i>A reference point against which other things can be evaluated or compared.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
                       </ul>
@@ -1845,14 +2540,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://purl.org/dc/terms/description">Description</a> (<a href="http://purl.org/dc/terms/description">dcterms:description</a>)
                         <br />Definition: <i>An account of the resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1905,14 +2603,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">prof:hasResource</a>)
                         <br />Definition: <i>A resource which describes the nature of an artifact and the role it plays in relation to the Profile</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -1965,14 +2666,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/ns/dx/prof/hasToken">has token</a> (<a href="http://www.w3.org/ns/dx/prof/hasToken">prof:hasToken</a>)
                         <br />Definition: <i>The preferred identifier for the Profile, for use in circumstances where its URI cannot be used</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2028,14 +2732,27 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/ns/dx/prof/isProfileOf">is profile of</a> (<a href="http://www.w3.org/ns/dx/prof/isProfileOf">prof:isProfileOf</a>)
                         <br />Definition: <i>A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                            <li>
+                                        specializes
+                      property
+                      
+                      <a href="http://www.w3.org/ns/dx/prof/isTransitiveProfileOf">is transitive profile of</a> (<a href="http://www.w3.org/ns/dx/prof/isTransitiveProfileOf">prof:isTransitiveProfileOf</a>)
+                        <br />Definition: <i>The transitive closure of the prof:isProfileOf property. Relates a profile to another specification that it is a profile of, possibly via a chain of intermediate profiles that are in prof:isProfileOf relationships</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
+                
+                            </li>
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2088,14 +2805,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://purl.org/dc/terms/title">Title</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
                         <br />Definition: <i>A name given to the resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2129,16 +2849,38 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
                     <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -2196,14 +2938,27 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2004/02/skos/core#definition">definition</a> (<a href="http://www.w3.org/2004/02/skos/core#definition">skos:definition</a>)
                         <br />Definition: <i>A statement or formal explanation of the meaning of a concept.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                            <li>
+                                        specializes
+                      property
+                      
+                      <a href="http://www.w3.org/2004/02/skos/core#note">note</a> (<a href="http://www.w3.org/2004/02/skos/core#note">skos:note</a>)
+                        <br />Definition: <i>A general note, for any purpose.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
+                
+                            </li>
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2255,14 +3010,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#externalDocumentation">external documentation</a> (<a href="https://w3id.org/dsv#externalDocumentation">dsv:externalDocumentation</a>)
                         <br />Definition: <i>Link to an external documentation of this resource. Profiles of this resource should preferably link to this URL for documentation.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2314,14 +3072,27 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://purl.org/dc/terms/isPartOf">Is Part Of</a> (<a href="http://purl.org/dc/terms/isPartOf">dcterms:isPartOf</a>)
                         <br />Definition: <i>A related resource in which the described resource is physically or logically included.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                            <li>
+                                        specializes
+                      property
+                      
+                      <a href="http://purl.org/dc/terms/relation">Relation</a> (<a href="http://purl.org/dc/terms/relation">dcterms:relation</a>)
+                        <br />Definition: <i>A related resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
+                
+                            </li>
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2373,15 +3144,28 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2004/02/skos/core#prefLabel">preferred label</a> (<a href="http://www.w3.org/2004/02/skos/core#prefLabel">skos:prefLabel</a>)
                         <br />Definition: <i>skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
                       disjoint properties.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                            <li>
+                                        specializes
+                      property
+                      
+                      <a href="http://www.w3.org/2000/01/rdf-schema#label">label</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
+                        <br />Definition: <i>A human-readable name for the subject.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
+                
+                            </li>
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2433,14 +3217,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#profileOf">profile of</a> (<a href="https://w3id.org/dsv#profileOf">dsv:profileOf</a>)
                         <br />Definition: <i>Specifies a parent profile of the current profile.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2492,14 +3279,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#reusesPropertyValue">reuses property value</a> (<a href="https://w3id.org/dsv#reusesPropertyValue">dsv:reusesPropertyValue</a>)
                         <br />Definition: <i>Points to definitions of Property value reuse for this Profile.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2551,14 +3341,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#specializes">specializes</a> (<a href="https://w3id.org/dsv#specializes">dsv:specializes</a>)
                         <br />Definition: <i>Specifies a profile specialized by this profile.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2611,14 +3404,27 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2004/02/skos/core#scopeNote">scope note</a> (<a href="http://www.w3.org/2004/02/skos/core#scopeNote">skos:scopeNote</a>)
                         <br />Definition: <i>A note that helps to clarify the meaning and/or the use of a concept.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                            <li>
+                                        specializes
+                      property
+                      
+                      <a href="http://www.w3.org/2004/02/skos/core#note">note</a> (<a href="http://www.w3.org/2004/02/skos/core#note">skos:note</a>)
+                        <br />Definition: <i>A general note, for any purpose.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
+                
+                            </li>
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -2654,25 +3460,82 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a> (<a href="http://www.w3.org/ns/dx/prof/Profile">prof:Profile</a>)
                     <br />Definition: <i>A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
             
             This definition includes what are often called &quot;application profiles&quot;, &quot;metadata application profiles&quot;, or &quot;metadata profiles&quot;.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://purl.org/dc/terms/Standard">Standard</a> (<a href="http://purl.org/dc/terms/Standard">dcterms:Standard</a>)
+                    <br />Definition: <i>A reference point against which other things can be evaluated or compared.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2002/07/owl#Ontology">Ontology</a> (<a href="http://www.w3.org/2002/07/owl#Ontology">owl:Ontology</a>)
                     <br />Definition: <i>The class of ontologies.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#SemanticDataSpecification">Semantic Data Specification</a> (<a href="https://w3id.org/dsv-dap#SemanticDataSpecification">dsv-dap:SemanticDataSpecification</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/ns/dx/prof/Profile">Profile</a> (<a href="http://www.w3.org/ns/dx/prof/Profile">prof:Profile</a>)
+                    <br />Definition: <i>A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
+            
+            This definition includes what are often called &quot;application profiles&quot;, &quot;metadata application profiles&quot;, or &quot;metadata profiles&quot;.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://purl.org/dc/terms/Standard">Standard</a> (<a href="http://purl.org/dc/terms/Standard">dcterms:Standard</a>)
+                    <br />Definition: <i>A reference point against which other things can be evaluated or compared.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -2729,16 +3592,38 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">prof:hasResource</a>)
                         <br />Definition: <i>A resource which describes the nature of an artifact and the role it plays in relation to the Profile</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
+                              <li>
+                                        specializes
+                      
+                      property profile
+                      <a href="#SemanticDataSpecification.hasResource">has resource</a> (<a href="https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource">dsv-dap:SemanticDataSpecification.hasResource</a>)
+                        <ul style="list-style-type: disclosure-closed;">
+                            <li>
+                                        profiles
+                      property
+                      
+                      <a href="http://www.w3.org/ns/dx/prof/hasResource">has resource</a> (<a href="http://www.w3.org/ns/dx/prof/hasResource">prof:hasResource</a>)
+                        <br />Definition: <i>A resource which describes the nature of an artifact and the role it plays in relation to the Profile</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
+                
+                            </li>
+                        </ul>
+                
+                              </li>
                           </ul>
                         </td>
                       </tr>
@@ -2774,30 +3659,98 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
                     <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#VocabularySpecificationDocument">Vocabulary Specification Document</a> (<a href="https://w3id.org/dsv#VocabularySpecificationDocument">dsv:VocabularySpecificationDocument</a>)
                     <br />Definition: <i>A Vocabulary Specification Document is a human-readable representation of a Vocabulary.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
+                    <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/adms#AssetDistribution">Asset Distribution</a> (<a href="http://www.w3.org/ns/adms#AssetDistribution">adms:AssetDistribution</a>)
                     <br />Definition: <i>An Asset Distribution represents a particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). An Asset Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Asset Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Asset Distributions themselves are not versioned.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#ResourceDescriptor">Resource Descriptor</a> (<a href="https://w3id.org/dsv-dap#ResourceDescriptor">dsv-dap:ResourceDescriptor</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/ns/adms#AssetDistribution">Asset Distribution</a> (<a href="http://www.w3.org/ns/adms#AssetDistribution">adms:AssetDistribution</a>)
+                    <br />Definition: <i>An Asset Distribution represents a particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). An Asset Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Asset Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Asset Distributions themselves are not versioned.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
+                    <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#DataSpecificationDocument">Data Specification Document</a> (<a href="https://w3id.org/dsv-dap#DataSpecificationDocument">dsv-dap:DataSpecificationDocument</a>)
+                    <br />Definition: <i>A human-readable Data Specification Document.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
+                    <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -2840,14 +3793,17 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
                     <br />Definition: <i>An idea or notion; a unit of thought.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                       </ul>
@@ -2889,23 +3845,78 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a>)
                     <br />Definition: <i>The class of classes.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2002/07/owl#Class">Class</a> (<a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)
                     <br />Definition: <i>The class of OWL classes.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a>)
+                    <br />Definition: <i>The class of classes.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -2964,14 +3975,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">subClassOf</a> (<a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a>)
                         <br />Definition: <i>The subject is a subclass of a class.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3005,14 +4019,17 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
                     <br />Definition: <i>An idea or notion; a unit of thought.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                       </ul>
@@ -3052,14 +4069,37 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Datatype">rdfs:Datatype</a>)
                     <br />Definition: <i>The class of RDF datatypes.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Class">Class</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a>)
+                    <br />Definition: <i>The class of classes.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
                       </ul>
@@ -3100,14 +4140,17 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
                     <br />Definition: <i>An idea or notion; a unit of thought.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                       </ul>
@@ -3151,16 +4194,48 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a> (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">rdf:Property</a>)
                     <br />Definition: <i>The class of RDF properties.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
+                          <li>
+                                    specializes
+                  
+                  class profile
+                  <a href="#Term">Term</a> (<a href="https://w3id.org/dsv-dap#Term">dsv-dap:Term</a>)
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    profiles
+                  class
+                  
+                  <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                    <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
+            
+                          </li>
                       </ul>
                     </td>
                   </tr>
@@ -3218,14 +4293,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2000/01/rdf-schema#domain">domain</a> (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>)
                         <br />Definition: <i>A domain of the subject property.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3277,14 +4355,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">subPropertyOf</a> (<a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a>)
                         <br />Definition: <i>The subject is a subproperty of a property.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3318,14 +4399,17 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
                     <br />Definition: <i>An idea or notion; a unit of thought.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                       </ul>
@@ -3367,21 +4451,27 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/adms#AssetDistribution">Asset Distribution</a> (<a href="http://www.w3.org/ns/adms#AssetDistribution">adms:AssetDistribution</a>)
                     <br />Definition: <i>An Asset Distribution represents a particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). An Asset Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Asset Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Asset Distributions themselves are not versioned.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">Resource Descriptor</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceDescriptor">prof:ResourceDescriptor</a>)
                     <br />Definition: <i>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                       </ul>
@@ -3439,14 +4529,27 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://purl.org/dc/terms/conformsTo">Conforms To</a> (<a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a>)
                         <br />Definition: <i>An established standard to which the described resource conforms.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                            <li>
+                                        specializes
+                      property
+                      
+                      <a href="http://purl.org/dc/terms/relation">Relation</a> (<a href="http://purl.org/dc/terms/relation">dcterms:relation</a>)
+                        <br />Definition: <i>A related resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
+                
+                            </li>
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3498,14 +4601,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://purl.org/dc/terms/format">Format</a> (<a href="http://purl.org/dc/terms/format">dcterms:format</a>)
                         <br />Definition: <i>The file format, physical medium, or dimensions of the resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3557,14 +4663,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/ns/dx/prof/hasArtifact">has artifact</a> (<a href="http://www.w3.org/ns/dx/prof/hasArtifact">prof:hasArtifact</a>)
                         <br />Definition: <i>The URL of a downloadable file with particulars such as its format and role indicated by the Resource Descriptor</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3616,14 +4725,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/ns/dx/prof/hasRole">has role</a> (<a href="http://www.w3.org/ns/dx/prof/hasRole">prof:hasRole</a>)
                         <br />Definition: <i>The function of an artifact described by a Resource Descriptor, such as specification, guidance etc.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3657,14 +4769,27 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/ns/dx/prof/ResourceRole">Resource Role</a> (<a href="http://www.w3.org/ns/dx/prof/ResourceRole">prof:ResourceRole</a>)
                     <br />Definition: <i>A role that an profile resource, described by a Resource Descriptor, plays</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                        <li>
+                                    specializes
+                  class
+                  
+                  <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
+                    <br />Definition: <i>An idea or notion; a unit of thought.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
+            
+                        </li>
+                    </ul>
             
                             </li>
                       </ul>
@@ -3704,14 +4829,17 @@
                 </tr>
             
                   <tr>
-                    <td>Profiles</td>
+                    <td>Hierarchy</td>
                     <td>
-                      <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                      <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                             <li>
-                                    class
+                                      profiles
+                  class
                   
                   <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
                     <br />Definition: <i>The class resource, everything.</i>
+                    <ul style="list-style-type: disclosure-closed;">
+                    </ul>
             
                             </li>
                       </ul>
@@ -3776,14 +4904,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2000/01/rdf-schema#comment">comment</a> (<a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a>)
                         <br />Definition: <i>A description of the subject resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3835,14 +4966,27 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">isDefinedBy</a> (<a href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">rdfs:isDefinedBy</a>)
                         <br />Definition: <i>The defininition of the subject resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                            <li>
+                                        specializes
+                      property
+                      
+                      <a href="http://www.w3.org/2000/01/rdf-schema#seeAlso">seeAlso</a> (<a href="http://www.w3.org/2000/01/rdf-schema#seeAlso">rdfs:seeAlso</a>)
+                        <br />Definition: <i>Further information about the subject resource.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
+                
+                            </li>
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3895,14 +5039,17 @@
                 
                 
                       <tr>
-                        <td>Profiles</td>
+                        <td>Hierarchy</td>
                         <td>
-                          <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                          <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
                                 <li>
-                                        property
+                                          profiles
+                      property
                       
                       <a href="http://www.w3.org/2000/01/rdf-schema#label">label</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
                         <br />Definition: <i>A human-readable name for the subject.</i>
+                        <ul style="list-style-type: disclosure-closed;">
+                        </ul>
                 
                                 </li>
                           </ul>
@@ -3920,6 +5067,1021 @@
 
 
 
+      <section>
+      <h2>Specifikace struktury pro Application Profile Specification Document</h2>
+      <p>Data structure for Application Profile Specification Document. An Application Profile Specification Document contains human-readable version of an Application Profile.</p>
+
+      <section>
+<h3>Overview of JSON structure</h3>
+<p>The JSON Schema capturing the structure for <i>Application Profile Specification Document</i> is defined in file <a href="../schema.json"><code>../schema.json</code></a>. The data set consists of a single item of the data structure <i>Application Profile Specification Document</i>.</p>
+
+<ul>
+
+<li>
+  <a href="#json-object--application-profile-specification-document--application-profile-specification-document">
+    Application Profile Specification Document
+  </a>
+<ul>
+<li>
+    <code>@id</code>:
+    required
+    (1 - 1) item of type 
+      <strong>IRI (<a href="#ApplicationProfileSpecificationDocument">Application Profile Specification Document</a>)</strong>
+      
+</li>
+<li>
+    <code>title</code>:
+    required
+    (1 - ∞) item of type 
+      
+       <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</li>
+<li>
+    <code>description</code>:
+    optional
+    (0 - ∞) item of type 
+      
+       <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</li>
+<li>
+    <code>conformsTo</code>:
+    optional
+    (0 - ∞) item of type 
+      <strong>IRI (<a href="#ApplicationProfile">Application Profile</a>)</strong>
+      
+</li>
+<li>
+    <code>format</code>:
+    optional
+    (0 - 1) item of type 
+      <strong>IRI (<a href="#Format">Format</a>)</strong>
+      
+</li>
+<li>
+    <code>hasRole</code>:
+    optional
+    (0 - 1) item of type 
+      <strong>IRI (<a href="#ResourceRole">Resource Role</a>)</strong>
+      
+</li>
+<li>
+    <code>hasArtifact</code>:
+    required
+    (1 - 1) item of type 
+      <strong>IRI (<a href="#Term">Term</a>)</strong>
+      
+</li>
+<li>
+    <code>inSpecificationOf</code>:
+    required
+    (1 - 1) item of type 
+      <strong><a href="#json-object--application-profile-specification-document--konceptuální-model">Application Profile</a></strong>
+      
+</li>
+</ul>
+</li>
+
+<li>
+  <a href="#json-object--application-profile-specification-document--konceptuální-model">
+    Application Profile
+  </a>
+<ul>
+<li>
+    <code>@id</code>:
+    required
+    (1 - 1) item of type 
+      <strong>IRI (<a href="#ApplicationProfile">Application Profile</a>)</strong>
+      
+</li>
+<li>
+    <code>title</code>:
+    required
+    (1 - ∞) item of type 
+      
+       <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</li>
+<li>
+    <code>description</code>:
+    optional
+    (0 - ∞) item of type 
+      
+       <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</li>
+<li>
+    <code>hasToken</code>:
+    optional
+    (0 - 1) item of type 
+      
+       <a href="http://www.w3.org/2001/XMLSchema#token">http://www.w3.org/2001/XMLSchema#token</a>
+</li>
+<li>
+    <code>isProfileOf</code>:
+    optional
+    (0 - ∞) item of type 
+      <strong><a href="#json-object--application-profile-specification-document--semantic-data-specification">Semantic Data Specification</a></strong>
+      
+</li>
+<li>
+    <code>hasResource</code>:
+    optional
+    (0 - ∞) item of type 
+      <strong><a href="#json-object--application-profile-specification-document--resource-descriptor">Resource Descriptor</a></strong>
+      
+</li>
+</ul>
+</li>
+
+<li>
+  <a href="#json-object--application-profile-specification-document--semantic-data-specification">
+    Semantic Data Specification
+  </a>
+<ul>
+<li>
+    <code>@id</code>:
+    required
+    (1 - 1) item of type 
+      <strong>IRI (<a href="#SemanticDataSpecification">Semantic Data Specification</a>)</strong>
+      
+</li>
+<li>
+    <code>title</code>:
+    required
+    (1 - ∞) item of type 
+      
+       <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</li>
+<li>
+    <code>hasResource</code>:
+    optional
+    (0 - ∞) item of type 
+      <strong>IRI (<a href="#ResourceDescriptor">Resource Descriptor</a>)</strong>
+      
+</li>
+</ul>
+</li>
+
+<li>
+  <a href="#json-object--application-profile-specification-document--resource-descriptor">
+    Resource Descriptor
+  </a>
+<ul>
+<li>
+    <code>@id</code>:
+    required
+    (1 - 1) item of type 
+      <strong>IRI (<a href="#ResourceDescriptor">Resource Descriptor</a>)</strong>
+      
+</li>
+<li>
+    <code>conformsTo</code>:
+    optional
+    (0 - ∞) item of type 
+      <strong>IRI (<a href="#ApplicationProfile">Application Profile</a>)</strong>
+      
+</li>
+<li>
+    <code>format</code>:
+    optional
+    (0 - 1) item of type 
+      <strong>IRI (<a href="#Format">Format</a>)</strong>
+      
+</li>
+<li>
+    <code>hasRole</code>:
+    optional
+    (0 - 1) item of type 
+      <strong>IRI (<a href="#ResourceRole">Resource Role</a>)</strong>
+      
+</li>
+<li>
+    <code>hasArtifact</code>:
+    required
+    (1 - 1) item of type 
+      <strong>IRI (<a href="#Term">Term</a>)</strong>
+      
+</li>
+</ul>
+</li>
+
+</ul>
+
+
+<section id="json-object--application-profile-specification-document--application-profile-specification-document">
+<h3>Object <i>Application Profile Specification Document</i></h3>
+<dl>
+
+<dt>Description</dt>
+<dd>An Application Profile Specification Document contains human-readable version of an Application Profile.</dd>
+
+<dt>Interpretation</dt>
+<dd>
+  <a href="#ApplicationProfileSpecificationDocument">Application Profile Specification Document</a>
+</dd>
+</dl>
+
+<section id="json-property--application-profile-specification-document--application-profile-specification-document-@id">
+<h5>Property <code>@id</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`@id`</dd>
+
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#ApplicationProfileSpecificationDocument">Application Profile Specification Document</a>)
+</dd>
+
+
+
+
+
+
+
+
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--application-profile-specification-document-title">
+<h5>Property <code>title</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`title`</dd>
+
+  <dt>Name</dt>
+  <dd>title</dd>
+
+
+  <dt>Description</dt>
+  <dd>A name given to the Data Specification Document.</dd>
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - ∞</dd>
+<dt>Type</dt>
+
+
+<dd>
+<a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</dd>
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#DataSpecificationDocument.title">title</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--application-profile-specification-document-description">
+<h5>Property <code>description</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`description`</dd>
+
+  <dt>Name</dt>
+  <dd>description</dd>
+
+
+  <dt>Description</dt>
+  <dd>An account of the Data Specification Document.</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - ∞</dd>
+<dt>Type</dt>
+
+
+<dd>
+<a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</dd>
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#DataSpecificationDocument.description">description</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--application-profile-specification-document-conformsto">
+<h5>Property <code>conformsTo</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`conformsTo`</dd>
+
+  <dt>Name</dt>
+  <dd>conforms To</dd>
+
+
+  <dt>Description</dt>
+  <dd>An established standard to which the described resource conforms.</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - ∞</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#ApplicationProfile">Application Profile</a>)
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ResourceDescriptor.conformsTo">conforms To</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--application-profile-specification-document-format">
+<h5>Property <code>format</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`format`</dd>
+
+  <dt>Name</dt>
+  <dd>format</dd>
+
+
+  <dt>Description</dt>
+  <dd>The file format, physical medium, or dimensions of the resource.</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#Format">Format</a>)
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ResourceDescriptor.format">format</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--application-profile-specification-document-hasrole">
+<h5>Property <code>hasRole</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`hasRole`</dd>
+
+  <dt>Name</dt>
+  <dd>has role</dd>
+
+
+  <dt>Description</dt>
+  <dd>The function of an artifact described by a Resource Descriptor, such as specification, guidance etc.</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#ResourceRole">Resource Role</a>)
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ResourceDescriptor.hasRole">has role</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--application-profile-specification-document-hasartifact">
+<h5>Property <code>hasArtifact</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`hasArtifact`</dd>
+
+  <dt>Name</dt>
+  <dd>has artifact</dd>
+
+
+  <dt>Description</dt>
+  <dd>The URL of a downloadable file with particulars such as its format and role indicated by the Resource Descriptor</dd>
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#Term">Term</a>)
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ResourceDescriptor.hasArtifact">has artifact</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--application-profile-specification-document-inspecificationof">
+<h5>Property <code>inSpecificationOf</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`inSpecificationOf`</dd>
+
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  <a href="#json-object--application-profile-specification-document--konceptuální-model">Application Profile</a>
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ApplicationProfile.hasSpecification"></a>
+</dd>
+</dl>
+</section>
+
+</section>
+
+<section id="json-object--application-profile-specification-document--konceptuální-model">
+<h3>Object <i>Application Profile</i></h3>
+<dl>
+
+<dt>Description</dt>
+<dd>An Application Profile identifies classes and properties from vocabularies, and class profiles and property profiles from Application profiles that are re-used in a certain usage context. It also allows specification editors to further adjust the description of re-used classes and properties for that usage context without the need to explicitly create subclasses and subproperties.</dd>
+
+<dt>Interpretation</dt>
+<dd>
+  <a href="#ApplicationProfile">Application Profile</a>
+</dd>
+</dl>
+
+<section id="json-property--application-profile-specification-document--konceptuální-model-@id">
+<h5>Property <code>@id</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`@id`</dd>
+
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#ApplicationProfile">Application Profile</a>)
+</dd>
+
+
+
+
+
+
+
+
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--konceptuální-model-title">
+<h5>Property <code>title</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`title`</dd>
+
+  <dt>Name</dt>
+  <dd>title</dd>
+
+
+  <dt>Description</dt>
+  <dd>A name given to the Semantic Data Specification.</dd>
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - ∞</dd>
+<dt>Type</dt>
+
+
+<dd>
+<a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</dd>
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#SemanticDataSpecification.title">title</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--konceptuální-model-description">
+<h5>Property <code>description</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`description`</dd>
+
+  <dt>Name</dt>
+  <dd>description</dd>
+
+
+  <dt>Description</dt>
+  <dd>An account of the Semantic Data Specification.</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - ∞</dd>
+<dt>Type</dt>
+
+
+<dd>
+<a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</dd>
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#SemanticDataSpecification.description">description</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--konceptuální-model-hastoken">
+<h5>Property <code>hasToken</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`hasToken`</dd>
+
+  <dt>Name</dt>
+  <dd>has token</dd>
+
+
+  <dt>Description</dt>
+  <dd>The preferred identifier for the Profile, for use in circumstances where its URI cannot be used</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - 1</dd>
+<dt>Type</dt>
+
+
+<dd>
+<a href="http://www.w3.org/2001/XMLSchema#token">http://www.w3.org/2001/XMLSchema#token</a>
+</dd>
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#SemanticDataSpecification.hasToken">has token</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--konceptuální-model-isprofileof">
+<h5>Property <code>isProfileOf</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`isProfileOf`</dd>
+
+  <dt>Name</dt>
+  <dd>is profile of</dd>
+
+
+  <dt>Description</dt>
+  <dd>A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - ∞</dd>
+<dt>Type</dt>
+
+<dd>
+  <a href="#json-object--application-profile-specification-document--semantic-data-specification">Semantic Data Specification</a>
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ApplicationProfile.isProfileOf">is profile of</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--konceptuální-model-hasresource">
+<h5>Property <code>hasResource</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`hasResource`</dd>
+
+  <dt>Name</dt>
+  <dd>has resource</dd>
+
+
+  <dt>Description</dt>
+  <dd>A resource which describes the nature of an artifact and the role it plays in relation to the Profile</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - ∞</dd>
+<dt>Type</dt>
+
+<dd>
+  <a href="#json-object--application-profile-specification-document--resource-descriptor">Resource Descriptor</a>
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#SemanticDataSpecification.hasResource">has resource</a>
+</dd>
+</dl>
+</section>
+
+</section>
+
+<section id="json-object--application-profile-specification-document--semantic-data-specification">
+<h3>Object <i>Semantic Data Specification</i></h3>
+<dl>
+
+<dt>Description</dt>
+<dd>A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
+
+This definition includes what are often called &quot;application profiles&quot;, &quot;metadata application profiles&quot;, or &quot;metadata profiles&quot;.</dd>
+
+<dt>Interpretation</dt>
+<dd>
+  <a href="#SemanticDataSpecification">Semantic Data Specification</a>
+</dd>
+</dl>
+
+<section id="json-property--application-profile-specification-document--semantic-data-specification-@id">
+<h5>Property <code>@id</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`@id`</dd>
+
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#SemanticDataSpecification">Semantic Data Specification</a>)
+</dd>
+
+
+
+
+
+
+
+
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--semantic-data-specification-title">
+<h5>Property <code>title</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`title`</dd>
+
+  <dt>Name</dt>
+  <dd>title</dd>
+
+
+  <dt>Description</dt>
+  <dd>A name given to the Semantic Data Specification.</dd>
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - ∞</dd>
+<dt>Type</dt>
+
+
+<dd>
+<a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">Text</a>
+</dd>
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#SemanticDataSpecification.title">title</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--semantic-data-specification-hasresource">
+<h5>Property <code>hasResource</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`hasResource`</dd>
+
+  <dt>Name</dt>
+  <dd>has resource</dd>
+
+
+  <dt>Description</dt>
+  <dd>A resource which describes the nature of an artifact and the role it plays in relation to the Profile</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - ∞</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#ResourceDescriptor">Resource Descriptor</a>)
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#SemanticDataSpecification.hasResource">has resource</a>
+</dd>
+</dl>
+</section>
+
+</section>
+
+<section id="json-object--application-profile-specification-document--resource-descriptor">
+<h3>Object <i>Resource Descriptor</i></h3>
+<dl>
+
+<dt>Description</dt>
+<dd>A description of a resource that defines an aspect - a particular part, feature or role - of a Profile</dd>
+
+<dt>Interpretation</dt>
+<dd>
+  <a href="#ResourceDescriptor">Resource Descriptor</a>
+</dd>
+</dl>
+
+<section id="json-property--application-profile-specification-document--resource-descriptor-@id">
+<h5>Property <code>@id</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`@id`</dd>
+
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#ResourceDescriptor">Resource Descriptor</a>)
+</dd>
+
+
+
+
+
+
+
+
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--resource-descriptor-conformsto">
+<h5>Property <code>conformsTo</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`conformsTo`</dd>
+
+  <dt>Name</dt>
+  <dd>conforms To</dd>
+
+
+  <dt>Description</dt>
+  <dd>An established standard to which the described resource conforms.</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - ∞</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#ApplicationProfile">Application Profile</a>)
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ResourceDescriptor.conformsTo">conforms To</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--resource-descriptor-format">
+<h5>Property <code>format</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`format`</dd>
+
+  <dt>Name</dt>
+  <dd>format</dd>
+
+
+  <dt>Description</dt>
+  <dd>The file format, physical medium, or dimensions of the resource.</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#Format">Format</a>)
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ResourceDescriptor.format">format</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--resource-descriptor-hasrole">
+<h5>Property <code>hasRole</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`hasRole`</dd>
+
+  <dt>Name</dt>
+  <dd>has role</dd>
+
+
+  <dt>Description</dt>
+  <dd>The function of an artifact described by a Resource Descriptor, such as specification, guidance etc.</dd>
+
+<dt>Optionality</dt>
+<dd>optional</dd>
+<dt>Cardinality</dt>
+<dd>0 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#ResourceRole">Resource Role</a>)
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ResourceDescriptor.hasRole">has role</a>
+</dd>
+</dl>
+</section>
+<section id="json-property--application-profile-specification-document--resource-descriptor-hasartifact">
+<h5>Property <code>hasArtifact</code></h5>
+<dl>
+<dt>Key</dt>
+<dd>`hasArtifact`</dd>
+
+  <dt>Name</dt>
+  <dd>has artifact</dd>
+
+
+  <dt>Description</dt>
+  <dd>The URL of a downloadable file with particulars such as its format and role indicated by the Resource Descriptor</dd>
+
+<dt>Optionality</dt>
+<dd>required</dd>
+<dt>Cardinality</dt>
+<dd>1 - 1</dd>
+<dt>Type</dt>
+
+<dd>
+  IRI (<a href="#Term">Term</a>)
+</dd>
+
+
+
+
+
+
+
+
+<dt>Interpretation</dt>
+<dd>
+<a href="#ResourceDescriptor.hasArtifact">has artifact</a>
+</dd>
+</dl>
+</section>
+
+</section>
+
+
+
+</section>
+      </section>
 
 <section>
   <h2>Examples</h2>
@@ -4326,16 +6488,16 @@
       <table id="table-namespaces" class="simple">
         <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
         <tbody>
-            <tr><td><code>prof</code></td><td><a href=http://www.w3.org/ns/dx/prof/><code>http://www.w3.org/ns/dx/prof/</code></a></td></tr>
-            <tr><td><code>dsv</code></td><td><a href=https://w3id.org/dsv#><code>https://w3id.org/dsv#</code></a></td></tr>
-            <tr><td><code>dsv-dap</code></td><td><a href=https://w3id.org/dsv-dap#><code>https://w3id.org/dsv-dap#</code></a></td></tr>
-            <tr><td><code>adms</code></td><td><a href=http://www.w3.org/ns/adms#><code>http://www.w3.org/ns/adms#</code></a></td></tr>
-            <tr><td><code>dcterms</code></td><td><a href=http://purl.org/dc/terms/><code>http://purl.org/dc/terms/</code></a></td></tr>
-            <tr><td><code>rdf</code></td><td><a href=http://www.w3.org/1999/02/22-rdf-syntax-ns#><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></a></td></tr>
-            <tr><td><code>owl</code></td><td><a href=http://www.w3.org/2002/07/owl#><code>http://www.w3.org/2002/07/owl#</code></a></td></tr>
-            <tr><td><code>rdfs</code></td><td><a href=http://www.w3.org/2000/01/rdf-schema#><code>http://www.w3.org/2000/01/rdf-schema#</code></a></td></tr>
-            <tr><td><code>xsd</code></td><td><a href=http://www.w3.org/2001/XMLSchema#><code>http://www.w3.org/2001/XMLSchema#</code></a></td></tr>
-            <tr><td><code>skos</code></td><td><a href=http://www.w3.org/2004/02/skos/core#><code>http://www.w3.org/2004/02/skos/core#</code></a></td></tr>
+            <tr><td><code>prof</code></td><td><a href="http://www.w3.org/ns/dx/prof/"><code>http://www.w3.org/ns/dx/prof/</code></a></td></tr>
+            <tr><td><code>dsv</code></td><td><a href="https://w3id.org/dsv#"><code>https://w3id.org/dsv#</code></a></td></tr>
+            <tr><td><code>dsv-dap</code></td><td><a href="https://w3id.org/dsv-dap#"><code>https://w3id.org/dsv-dap#</code></a></td></tr>
+            <tr><td><code>dcterms</code></td><td><a href="http://purl.org/dc/terms/"><code>http://purl.org/dc/terms/</code></a></td></tr>
+            <tr><td><code>adms</code></td><td><a href="http://www.w3.org/ns/adms#"><code>http://www.w3.org/ns/adms#</code></a></td></tr>
+            <tr><td><code>rdfs</code></td><td><a href="http://www.w3.org/2000/01/rdf-schema#"><code>http://www.w3.org/2000/01/rdf-schema#</code></a></td></tr>
+            <tr><td><code>rdf</code></td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></a></td></tr>
+            <tr><td><code>owl</code></td><td><a href="http://www.w3.org/2002/07/owl#"><code>http://www.w3.org/2002/07/owl#</code></a></td></tr>
+            <tr><td><code>xsd</code></td><td><a href="http://www.w3.org/2001/XMLSchema#"><code>http://www.w3.org/2001/XMLSchema#</code></a></td></tr>
+            <tr><td><code>skos</code></td><td><a href="http://www.w3.org/2004/02/skos/core#"><code>http://www.w3.org/2004/02/skos/core#</code></a></td></tr>
         </tbody>
       </table>
     </section>
@@ -4355,6 +6517,9 @@
               <td>Application profile</td>
               <td><a href="./dsv.ttl">./dsv.ttl</a></td>
             </tr>
+            <tr><td>JSON schema</td><td><a href="./schema.json">../schema.json</a></td></tr>
+            <tr><td>JSON-LD context</td><td><a href="./context.jsonld">../context.jsonld</a></td></tr>
+            <tr><td>Documentation</td><td><a href="">#</a></td></tr>
         </tbody>
       </table>
     </section>  </body>

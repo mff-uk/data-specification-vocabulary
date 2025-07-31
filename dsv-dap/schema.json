@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/schema.json",
+  "title": "Application Profile Specification Document",
+  "description": "An Application Profile Specification Document contains human-readable version of an Application Profile.",
+  "type": "object",
+  "required": [
+    "@id",
+    "title",
+    "hasArtifact",
+    "inSpecificationOf"
+  ],
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "iri"
+    },
+    "title": {
+      "title": "title",
+      "description": "A name given to the Data Specification Document.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "Text",
+        "type": "object",
+        "additionalProperties": {
+          "title": "Hodnota v jiném jazyce",
+          "type": "string"
+        },
+        "required": [
+
+        ],
+        "properties": {
+          "cs": {
+            "title": "Hodnota v českém jazyce",
+            "type": "string"
+          },
+          "en": {
+            "title": "Hodnota v anglickém jazyce",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "description": {
+      "title": "description",
+      "description": "An account of the Data Specification Document.",
+      "type": "array",
+      "items": {
+        "title": "Text",
+        "type": "object",
+        "additionalProperties": {
+          "title": "Hodnota v jiném jazyce",
+          "type": "string"
+        },
+        "required": [
+
+        ],
+        "properties": {
+          "cs": {
+            "title": "Hodnota v českém jazyce",
+            "type": "string"
+          },
+          "en": {
+            "title": "Hodnota v anglickém jazyce",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "conformsTo": {
+      "title": "conforms To",
+      "description": "An established standard to which the described resource conforms.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "iri"
+      }
+    },
+    "format": {
+      "title": "format",
+      "description": "The file format, physical medium, or dimensions of the resource.",
+      "type": "string",
+      "format": "iri"
+    },
+    "hasRole": {
+      "title": "has role",
+      "description": "The function of an artifact described by a Resource Descriptor, such as specification, guidance etc.",
+      "type": "string",
+      "format": "iri"
+    },
+    "hasArtifact": {
+      "title": "has artifact",
+      "description": "The URL of a downloadable file with particulars such as its format and role indicated by the Resource Descriptor",
+      "type": "string",
+      "format": "iri"
+    },
+    "inSpecificationOf": {
+      "title": "Konceptuální model",
+      "description": "Konceptuální model obsahující profily tříd a vlastností různých slovníků.",
+      "type": "object",
+      "required": [
+        "@id",
+        "title"
+      ],
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "iri"
+        },
+        "title": {
+          "title": "title",
+          "description": "A name given to the Semantic Data Specification.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "title": "Text",
+            "type": "object",
+            "additionalProperties": {
+              "title": "Hodnota v jiném jazyce",
+              "type": "string"
+            },
+            "required": [
+
+            ],
+            "properties": {
+              "cs": {
+                "title": "Hodnota v českém jazyce",
+                "type": "string"
+              },
+              "en": {
+                "title": "Hodnota v anglickém jazyce",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "description": {
+          "title": "description",
+          "description": "An account of the Semantic Data Specification.",
+          "type": "array",
+          "items": {
+            "title": "Text",
+            "type": "object",
+            "additionalProperties": {
+              "title": "Hodnota v jiném jazyce",
+              "type": "string"
+            },
+            "required": [
+
+            ],
+            "properties": {
+              "cs": {
+                "title": "Hodnota v českém jazyce",
+                "type": "string"
+              },
+              "en": {
+                "title": "Hodnota v anglickém jazyce",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "hasToken": {
+          "title": "has token",
+          "description": "The preferred identifier for the Profile, for use in circumstances where its URI cannot be used",
+          "type": "string"
+        },
+        "isProfileOf": {
+          "title": "is profile of",
+          "description": "A specification for which this Profile defines constraints, extensions, or which it uses in combination with other specifications, or provides guidance or explanation about its usage",
+          "type": "array",
+          "items": {
+            "title": "Semantic Data Specification",
+            "description": "A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.\n\nThis definition includes what are often called \"application profiles\", \"metadata application profiles\", or \"metadata profiles\".",
+            "type": "object",
+            "required": [
+              "@id",
+              "title"
+            ],
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "iri"
+              },
+              "title": {
+                "title": "title",
+                "description": "A name given to the Semantic Data Specification.",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "title": "Text",
+                  "type": "object",
+                  "additionalProperties": {
+                    "title": "Hodnota v jiném jazyce",
+                    "type": "string"
+                  },
+                  "required": [
+
+                  ],
+                  "properties": {
+                    "cs": {
+                      "title": "Hodnota v českém jazyce",
+                      "type": "string"
+                    },
+                    "en": {
+                      "title": "Hodnota v anglickém jazyce",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "hasResource": {
+                "title": "has resource",
+                "description": "A resource which describes the nature of an artifact and the role it plays in relation to the Profile",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "iri"
+                }
+              }
+            }
+          }
+        },
+        "hasResource": {
+          "title": "has resource",
+          "description": "A resource which describes the nature of an artifact and the role it plays in relation to the Profile",
+          "type": "array",
+          "items": {
+            "title": "Resource Descriptor",
+            "description": "A description of a resource that defines an aspect - a particular part, feature or role - of a Profile",
+            "type": "object",
+            "required": [
+              "@id",
+              "hasArtifact"
+            ],
+            "properties": {
+              "@id": {
+                "type": "string",
+                "format": "iri"
+              },
+              "conformsTo": {
+                "title": "conforms To",
+                "description": "An established standard to which the described resource conforms.",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "iri"
+                }
+              },
+              "format": {
+                "title": "format",
+                "description": "The file format, physical medium, or dimensions of the resource.",
+                "type": "string",
+                "format": "iri"
+              },
+              "hasRole": {
+                "title": "has role",
+                "description": "The function of an artifact described by a Resource Descriptor, such as specification, guidance etc.",
+                "type": "string",
+                "format": "iri"
+              },
+              "hasArtifact": {
+                "title": "has artifact",
+                "description": "The URL of a downloadable file with particulars such as its format and role indicated by the Resource Descriptor",
+                "type": "string",
+                "format": "iri"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
