@@ -1,75 +1,58 @@
 {
     "@graph": [
         {
-            "@id": "_:b0",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:range"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b1",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:range"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Datatypeproperty.range",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Datatype"
+            "@id": "https://w3id.org/dsv-dap#Term.definition",
+            "dsv:datatypePropertyRange": {
+                "@id": "rdf:langString"
             },
             "@type": [
-                "dsv:ObjectPropertyProfile",
+                "dsv:DatatypePropertyProfile",
                 "dsv:TermProfile"
             ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#Term"
+            },
             "dsv:property": {
-                "@id": "rdfs:range"
+                "@id": "rdfs:comment"
             },
             "dsv:cardinality": {
-                "@id": "cardinality:01"
+                "@id": "cardinality:0n"
             },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b0"
-                },
-                {
-                    "@id": "_:b1"
-                }
-            ],
+            "skos:definition": {
+                "@language": "en",
+                "@value": "A definition of the subject resource."
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "definition"
+            },
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#DatatypeProperty"
             }
         },
         {
-            "@id": "https://w3id.org/dsv-dap#Datatype",
+            "@id": "https://w3id.org/dsv-dap#Term",
             "dsv:classRole": {
                 "@id": "role:supportive"
             },
             "dsv:class": {
-                "@id": "rdfs:Datatype"
+                "@id": "rdfs:Resource"
             },
             "@type": [
                 "dsv:ClassProfile",
                 "dsv:TermProfile"
             ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b25"
-                },
-                {
-                    "@id": "_:b26"
-                }
-            ],
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b79"
+            },
+            "skos:scopeNote": {
+                "@language": "en",
+                "@value": "In the context of DSV, Term is used as a common denominator for Classes, Properties and their profiles."
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "Term"
+            },
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
             }
@@ -117,20 +100,20 @@
                 "@type": "xsd:date"
             },
             "dct:modified": {
-                "@value": "2025-05-14",
+                "@value": "2026-01-09",
                 "@type": "xsd:date"
             },
             "owl:versionIRI": {
-                "@id": "https://w3id.org/dsv-dap/1.0.0#"
+                "@id": "https://w3id.org/dsv-dap/1.0.1#"
             },
-            "owl:versionInfo": "1.0.0",
+            "owl:versionInfo": "1.0.1",
             "rdfs:comment": {
                 "@language": "en",
                 "@value": "See also DSV for a vocabulary supporting this application profile."
             },
             "dct:bibliographicCitation": {
                 "@language": "en",
-                "@value": "Klímek, J., Stenchlák, Š., & Škoda, P. (2025). Data Specification Vocabulary Default Application Profile (Version 1.0.0). https://w3id.org/dsv-dap#"
+                "@value": "Klímek, J., Stenchlák, Š., & Škoda, P. (2026). Data Specification Vocabulary Default Application Profile (Version 1.0.1). https://w3id.org/dsv-dap#"
             },
             "cc:license": {
                 "@id": "http://creativecommons.org/licenses/by/4.0/"
@@ -151,354 +134,57 @@
             }
         },
         {
-            "@id": "https://w3id.org/dsv-dap#DatatypeProperty",
-            "dsv:classRole": {
-                "@id": "role:main"
+            "@id": "_:b0",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:label"
             },
-            "dsv:class": {
-                "@id": "owl:DatatypeProperty"
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b1",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:label"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Term.label",
+            "dsv:datatypePropertyRange": {
+                "@id": "rdf:langString"
             },
             "@type": [
-                "dsv:ClassProfile",
+                "dsv:DatatypePropertyProfile",
                 "dsv:TermProfile"
             ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#Term"
+            },
+            "dsv:property": {
+                "@id": "rdfs:label"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:1n"
+            },
             "dsv:reusesPropertyValue": [
                 {
-                    "@id": "_:b2"
+                    "@id": "_:b0"
                 },
                 {
-                    "@id": "_:b3"
+                    "@id": "_:b1"
                 }
             ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#Property"
-            },
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
             }
         },
         {
             "@id": "_:b2",
-            "dsv:reusedFromResource": {
-                "@id": "owl:DatatypeProperty"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b3",
-            "dsv:reusedFromResource": {
-                "@id": "owl:DatatypeProperty"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Property",
-            "dsv:classRole": {
-                "@id": "role:supportive"
-            },
-            "dsv:class": {
-                "@id": "rdf:Property"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b36"
-                },
-                {
-                    "@id": "_:b37"
-                }
-            ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#Term"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b4",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:range"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b5",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:range"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Objectproperty.range",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Class"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "rdfs:range"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:01"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b4"
-                },
-                {
-                    "@id": "_:b5"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#ObjectProperty"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Class",
-            "dsv:classRole": {
-                "@id": "role:supportive"
-            },
-            "dsv:class": [
-                {
-                    "@id": "owl:Class"
-                },
-                {
-                    "@id": "rdfs:Class"
-                }
-            ],
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b30"
-                },
-                {
-                    "@id": "_:b31"
-                }
-            ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#Term"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ObjectProperty",
-            "dsv:classRole": {
-                "@id": "role:main"
-            },
-            "dsv:class": {
-                "@id": "owl:ObjectProperty"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b6"
-                },
-                {
-                    "@id": "_:b7"
-                }
-            ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#Property"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b6",
-            "dsv:reusedFromResource": {
-                "@id": "owl:ObjectProperty"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b7",
-            "dsv:reusedFromResource": {
-                "@id": "owl:ObjectProperty"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Format",
-            "dsv:classRole": {
-                "@id": "role:supportive"
-            },
-            "dsv:class": {
-                "@id": "skos:Concept"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "skos:scopeNote": {
-                "@language": "en",
-                "@value": "The file format, physical medium, or dimensions of the resource."
-            },
-            "skos:definition": {
-                "@language": "en",
-                "@value": "An idea or notion; a unit of thought."
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "Format"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Cardinality",
-            "dsv:classRole": {
-                "@id": "role:supportive"
-            },
-            "dsv:class": {
-                "@id": "skos:Concept"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "skos:definition": {
-                "@language": "en",
-                "@value": "Cardinality, e.g. 0..* or 1..1"
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "Cardinality"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#RequirementLevel",
-            "dsv:classRole": {
-                "@id": "role:supportive"
-            },
-            "dsv:class": {
-                "@id": "skos:Concept"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "skos:definition": {
-                "@language": "en",
-                "@value": "Requirement Level of a property profile."
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "Requirement Level"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ClassRole",
-            "dsv:classRole": {
-                "@id": "role:supportive"
-            },
-            "dsv:class": {
-                "@id": "skos:Concept"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "skos:definition": {
-                "@language": "en",
-                "@value": "Class Role, e.g. Mandatory or Supportive."
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "Class Role"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b8",
-            "dsv:reusedFromResource": {
-                "@id": "prof:ResourceRole"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b9",
-            "dsv:reusedFromResource": {
-                "@id": "prof:ResourceRole"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ResourceRole",
-            "dsv:classRole": {
-                "@id": "role:supportive"
-            },
-            "dsv:class": {
-                "@id": "prof:ResourceRole"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b8"
-                },
-                {
-                    "@id": "_:b9"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b10",
             "dsv:reusedFromResource": {
                 "@id": "prof:hasToken"
             },
@@ -508,7 +194,7 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "_:b11",
+            "@id": "_:b3",
             "dsv:reusedFromResource": {
                 "@id": "prof:hasToken"
             },
@@ -526,6 +212,9 @@
                 "dsv:DatatypePropertyProfile",
                 "dsv:TermProfile"
             ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
+            },
             "dsv:property": {
                 "@id": "prof:hasToken"
             },
@@ -534,10 +223,10 @@
             },
             "dsv:reusesPropertyValue": [
                 {
-                    "@id": "_:b10"
+                    "@id": "_:b2"
                 },
                 {
-                    "@id": "_:b11"
+                    "@id": "_:b3"
                 }
             ],
             "skos:scopeNote": {
@@ -546,9 +235,6 @@
             },
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
             }
         },
         {
@@ -564,7 +250,7 @@
                 "dsv:TermProfile"
             ],
             "dsv:reusesPropertyValue": {
-                "@id": "_:b16"
+                "@id": "_:b65"
             },
             "skos:prefLabel": {
                 "@language": "en",
@@ -572,56 +258,6 @@
             },
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b12",
-            "dsv:reusedFromResource": {
-                "@id": "prof:isProfileOf"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b13",
-            "dsv:reusedFromResource": {
-                "@id": "prof:isProfileOf"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "prof:isProfileOf"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b12"
-                },
-                {
-                    "@id": "_:b13"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
             }
         },
         {
@@ -633,6 +269,9 @@
                 "dsv:DatatypePropertyProfile",
                 "dsv:TermProfile"
             ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
+            },
             "dsv:property": {
                 "@id": "dct:description"
             },
@@ -649,9 +288,6 @@
             },
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
             }
         },
         {
@@ -663,6 +299,9 @@
                 "dsv:DatatypePropertyProfile",
                 "dsv:TermProfile"
             ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
+            },
             "dsv:property": {
                 "@id": "dct:title"
             },
@@ -679,99 +318,7 @@
             },
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
             }
-        },
-        {
-            "@id": "_:b14",
-            "dsv:reusedFromResource": {
-                "@id": "prof:hasResource"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b15",
-            "dsv:reusedFromResource": {
-                "@id": "prof:hasResource"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "prof:hasResource"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b14"
-                },
-                {
-                    "@id": "_:b15"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor",
-            "dsv:classRole": {
-                "@id": "role:supportive"
-            },
-            "dsv:class": [
-                {
-                    "@id": "prof:ResourceDescriptor"
-                },
-                {
-                    "@id": "http://www.w3.org/ns/adms#AssetDistribution"
-                }
-            ],
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b90"
-                },
-                {
-                    "@id": "_:b91"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b16",
-            "dsv:reusedFromResource": {
-                "@id": "prof:Profile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
         },
         {
             "@id": "https://w3id.org/dsv-dap#DataSpecificationDocument.description",
@@ -782,6 +329,9 @@
                 "dsv:DatatypePropertyProfile",
                 "dsv:TermProfile"
             ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#DataSpecificationDocument"
+            },
             "dsv:property": {
                 "@id": "dct:description"
             },
@@ -798,9 +348,6 @@
             },
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#DataSpecificationDocument"
             }
         },
         {
@@ -836,6 +383,9 @@
                 "dsv:DatatypePropertyProfile",
                 "dsv:TermProfile"
             ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#DataSpecificationDocument"
+            },
             "dsv:property": {
                 "@id": "dct:title"
             },
@@ -852,15 +402,147 @@
             },
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#DataSpecificationDocument"
             }
         },
         {
-            "@id": "_:b17",
+            "@id": "https://w3id.org/dsv-dap#TermProfile.usageNote",
+            "dsv:datatypePropertyRange": {
+                "@id": "rdf:langString"
+            },
+            "@type": [
+                "dsv:DatatypePropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dsv:property": {
+                "@id": "skos:scopeNote"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Usage note of this profile."
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "usage note"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#TermProfile",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": {
+                "@id": "dsv:TermProfile"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b90"
+                },
+                {
+                    "@id": "_:b91"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#Term"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b4",
             "dsv:reusedFromResource": {
-                "@id": "dsv:VocabularySpecificationDocument"
+                "@id": "skos:definition"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#TermProfile.definition",
+            "dsv:datatypePropertyRange": {
+                "@id": "rdf:langString"
+            },
+            "@type": [
+                "dsv:DatatypePropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dsv:property": {
+                "@id": "skos:definition"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b4"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Definition of this profile."
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b5",
+            "dsv:reusedFromResource": {
+                "@id": "skos:prefLabel"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#TermProfile.preferredLabel",
+            "dsv:datatypePropertyRange": {
+                "@id": "rdf:langString"
+            },
+            "@type": [
+                "dsv:DatatypePropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dsv:property": {
+                "@id": "skos:prefLabel"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b5"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Preferred label of this profile."
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b6",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:reusedAsProperty"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:definition"
@@ -868,14 +550,888 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "_:b18",
+            "@id": "_:b7",
             "dsv:reusedFromResource": {
-                "@id": "dsv:VocabularySpecificationDocument"
+                "@id": "dsv:reusedAsProperty"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:prefLabel"
             },
             "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#PropertyValueReuse.reusedAsProperty",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Property"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#PropertyValueReuse"
+            },
+            "dsv:property": {
+                "@id": "dsv:reusedAsProperty"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b6"
+                },
+                {
+                    "@id": "_:b7"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Property",
+            "dsv:classRole": {
+                "@id": "role:supportive"
+            },
+            "dsv:class": {
+                "@id": "rdf:Property"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b77"
+                },
+                {
+                    "@id": "_:b78"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#Term"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#PropertyValueReuse",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": {
+                "@id": "dsv:PropertyValueReuse"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b80"
+                },
+                {
+                    "@id": "_:b81"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b8",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:range"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b9",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:range"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Datatypeproperty.range",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Datatype"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#DatatypeProperty"
+            },
+            "dsv:property": {
+                "@id": "rdfs:range"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:01"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b8"
+                },
+                {
+                    "@id": "_:b9"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Datatype",
+            "dsv:classRole": {
+                "@id": "role:supportive"
+            },
+            "dsv:class": {
+                "@id": "rdfs:Datatype"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b72"
+                },
+                {
+                    "@id": "_:b73"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#DatatypeProperty",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": {
+                "@id": "owl:DatatypeProperty"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b59"
+                },
+                {
+                    "@id": "_:b60"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#Property"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b10",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:range"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b11",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:range"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Objectproperty.range",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Class"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#ObjectProperty"
+            },
+            "dsv:property": {
+                "@id": "rdfs:range"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:01"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b10"
+                },
+                {
+                    "@id": "_:b11"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Class",
+            "dsv:classRole": {
+                "@id": "role:supportive"
+            },
+            "dsv:class": [
+                {
+                    "@id": "owl:Class"
+                },
+                {
+                    "@id": "rdfs:Class"
+                }
+            ],
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b75"
+                },
+                {
+                    "@id": "_:b76"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#Term"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ObjectProperty",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": {
+                "@id": "owl:ObjectProperty"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b61"
+                },
+                {
+                    "@id": "_:b62"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#Property"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b12",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:domain"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b13",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:domain"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Property.domain",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Class"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#Property"
+            },
+            "dsv:property": {
+                "@id": "rdfs:domain"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:01"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b12"
+                },
+                {
+                    "@id": "_:b13"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b14",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:subPropertyOf"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b15",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:subPropertyOf"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Property.subpropertyof",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Property"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#Property"
+            },
+            "dsv:property": {
+                "@id": "rdfs:subPropertyOf"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b14"
+                },
+                {
+                    "@id": "_:b15"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b16",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:subClassOf"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b17",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:subClassOf"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Class.subclassof",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Class"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#Class"
+            },
+            "dsv:property": {
+                "@id": "rdfs:subClassOf"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b16"
+                },
+                {
+                    "@id": "_:b17"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b18",
+            "dsv:reusedFromResource": {
+                "@id": "dct:conformsTo"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor.conformsTo",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#ApplicationProfile"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
+            },
+            "dsv:property": {
+                "@id": "dct:conformsTo"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b18"
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "conforms To"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ApplicationProfile",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": [
+                {
+                    "@id": "dsv:ApplicationProfile"
+                },
+                {
+                    "@id": "prof:Profile"
+                }
+            ],
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b70"
+                },
+                {
+                    "@id": "_:b71"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor",
+            "dsv:classRole": {
+                "@id": "role:supportive"
+            },
+            "dsv:class": [
+                {
+                    "@id": "prof:ResourceDescriptor"
+                },
+                {
+                    "@id": "http://www.w3.org/ns/adms#AssetDistribution"
+                }
+            ],
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b92"
+                },
+                {
+                    "@id": "_:b93"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b19",
+            "dsv:reusedFromResource": {
+                "@id": "dct:format"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor.format",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Format"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
+            },
+            "dsv:property": {
+                "@id": "dct:format"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:01"
+            },
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b19"
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "format"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Format",
+            "dsv:classRole": {
+                "@id": "role:supportive"
+            },
+            "dsv:class": {
+                "@id": "skos:Concept"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "skos:scopeNote": {
+                "@language": "en",
+                "@value": "The file format, physical medium, or dimensions of the resource."
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "An idea or notion; a unit of thought."
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "Format"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b20",
+            "dsv:reusedFromResource": {
+                "@id": "prof:hasRole"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b21",
+            "dsv:reusedFromResource": {
+                "@id": "prof:hasRole"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor.hasRole",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#ResourceRole"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
+            },
+            "dsv:property": {
+                "@id": "prof:hasRole"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:01"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b20"
+                },
+                {
+                    "@id": "_:b21"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ResourceRole",
+            "dsv:classRole": {
+                "@id": "role:supportive"
+            },
+            "dsv:class": {
+                "@id": "prof:ResourceRole"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b63"
+                },
+                {
+                    "@id": "_:b64"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b22",
+            "dsv:reusedFromResource": {
+                "@id": "prof:hasArtifact"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b23",
+            "dsv:reusedFromResource": {
+                "@id": "prof:hasArtifact"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor.hasArtifact",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Term"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
+            },
+            "dsv:property": {
+                "@id": "prof:hasArtifact"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b22"
+                },
+                {
+                    "@id": "_:b23"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b24",
+            "dsv:reusedFromResource": {
+                "@id": "prof:isProfileOf"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b25",
+            "dsv:reusedFromResource": {
+                "@id": "prof:isProfileOf"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
+            },
+            "dsv:property": {
+                "@id": "prof:isProfileOf"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b24"
+                },
+                {
+                    "@id": "_:b25"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b26",
+            "dsv:reusedFromResource": {
+                "@id": "prof:hasResource"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b27",
+            "dsv:reusedFromResource": {
+                "@id": "prof:hasResource"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
+            },
+            "dsv:property": {
+                "@id": "prof:hasResource"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b26"
+                },
+                {
+                    "@id": "_:b27"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b28",
+            "dsv:reusedFromResource": {
+                "@id": "prof:hasResource"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Vocabulary.hasSpecification",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#VocabularySpecificationDocument"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#Vocabulary"
+            },
+            "dsv:property": {
+                "@id": "prof:hasResource"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:1n"
+            },
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b28"
+            },
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource"
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "has specification"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
         },
         {
             "@id": "https://w3id.org/dsv-dap#VocabularySpecificationDocument",
@@ -899,10 +1455,10 @@
             ],
             "dsv:reusesPropertyValue": [
                 {
-                    "@id": "_:b17"
+                    "@id": "_:b66"
                 },
                 {
-                    "@id": "_:b18"
+                    "@id": "_:b67"
                 }
             ],
             "dsv:specializes": [
@@ -915,202 +1471,6 @@
             ],
             "dct:isPartOf": {
                 "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b19",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:ApplicationProfileSpecificationDocument"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b20",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:ApplicationProfileSpecificationDocument"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ApplicationProfileSpecificationDocument",
-            "dsv:classRole": {
-                "@id": "role:main"
-            },
-            "dsv:class": [
-                {
-                    "@id": "http://www.w3.org/ns/adms#AssetDistribution"
-                },
-                {
-                    "@id": "dsv:ApplicationProfileSpecificationDocument"
-                },
-                {
-                    "@id": "prof:ResourceDescriptor"
-                }
-            ],
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b19"
-                },
-                {
-                    "@id": "_:b20"
-                }
-            ],
-            "dsv:specializes": [
-                {
-                    "@id": "https://w3id.org/dsv-dap#DataSpecificationDocument"
-                },
-                {
-                    "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b21",
-            "dsv:reusedFromResource": {
-                "@id": "prof:hasResource"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ApplicationProfile.hasSpecification",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#ApplicationProfileSpecificationDocument"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "prof:hasResource"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:1n"
-            },
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b21"
-            },
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource"
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "has specification"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#ApplicationProfile"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ApplicationProfile",
-            "dsv:classRole": {
-                "@id": "role:main"
-            },
-            "dsv:class": [
-                {
-                    "@id": "dsv:ApplicationProfile"
-                },
-                {
-                    "@id": "prof:Profile"
-                }
-            ],
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b22"
-                },
-                {
-                    "@id": "_:b23"
-                }
-            ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b22",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:ApplicationProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b23",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:ApplicationProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b24",
-            "dsv:reusedFromResource": {
-                "@id": "prof:hasResource"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Vocabulary.hasSpecification",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#VocabularySpecificationDocument"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "prof:hasResource"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:1n"
-            },
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b24"
-            },
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource"
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "has specification"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#Vocabulary"
             }
         },
         {
@@ -1146,7 +1506,1166 @@
             }
         },
         {
-            "@id": "_:b25",
+            "@id": "_:b29",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:externalDocumentation"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b30",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:externalDocumentation"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#TermProfile.externalDocumentation",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Term"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:externalDocumentation"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:01"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b29"
+                },
+                {
+                    "@id": "_:b30"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b31",
+            "dsv:reusedFromResource": {
+                "@id": "prof:hasResource"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ApplicationProfile.hasSpecification",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#ApplicationProfileSpecificationDocument"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#ApplicationProfile"
+            },
+            "dsv:property": {
+                "@id": "prof:hasResource"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:1n"
+            },
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b31"
+            },
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource"
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "has specification"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ApplicationProfileSpecificationDocument",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": [
+                {
+                    "@id": "http://www.w3.org/ns/adms#AssetDistribution"
+                },
+                {
+                    "@id": "dsv:ApplicationProfileSpecificationDocument"
+                },
+                {
+                    "@id": "prof:ResourceDescriptor"
+                }
+            ],
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b68"
+                },
+                {
+                    "@id": "_:b69"
+                }
+            ],
+            "dsv:specializes": [
+                {
+                    "@id": "https://w3id.org/dsv-dap#DataSpecificationDocument"
+                },
+                {
+                    "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b32",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:requirementLevel"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b33",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:requirementLevel"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#PropertyProfile.requirementLevel",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#RequirementLevel"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:requirementLevel"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:01"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b32"
+                },
+                {
+                    "@id": "_:b33"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#RequirementLevel",
+            "dsv:classRole": {
+                "@id": "role:supportive"
+            },
+            "dsv:class": {
+                "@id": "skos:Concept"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Requirement Level of a property profile."
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "Requirement Level"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#PropertyProfile",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": {
+                "@id": "dsv:PropertyProfile"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b86"
+                },
+                {
+                    "@id": "_:b87"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b34",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:classRole"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b35",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:classRole"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ClassProfile.classRole",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#ClassRole"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#ClassProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:classRole"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b34"
+                },
+                {
+                    "@id": "_:b35"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ClassRole",
+            "dsv:classRole": {
+                "@id": "role:supportive"
+            },
+            "dsv:class": {
+                "@id": "skos:Concept"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Class Role, e.g. Mandatory or Supportive."
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "Class Role"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ClassProfile",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": {
+                "@id": "dsv:ClassProfile"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b88"
+                },
+                {
+                    "@id": "_:b89"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b36",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:cardinality"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b37",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:cardinality"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#PropertyProfile.cardinality",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Cardinality"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:cardinality"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:01"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b36"
+                },
+                {
+                    "@id": "_:b37"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Cardinality",
+            "dsv:classRole": {
+                "@id": "role:supportive"
+            },
+            "dsv:class": {
+                "@id": "skos:Concept"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Cardinality, e.g. 0..* or 1..1"
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "Cardinality"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b38",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:profileOf"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b39",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:profileOf"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#TermProfile.profileOf",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:profileOf"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b38"
+                },
+                {
+                    "@id": "_:b39"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b40",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:class"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b41",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:class"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ClassProfile.profiledClass",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Class"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#ClassProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:class"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b40"
+                },
+                {
+                    "@id": "_:b41"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b42",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:specializes"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b43",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:specializes"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#TermProfile.specializes",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:specializes"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b42"
+                },
+                {
+                    "@id": "_:b43"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b44",
+            "dsv:reusedFromResource": {
+                "@id": "dct:isPartOf"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#TermProfile.isPartOf",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#ApplicationProfile"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dsv:property": {
+                "@id": "dct:isPartOf"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b44"
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "is part of"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b45",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:reusesPropertyValue"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b46",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:reusesPropertyValue"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#TermProfile.reusesPropertyValue",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#PropertyValueReuse"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#TermProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:reusesPropertyValue"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:0n"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b45"
+                },
+                {
+                    "@id": "_:b46"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b47",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:reusedProperty"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b48",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:reusedProperty"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#PropertyValueReuse.reusedProperty",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Property"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#PropertyValueReuse"
+            },
+            "dsv:property": {
+                "@id": "dsv:reusedProperty"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b47"
+                },
+                {
+                    "@id": "_:b48"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b49",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:reusedFromResource"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b50",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:reusedFromResource"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#PropertyValueReuse.reusedFromResource",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Term"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#PropertyValueReuse"
+            },
+            "dsv:property": {
+                "@id": "dsv:reusedFromResource"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b49"
+                },
+                {
+                    "@id": "_:b50"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b51",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:domain"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b52",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:domain"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#PropertyProfile.domain",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#ClassProfile"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:domain"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b51"
+                },
+                {
+                    "@id": "_:b52"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b53",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:range"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b54",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:range"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ObjectPropertyProfile.range",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#ClassProfile"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#ObjectPropertyProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:range"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b53"
+                },
+                {
+                    "@id": "_:b54"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#ObjectPropertyProfile",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": {
+                "@id": "dsv:ObjectPropertyProfile"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b84"
+                },
+                {
+                    "@id": "_:b85"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b55",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:datatype"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#DatatypePropertyProfile.datatype",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Datatype"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#DatatypePropertyProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:datatype"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b55"
+            },
+            "skos:definition": {
+                "@language": "en",
+                "@value": "Datatype used with this Datatype property profile."
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#DatatypePropertyProfile",
+            "dsv:classRole": {
+                "@id": "role:main"
+            },
+            "dsv:class": {
+                "@id": "dsv:DatatypePropertyProfile"
+            },
+            "@type": [
+                "dsv:ClassProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b82"
+                },
+                {
+                    "@id": "_:b83"
+                }
+            ],
+            "dsv:specializes": {
+                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b56",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:property"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b57",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:property"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#PropertyProfile.profiledProperty",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Property"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
+            },
+            "dsv:property": {
+                "@id": "dsv:property"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": [
+                {
+                    "@id": "_:b56"
+                },
+                {
+                    "@id": "_:b57"
+                }
+            ],
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b58",
+            "dsv:reusedFromResource": {
+                "@id": "rdfs:isDefinedBy"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "https://w3id.org/dsv-dap#Term.isdefinedby",
+            "dsv:objectPropertyRange": {
+                "@id": "https://w3id.org/dsv-dap#Vocabulary"
+            },
+            "@type": [
+                "dsv:ObjectPropertyProfile",
+                "dsv:TermProfile"
+            ],
+            "dsv:domain": {
+                "@id": "https://w3id.org/dsv-dap#Term"
+            },
+            "dsv:property": {
+                "@id": "rdfs:isDefinedBy"
+            },
+            "dsv:cardinality": {
+                "@id": "cardinality:11"
+            },
+            "dsv:reusesPropertyValue": {
+                "@id": "_:b58"
+            },
+            "skos:prefLabel": {
+                "@language": "en",
+                "@value": "is defined by"
+            },
+            "dct:isPartOf": {
+                "@id": "https://w3id.org/dsv-dap#"
+            }
+        },
+        {
+            "@id": "_:b59",
+            "dsv:reusedFromResource": {
+                "@id": "owl:DatatypeProperty"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b60",
+            "dsv:reusedFromResource": {
+                "@id": "owl:DatatypeProperty"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b61",
+            "dsv:reusedFromResource": {
+                "@id": "owl:ObjectProperty"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b62",
+            "dsv:reusedFromResource": {
+                "@id": "owl:ObjectProperty"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b63",
+            "dsv:reusedFromResource": {
+                "@id": "prof:ResourceRole"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b64",
+            "dsv:reusedFromResource": {
+                "@id": "prof:ResourceRole"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b65",
+            "dsv:reusedFromResource": {
+                "@id": "prof:Profile"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b66",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:VocabularySpecificationDocument"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b67",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:VocabularySpecificationDocument"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b68",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:ApplicationProfileSpecificationDocument"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b69",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:ApplicationProfileSpecificationDocument"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b70",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:ApplicationProfile"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b71",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:ApplicationProfile"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b72",
             "dsv:reusedFromResource": {
                 "@id": "rdfs:Datatype"
             },
@@ -1156,7 +2675,7 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "_:b26",
+            "@id": "_:b73",
             "dsv:reusedFromResource": {
                 "@id": "rdfs:Datatype"
             },
@@ -1166,7 +2685,7 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "_:b27",
+            "@id": "_:b74",
             "dsv:reusedFromResource": {
                 "@id": "dsv:InvalidTermProfile"
             },
@@ -1188,7 +2707,7 @@
                 "dsv:TermProfile"
             ],
             "dsv:reusesPropertyValue": {
-                "@id": "_:b27"
+                "@id": "_:b74"
             },
             "dsv:specializes": {
                 "@id": "https://w3id.org/dsv-dap#TermProfile"
@@ -1208,1261 +2727,9 @@
             }
         },
         {
-            "@id": "https://w3id.org/dsv-dap#TermProfile",
-            "dsv:classRole": {
-                "@id": "role:main"
-            },
-            "dsv:class": {
-                "@id": "dsv:TermProfile"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b82"
-                },
-                {
-                    "@id": "_:b83"
-                }
-            ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#Term"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b28",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:subClassOf"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b29",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:subClassOf"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Class.subclassof",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Class"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "rdfs:subClassOf"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b28"
-                },
-                {
-                    "@id": "_:b29"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#Class"
-            }
-        },
-        {
-            "@id": "_:b30",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:Class"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b31",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:Class"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Term",
-            "dsv:classRole": {
-                "@id": "role:supportive"
-            },
-            "dsv:class": {
-                "@id": "rdfs:Resource"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b41"
-            },
-            "skos:scopeNote": {
-                "@language": "en",
-                "@value": "In the context of DSV, Term is used as a common denominator for Classes, Properties and their profiles."
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "Term"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b32",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:domain"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b33",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:domain"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Property.domain",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Class"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "rdfs:domain"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:01"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b32"
-                },
-                {
-                    "@id": "_:b33"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#Property"
-            }
-        },
-        {
-            "@id": "_:b34",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:subPropertyOf"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b35",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:subPropertyOf"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Property.subpropertyof",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Property"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "rdfs:subPropertyOf"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b34"
-                },
-                {
-                    "@id": "_:b35"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#Property"
-            }
-        },
-        {
-            "@id": "_:b36",
-            "dsv:reusedFromResource": {
-                "@id": "rdf:Property"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b37",
-            "dsv:reusedFromResource": {
-                "@id": "rdf:Property"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Term.definition",
-            "dsv:datatypePropertyRange": {
-                "@id": "rdf:langString"
-            },
-            "@type": [
-                "dsv:DatatypePropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "rdfs:comment"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "skos:definition": {
-                "@language": "en",
-                "@value": "A definition of the subject resource."
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "definition"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#Term"
-            }
-        },
-        {
-            "@id": "_:b38",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:label"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b39",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:label"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Term.label",
-            "dsv:datatypePropertyRange": {
-                "@id": "rdf:langString"
-            },
-            "@type": [
-                "dsv:DatatypePropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "rdfs:label"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:1n"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b38"
-                },
-                {
-                    "@id": "_:b39"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#Term"
-            }
-        },
-        {
-            "@id": "_:b40",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:isDefinedBy"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#Term.isdefinedby",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Vocabulary"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "rdfs:isDefinedBy"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b40"
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "is defined by"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#Term"
-            }
-        },
-        {
-            "@id": "_:b41",
-            "dsv:reusedFromResource": {
-                "@id": "rdfs:Resource"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b42",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:reusedProperty"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b43",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:reusedProperty"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#PropertyValueReuse.reusedProperty",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Property"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:reusedProperty"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b42"
-                },
-                {
-                    "@id": "_:b43"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#PropertyValueReuse"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#PropertyValueReuse",
-            "dsv:classRole": {
-                "@id": "role:main"
-            },
-            "dsv:class": {
-                "@id": "dsv:PropertyValueReuse"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b46"
-                },
-                {
-                    "@id": "_:b47"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b44",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:reusedFromResource"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b45",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:reusedFromResource"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#PropertyValueReuse.reusedFromResource",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Term"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:reusedFromResource"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b44"
-                },
-                {
-                    "@id": "_:b45"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#PropertyValueReuse"
-            }
-        },
-        {
-            "@id": "_:b46",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:PropertyValueReuse"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b47",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:PropertyValueReuse"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b48",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:datatype"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#DatatypePropertyProfile.datatype",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Datatype"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:datatype"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b48"
-            },
-            "skos:definition": {
-                "@language": "en",
-                "@value": "Datatype used with this Datatype property profile."
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#DatatypePropertyProfile"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#DatatypePropertyProfile",
-            "dsv:classRole": {
-                "@id": "role:main"
-            },
-            "dsv:class": {
-                "@id": "dsv:DatatypePropertyProfile"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b49"
-                },
-                {
-                    "@id": "_:b50"
-                }
-            ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b49",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:DatatypePropertyProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b50",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:DatatypePropertyProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#PropertyProfile",
-            "dsv:classRole": {
-                "@id": "role:main"
-            },
-            "dsv:class": {
-                "@id": "dsv:PropertyProfile"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b63"
-                },
-                {
-                    "@id": "_:b64"
-                }
-            ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b51",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:range"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b52",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:range"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ObjectPropertyProfile.range",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#ClassProfile"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:range"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b51"
-                },
-                {
-                    "@id": "_:b52"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#ObjectPropertyProfile"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ClassProfile",
-            "dsv:classRole": {
-                "@id": "role:main"
-            },
-            "dsv:class": {
-                "@id": "dsv:ClassProfile"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b69"
-                },
-                {
-                    "@id": "_:b70"
-                }
-            ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ObjectPropertyProfile",
-            "dsv:classRole": {
-                "@id": "role:main"
-            },
-            "dsv:class": {
-                "@id": "dsv:ObjectPropertyProfile"
-            },
-            "@type": [
-                "dsv:ClassProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b53"
-                },
-                {
-                    "@id": "_:b54"
-                }
-            ],
-            "dsv:specializes": {
-                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            }
-        },
-        {
-            "@id": "_:b53",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:ObjectPropertyProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b54",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:ObjectPropertyProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b55",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:requirementLevel"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b56",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:requirementLevel"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#PropertyProfile.requirementLevel",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#RequirementLevel"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:requirementLevel"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:01"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b55"
-                },
-                {
-                    "@id": "_:b56"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
-            }
-        },
-        {
-            "@id": "_:b57",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:cardinality"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b58",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:cardinality"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#PropertyProfile.cardinality",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Cardinality"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:cardinality"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:01"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b57"
-                },
-                {
-                    "@id": "_:b58"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
-            }
-        },
-        {
-            "@id": "_:b59",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:domain"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b60",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:domain"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#PropertyProfile.domain",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#ClassProfile"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:domain"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b59"
-                },
-                {
-                    "@id": "_:b60"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
-            }
-        },
-        {
-            "@id": "_:b61",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:property"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b62",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:property"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#PropertyProfile.profiledProperty",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Property"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:property"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b61"
-                },
-                {
-                    "@id": "_:b62"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#PropertyProfile"
-            }
-        },
-        {
-            "@id": "_:b63",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:PropertyProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b64",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:PropertyProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b65",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:classRole"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b66",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:classRole"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ClassProfile.classRole",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#ClassRole"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:classRole"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b65"
-                },
-                {
-                    "@id": "_:b66"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#ClassProfile"
-            }
-        },
-        {
-            "@id": "_:b67",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:class"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b68",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:class"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ClassProfile.profiledClass",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Class"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:class"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b67"
-                },
-                {
-                    "@id": "_:b68"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#ClassProfile"
-            }
-        },
-        {
-            "@id": "_:b69",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:ClassProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b70",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:ClassProfile"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#TermProfile.usageNote",
-            "dsv:datatypePropertyRange": {
-                "@id": "rdf:langString"
-            },
-            "@type": [
-                "dsv:DatatypePropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "skos:scopeNote"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "skos:definition": {
-                "@language": "en",
-                "@value": "Usage note of this profile."
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "usage note"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            }
-        },
-        {
-            "@id": "_:b71",
-            "dsv:reusedFromResource": {
-                "@id": "skos:definition"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#TermProfile.definition",
-            "dsv:datatypePropertyRange": {
-                "@id": "rdf:langString"
-            },
-            "@type": [
-                "dsv:DatatypePropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "skos:definition"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b71"
-            },
-            "skos:definition": {
-                "@language": "en",
-                "@value": "Definition of this profile."
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            }
-        },
-        {
-            "@id": "_:b72",
-            "dsv:reusedFromResource": {
-                "@id": "skos:prefLabel"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#TermProfile.preferredLabel",
-            "dsv:datatypePropertyRange": {
-                "@id": "rdf:langString"
-            },
-            "@type": [
-                "dsv:DatatypePropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "skos:prefLabel"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b72"
-            },
-            "skos:definition": {
-                "@language": "en",
-                "@value": "Preferred label of this profile."
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            }
-        },
-        {
-            "@id": "_:b73",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:externalDocumentation"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:definition"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "_:b74",
-            "dsv:reusedFromResource": {
-                "@id": "dsv:externalDocumentation"
-            },
-            "dsv:reusedProperty": {
-                "@id": "skos:prefLabel"
-            },
-            "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#TermProfile.externalDocumentation",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Term"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:externalDocumentation"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:01"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b73"
-                },
-                {
-                    "@id": "_:b74"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            }
-        },
-        {
             "@id": "_:b75",
             "dsv:reusedFromResource": {
-                "@id": "dsv:profileOf"
+                "@id": "rdfs:Class"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:definition"
@@ -2472,7 +2739,7 @@
         {
             "@id": "_:b76",
             "dsv:reusedFromResource": {
-                "@id": "dsv:profileOf"
+                "@id": "rdfs:Class"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:prefLabel"
@@ -2480,39 +2747,9 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "https://w3id.org/dsv-dap#TermProfile.profileOf",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:profileOf"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b75"
-                },
-                {
-                    "@id": "_:b76"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            }
-        },
-        {
             "@id": "_:b77",
             "dsv:reusedFromResource": {
-                "@id": "dsv:specializes"
+                "@id": "rdf:Property"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:definition"
@@ -2522,7 +2759,7 @@
         {
             "@id": "_:b78",
             "dsv:reusedFromResource": {
-                "@id": "dsv:specializes"
+                "@id": "rdf:Property"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:prefLabel"
@@ -2530,39 +2767,9 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "https://w3id.org/dsv-dap#TermProfile.specializes",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:specializes"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b77"
-                },
-                {
-                    "@id": "_:b78"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            }
-        },
-        {
             "@id": "_:b79",
             "dsv:reusedFromResource": {
-                "@id": "dct:isPartOf"
+                "@id": "rdfs:Resource"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:definition"
@@ -2570,38 +2777,9 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "https://w3id.org/dsv-dap#TermProfile.isPartOf",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#ApplicationProfile"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dct:isPartOf"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b79"
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "is part of"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            }
-        },
-        {
             "@id": "_:b80",
             "dsv:reusedFromResource": {
-                "@id": "dsv:reusesPropertyValue"
+                "@id": "dsv:PropertyValueReuse"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:definition"
@@ -2611,7 +2789,7 @@
         {
             "@id": "_:b81",
             "dsv:reusedFromResource": {
-                "@id": "dsv:reusesPropertyValue"
+                "@id": "dsv:PropertyValueReuse"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:prefLabel"
@@ -2619,39 +2797,9 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "https://w3id.org/dsv-dap#TermProfile.reusesPropertyValue",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#PropertyValueReuse"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dsv:reusesPropertyValue"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b80"
-                },
-                {
-                    "@id": "_:b81"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#TermProfile"
-            }
-        },
-        {
             "@id": "_:b82",
             "dsv:reusedFromResource": {
-                "@id": "dsv:TermProfile"
+                "@id": "dsv:DatatypePropertyProfile"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:definition"
@@ -2661,7 +2809,7 @@
         {
             "@id": "_:b83",
             "dsv:reusedFromResource": {
-                "@id": "dsv:TermProfile"
+                "@id": "dsv:DatatypePropertyProfile"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:prefLabel"
@@ -2671,85 +2819,27 @@
         {
             "@id": "_:b84",
             "dsv:reusedFromResource": {
-                "@id": "dct:conformsTo"
+                "@id": "dsv:ObjectPropertyProfile"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:definition"
             },
             "@type": "dsv:PropertyValueReuse"
-        },
-        {
-            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor.conformsTo",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#ApplicationProfile"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dct:conformsTo"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:0n"
-            },
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b84"
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "conforms To"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
-            }
         },
         {
             "@id": "_:b85",
             "dsv:reusedFromResource": {
-                "@id": "dct:format"
+                "@id": "dsv:ObjectPropertyProfile"
             },
             "dsv:reusedProperty": {
-                "@id": "skos:definition"
+                "@id": "skos:prefLabel"
             },
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor.format",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Format"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "dct:format"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:01"
-            },
-            "dsv:reusesPropertyValue": {
-                "@id": "_:b85"
-            },
-            "skos:prefLabel": {
-                "@language": "en",
-                "@value": "format"
-            },
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
-            }
-        },
-        {
             "@id": "_:b86",
             "dsv:reusedFromResource": {
-                "@id": "prof:hasRole"
+                "@id": "dsv:PropertyProfile"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:definition"
@@ -2759,7 +2849,7 @@
         {
             "@id": "_:b87",
             "dsv:reusedFromResource": {
-                "@id": "prof:hasRole"
+                "@id": "dsv:PropertyProfile"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:prefLabel"
@@ -2767,39 +2857,9 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor.hasRole",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#ResourceRole"
-            },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "prof:hasRole"
-            },
-            "dsv:cardinality": {
-                "@id": "cardinality:01"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b86"
-                },
-                {
-                    "@id": "_:b87"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
-            }
-        },
-        {
             "@id": "_:b88",
             "dsv:reusedFromResource": {
-                "@id": "prof:hasArtifact"
+                "@id": "dsv:ClassProfile"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:definition"
@@ -2809,7 +2869,7 @@
         {
             "@id": "_:b89",
             "dsv:reusedFromResource": {
-                "@id": "prof:hasArtifact"
+                "@id": "dsv:ClassProfile"
             },
             "dsv:reusedProperty": {
                 "@id": "skos:prefLabel"
@@ -2817,37 +2877,27 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "https://w3id.org/dsv-dap#ResourceDescriptor.hasArtifact",
-            "dsv:objectPropertyRange": {
-                "@id": "https://w3id.org/dsv-dap#Term"
+            "@id": "_:b90",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:TermProfile"
             },
-            "@type": [
-                "dsv:ObjectPropertyProfile",
-                "dsv:TermProfile"
-            ],
-            "dsv:property": {
-                "@id": "prof:hasArtifact"
+            "dsv:reusedProperty": {
+                "@id": "skos:definition"
             },
-            "dsv:cardinality": {
-                "@id": "cardinality:11"
-            },
-            "dsv:reusesPropertyValue": [
-                {
-                    "@id": "_:b88"
-                },
-                {
-                    "@id": "_:b89"
-                }
-            ],
-            "dct:isPartOf": {
-                "@id": "https://w3id.org/dsv-dap#"
-            },
-            "dsv:domain": {
-                "@id": "https://w3id.org/dsv-dap#ResourceDescriptor"
-            }
+            "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "_:b90",
+            "@id": "_:b91",
+            "dsv:reusedFromResource": {
+                "@id": "dsv:TermProfile"
+            },
+            "dsv:reusedProperty": {
+                "@id": "skos:prefLabel"
+            },
+            "@type": "dsv:PropertyValueReuse"
+        },
+        {
+            "@id": "_:b92",
             "dsv:reusedFromResource": {
                 "@id": "prof:ResourceDescriptor"
             },
@@ -2857,7 +2907,7 @@
             "@type": "dsv:PropertyValueReuse"
         },
         {
-            "@id": "_:b91",
+            "@id": "_:b93",
             "dsv:reusedFromResource": {
                 "@id": "prof:ResourceDescriptor"
             },
@@ -2891,7 +2941,6 @@
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "requirement": "https://w3id.org/dsv/requirement-level#",
         "prof": "http://www.w3.org/ns/dx/prof/",
         "cardinality": "https://w3id.org/dsv/cardinality#",
         "dct": "http://purl.org/dc/terms/",

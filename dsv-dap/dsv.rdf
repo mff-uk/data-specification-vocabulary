@@ -5,62 +5,18 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:dsv="https://w3id.org/dsv#"
     xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:requirement="https://w3id.org/dsv/requirement-level#"
     xmlns:cardinality="https://w3id.org/dsv/cardinality#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:bibo="http://purl.org/ontology/bibo/"
-    xmlns:cc="http://creativecommons.org/ns#"
     xmlns="https://w3id.org/dsv-dap#"
+    xmlns:cc="http://creativecommons.org/ns#"
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:prof="http://www.w3.org/ns/dx/prof/">
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#Term.definition">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
-    <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
-    <skos:definition xml:lang="en">A definition of the subject resource.</skos:definition>
-    <skos:prefLabel xml:lang="en">definition</skos:prefLabel>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf>
-      <prof:Profile rdf:about="https://w3id.org/dsv-dap#">
-        <foaf:depiction rdf:resource="https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/626cb.svg"/>
-        <foaf:depiction rdf:resource="https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg"/>
-        <foaf:depiction rdf:resource="https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/8dlkl.svg"/>
-        <dct:source rdf:resource="https://w3id.org/dsv-dap#"/>
-        <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
-        <vs:term_status>stable</vs:term_status>
-        <vann:preferredNamespaceUri>https://w3id.org/dsv-dap#</vann:preferredNamespaceUri>
-        <vann:preferredNamespacePrefix>dsv-dap</vann:preferredNamespacePrefix>
-        <rdf:type rdf:resource="https://w3id.org/dsv#ApplicationProfile"/>
-        <dct:title xml:lang="en">Data Specification Vocabulary - Default Application Profile</dct:title>
-        <dct:description xml:lang="en">Data Specification Vocabulary - Default Application Profile (DSV-DAP) is an application profile for describing semantic data specifications, namely vocabularies and application profiles.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-        >2024-10-01</dct:issued>
-        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-        >2024-10-01</dct:created>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-        >2025-05-14</dct:modified>
-        <owl:versionIRI rdf:resource="https://w3id.org/dsv-dap/1.0.0#"/>
-        <owl:versionInfo>1.0.0</owl:versionInfo>
-        <rdfs:comment xml:lang="en">See also DSV for a vocabulary supporting this application profile.</rdfs:comment>
-        <dct:bibliographicCitation xml:lang="en">Klímek, J., Stenchlák, Š., &amp; Škoda, P. (2025). Data Specification Vocabulary Default Application Profile (Version 1.0.0). https://w3id.org/dsv-dap#</dct:bibliographicCitation>
-        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dct:creator>
-          <foaf:Person rdf:about="http://www.wikidata.org/entity/Q57585169"/>
-        </dct:creator>
-        <dct:contributor>
-          <foaf:Person rdf:about="http://www.wikidata.org/entity/Q57232642"/>
-        </dct:contributor>
-        <dct:contributor>
-          <foaf:Person rdf:about="https://orcid.org/0000-0003-4843-2470"/>
-        </dct:contributor>
-        <dct:publisher>
-          <foaf:Organization rdf:about="http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University"/>
-        </dct:publisher>
-      </prof:Profile>
-    </dct:isPartOf>
     <dsv:domain>
       <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#Term">
         <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#supportive"/>
@@ -74,9 +30,52 @@
         <skos:scopeNote xml:lang="en">In the context of DSV, Term is used as a common denominator for Classes, Properties and their profiles.</skos:scopeNote>
         <skos:prefLabel xml:lang="en">Term</skos:prefLabel>
         <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
+        <dct:isPartOf>
+          <prof:Profile rdf:about="https://w3id.org/dsv-dap#">
+            <foaf:depiction rdf:resource="https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/626cb.svg"/>
+            <foaf:depiction rdf:resource="https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg"/>
+            <foaf:depiction rdf:resource="https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/8dlkl.svg"/>
+            <dct:source rdf:resource="https://w3id.org/dsv-dap#"/>
+            <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/published"/>
+            <vs:term_status>stable</vs:term_status>
+            <vann:preferredNamespaceUri>https://w3id.org/dsv-dap#</vann:preferredNamespaceUri>
+            <vann:preferredNamespacePrefix>dsv-dap</vann:preferredNamespacePrefix>
+            <rdf:type rdf:resource="https://w3id.org/dsv#ApplicationProfile"/>
+            <dct:title xml:lang="en">Data Specification Vocabulary - Default Application Profile</dct:title>
+            <dct:description xml:lang="en">Data Specification Vocabulary - Default Application Profile (DSV-DAP) is an application profile for describing semantic data specifications, namely vocabularies and application profiles.</dct:description>
+            <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >2024-10-01</dct:issued>
+            <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >2024-10-01</dct:created>
+            <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >2026-01-09</dct:modified>
+            <owl:versionIRI rdf:resource="https://w3id.org/dsv-dap/1.0.1#"/>
+            <owl:versionInfo>1.0.1</owl:versionInfo>
+            <rdfs:comment xml:lang="en">See also DSV for a vocabulary supporting this application profile.</rdfs:comment>
+            <dct:bibliographicCitation xml:lang="en">Klímek, J., Stenchlák, Š., &amp; Škoda, P. (2026). Data Specification Vocabulary Default Application Profile (Version 1.0.1). https://w3id.org/dsv-dap#</dct:bibliographicCitation>
+            <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+            <dct:creator>
+              <foaf:Person rdf:about="http://www.wikidata.org/entity/Q57585169"/>
+            </dct:creator>
+            <dct:contributor>
+              <foaf:Person rdf:about="http://www.wikidata.org/entity/Q57232642"/>
+            </dct:contributor>
+            <dct:contributor>
+              <foaf:Person rdf:about="https://orcid.org/0000-0003-4843-2470"/>
+            </dct:contributor>
+            <dct:publisher>
+              <foaf:Organization rdf:about="http://dbpedia.org/resource/Faculty_of_Mathematics_and_Physics,_Charles_University"/>
+            </dct:publisher>
+          </prof:Profile>
+        </dct:isPartOf>
       </dsv:ClassProfile>
     </dsv:domain>
+    <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
+    <skos:definition xml:lang="en">A definition of the subject resource.</skos:definition>
+    <skos:prefLabel xml:lang="en">definition</skos:prefLabel>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
   </dsv:DatatypePropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#Objectproperty.range">
     <dsv:objectPropertyRange>
@@ -101,22 +100,6 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
-    <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
     <dsv:domain>
       <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#ObjectProperty">
         <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
@@ -158,6 +141,22 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:domain>
+    <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#Datatypeproperty.range">
     <dsv:objectPropertyRange>
@@ -180,22 +179,6 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
-    <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
     <dsv:domain>
       <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#DatatypeProperty">
         <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
@@ -217,6 +200,22 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:domain>
+    <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#TermProfile.reusesPropertyValue">
     <dsv:objectPropertyRange>
@@ -239,22 +238,6 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
-    <dsv:property rdf:resource="https://w3id.org/dsv#reusesPropertyValue"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#reusesPropertyValue"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#reusesPropertyValue"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
     <dsv:domain>
       <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#TermProfile">
         <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
@@ -276,15 +259,45 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:domain>
+    <dsv:property rdf:resource="https://w3id.org/dsv#reusesPropertyValue"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#reusesPropertyValue"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#reusesPropertyValue"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
+  </dsv:ObjectPropertyProfile>
+  <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#PropertyValueReuse.reusedAsProperty">
+    <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Property"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyValueReuse"/>
+    <dsv:property rdf:resource="https://w3id.org/dsv#reusedAsProperty"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#reusedAsProperty"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#reusedAsProperty"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
   </dsv:ObjectPropertyProfile>
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#DataSpecificationDocument.description">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
-    <dsv:property rdf:resource="http://purl.org/dc/terms/description"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
-    <skos:definition xml:lang="en">An account of the Data Specification Document.</skos:definition>
-    <skos:prefLabel xml:lang="en">description</skos:prefLabel>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
     <dsv:domain>
       <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#DataSpecificationDocument">
         <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
@@ -295,25 +308,15 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:domain>
+    <dsv:property rdf:resource="http://purl.org/dc/terms/description"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
+    <skos:definition xml:lang="en">An account of the Data Specification Document.</skos:definition>
+    <skos:prefLabel xml:lang="en">description</skos:prefLabel>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
   </dsv:DatatypePropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#PropertyProfile.profiledProperty">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Property"/>
-    <dsv:property rdf:resource="https://w3id.org/dsv#property"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#property"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#property"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
     <dsv:domain>
       <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#PropertyProfile">
         <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
@@ -335,6 +338,22 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:domain>
+    <dsv:property rdf:resource="https://w3id.org/dsv#property"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#property"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#property"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#ObjectPropertyProfile.range">
     <dsv:objectPropertyRange>
@@ -358,22 +377,6 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
-    <dsv:property rdf:resource="https://w3id.org/dsv#range"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#range"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#range"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
     <dsv:domain>
       <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#ObjectPropertyProfile">
         <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
@@ -395,26 +398,22 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:domain>
-  </dsv:ObjectPropertyProfile>
-  <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#TermProfile.externalDocumentation">
-    <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Term"/>
-    <dsv:property rdf:resource="https://w3id.org/dsv#externalDocumentation"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
+    <dsv:property rdf:resource="https://w3id.org/dsv#range"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
     <dsv:reusesPropertyValue>
       <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#externalDocumentation"/>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#range"/>
         <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
       </dsv:PropertyValueReuse>
     </dsv:reusesPropertyValue>
     <dsv:reusesPropertyValue>
       <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#externalDocumentation"/>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#range"/>
         <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
       </dsv:PropertyValueReuse>
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#ResourceDescriptor.conformsTo">
     <dsv:objectPropertyRange>
@@ -453,17 +452,6 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
-    <dsv:property rdf:resource="http://purl.org/dc/terms/conformsTo"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="http://purl.org/dc/terms/conformsTo"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <skos:prefLabel xml:lang="en">conforms To</skos:prefLabel>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
     <dsv:domain>
       <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#ResourceDescriptor">
         <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#supportive"/>
@@ -485,6 +473,37 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:domain>
+    <dsv:property rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <skos:prefLabel xml:lang="en">conforms To</skos:prefLabel>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
+  </dsv:ObjectPropertyProfile>
+  <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#TermProfile.externalDocumentation">
+    <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Term"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
+    <dsv:property rdf:resource="https://w3id.org/dsv#externalDocumentation"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#externalDocumentation"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#externalDocumentation"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#Vocabulary.hasSpecification">
     <dsv:objectPropertyRange>
@@ -511,6 +530,18 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
+    <dsv:domain>
+      <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#Vocabulary">
+        <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
+        <dsv:class rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+        <dsv:class rdf:resource="http://www.w3.org/ns/dx/prof/Profile"/>
+        <dsv:specializes rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
+        <skos:definition xml:lang="en">Vocabulary contains definitions of classes, properties and their relations, possibly to classes and properties from other vocabularies.</skos:definition>
+        <skos:prefLabel xml:lang="en">Vocabulary</skos:prefLabel>
+        <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+        <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
+      </dsv:ClassProfile>
+    </dsv:domain>
     <dsv:property rdf:resource="http://www.w3.org/ns/dx/prof/hasResource"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#1n"/>
     <dsv:reusesPropertyValue>
@@ -522,6 +553,7 @@
     <dsv:specializes>
       <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#SemanticDataSpecification.hasResource">
         <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#ResourceDescriptor"/>
+        <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
         <dsv:property rdf:resource="http://www.w3.org/ns/dx/prof/hasResource"/>
         <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
         <dsv:reusesPropertyValue>
@@ -538,27 +570,15 @@
         </dsv:reusesPropertyValue>
         <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-        <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
       </dsv:ObjectPropertyProfile>
     </dsv:specializes>
     <skos:prefLabel xml:lang="en">has specification</skos:prefLabel>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain>
-      <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#Vocabulary">
-        <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
-        <dsv:class rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-        <dsv:class rdf:resource="http://www.w3.org/ns/dx/prof/Profile"/>
-        <dsv:specializes rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
-        <skos:definition xml:lang="en">Vocabulary contains definitions of classes, properties and their relations, possibly to classes and properties from other vocabularies.</skos:definition>
-        <skos:prefLabel xml:lang="en">Vocabulary</skos:prefLabel>
-        <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-        <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-      </dsv:ClassProfile>
-    </dsv:domain>
   </dsv:ObjectPropertyProfile>
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#TermProfile.definition">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
     <dsv:property rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <dsv:reusesPropertyValue>
@@ -570,7 +590,6 @@
     <skos:definition xml:lang="en">Definition of this profile.</skos:definition>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
   </dsv:DatatypePropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#ApplicationProfile.hasSpecification">
     <dsv:objectPropertyRange>
@@ -597,6 +616,7 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ApplicationProfile"/>
     <dsv:property rdf:resource="http://www.w3.org/ns/dx/prof/hasResource"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#1n"/>
     <dsv:reusesPropertyValue>
@@ -609,7 +629,6 @@
     <skos:prefLabel xml:lang="en">has specification</skos:prefLabel>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ApplicationProfile"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#ResourceDescriptor.hasRole">
     <dsv:objectPropertyRange>
@@ -632,6 +651,7 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ResourceDescriptor"/>
     <dsv:property rdf:resource="http://www.w3.org/ns/dx/prof/hasRole"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
     <dsv:reusesPropertyValue>
@@ -648,25 +668,10 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ResourceDescriptor"/>
   </dsv:ObjectPropertyProfile>
-  <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#InvalidTermProfile">
-    <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
-    <dsv:class rdf:resource="https://w3id.org/dsv#InvalidTermProfile"/>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#InvalidTermProfile"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <dsv:specializes rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
-    <skos:prefLabel xml:lang="en">Invalid Term Profile</skos:prefLabel>
-    <skos:prefLabel xml:lang="cs">Nevalidní profil</skos:prefLabel>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-  </dsv:ClassProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#TermProfile.specializes">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
     <dsv:property rdf:resource="https://w3id.org/dsv#specializes"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <dsv:reusesPropertyValue>
@@ -683,10 +688,25 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
   </dsv:ObjectPropertyProfile>
+  <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#InvalidTermProfile">
+    <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
+    <dsv:class rdf:resource="https://w3id.org/dsv#InvalidTermProfile"/>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#InvalidTermProfile"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <dsv:specializes rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
+    <skos:prefLabel xml:lang="en">Invalid Term Profile</skos:prefLabel>
+    <skos:prefLabel xml:lang="cs">Nevalidní profil</skos:prefLabel>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
+  </dsv:ClassProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#PropertyValueReuse.reusedProperty">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Property"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyValueReuse"/>
     <dsv:property rdf:resource="https://w3id.org/dsv#reusedProperty"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
     <dsv:reusesPropertyValue>
@@ -703,10 +723,10 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyValueReuse"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#ApplicationProfile.isProfileOf">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
     <dsv:property rdf:resource="http://www.w3.org/ns/dx/prof/isProfileOf"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <dsv:reusesPropertyValue>
@@ -723,20 +743,20 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
   </dsv:ObjectPropertyProfile>
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#SemanticDataSpecification.title">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
     <dsv:property rdf:resource="http://purl.org/dc/terms/title"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#1n"/>
     <skos:definition xml:lang="en">A name given to the Semantic Data Specification.</skos:definition>
     <skos:prefLabel xml:lang="en">title</skos:prefLabel>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
   </dsv:DatatypePropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#PropertyValueReuse.reusedFromResource">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Term"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyValueReuse"/>
     <dsv:property rdf:resource="https://w3id.org/dsv#reusedFromResource"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
     <dsv:reusesPropertyValue>
@@ -753,10 +773,10 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyValueReuse"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#Class.subclassof">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Class"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Class"/>
     <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <dsv:reusesPropertyValue>
@@ -773,10 +793,10 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Class"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#Property.domain">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Class"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Property"/>
     <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
     <dsv:reusesPropertyValue>
@@ -793,7 +813,6 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Property"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#PropertyProfile.requirementLevel">
     <dsv:objectPropertyRange>
@@ -806,6 +825,7 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyProfile"/>
     <dsv:property rdf:resource="https://w3id.org/dsv#requirementLevel"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
     <dsv:reusesPropertyValue>
@@ -822,7 +842,6 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyProfile"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#ClassProfile.classRole">
     <dsv:objectPropertyRange>
@@ -835,6 +854,7 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ClassProfile"/>
     <dsv:property rdf:resource="https://w3id.org/dsv#classRole"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <dsv:reusesPropertyValue>
@@ -851,10 +871,10 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ClassProfile"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#PropertyProfile.domain">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#ClassProfile"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyProfile"/>
     <dsv:property rdf:resource="https://w3id.org/dsv#domain"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
     <dsv:reusesPropertyValue>
@@ -871,10 +891,10 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyProfile"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#Property.subpropertyof">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Property"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Property"/>
     <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <dsv:reusesPropertyValue>
@@ -891,7 +911,6 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Property"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#ResourceDescriptor.format">
     <dsv:objectPropertyRange>
@@ -905,6 +924,7 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ResourceDescriptor"/>
     <dsv:property rdf:resource="http://purl.org/dc/terms/format"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
     <dsv:reusesPropertyValue>
@@ -916,21 +936,9 @@
     <skos:prefLabel xml:lang="en">format</skos:prefLabel>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ResourceDescriptor"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#DatatypePropertyProfile.datatype">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Datatype"/>
-    <dsv:property rdf:resource="https://w3id.org/dsv#datatype"/>
-    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
-    <dsv:reusesPropertyValue>
-      <dsv:PropertyValueReuse>
-        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#datatype"/>
-        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-      </dsv:PropertyValueReuse>
-    </dsv:reusesPropertyValue>
-    <skos:definition xml:lang="en">Datatype used with this Datatype property profile.</skos:definition>
-    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
-    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
     <dsv:domain>
       <dsv:ClassProfile rdf:about="https://w3id.org/dsv-dap#DatatypePropertyProfile">
         <dsv:classRole rdf:resource="https://w3id.org/dsv/class-role#main"/>
@@ -952,9 +960,21 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:domain>
+    <dsv:property rdf:resource="https://w3id.org/dsv#datatype"/>
+    <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
+    <dsv:reusesPropertyValue>
+      <dsv:PropertyValueReuse>
+        <dsv:reusedFromResource rdf:resource="https://w3id.org/dsv#datatype"/>
+        <dsv:reusedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+      </dsv:PropertyValueReuse>
+    </dsv:reusesPropertyValue>
+    <skos:definition xml:lang="en">Datatype used with this Datatype property profile.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
+    <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#Term.isdefinedby">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Vocabulary"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Term"/>
     <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
     <dsv:reusesPropertyValue>
@@ -966,10 +986,10 @@
     <skos:prefLabel xml:lang="en">is defined by</skos:prefLabel>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Term"/>
   </dsv:ObjectPropertyProfile>
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#SemanticDataSpecification.hasToken">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
     <dsv:property rdf:resource="http://www.w3.org/ns/dx/prof/hasToken"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
     <dsv:reusesPropertyValue>
@@ -987,17 +1007,16 @@
     <skos:scopeNote xml:lang="en">Used to store the preferred prefix, e.g., registered at prefix.cc.</skos:scopeNote>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
   </dsv:DatatypePropertyProfile>
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#SemanticDataSpecification.description">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
     <dsv:property rdf:resource="http://purl.org/dc/terms/description"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <skos:definition xml:lang="en">An account of the Semantic Data Specification.</skos:definition>
     <skos:prefLabel xml:lang="en">description</skos:prefLabel>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#SemanticDataSpecification"/>
   </dsv:DatatypePropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#PropertyProfile.cardinality">
     <dsv:objectPropertyRange>
@@ -1010,6 +1029,7 @@
         <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
       </dsv:ClassProfile>
     </dsv:objectPropertyRange>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyProfile"/>
     <dsv:property rdf:resource="https://w3id.org/dsv#cardinality"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#01"/>
     <dsv:reusesPropertyValue>
@@ -1026,20 +1046,20 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#PropertyProfile"/>
   </dsv:ObjectPropertyProfile>
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#DataSpecificationDocument.title">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#DataSpecificationDocument"/>
     <dsv:property rdf:resource="http://purl.org/dc/terms/title"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#1n"/>
     <skos:definition xml:lang="en">A name given to the Data Specification Document.</skos:definition>
     <skos:prefLabel xml:lang="en">title</skos:prefLabel>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#DataSpecificationDocument"/>
   </dsv:DatatypePropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#ClassProfile.profiledClass">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Class"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ClassProfile"/>
     <dsv:property rdf:resource="https://w3id.org/dsv#class"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
     <dsv:reusesPropertyValue>
@@ -1056,20 +1076,20 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ClassProfile"/>
   </dsv:ObjectPropertyProfile>
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#TermProfile.usageNote">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
     <dsv:property rdf:resource="http://www.w3.org/2004/02/skos/core#scopeNote"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <skos:definition xml:lang="en">Usage note of this profile.</skos:definition>
     <skos:prefLabel xml:lang="en">usage note</skos:prefLabel>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
   </dsv:DatatypePropertyProfile>
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#Term.label">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Term"/>
     <dsv:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#1n"/>
     <dsv:reusesPropertyValue>
@@ -1086,10 +1106,10 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#Term"/>
   </dsv:DatatypePropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#ResourceDescriptor.hasArtifact">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#Term"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ResourceDescriptor"/>
     <dsv:property rdf:resource="http://www.w3.org/ns/dx/prof/hasArtifact"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
     <dsv:reusesPropertyValue>
@@ -1106,10 +1126,10 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#ResourceDescriptor"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#TermProfile.isPartOf">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#ApplicationProfile"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
     <dsv:property rdf:resource="http://purl.org/dc/terms/isPartOf"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#11"/>
     <dsv:reusesPropertyValue>
@@ -1121,10 +1141,10 @@
     <skos:prefLabel xml:lang="en">is part of</skos:prefLabel>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
   </dsv:ObjectPropertyProfile>
   <dsv:ObjectPropertyProfile rdf:about="https://w3id.org/dsv-dap#TermProfile.profileOf">
     <dsv:objectPropertyRange rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
     <dsv:property rdf:resource="https://w3id.org/dsv#profileOf"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <dsv:reusesPropertyValue>
@@ -1141,10 +1161,10 @@
     </dsv:reusesPropertyValue>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
   </dsv:ObjectPropertyProfile>
   <dsv:DatatypePropertyProfile rdf:about="https://w3id.org/dsv-dap#TermProfile.preferredLabel">
     <dsv:datatypePropertyRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
     <dsv:property rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
     <dsv:cardinality rdf:resource="https://w3id.org/dsv/cardinality#0n"/>
     <dsv:reusesPropertyValue>
@@ -1156,6 +1176,5 @@
     <skos:definition xml:lang="en">Preferred label of this profile.</skos:definition>
     <rdf:type rdf:resource="https://w3id.org/dsv#TermProfile"/>
     <dct:isPartOf rdf:resource="https://w3id.org/dsv-dap#"/>
-    <dsv:domain rdf:resource="https://w3id.org/dsv-dap#TermProfile"/>
   </dsv:DatatypePropertyProfile>
 </rdf:RDF>
