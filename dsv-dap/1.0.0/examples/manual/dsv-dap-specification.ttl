@@ -1,0 +1,61 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dsv: <https://w3id.org/dsv#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix file-type: <http://publications.europa.eu/resource/authority/file-type/> .
+
+<http://w3id.org/dsv-dap#> a dsv:ApplicationProfile, prof:Profile ;
+    prof:hasResource <http://w3id.org/dsv-dap/> , # Specification document
+                     <http://w3id.org/dsv-dap/#spec>, # Specification file
+                     <http://w3id.org/dsv-dap/#dsv>, # DSV file
+                     <http://w3id.org/dsv-dap/#shacl> , # SHACL file
+                     <http://w3id.org/dsv-dap/#80bb66a5-4182-4250-90c2-90b7f0b05a7b> , # Image 1
+                     <http://w3id.org/dsv-dap/#626cb> ; # Image 2
+    prof:isProfileOf <https://w3id.org/dsv#>, <http://www.w3.org/ns/adms#>  ; # Profile of DSV and ADMS vocabularies
+    prof:hasToken "dsv-dap"^^xsd:token .
+
+                     
+<http://w3id.org/dsv-dap/> a dsv:ApplicationProfileSpecificationDocument, prof:ResourceDescriptor ;
+    dcterms:title "Data Specification Vocabulary - Default Application Profile"@en;
+    prof:hasArtifact <http://w3id.org/dsv-dap/> ;
+    prof:hasRole role:Guidance ;
+    dcterms:format file-type:HTML .
+
+<http://w3id.org/dsv-dap/#spec> a prof:ResourceDescriptor ; # DSV Specification file
+    dcterms:title "DSV Specification file"@en;
+    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/spec.ttl> ; # Downloadable file
+    prof:hasRole role:Specification ;
+    dcterms:format file-type:RDF_TURTLE ;
+    dcterms:conformsTo <https://w3id.org/dsv-dap#> .
+
+<http://w3id.org/dsv-dap/#dsv> a prof:ResourceDescriptor ; # Application profile specification
+    dcterms:title "DSV AP file"@en;
+    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/dsv.ttl> ; # Downloadable file
+    prof:hasRole role:Specification ;
+    dcterms:format file-type:RDF_TURTLE ;
+    dcterms:conformsTo <https://w3id.org/dsv-dap#> .
+
+<http://w3id.org/dsv-dap/#shacl> a prof:ResourceDescriptor ; # SHACL specification
+    dcterms:title "SHACL file"@en;
+    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/shacl.ttl> ; # Downloadable file
+    prof:hasRole role:Schema ;
+    dcterms:format file-type:RDF_TURTLE ;
+    dcterms:conformsTo <http://www.w3.org/ns/shacl#> . # SHACL
+
+<http://w3id.org/dsv-dap/#80bb66a5-4182-4250-90c2-90b7f0b05a7b> a prof:ResourceDescriptor ; # Image 1
+    dcterms:title "Image 1"@en;
+    prof:hasArtifact <https://mff-uk.github.io/data-specification-vocabulary/dsv-dap/80bb66a5-4182-4250-90c2-90b7f0b05a7b.svg> ; # Downloadable file
+    prof:hasRole role:Guidance ;
+    dcterms:format file-type:SVG ;
+    dcterms:conformsTo <https://www.w3.org/TR/SVG/> . # SVG
+
+<https://w3id.org/dsv#> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+                      prof:hasArtifact <https://w3id.org/dsv#> ] ; # same - ideal case
+    prof:hasToken "dsv"^^xsd:token .
+
+<http://www.w3.org/ns/adms#> a prof:Profile ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+                      prof:hasArtifact <https://www.w3.org/ns/legacy_adms> ] ; # different due to owner change
+    prof:hasToken "adms"^^xsd:token .
