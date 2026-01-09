@@ -16,11 +16,11 @@
     dct:description "Data Specification Vocabulary (DSV) is a vocabulary for describing semantic data specifications, namely vocabularies and application profiles."@en ;
     dct:issued "2024-10-01"^^xsd:date ;
     dct:created "2024-10-01"^^xsd:date ;
-    dct:modified "2025-05-14"^^xsd:date ;
-    owl:versionIRI <https://w3id.org/dsv/1.0.0#> ;
-    owl:versionInfo "1.0.0" ;
+    dct:modified "2026-01-09"^^xsd:date ;
+    owl:versionIRI <https://w3id.org/dsv/1.0.1#> ;
+    owl:versionInfo "1.0.1" ;
     rdfs:comment "See also DSV Default Application Profile for a more complete information on how to use this vocabulary."@en ;
-    dct:bibliographicCitation "Klímek, J., Stenchlák, Š., & Škoda, P. (2025). Data Specification Vocabulary (Version 1.0.0). https://w3id.org/dsv#"@en ;
+    dct:bibliographicCitation "Klímek, J., Stenchlák, Š., & Škoda, P. (2026). Data Specification Vocabulary (Version 1.0.1). https://w3id.org/dsv#"@en ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
     dct:creator <http://www.wikidata.org/entity/Q57585169> ;
     dct:contributor <http://www.wikidata.org/entity/Q57232642>, <https://orcid.org/0000-0003-4843-2470> ;
@@ -53,6 +53,12 @@
 :reusedProperty a rdf:Property, owl:ObjectProperty;
     rdfs:label "reused property"@en;
     rdfs:comment "The Property from which a value is reused."@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv#>;
+    rdfs:domain :PropertyValueReuse;
+    rdfs:range rdf:Property.
+:reusedAsProperty a rdf:Property, owl:ObjectProperty;
+    rdfs:label "reused as property"@en;
+    rdfs:comment "The Property to gain the reused value."@en;
     rdfs:isDefinedBy <https://w3id.org/dsv#>;
     rdfs:domain :PropertyValueReuse;
     rdfs:range rdf:Property.

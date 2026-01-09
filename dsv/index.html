@@ -15,7 +15,7 @@
         "prof:ResourceDescriptor"
       ],
       "hasArtifact": ".",
-      "hasRole": "role:Guidance",
+      "hasRole": "role:specification",
       "format": "filetype:HTML",
       "inSpecificationOf": [
         {
@@ -32,34 +32,52 @@
           },
           "isProfileOf": [
             {
-              "hasArtifact": [
-                "https://www.w3.org/TR/dx-prof/rdf/prof.ttl"
-              ]
+              "title": {
+                "en": "prof"
+              },
+              "hasResource": {
+                "hasArtifact": "https://www.w3.org/TR/dx-prof/rdf/prof.ttl"
+              }
             },
             {
-              "hasArtifact": [
-                "https://datagov-cz.github.io/cache-slovniku/rdfs.ttl"
-              ]
+              "title": {
+                "en": "rdfs"
+              },
+              "hasResource": {
+                "hasArtifact": "https://datagov-cz.github.io/cache-slovniku/rdfs.ttl"
+              }
             },
             {
-              "hasArtifact": [
-                "https://datagov-cz.github.io/cache-slovniku/rdf.ttl"
-              ]
+              "title": {
+                "en": "rdf"
+              },
+              "hasResource": {
+                "hasArtifact": "https://datagov-cz.github.io/cache-slovniku/rdf.ttl"
+              }
             },
             {
-              "hasArtifact": [
-                "https://www.w3.org/2002/07/owl#"
-              ]
+              "title": {
+                "en": "owl"
+              },
+              "hasResource": {
+                "hasArtifact": "https://www.w3.org/2002/07/owl#"
+              }
             },
             {
-              "hasArtifact": [
-                "https://datagov-cz.github.io/cache-slovniku/dublin_core_terms.ttl"
-              ]
+              "title": {
+                "en": "dcterms"
+              },
+              "hasResource": {
+                "hasArtifact": "https://datagov-cz.github.io/cache-slovniku/dublin_core_terms.ttl"
+              }
             },
             {
-              "hasArtifact": [
-                "https://datagov-cz.github.io/cache-slovniku/skos.rdf"
-              ]
+              "title": {
+                "en": "skos"
+              },
+              "hasResource": {
+                "hasArtifact": "https://datagov-cz.github.io/cache-slovniku/skos.rdf"
+              }
             }
           ],
           "hasResource": [
@@ -70,7 +88,7 @@
                 "prof:ResourceDescriptor"
               ],
               "hasArtifact": "./model.owl.ttl",
-              "hasRole": "role:Vocabulary",
+              "hasRole": "role:vocabulary",
               "format": "filetype:RDF_TURTLE",
               "conformsTo": [
                 "http://www.w3.org/2000/01/rdf-schema#",
@@ -84,7 +102,7 @@
                 "prof:ResourceDescriptor"
               ],
               "hasArtifact": "./c5d2ee2e-32c6-4c12-abb3-b80410162920.svg",
-              "hasRole": "role:Guidance",
+              "hasRole": "role:guidance",
               "format": "filetype:SVG",
               "conformsTo": "https://www.w3.org/TR/SVG/"
             },
@@ -96,7 +114,7 @@
                 "prof:ResourceDescriptor"
               ],
               "hasArtifact": ".",
-              "hasRole": "role:Guidance",
+              "hasRole": "role:specification",
               "format": "filetype:HTML"
             }
           ]
@@ -161,8 +179,13 @@
                 },
                 "hasResource": {
                   "@id": "prof:hasResource",
-                  "@type": "@id",
-                  "@container": "@set"
+                  "@container": "@set",
+                  "@context": {
+                    "hasArtifact": {
+                      "@id": "prof:hasArtifact",
+                      "@type": "@id"
+                    }
+                  }
                 }
               }
             },
@@ -825,6 +848,39 @@
                   <td>Range</td>
                   <td>
                     <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            
+                    
+                  </td>
+                  </tr>
+              </table>
+            </section>            <section id="reusedAsProperty">
+              <h4>reused as property</h4>
+            
+              <table class="def">
+                <tr>
+                  <td>IRI</td>
+                  <td><a href="https://w3id.org/dsv#reusedAsProperty">dsv:reusedAsProperty</a></td>
+                </tr>
+                <tr>
+                  <td>Label</td>
+                  <td>reused as property</td>
+                </tr>
+                <tr>
+                  <td>Definition</td>
+                  <td>The Property to gain the reused value.</td>
+                </tr>
+                <tr>
+                  <td>Domain</td>
+                  <td>
+                    <a href="#PropertyValueReuse">Property Value Reuse</a>
+            
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>Range</td>
+                  <td>
+                    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">Property</a>
             
                     
                   </td>
