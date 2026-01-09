@@ -27,9 +27,6 @@
           "title": "Hodnota v jiném jazyce",
           "type": "string"
         },
-        "required": [
-
-        ],
         "properties": {
           "cs": {
             "title": "Hodnota v českém jazyce",
@@ -53,9 +50,6 @@
           "title": "Hodnota v jiném jazyce",
           "type": "string"
         },
-        "required": [
-
-        ],
         "properties": {
           "cs": {
             "title": "Hodnota v českém jazyce",
@@ -120,9 +114,6 @@
               "title": "Hodnota v jiném jazyce",
               "type": "string"
             },
-            "required": [
-
-            ],
             "properties": {
               "cs": {
                 "title": "Hodnota v českém jazyce",
@@ -146,9 +137,6 @@
               "title": "Hodnota v jiném jazyce",
               "type": "string"
             },
-            "required": [
-
-            ],
             "properties": {
               "cs": {
                 "title": "Hodnota v českém jazyce",
@@ -195,9 +183,6 @@
                     "title": "Hodnota v jiném jazyce",
                     "type": "string"
                   },
-                  "required": [
-
-                  ],
                   "properties": {
                     "cs": {
                       "title": "Hodnota v českém jazyce",
