@@ -7,6 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix vann: <http://purl.org/vocab/vann/>.
 @prefix cardinality: <https://w3id.org/dsv/cardinality#>.
+@prefix requirement: <https://w3id.org/dsv/requirement-level#>.
 @prefix role: <https://w3id.org/dsv/class-role#>.
 @prefix prof: <http://www.w3.org/ns/dx/prof/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -21,7 +22,7 @@
     dct:description "Data Specification Vocabulary - Default Application Profile (DSV-DAP) is an application profile for describing semantic data specifications, namely vocabularies and application profiles."@en ;
     dct:issued "2024-10-01"^^xsd:date ;
     dct:created "2024-10-01"^^xsd:date ;
-    dct:modified "2026-01-09"^^xsd:date ;
+    dct:modified "2026-04-02"^^xsd:date ;
     owl:versionIRI <https://w3id.org/dsv-dap/1.0.1#> ;
     owl:versionInfo "1.0.1" ;
     rdfs:comment "See also DSV for a vocabulary supporting this application profile."@en ;
@@ -48,11 +49,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource prof:ResourceDescriptor
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:ResourceDescriptor
 ];
     a dsv:ClassProfile;
@@ -63,11 +66,13 @@
     dsv:specializes :Term;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:TermProfile
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:TermProfile
 ];
     a dsv:ClassProfile;
@@ -78,11 +83,13 @@
     dsv:specializes :TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:ClassProfile
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:ClassProfile
 ];
     a dsv:ClassProfile;
@@ -93,11 +100,13 @@
     dsv:specializes :TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:PropertyProfile
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:PropertyProfile
 ];
     a dsv:ClassProfile;
@@ -108,11 +117,13 @@
     dsv:specializes :PropertyProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:ObjectPropertyProfile
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:ObjectPropertyProfile
 ];
     a dsv:ClassProfile;
@@ -123,11 +134,13 @@
     dsv:specializes :PropertyProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:DatatypePropertyProfile
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:DatatypePropertyProfile
 ];
     a dsv:ClassProfile;
@@ -137,11 +150,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:PropertyValueReuse
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:PropertyValueReuse
 ];
     a dsv:ClassProfile;
@@ -153,7 +168,8 @@
     skos:scopeNote "In the context of DSV, Term is used as a common denominator for Classes, Properties and their profiles."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:Resource
 ];
     a dsv:ClassProfile;
@@ -164,11 +180,13 @@
     dsv:specializes :Term;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource rdf:Property
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdf:Property
 ];
     a dsv:ClassProfile;
@@ -179,11 +197,13 @@
     dsv:specializes :Term;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource rdfs:Class
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:Class
 ];
     a dsv:ClassProfile;
@@ -195,7 +215,8 @@
     dsv:specializes :TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:InvalidTermProfile
 ];
     a dsv:ClassProfile;
@@ -205,11 +226,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource rdfs:Datatype
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:Datatype
 ];
     a dsv:ClassProfile;
@@ -228,11 +251,13 @@
     dsv:specializes :SemanticDataSpecification;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:ApplicationProfile
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:ApplicationProfile
 ];
     a dsv:ClassProfile;
@@ -243,11 +268,13 @@
     dsv:specializes :ResourceDescriptor, :DataSpecificationDocument;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:ApplicationProfileSpecificationDocument
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:ApplicationProfileSpecificationDocument
 ];
     a dsv:ClassProfile;
@@ -258,11 +285,13 @@
     dsv:specializes :ResourceDescriptor, :DataSpecificationDocument;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:VocabularySpecificationDocument
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:VocabularySpecificationDocument
 ];
     a dsv:ClassProfile;
@@ -281,6 +310,7 @@
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:Profile
 ];
     a dsv:ClassProfile;
@@ -290,11 +320,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource prof:ResourceRole
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:ResourceRole
 ];
     a dsv:ClassProfile;
@@ -334,11 +366,13 @@
     dsv:specializes :Property;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource owl:ObjectProperty
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource owl:ObjectProperty
 ];
     a dsv:ClassProfile;
@@ -349,11 +383,13 @@
     dsv:specializes :Property;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource owl:DatatypeProperty
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource owl:DatatypeProperty
 ];
     a dsv:ClassProfile;
@@ -365,7 +401,8 @@
     skos:prefLabel "is defined by"@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:isDefinedBy
 ];
     dsv:cardinality cardinality:11;
@@ -378,11 +415,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:property
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:property
 ];
     dsv:cardinality cardinality:11;
@@ -396,7 +435,8 @@
     skos:definition "Datatype used with this Datatype property profile."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:datatype
 ];
     dsv:cardinality cardinality:11;
@@ -409,11 +449,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:range
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:range
 ];
     dsv:cardinality cardinality:11;
@@ -426,11 +468,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:domain
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:domain
 ];
     dsv:cardinality cardinality:11;
@@ -443,11 +487,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:reusedFromResource
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:reusedFromResource
 ];
     dsv:cardinality cardinality:11;
@@ -460,11 +506,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:reusedProperty
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:reusedProperty
 ];
     dsv:cardinality cardinality:11;
@@ -477,11 +525,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:reusesPropertyValue
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:reusesPropertyValue
 ];
     dsv:cardinality cardinality:0n;
@@ -495,7 +545,8 @@
     skos:prefLabel "is part of"@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dct:isPartOf
 ];
     dsv:cardinality cardinality:11;
@@ -508,11 +559,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:specializes
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:specializes
 ];
     dsv:cardinality cardinality:0n;
@@ -525,11 +578,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:class
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:class
 ];
     dsv:cardinality cardinality:11;
@@ -542,11 +597,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:profileOf
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:profileOf
 ];
     dsv:cardinality cardinality:0n;
@@ -559,11 +616,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:cardinality
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:cardinality
 ];
     dsv:cardinality cardinality:01;
@@ -576,11 +635,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:classRole
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:classRole
 ];
     dsv:cardinality cardinality:0n;
@@ -593,11 +654,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:requirementLevel
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:requirementLevel
 ];
     dsv:cardinality cardinality:01;
@@ -613,6 +676,7 @@
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:hasResource
 ];
     dsv:cardinality cardinality:1n;
@@ -625,11 +689,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:externalDocumentation
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:externalDocumentation
 ];
     dsv:cardinality cardinality:01;
@@ -645,6 +711,7 @@
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:hasResource
 ];
     dsv:cardinality cardinality:1n;
@@ -657,11 +724,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource prof:hasResource
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:hasResource
 ];
     dsv:cardinality cardinality:0n;
@@ -674,11 +743,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource prof:isProfileOf
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:isProfileOf
 ];
     dsv:cardinality cardinality:0n;
@@ -691,11 +762,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource prof:hasArtifact
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:hasArtifact
 ];
     dsv:cardinality cardinality:11;
@@ -708,11 +781,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource prof:hasRole
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:hasRole
 ];
     dsv:cardinality cardinality:01;
@@ -726,7 +801,8 @@
     skos:prefLabel "format"@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dct:format
 ];
     dsv:cardinality cardinality:01;
@@ -740,7 +816,8 @@
     skos:prefLabel "conforms To"@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dct:conformsTo
 ];
     dsv:cardinality cardinality:0n;
@@ -753,11 +830,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource rdfs:subClassOf
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:subClassOf
 ];
     dsv:cardinality cardinality:0n;
@@ -770,11 +849,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource rdfs:subPropertyOf
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:subPropertyOf
 ];
     dsv:cardinality cardinality:0n;
@@ -787,11 +868,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource rdfs:domain
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:domain
 ];
     dsv:cardinality cardinality:01;
@@ -804,11 +887,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource rdfs:range
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:range
 ];
     dsv:cardinality cardinality:01;
@@ -821,11 +906,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource rdfs:range
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:range
 ];
     dsv:cardinality cardinality:01;
@@ -836,13 +923,16 @@
 
 <https://w3id.org/dsv-dap#PropertyValueReuse.reusedAsProperty> dct:isPartOf <https://w3id.org/dsv-dap#>;
     a dsv:TermProfile;
+    skos:scopeNote "This is expected to be one of skos:prefLabel for preferred label, skos:definition for definition, or skos:scopeNote for usage note."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource dsv:reusedAsProperty
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource dsv:reusedAsProperty
 ];
     dsv:cardinality cardinality:11;
@@ -856,7 +946,8 @@
     skos:definition "Preferred label of this profile."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource skos:prefLabel
 ];
     dsv:cardinality cardinality:0n;
@@ -870,7 +961,8 @@
     skos:definition "Definition of this profile."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource skos:definition
 ];
     dsv:cardinality cardinality:0n;
@@ -934,11 +1026,13 @@
     skos:scopeNote "Used to store the preferred prefix, e.g., registered at prefix.cc."@en;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource prof:hasToken
 ], [
   a dsv:PropertyValueReuse;
   dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource prof:hasToken
 ];
     dsv:cardinality cardinality:01;
@@ -951,11 +1045,13 @@
     a dsv:TermProfile;
     dsv:reusesPropertyValue [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
   dsv:reusedFromResource rdfs:label
 ], [
   a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
   dsv:reusedFromResource rdfs:label
 ];
     dsv:cardinality cardinality:1n;

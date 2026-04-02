@@ -14,7 +14,7 @@
         "adms:AssetDistribution",
         "prof:ResourceDescriptor"
       ],
-      "hasArtifact": ".",
+      "hasArtifact": "",
       "hasRole": "role:specification",
       "format": "filetype:HTML",
       "inSpecificationOf": [
@@ -46,7 +46,6 @@
           ],
           "hasResource": [
             {
-              "@id": "https://w3id.org/dsv-dap/#dsv",
               "@type": [
                 "adms:AssetDistribution",
                 "prof:ResourceDescriptor"
@@ -60,7 +59,6 @@
               ]
             },
             {
-              "@id": "https://w3id.org/dsv-dap/#shacl",
               "@type": [
                 "adms:AssetDistribution",
                 "prof:ResourceDescriptor"
@@ -71,7 +69,26 @@
               "conformsTo": "https://www.w3.org/TR/shacl/"
             },
             {
-              "@id": "https://w3id.org/dsv-dap/#80bb66a5-4182-4250-90c2-90b7f0b05a7b",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./application-profile-specification-document/structure.ttl",
+              "hasRole": "role:schema",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": "dsv:Structure"
+            },
+            {
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./generator-configuration.ttl",
+              "hasRole": "role:schema",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": "dsv:StructureConfiguration"
+            },
+            {
               "@type": [
                 "adms:AssetDistribution",
                 "prof:ResourceDescriptor"
@@ -82,7 +99,6 @@
               "conformsTo": "https://www.w3.org/TR/SVG/"
             },
             {
-              "@id": "https://w3id.org/dsv-dap/#626cb",
               "@type": [
                 "adms:AssetDistribution",
                 "prof:ResourceDescriptor"
@@ -93,7 +109,6 @@
               "conformsTo": "https://www.w3.org/TR/SVG/"
             },
             {
-              "@id": "https://w3id.org/dsv-dap/#n4roi",
               "@type": [
                 "adms:AssetDistribution",
                 "prof:ResourceDescriptor"
@@ -104,7 +119,6 @@
               "conformsTo": "https://www.w3.org/TR/SVG/"
             },
             {
-              "@id": "https://w3id.org/dsv-dap/#8dlkl",
               "@type": [
                 "adms:AssetDistribution",
                 "prof:ResourceDescriptor"
@@ -121,7 +135,7 @@
                 "adms:AssetDistribution",
                 "prof:ResourceDescriptor"
               ],
-              "hasArtifact": ".",
+              "hasArtifact": "",
               "hasRole": "role:specification",
               "format": "filetype:HTML"
             },
@@ -349,7 +363,6 @@
       </ul>
     </p>
     </section>
-    
 
     <section>
       <h2>Overview</h2>
@@ -2389,6 +2402,10 @@
                       </td>
                     </tr>
               
+                  <tr>
+                    <td>Usage note</td>
+                    <td>This is expected to be one of skos:prefLabel for preferred label, skos:definition for definition, or skos:scopeNote for usage note.</td>
+                  </tr>
                 </table>
               </section>    <section id="PropertyValueReuse.reusedFromResource">
                 <h4>reused from resource</h4>
@@ -5177,7 +5194,7 @@
       <dt>IRI</dt>
       <dd><code>/schema.json</code></dd>
       <dt>Defined in</dt>
-      <dd><code><a href="../schema.json">../schema.json</a></code></dd>
+      <dd><code><a href="./schema.json">./schema.json</a></code></dd>
         <dt>Language version used</dt>
         <dd><a href="https://json-schema.org/specification-links.html#2020-12-release" target="_blank">2020-12</a> (metaschema IRI: <code>https://json-schema.org/draft/2020-12/schema</code>)</dd>
     </dl>
@@ -5301,7 +5318,7 @@
   
 
 
-    
+          
 
   
   
@@ -5383,7 +5400,7 @@
   
 
 
-    
+          
 
   
   
@@ -5418,7 +5435,7 @@
   
 
 
-    
+          
 
   
   
@@ -5633,7 +5650,7 @@
   
 
 
-    
+          
 
   
   
@@ -5715,7 +5732,7 @@
   
 
 
-    
+          
 
   
   
@@ -5759,7 +5776,7 @@
   
     array of values <code>{0..*}</code> of type     <a href="#json-object--application-profile-specification-document--semantic-data-specification"></a>
 
-    
+          
 
   
   
@@ -5781,7 +5798,7 @@
   
     array of values <code>{0..*}</code> of type     <a href="#json-object--application-profile-specification-document--resource-descriptor"></a>
 
-    
+          
 
   
   
@@ -5874,7 +5891,7 @@
   
 
 
-    
+          
 
   
   
@@ -6082,7 +6099,7 @@ This definition includes what are often called &quot;application profiles&quot;,
   
 
 
-    
+          
 
   
   
@@ -6117,7 +6134,7 @@ This definition includes what are often called &quot;application profiles&quot;,
   
 
 
-    
+          
 
   
   
@@ -6216,6 +6233,17 @@ This definition includes what are often called &quot;application profiles&quot;,
               ]
             },
             {
+              "@id": "https://w3id.org/dsv-dap/#shacl",
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./shacl.ttl",
+              "hasRole": "role:constraints",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": "https://www.w3.org/TR/shacl/"
+            },
+            {
               "@id": "https://w3id.org/dsv-dap/#80bb66a5-4182-4250-90c2-90b7f0b05a7b",
               "@type": [
                 "adms:AssetDistribution",
@@ -6276,7 +6304,7 @@ This definition includes what are often called &quot;application profiles&quot;,
                 "adms:AssetDistribution",
                 "prof:ResourceDescriptor"
               ],
-              "hasArtifact": "../schema.json",
+              "hasArtifact": "./schema.json",
               "hasRole": "role:schema",
               "format": "filetype:JSON",
               "conformsTo": "https://json-schema.org/draft/2020-12/schema"
@@ -6287,7 +6315,7 @@ This definition includes what are often called &quot;application profiles&quot;,
                 "adms:AssetDistribution",
                 "prof:ResourceDescriptor"
               ],
-              "hasArtifact": "../context.jsonld",
+              "hasArtifact": "./context.jsonld",
               "hasRole": "role:schema",
               "format": "filetype:JSON_LD",
               "conformsTo": "http://www.w3.org/ns/json-ld"
@@ -6547,7 +6575,7 @@ This definition includes what are often called &quot;application profiles&quot;,
     </aside>
       </section>
     
-    </section>
+    </section>    
     <section>
       <h2>Used prefixes</h2>
       <table id="table-namespaces" class="simple">
@@ -6566,7 +6594,7 @@ This definition includes what are often called &quot;application profiles&quot;,
         </tbody>
       </table>
     </section>
-    <section>
+    <section id="attachments">
       <h2>Attachments</h2>
     
         <p>This specification includes the following attachments.</p>
@@ -6581,6 +6609,14 @@ This definition includes what are often called &quot;application profiles&quot;,
             <tr>
               <td>Application profile</td>
               <td><a href="./dsv.ttl">./dsv.ttl</a></td>
+            </tr>
+            <tr>
+              <td>SHACL validation rules</td>
+              <td><a href="./shacl.ttl">./shacl.ttl</a></td>
+            </tr>
+            <tr>
+              <td>Description of structure model</td>
+              <td><a href="./application-profile-specification-document/structure.ttl">./application-profile-specification-document/structure.ttl</a></td>
             </tr>
             <tr><td>JSON schema</td><td><a href="./schema.json">./schema.json</a></td></tr>
             <tr><td>JSON-LD context</td><td><a href="./context.jsonld">./context.jsonld</a></td></tr>
