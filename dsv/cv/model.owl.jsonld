@@ -1,0 +1,108 @@
+{
+    "@graph": [
+        {
+            "@id": "https://w3id.org/dsv/cv#controlledvocabulary",
+            "rdfs:range": {
+                "@id": "http://www.w3.org/ns/dcat#Dataset"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv/cv#Assignment"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv/cv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The assigned Controlled Vocabulary."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "controlledVocabulary"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv/cv#Assignment",
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv/cv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Assignment of a Controlled Vocabulary to a Class Profile."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Assignment"
+            },
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv/cv#",
+            "@type": [
+                "prof:Profile",
+                "owl:Ontology"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv/cv#classProfile",
+            "rdfs:range": {
+                "@id": "https://w3id.org/dsv#ClassProfile"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv/cv#Assignment"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv/cv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The Class Profile to which a Controlled Vocabulary is assigned."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Class Profile"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        },
+        {
+            "@id": "https://w3id.org/dsv/cv#usageExpectation",
+            "rdfs:range": {
+                "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+            },
+            "rdfs:domain": {
+                "@id": "https://w3id.org/dsv/cv#Assignment"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "https://w3id.org/dsv/cv#"
+            },
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Usage Expectation on the assigned Controlled Vocabulary."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Usage Expectation"
+            },
+            "@type": [
+                "owl:ObjectProperty",
+                "rdf:Property"
+            ]
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "prof": "http://www.w3.org/ns/dx/prof/",
+        "@vocab": "https://w3id.org/dsv/cv#"
+    }
+}

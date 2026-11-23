@@ -1,0 +1,45 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="https://w3id.org/dsv/cv#"
+    xmlns:prof="http://www.w3.org/ns/dx/prof/" > 
+  <rdf:Description rdf:about="https://w3id.org/dsv/cv#Assignment">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv/cv#"/>
+    <rdfs:comment xml:lang="en">Assignment of a Controlled Vocabulary to a Class Profile.</rdfs:comment>
+    <rdfs:label xml:lang="en">Assignment</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dsv/cv#classProfile">
+    <rdfs:range rdf:resource="https://w3id.org/dsv#ClassProfile"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv/cv#Assignment"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv/cv#"/>
+    <rdfs:comment xml:lang="en">The Class Profile to which a Controlled Vocabulary is assigned.</rdfs:comment>
+    <rdfs:label xml:lang="en">Class Profile</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dsv/cv#usageExpectation">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv/cv#Assignment"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv/cv#"/>
+    <rdfs:comment xml:lang="en">Usage Expectation on the assigned Controlled Vocabulary.</rdfs:comment>
+    <rdfs:label xml:lang="en">Usage Expectation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dsv/cv#">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dx/prof/Profile"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dsv/cv#controlledvocabulary">
+    <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdfs:domain rdf:resource="https://w3id.org/dsv/cv#Assignment"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/dsv/cv#"/>
+    <rdfs:comment xml:lang="en">The assigned Controlled Vocabulary.</rdfs:comment>
+    <rdfs:label xml:lang="en">controlledVocabulary</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+</rdf:RDF>
