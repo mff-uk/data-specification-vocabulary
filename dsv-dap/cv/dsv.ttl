@@ -1,0 +1,456 @@
+@prefix : <https://w3id.org/dsv-dap/cv#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dsv: <https://w3id.org/dsv#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix cardinality: <https://w3id.org/dsv/cardinality#>.
+@prefix requirement: <https://w3id.org/dsv/requirement-level#>.
+@prefix role: <https://w3id.org/dsv/class-role#>.
+@prefix prof: <http://www.w3.org/ns/dx/prof/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+
+
+<https://w3id.org/dsv-dap/cv#> a prof:Profile, dsv:ApplicationProfile.
+:Assignment dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://w3id.org/dsv/cv#Assignment>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://w3id.org/dsv/cv#Assignment>
+];
+    a dsv:ClassProfile;
+    dsv:class <https://w3id.org/dsv/cv#Assignment>;
+    dsv:classRole role:main.
+:ClassProfile dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource dsv:ClassProfile
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource dsv:ClassProfile
+];
+    a dsv:ClassProfile;
+    dsv:class dsv:ClassProfile;
+    dsv:classRole role:main.
+:ControlledVocabulary dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Conjunto de datos"@es, "Controlled Vocabulary"@en, "Dataset"@it, "Datová sada"@cs, "Jeu de données"@fr, "Σύνολο Δεδομένων"@el, "قائمة بيانات"@ar, "データセット"@ja, "Datasæt"@da;
+    skos:definition "Controlled Vocabulary used in a Data Specification."@en;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#Dataset>;
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
+:ConceptScheme dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource skos:ConceptScheme
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource skos:ConceptScheme
+];
+    a dsv:ClassProfile;
+    dsv:class skos:ConceptScheme;
+    dsv:classRole role:main.
+:Concept dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Usage Expectation"@en;
+    skos:definition "Usage Expectation on the assigned Controlled Vocabulary."@en;
+    a dsv:ClassProfile;
+    dsv:class skos:Concept;
+    dsv:classRole role:main.
+
+<https://w3id.org/dsv-dap/cv#Concept/controlled-vocabulary-assignment/vocabulary/https%3A%2F%2Fw3id.org%2Fdsv-dap%2Fcv%2Fcontrolled-vocabulary-catalog%2F3fd42de2-0987-4144-9633-92e9fede0da0%2Fdataset%2Ff97beaaa-1dce-4a06-b684-d4d935e6e303> a dsv:ControlledVocabularyAssignment;
+    dsv:classProfile :Concept;
+    dsv:controlledVocabulary <https://w3id.org/dsv-dap/cv/controlled-vocabulary-catalog/3fd42de2-0987-4144-9633-92e9fede0da0/dataset/f97beaaa-1dce-4a06-b684-d4d935e6e303>;
+    dsv:usageExpectation <https://w3id.org/dsv/usage-expectation#must>.
+:ControlledVocabulariesCatalog dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Catalog of Controlled Vocabularies"@en;
+    skos:definition "A collection of Controlled Vocabularies used in this Data Specification."@en;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#Catalog>;
+    a dsv:ClassProfile;
+    dsv:classRole role:main.
+:Standard dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#Standard>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Standard>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Standard>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Standard>
+];
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
+:Document dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Document"@en;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#Document>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Document>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Document>
+];
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
+:Distribution dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#Distribution>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Distribution>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Distribution>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Distribution>
+];
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
+:rdfs-Resource dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    skos:prefLabel "Resource"@en;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource>
+];
+    a dsv:ClassProfile;
+    dsv:classRole role:supportive.
+:Assignment.classProfile dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://w3id.org/dsv/cv#classProfile>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://w3id.org/dsv/cv#classProfile>
+];
+    dsv:cardinality cardinality:11;
+    dsv:property <https://w3id.org/dsv/cv#classProfile>;
+    dsv:domain :Assignment;
+    dsv:requirementLevel requirement:mandatory;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :ClassProfile.
+:Assignment.controlledvocabulary dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://w3id.org/dsv/cv#controlledvocabulary>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://w3id.org/dsv/cv#controlledvocabulary>
+];
+    dsv:cardinality cardinality:11;
+    dsv:property <https://w3id.org/dsv/cv#controlledvocabulary>;
+    dsv:domain :Assignment;
+    dsv:requirementLevel requirement:mandatory;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :ControlledVocabulary.
+:Assignment.usageExpectation dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://w3id.org/dsv/cv#usageExpectation>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://w3id.org/dsv/cv#usageExpectation>
+];
+    dsv:cardinality cardinality:11;
+    dsv:property <https://w3id.org/dsv/cv#usageExpectation>;
+    dsv:domain :Assignment;
+    dsv:requirementLevel requirement:mandatory;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :Concept.
+:ControlledVocabulariesCatalog.containsControlledVocabulary dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    skos:prefLabel "قائمة بيانات"@ar, "データセット"@ja, "conjunto de datos"@es, "contains controlled vocabulary"@en, "dataset"@it, "datová sada"@cs, "jeu de données"@fr, "σύνολο δεδομένων"@el, "datasæt"@da;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#Catalog.dataset>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Catalog.dataset>
+];
+    dsv:cardinality cardinality:0n;
+    dsv:domain :ControlledVocabulariesCatalog;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :ControlledVocabulary.
+:ControlledVocabulary.references dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    skos:prefLabel "references"@en;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource dct:references
+];
+    dsv:cardinality cardinality:01;
+    dsv:property dct:references;
+    dsv:domain :ControlledVocabulary;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :ConceptScheme.
+:ControlledVocabulary.conformsTo dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.conformsTo>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.conformsTo>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.conformsTo>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.conformsTo>
+];
+    dsv:cardinality cardinality:01;
+    dsv:domain :ControlledVocabulary;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :Standard.
+:ControlledVocabulary.landingPage dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.landingPage>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.landingPage>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.landingPage>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.landingPage>
+];
+    dsv:cardinality cardinality:01;
+    dsv:domain :ControlledVocabulary;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :Document.
+:ControlledVocabulary.distribution dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#Dataset.distribution>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Dataset.distribution>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Dataset.distribution>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Dataset.distribution>
+];
+    dsv:cardinality cardinality:01;
+    dsv:domain :ControlledVocabulary;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :Distribution.
+:Distribution.accessUrl dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#Distribution.accessUrl>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Distribution.accessUrl>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Distribution.accessUrl>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Distribution.accessUrl>
+];
+    dsv:cardinality cardinality:01;
+    dsv:domain :Distribution;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :rdfs-Resource.
+:Distribution.downloadUrl dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#Distribution.downloadUrl>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Distribution.downloadUrl>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Distribution.downloadUrl>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#Distribution.downloadUrl>
+];
+    dsv:cardinality cardinality:01;
+    dsv:domain :Distribution;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :rdfs-Resource.
+:Assignment.replaces dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.replaces>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.replaces>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.replaces>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.replaces>
+];
+    dsv:cardinality cardinality:01;
+    dsv:domain :Assignment;
+    dsv:requirementLevel requirement:optional;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange :Assignment.
+:ControlledVocabulary.title dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.title>;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.title>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.title>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:scopeNote;
+  dsv:reusedAsProperty skos:scopeNote;
+  dsv:reusedFromResource <https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.title>
+];
+    dsv:cardinality cardinality:11;
+    dsv:domain :ControlledVocabulary;
+    dsv:requirementLevel requirement:mandatory;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange <https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text>.
+:ControlledVocabulary.pattern dct:isPartOf <https://w3id.org/dsv-dap/cv#>;
+    a dsv:TermProfile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:label;
+  dsv:reusedAsProperty skos:prefLabel;
+  dsv:reusedFromResource sh:pattern
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty rdfs:comment;
+  dsv:reusedAsProperty skos:definition;
+  dsv:reusedFromResource sh:pattern
+];
+    dsv:cardinality cardinality:01;
+    dsv:property sh:pattern;
+    dsv:domain :ControlledVocabulary;
+    dsv:requirementLevel requirement:recommended;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
+
+<https://w3id.org/dsv-dap/cv/controlled-vocabulary-catalog/3fd42de2-0987-4144-9633-92e9fede0da0> a dcat:Catalog;
+    dcat:dataset <https://w3id.org/dsv-dap/cv/controlled-vocabulary-catalog/3fd42de2-0987-4144-9633-92e9fede0da0/dataset/f97beaaa-1dce-4a06-b684-d4d935e6e303>.
+
+<https://w3id.org/dsv-dap/cv/controlled-vocabulary-catalog/3fd42de2-0987-4144-9633-92e9fede0da0/dataset/f97beaaa-1dce-4a06-b684-d4d935e6e303> a dcat:Dataset;
+    dct:title "Usage Expectations"@en;
+    dct:references <https://w3id.org/dsv/cv/usage-expectation#ConceptScheme>;
+    dct:conformsTo <http://www.w3.org/2004/02/skos/core>;
+    sh:pattern "^https://w3id\\.org/dsv/cv/usage-expectation#[^#/]+$";
+    dcat:landingPage <https://w3id.org/dsv/cv/usage-expectation#>;
+    dcat:distribution [
+  a dcat:Distribution;
+  dcat:downloadURL <https://w3id.org/dsv/cv/usage-expectation#>;
+  dcat:accessURL <https://w3id.org/dsv/cv/usage-expectation#>
+].

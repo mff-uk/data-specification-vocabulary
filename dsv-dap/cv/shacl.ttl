@@ -1,0 +1,182 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<https://w3id.org/dsv-dap/cv#> rdfs:member <https://w3id.org/dsv-dap/cv#cv:AssignmentShape>, <https://w3id.org/dsv-dap/cv#dsv:ClassProfileShape>, <https://w3id.org/dsv-dap/cv#dcat:DatasetShape>, <https://w3id.org/dsv-dap/cv#skos:ConceptSchemeShape>, <https://w3id.org/dsv-dap/cv#skos:ConceptShape>, <https://w3id.org/dsv-dap/cv#skos:ConceptShape/cv-19afbf51>, <https://w3id.org/dsv-dap/cv#dcat:CatalogShape>, <https://w3id.org/dsv-dap/cv#dcterms:StandardShape>, <https://w3id.org/dsv-dap/cv#foaf:DocumentShape>, <https://w3id.org/dsv-dap/cv#dcat:DistributionShape>, <https://w3id.org/dsv-dap/cv#rdfs:ResourceShape>.
+
+<https://w3id.org/dsv-dap/cv#cv:AssignmentShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#Assignment>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv/cv#Assignment>.
+
+<https://w3id.org/dsv-dap/cv#cv:AssignmentShape/-32424682> a sh:PropertyShape;
+    sh:name "Class Profile"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv/cv#classProfile>;
+    sh:maxCount 1;
+    sh:minCount 1;
+    sh:class <https://w3id.org/dsv#ClassProfile>.
+
+<https://w3id.org/dsv-dap/cv#cv:AssignmentShape> sh:property <https://w3id.org/dsv-dap/cv#cv:AssignmentShape/-32424682>.
+
+<https://w3id.org/dsv-dap/cv#cv:AssignmentShape/-4d028762> a sh:PropertyShape;
+    sh:name "controlledVocabulary"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv/cv#controlledvocabulary>;
+    sh:maxCount 1;
+    sh:minCount 1;
+    sh:class <http://www.w3.org/ns/dcat#Dataset>.
+
+<https://w3id.org/dsv-dap/cv#cv:AssignmentShape> sh:property <https://w3id.org/dsv-dap/cv#cv:AssignmentShape/-4d028762>.
+
+<https://w3id.org/dsv-dap/cv#cv:AssignmentShape/-22531ad5> a sh:PropertyShape;
+    sh:name "Usage Expectation"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <https://w3id.org/dsv/cv#usageExpectation>;
+    sh:maxCount 1;
+    sh:minCount 1;
+    sh:class skos:Concept.
+
+<https://w3id.org/dsv-dap/cv#cv:AssignmentShape> sh:property <https://w3id.org/dsv-dap/cv#cv:AssignmentShape/-22531ad5>.
+
+<https://w3id.org/dsv-dap/cv#cv:AssignmentShape/329714ff> a sh:PropertyShape;
+    sh:name "replaces"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://purl.org/dc/terms/replaces>;
+    sh:maxCount 1;
+    sh:class <https://w3id.org/dsv/cv#Assignment>.
+
+<https://w3id.org/dsv-dap/cv#cv:AssignmentShape> sh:property <https://w3id.org/dsv-dap/cv#cv:AssignmentShape/329714ff>.
+
+<https://w3id.org/dsv-dap/cv#dsv:ClassProfileShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#ClassProfile>;
+    sh:closed false;
+    sh:targetClass <https://w3id.org/dsv#ClassProfile>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#ControlledVocabulary>;
+    sh:closed false;
+    sh:targetClass <http://www.w3.org/ns/dcat#Dataset>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape/-56e8d388> a sh:PropertyShape;
+    sh:name "title"@en;
+    sh:nodeKind sh:Literal;
+    sh:path <http://purl.org/dc/terms/title>;
+    sh:maxCount 1;
+    sh:datatype rdf:langString.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape> sh:property <https://w3id.org/dsv-dap/cv#dcat:DatasetShape/-56e8d388>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape/-73034d2b> a sh:PropertyShape;
+    sh:name "pattern"@en;
+    sh:nodeKind sh:Literal;
+    sh:path sh:pattern;
+    sh:maxCount 1;
+    sh:datatype xsd:string.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape> sh:property <https://w3id.org/dsv-dap/cv#dcat:DatasetShape/-73034d2b>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape/3e54091b> a sh:PropertyShape;
+    sh:name "references"@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://purl.org/dc/terms/references>;
+    sh:maxCount 1;
+    sh:class skos:ConceptScheme.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape> sh:property <https://w3id.org/dsv-dap/cv#dcat:DatasetShape/3e54091b>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape/55a9bc0> a sh:PropertyShape;
+    sh:name "conforms to"@en;
+    sh:description "This property SHOULD be used to indicate the model, schema, ontology, view or profile that the cataloged resource content conforms to."@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://purl.org/dc/terms/conformsTo>;
+    sh:maxCount 1;
+    sh:class <http://purl.org/dc/terms/Standard>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape> sh:property <https://w3id.org/dsv-dap/cv#dcat:DatasetShape/55a9bc0>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape/3bb678a0> a sh:PropertyShape;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://www.w3.org/ns/dcat#landingPage>;
+    sh:maxCount 1;
+    sh:class <http://xmlns.com/foaf/0.1/Document>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape> sh:property <https://w3id.org/dsv-dap/cv#dcat:DatasetShape/3bb678a0>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape/6cd09e6f> a sh:PropertyShape;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://www.w3.org/ns/dcat#distribution>;
+    sh:maxCount 1;
+    sh:class <http://www.w3.org/ns/dcat#Distribution>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DatasetShape> sh:property <https://w3id.org/dsv-dap/cv#dcat:DatasetShape/6cd09e6f>.
+
+<https://w3id.org/dsv-dap/cv#skos:ConceptSchemeShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#ConceptScheme>;
+    sh:closed false;
+    sh:targetClass skos:ConceptScheme.
+
+<https://w3id.org/dsv-dap/cv#skos:ConceptShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#Concept>;
+    sh:closed false;
+    sh:targetClass skos:Concept.
+
+<https://w3id.org/dsv-dap/cv#skos:ConceptShape/cv-19afbf51> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#Concept>;
+    sh:closed false;
+    sh:targetClass skos:Concept;
+    sh:pattern "^https://w3id\\.org/dsv/cv/usage-expectation#[^#/]+$";
+    sh:severity sh:Violation.
+
+<https://w3id.org/dsv-dap/cv#dcat:CatalogShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#ControlledVocabulariesCatalog>;
+    sh:closed false;
+    sh:targetClass <http://www.w3.org/ns/dcat#Catalog>.
+
+<https://w3id.org/dsv-dap/cv#dcat:CatalogShape/75ae2372> a sh:PropertyShape;
+    sh:name "قائمة بيانات"@ar, "データセット"@ja, "conjunto de datos"@es, "contains controlled vocabulary"@en, "dataset"@it, "datová sada"@cs, "jeu de données"@fr, "σύνολο δεδομένων"@el, "datasæt"@da;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://www.w3.org/ns/dcat#dataset>;
+    sh:class <http://www.w3.org/ns/dcat#Dataset>.
+
+<https://w3id.org/dsv-dap/cv#dcat:CatalogShape> sh:property <https://w3id.org/dsv-dap/cv#dcat:CatalogShape/75ae2372>.
+
+<https://w3id.org/dsv-dap/cv#dcterms:StandardShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#Standard>;
+    sh:closed false;
+    sh:targetClass <http://purl.org/dc/terms/Standard>.
+
+<https://w3id.org/dsv-dap/cv#foaf:DocumentShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#Document>;
+    sh:closed false;
+    sh:targetClass <http://xmlns.com/foaf/0.1/Document>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DistributionShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#Distribution>;
+    sh:closed false;
+    sh:targetClass <http://www.w3.org/ns/dcat#Distribution>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DistributionShape/43e846cc> a sh:PropertyShape;
+    sh:name "URL d'accès"@fr, "URL de acceso"@es, "URL πρόσβασης"@el, "access URL"@en, "indirizzo di accesso"@it, "přístupová adresa"@cs, "رابط وصول"@ar, "アクセスURL"@ja, "adgangsadresse"@da;
+    sh:description "dcat:accessURL SHOULD be used for the URL of a service or location that can provide access to this distribution, typically through a Web form, query or API call.\n\ndcat:downloadURL is preferred for direct links to downloadable resources.\n\nIf the distribution(s) are accessible only through a landing page (i.e., direct download URLs are not known), then the landing page URL associated with the dcat:Dataset SHOULD be duplicated as access URL on a distribution (see 5.7 Dataset available only behind some Web page)."@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://www.w3.org/ns/dcat#accessURL>;
+    sh:maxCount 1.
+
+<https://w3id.org/dsv-dap/cv#dcat:DistributionShape> sh:property <https://w3id.org/dsv-dap/cv#dcat:DistributionShape/43e846cc>.
+
+<https://w3id.org/dsv-dap/cv#dcat:DistributionShape/-7c10d790> a sh:PropertyShape;
+    sh:description "dcat:downloadURL SHOULD be used for the URL at which this distribution is available directly, typically through a HTTP Get request."@en;
+    sh:nodeKind sh:BlankNodeOrIRI;
+    sh:path <http://www.w3.org/ns/dcat#downloadURL>;
+    sh:maxCount 1.
+
+<https://w3id.org/dsv-dap/cv#dcat:DistributionShape> sh:property <https://w3id.org/dsv-dap/cv#dcat:DistributionShape/-7c10d790>.
+
+<https://w3id.org/dsv-dap/cv#rdfs:ResourceShape> a sh:NodeShape;
+    rdfs:seeAlso <https://w3id.org/dsv-dap/cv#rdfs-Resource>;
+    sh:closed false;
+    sh:targetClass rdfs:Resource.
+

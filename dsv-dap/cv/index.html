@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Data Specification Vocabulary - Default Application Profile -  Controlled Vocabularies (DSV-DAP-CV)</title>
+    <meta name="color-scheme" content="light dark">
+    <script type="application/ld+json">
+      {
+      "@id": "https://w3id.org/dsv-dap/cv/",
+      "@type": [
+        "dsv:ApplicationProfileSpecificationDocument",
+        "adms:AssetDistribution",
+        "prof:ResourceDescriptor"
+      ],
+      "hasArtifact": "",
+      "hasRole": "role:specification",
+      "format": "filetype:HTML",
+      "inSpecificationOf": [
+        {
+          "@id": "https://w3id.org/dsv-dap/cv#",
+          "@type": [
+            "dsv:ApplicationProfile",
+            "prof:Profile"
+          ],
+          "title": {
+            "en": "Data Specification Vocabulary - Default Application Profile -  Controlled Vocabularies (DSV-DAP-CV)"
+          },
+          "isProfileOf": [
+            {
+              "@id": "https://w3id.org/dsv#",
+              "title": {},
+              "hasResource": {
+                "hasArtifact": "https://mff-uk.github.io/data-specification-vocabulary/dsv/"
+              }
+            },
+            {
+              "@id": "https://w3id.org/dsv/cv#",
+              "title": {},
+              "hasResource": {
+                "hasArtifact": "https://mff-uk.github.io/data-specification-vocabulary/dsv/cv/"
+              }
+            },
+            {
+              "@id": "https://mff-uk.github.io/specifications/dcat-dap#",
+              "title": {},
+              "hasResource": {
+                "hasArtifact": "https://mff-uk.github.io/specifications/dcat-dap/"
+              }
+            },
+            {
+              "title": {
+                "en": "shacl"
+              },
+              "hasResource": {
+                "hasArtifact": "https://www.w3.org/ns/shacl.ttl"
+              }
+            }
+          ],
+          "hasResource": [
+            {
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./dsv.ttl",
+              "hasRole": "role:constraints",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": [
+                "prof:Profile",
+                "dsv:ApplicationProfile"
+              ]
+            },
+            {
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./shacl.ttl",
+              "hasRole": "role:constraints",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": "https://www.w3.org/TR/shacl/"
+            },
+            {
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./dsv.ldes.ttl",
+              "hasRole": "role:specification",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": "https://w3id.org/ldes/specification"
+            },
+            {
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./controlled_vocabulary_catalog.ttl",
+              "hasRole": "role:vocabulary",
+              "format": "filetype:RDF_TURTLE",
+              "conformsTo": "https://www.w3.org/TR/vocab-dcat-3/"
+            },
+            {
+              "@type": [
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "./3fd42de2-0987-4144-9633-92e9fede0da0/visual-model.svg",
+              "hasRole": "role:guidance",
+              "format": "filetype:SVG",
+              "conformsTo": "https://www.w3.org/TR/SVG/"
+            },
+            {
+              "@id": "https://w3id.org/dsv-dap/cv/",
+              "@type": [
+                "dsv:ApplicationProfileSpecificationDocument",
+                "adms:AssetDistribution",
+                "prof:ResourceDescriptor"
+              ],
+              "hasArtifact": "",
+              "hasRole": "role:specification",
+              "format": "filetype:HTML"
+            }
+          ]
+        }
+      ],
+      "@context": {
+        "@version": 1.1,
+        "prof": "http://www.w3.org/ns/dx/prof/",
+        "role": "prof:role/",
+        "dsv": "https://w3id.org/dsv#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "adms": "http://www.w3.org/ns/adms#",
+        "filetype": "http://publications.europa.eu/resource/authority/file-type/",
+        "title": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@container": "@language"
+        },
+        "description": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@container": "@language"
+        },
+        "conformsTo": {
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "@type": "@id",
+          "@container": "@set"
+        },
+        "format": {
+          "@id": "http://purl.org/dc/terms/format",
+          "@type": "@id"
+        },
+        "hasRole": {
+          "@id": "prof:hasRole",
+          "@type": "@id"
+        },
+        "hasArtifact": {
+          "@id": "prof:hasArtifact",
+          "@type": "@id"
+        },
+        "inSpecificationOf": {
+          "@reverse": "prof:hasResource",
+          "@type": "@id",
+          "@context": {
+            "title": {
+              "@id": "http://purl.org/dc/terms/title",
+              "@container": "@language"
+            },
+            "description": {
+              "@id": "http://purl.org/dc/terms/description",
+              "@container": "@language"
+            },
+            "hasToken": {
+              "@id": "prof:hasToken",
+              "@type": "xsd:token"
+            },
+            "isProfileOf": {
+              "@id": "prof:isProfileOf",
+              "@container": "@set",
+              "@context": {
+                "title": {
+                  "@id": "http://purl.org/dc/terms/title",
+                  "@container": "@language"
+                },
+                "hasResource": {
+                  "@id": "prof:hasResource",
+                  "@container": "@set",
+                  "@context": {
+                    "hasArtifact": {
+                      "@id": "prof:hasArtifact",
+                      "@type": "@id"
+                    }
+                  }
+                }
+              }
+            },
+            "hasResource": {
+              "@id": "prof:hasResource",
+              "@container": "@set",
+              "@context": {
+                "conformsTo": {
+                  "@id": "http://purl.org/dc/terms/conformsTo",
+                  "@type": "@id",
+                  "@container": "@set"
+                },
+                "format": {
+                  "@id": "http://purl.org/dc/terms/format",
+                  "@type": "@id"
+                },
+                "hasRole": {
+                  "@id": "prof:hasRole",
+                  "@type": "@id"
+                },
+                "hasArtifact": {
+                  "@id": "prof:hasArtifact",
+                  "@type": "@id"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    </script>
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      class="remove"
+      defer
+    ></script>
+    <script class="remove">
+    // All config options at https://respec.org/docs/
+    var respecConfig = {
+      specStatus: "base",
+      editors: [{ name: "Dataspecer", url: "https://dataspecer.com" }],
+      //github: "some-org/mySpec",
+      shortName: "todo",
+      historyURI: null,
+      thisVersion: "/en/index.html",
+      latestVersion: "/en/index.html",
+      //publishDate: "2025-09-29",
+      //github: "https://github.com/org/repo",
+      //xref: "web-platform",
+      //group: "my-working-group",
+      //otherLinks: [{
+      //    key: "Repository",
+      //    data: [{
+      //        value: "GitHub",
+      //        href: "https://github.com/org/repo"
+      //    }],
+      //}],
+      localBiblio: {
+            "DCAT-AP": {
+                title: "DCAT Application Profile for data portals in Europe",
+                href: "https://semiceu.github.io/DCAT-AP/releases/3.0.1/",
+                date: "2024"
+            },
+            "GeoDCAT-AP": {
+                title: "GeoDCAT Application Profile for data portals in Europe",
+                href: "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
+                date: "2024"
+            },
+            "DCAT-AP-HVD": {
+                title: "DCAT-AP HVD Application Profile",
+                href: "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd/",
+                date: "2024"
+            }
+        },};</script>
+    
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+        max-width: 100%;
+        margin: auto;
+        height: auto;
+      }
+    
+      table.simple {
+        margin: auto;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+    
+      table.simple th {
+        padding: 3px 10px;
+        text-align: left;
+      }
+    
+      table.simple td {
+        border-top: 1px solid #ddd;
+        padding: 3px 10px;
+      }
+    
+      /* An IRI has no spaces to break at, so it may wrap anywhere instead of widening the table. */
+      table.def.cv-list .cv-iri {
+        overflow-wrap: anywhere;
+      }
+    
+      /* ReSpec shows the header row of a definition table as an italic body row, so it is marked out as a header. */
+      table.def.cv-table thead th {
+        font-style: normal;
+        font-weight: bold;
+        background: color-mix(in srgb, currentColor 8%, transparent);
+        border-bottom: 2px solid color-mix(in srgb, currentColor 35%, transparent);
+      }
+    
+      table.def.cv-list .cv-center {
+        text-align: center;
+      }
+    
+      a.cv-link + a.cv-link {
+        margin-left: 0.5em;
+      }
+    
+      .cv-icon {
+        vertical-align: -0.2em;
+      }
+    </style>  </head>
+  <body>
+    <p class="copyright"></p>
+    <section id="abstract">
+      <p>
+        This file documents <strong>Data Specification Vocabulary - Default Application Profile -  Controlled Vocabularies (DSV-DAP-CV)</strong>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Overview</h2>
+
+        <figure>
+          <img src="./3fd42de2-0987-4144-9633-92e9fede0da0/visual-model.svg" alt="Main view" />
+          <figcaption><a href="./3fd42de2-0987-4144-9633-92e9fede0da0/visual-model.svg">Main view</a></figcaption>
+        </figure>
+    </section>
+
+      <section>
+        <h2>Main class profiles</h2>
+
+          <section id="Assignment">
+            <h4>Assignment</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="https://w3id.org/dsv/cv#Assignment">https://w3id.org/dsv/cv#Assignment</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#Assignment">https://w3id.org/dsv-dap/cv#Assignment</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Assignment</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>Assignment of a Controlled Vocabulary to a Class Profile.</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/cv/#Assignment">Assignment</a> (<a href="https://w3id.org/dsv/cv#Assignment">https://w3id.org/dsv/cv#Assignment</a>)
+                  <br />Definition: <i>Assignment of a Controlled Vocabulary to a Class Profile.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p><strong>Properties</strong></p>
+              <p>For this class profile the following properties are defined: <a href="#Assignment.classProfile">Class Profile</a>, <a href="#Assignment.controlledvocabulary">controlledVocabulary</a>, <a href="#Assignment.replaces">replaces</a>, <a href="#Assignment.usageExpectation">Usage Expectation</a>.</p>
+              <p><strong>Backwards associations</strong></p>
+              <ul>
+                  <li>from domain <a href="#Assignment"></a> → <a href="#Assignment.replaces"></a></li>
+              </ul>
+              <section id="Assignment.classProfile">
+                <h4>Class Profile</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="https://w3id.org/dsv/cv#classProfile">https://w3id.org/dsv/cv#classProfile</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#Assignment.classProfile">https://w3id.org/dsv-dap/cv#Assignment.classProfile</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>Class Profile</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>The Class Profile to which a Controlled Vocabulary is assigned.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#Assignment">Assignment</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#ClassProfile">Class Profile</a> [1..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/cv/#classProfile">Class Profile</a> (<a href="https://w3id.org/dsv/cv#classProfile">https://w3id.org/dsv/cv#classProfile</a>)
+                      <br />Definition: <i>The Class Profile to which a Controlled Vocabulary is assigned.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+              <section id="Assignment.controlledvocabulary">
+                <h4>controlledVocabulary</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="https://w3id.org/dsv/cv#controlledvocabulary">https://w3id.org/dsv/cv#controlledvocabulary</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#Assignment.controlledvocabulary">https://w3id.org/dsv-dap/cv#Assignment.controlledvocabulary</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>controlledVocabulary</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>The assigned Controlled Vocabulary.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#Assignment">Assignment</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#ControlledVocabulary">Controlled Vocabulary</a> [1..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/cv/#controlledvocabulary">controlledVocabulary</a> (<a href="https://w3id.org/dsv/cv#controlledvocabulary">https://w3id.org/dsv/cv#controlledvocabulary</a>)
+                      <br />Definition: <i>The assigned Controlled Vocabulary.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+              <section id="Assignment.replaces">
+                <h4>replaces</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://purl.org/dc/terms/replaces">dcterms:replaces</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#Assignment.replaces">https://w3id.org/dsv-dap/cv#Assignment.replaces</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>replaces</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>A related resource that is supplanted, displaced, or superseded by the described resource.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#Assignment">Assignment</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#Assignment">Assignment</a> [0..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_replaces">replaces</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.replaces">dcat-dap:CatalogedResource.replaces</a>)
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              profiles property <a href="http://purl.org/dc/terms/replaces">Replaces</a> (<a href="http://purl.org/dc/terms/replaces">dcterms:replaces</a>)
+                      <br />Definition: <i>A related resource that is supplanted, displaced, or superseded by the described resource.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              specializes property <a href="http://purl.org/dc/terms/relation">Relation</a> (<a href="http://purl.org/dc/terms/relation">dcterms:relation</a>)
+                      <br />Definition: <i>A related resource.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+              <section id="Assignment.usageExpectation">
+                <h4>Usage Expectation</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="https://w3id.org/dsv/cv#usageExpectation">https://w3id.org/dsv/cv#usageExpectation</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#Assignment.usageExpectation">https://w3id.org/dsv-dap/cv#Assignment.usageExpectation</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>Usage Expectation</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>Usage Expectation on the assigned Controlled Vocabulary.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#Assignment">Assignment</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#Concept">Usage Expectation</a> [1..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/cv/#usageExpectation">Usage Expectation</a> (<a href="https://w3id.org/dsv/cv#usageExpectation">https://w3id.org/dsv/cv#usageExpectation</a>)
+                      <br />Definition: <i>Usage Expectation on the assigned Controlled Vocabulary.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                  <tr>
+                    <td>Controlled vocabularies</td>
+                    <td>  <a href="#cv-Usage-Expectations">Usage Expectations</a> (MUST)
+              
+              </td>
+                  </tr>
+                  <tr>
+                    <td>Controlled vocabulary usage</td>
+                    <td>  <p>
+                  The property MUST use as range values codes from <a href="#cv-Usage-Expectations">Usage Expectations</a>.<br />
+                  This expectation results in that the value space is closed under the controlled vocabulary. Validation systems SHOULD produce errors. All profiles in the ecosystem MUST avoid conflicts by creating subproperties.
+                </p>
+              </td>
+                  </tr>
+                </table>
+              </section>
+          </section>
+          <section id="ControlledVocabulariesCatalog">
+            <h4>Catalog of Controlled Vocabularies</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="http://www.w3.org/ns/dcat#Catalog">dcat:Catalog</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#ControlledVocabulariesCatalog">https://w3id.org/dsv-dap/cv#ControlledVocabulariesCatalog</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Catalog of Controlled Vocabularies</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>A collection of Controlled Vocabularies used in this Data Specification.</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">Catalog</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Catalog">dcat-dap:Catalog</a>)
+                  <br />Definition: <i>A curated collection of metadata about resources.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          profiles class <a href="http://www.w3.org/ns/dcat#Catalog">Catalog</a> (<a href="http://www.w3.org/ns/dcat#Catalog">dcat:Catalog</a>)
+                  <br />Definition: <i>A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog).</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          specializes class <a href="http://www.w3.org/ns/dcat#Dataset">Dataset</a> (<a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a>)
+                  <br />Definition: <i>A collection of data, published or curated by a single source, and available for access or download in one or more representations.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          specializes class <a href="http://www.w3.org/ns/dcat#Resource">Catalogued resource</a> (<a href="http://www.w3.org/ns/dcat#Resource">dcat:Resource</a>)
+                  <br />Definition: <i>Resource published or curated by a single agent.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                      <li>
+                          specializes class profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          profiles class <a href="http://www.w3.org/ns/dcat#Dataset">Dataset</a> (<a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a>)
+                  <br />Definition: <i>A collection of data, published or curated by a single source, and available for access or download in one or more representations.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          specializes class <a href="http://www.w3.org/ns/dcat#Resource">Catalogued resource</a> (<a href="http://www.w3.org/ns/dcat#Resource">dcat:Resource</a>)
+                  <br />Definition: <i>Resource published or curated by a single agent.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                      <li>
+                          specializes class profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Resource">Cataloged Resource</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource">dcat-dap:CatalogedResource</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          profiles class <a href="http://www.w3.org/ns/dcat#Resource">Catalogued resource</a> (<a href="http://www.w3.org/ns/dcat#Resource">dcat:Resource</a>)
+                  <br />Definition: <i>Resource published or curated by a single agent.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p><strong>Properties</strong></p>
+              <p>For this class profile the following properties are defined: <a href="#ControlledVocabulariesCatalog.containsControlledVocabulary">contains controlled vocabulary</a>.</p>
+              <section id="ControlledVocabulariesCatalog.containsControlledVocabulary">
+                <h4>contains controlled vocabulary</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://www.w3.org/ns/dcat#dataset">dcat:dataset</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#ControlledVocabulariesCatalog.containsControlledVocabulary">https://w3id.org/dsv-dap/cv#ControlledVocabulariesCatalog.containsControlledVocabulary</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>contains controlled vocabulary</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>A dataset that is listed in the catalog.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#ControlledVocabulariesCatalog">Catalog of Controlled Vocabularies</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#ControlledVocabulary">Controlled Vocabulary</a> [0..*]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset">dataset</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Catalog.dataset">dcat-dap:Catalog.dataset</a>)
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              profiles property <a href="http://www.w3.org/ns/dcat#dataset">dataset</a> (<a href="http://www.w3.org/ns/dcat#dataset">dcat:dataset</a>)
+                      <br />Definition: <i>A dataset that is listed in the catalog.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              specializes property <a href="http://www.w3.org/ns/dcat#resource">resource</a> (<a href="http://www.w3.org/ns/dcat#resource">dcat:resource</a>)
+                      <br />Definition: <i>A resource that is listed in the catalog.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              specializes property <a href="http://purl.org/dc/terms/hasPart">Has Part</a> (<a href="http://purl.org/dc/terms/hasPart">dcterms:hasPart</a>)
+                      <br />Definition: <i>A related resource that is included either physically or logically in the described resource.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              specializes property <a href="http://purl.org/dc/terms/relation">Relation</a> (<a href="http://purl.org/dc/terms/relation">dcterms:relation</a>)
+                      <br />Definition: <i>A related resource.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+          </section>
+          <section id="ClassProfile">
+            <h4>Class Profile</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="https://w3id.org/dsv#ClassProfile">dsv:ClassProfile</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#ClassProfile">https://w3id.org/dsv-dap/cv#ClassProfile</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Class Profile</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes.</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#ClassProfile">Class Profile</a> (<a href="https://w3id.org/dsv#ClassProfile">dsv:ClassProfile</a>)
+                  <br />Definition: <i>Profile of a class. Allows specification editors to specify profile specific names, definitions and usage notes.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          specializes class <a href="https://mff-uk.github.io/data-specification-vocabulary/dsv/#TermProfile">Term Profile</a> (<a href="https://w3id.org/dsv#TermProfile">dsv:TermProfile</a>)
+                  <br />Definition: <i>Term profile. Allows profile editors to specify context dependent information such as label, definition, usage note, cardinalities, etc. for Class profiles and Property profiles.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p><strong>Backwards associations</strong></p>
+              <ul>
+                  <li>from domain <a href="#Assignment"></a> → <a href="#Assignment.classProfile"></a></li>
+              </ul>
+          </section>
+          <section id="ConceptScheme">
+            <h4>Concept Scheme</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme">skos:ConceptScheme</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#ConceptScheme">https://w3id.org/dsv-dap/cv#ConceptScheme</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Concept Scheme</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>A set of concepts, optionally including statements about semantic relationships between those concepts.</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> (<a href="http://www.w3.org/2004/02/skos/core#ConceptScheme">skos:ConceptScheme</a>)
+                  <br />Definition: <i>A set of concepts, optionally including statements about semantic relationships between those concepts.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p><strong>Backwards associations</strong></p>
+              <ul>
+                  <li>from domain <a href="#ControlledVocabulary"></a> → <a href="#ControlledVocabulary.references"></a></li>
+              </ul>
+          </section>
+          <section id="ControlledVocabulary">
+            <h4>Controlled Vocabulary</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#ControlledVocabulary">https://w3id.org/dsv-dap/cv#ControlledVocabulary</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Controlled Vocabulary</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>Controlled Vocabulary used in a Data Specification.</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset">dcat-dap:Dataset</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          profiles class <a href="http://www.w3.org/ns/dcat#Dataset">Dataset</a> (<a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a>)
+                  <br />Definition: <i>A collection of data, published or curated by a single source, and available for access or download in one or more representations.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          specializes class <a href="http://www.w3.org/ns/dcat#Resource">Catalogued resource</a> (<a href="http://www.w3.org/ns/dcat#Resource">dcat:Resource</a>)
+                  <br />Definition: <i>Resource published or curated by a single agent.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                      <li>
+                          specializes class profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Resource">Cataloged Resource</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource">dcat-dap:CatalogedResource</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          profiles class <a href="http://www.w3.org/ns/dcat#Resource">Catalogued resource</a> (<a href="http://www.w3.org/ns/dcat#Resource">dcat:Resource</a>)
+                  <br />Definition: <i>Resource published or curated by a single agent.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p><strong>Properties</strong></p>
+              <p>For this class profile the following properties are defined: <a href="#ControlledVocabulary.conformsTo">conforms to</a>, <a href="#ControlledVocabulary.distribution">distribution</a>, <a href="#ControlledVocabulary.landingPage">landing page</a>, <a href="#ControlledVocabulary.pattern">pattern</a>, <a href="#ControlledVocabulary.references">references</a>, <a href="#ControlledVocabulary.title">title</a>.</p>
+              <p><strong>Backwards associations</strong></p>
+              <ul>
+                  <li>from domain <a href="#ControlledVocabulariesCatalog"></a> → <a href="#ControlledVocabulariesCatalog.containsControlledVocabulary"></a></li>
+                  <li>from domain <a href="#Assignment"></a> → <a href="#Assignment.controlledvocabulary"></a></li>
+              </ul>
+              <section id="ControlledVocabulary.conformsTo">
+                <h4>conforms to</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#ControlledVocabulary.conformsTo">https://w3id.org/dsv-dap/cv#ControlledVocabulary.conformsTo</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>conforms to</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>An established standard to which the described resource conforms.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#ControlledVocabulary">Controlled Vocabulary</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#Standard">Standard</a> [0..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_conforms_to">conforms to</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.conformsTo">dcat-dap:CatalogedResource.conformsTo</a>)
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              profiles property <a href="http://purl.org/dc/terms/conformsTo">Conforms To</a> (<a href="http://purl.org/dc/terms/conformsTo">dcterms:conformsTo</a>)
+                      <br />Definition: <i>An established standard to which the described resource conforms.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              specializes property <a href="http://purl.org/dc/terms/relation">Relation</a> (<a href="http://purl.org/dc/terms/relation">dcterms:relation</a>)
+                      <br />Definition: <i>A related resource.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                  <tr>
+                    <td>Usage note</td>
+                    <td>This property SHOULD be used to indicate the model, schema, ontology, view or profile that the cataloged resource content conforms to.</td>
+                  </tr>
+                </table>
+              </section>
+              <section id="ControlledVocabulary.distribution">
+                <h4>distribution</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#ControlledVocabulary.distribution">https://w3id.org/dsv-dap/cv#ControlledVocabulary.distribution</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>distribution</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>An available distribution of the dataset.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#ControlledVocabulary">Controlled Vocabulary</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#Distribution">Distribution</a> [0..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset_distribution">distribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Dataset.distribution">dcat-dap:Dataset.distribution</a>)
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              profiles property <a href="http://www.w3.org/ns/dcat#distribution">distribution</a> (<a href="http://www.w3.org/ns/dcat#distribution">dcat:distribution</a>)
+                      <br />Definition: <i>An available distribution of the dataset.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              specializes property <a href="http://purl.org/dc/terms/relation">Relation</a> (<a href="http://purl.org/dc/terms/relation">dcterms:relation</a>)
+                      <br />Definition: <i>A related resource.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+              <section id="ControlledVocabulary.landingPage">
+                <h4>landing page</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://www.w3.org/ns/dcat#landingPage">dcat:landingPage</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#ControlledVocabulary.landingPage">https://w3id.org/dsv-dap/cv#ControlledVocabulary.landingPage</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>landing page</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#ControlledVocabulary">Controlled Vocabulary</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#Document">Document</a> [0..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_landing_page">landing page</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.landingPage">dcat-dap:CatalogedResource.landingPage</a>)
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              profiles property <a href="http://www.w3.org/ns/dcat#landingPage">landing page</a> (<a href="http://www.w3.org/ns/dcat#landingPage">dcat:landingPage</a>)
+                      <br />Definition: <i>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              specializes property <a href="http://xmlns.com/foaf/0.1/page">page</a> (<a href="http://xmlns.com/foaf/0.1/page">foaf:page</a>)
+                      <br />Definition: <i>A page or document about this thing.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+              <section id="ControlledVocabulary.pattern">
+                <h4>pattern</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://www.w3.org/ns/shacl#pattern">http://www.w3.org/ns/shacl#pattern</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#ControlledVocabulary.pattern">https://w3id.org/dsv-dap/cv#ControlledVocabulary.pattern</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>pattern</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>Specifies a regular expression pattern that the string representations of the value nodes must match.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#ControlledVocabulary">Controlled Vocabulary</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a> [0..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property <a href="http://www.w3.org/ns/shacl#pattern">pattern</a> (<a href="http://www.w3.org/ns/shacl#pattern">http://www.w3.org/ns/shacl#pattern</a>)
+                      <br />Definition: <i>Specifies a regular expression pattern that the string representations of the value nodes must match.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+              <section id="ControlledVocabulary.references">
+                <h4>references</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://purl.org/dc/terms/references">dcterms:references</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#ControlledVocabulary.references">https://w3id.org/dsv-dap/cv#ControlledVocabulary.references</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>references</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>A related resource that is referenced, cited, or otherwise pointed to by the described resource.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#ControlledVocabulary">Controlled Vocabulary</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#ConceptScheme">Concept Scheme</a> [0..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property <a href="http://purl.org/dc/terms/references">References</a> (<a href="http://purl.org/dc/terms/references">dcterms:references</a>)
+                      <br />Definition: <i>A related resource that is referenced, cited, or otherwise pointed to by the described resource.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              specializes property <a href="http://purl.org/dc/terms/relation">Relation</a> (<a href="http://purl.org/dc/terms/relation">dcterms:relation</a>)
+                      <br />Definition: <i>A related resource.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+              <section id="ControlledVocabulary.title">
+                <h4>title</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://purl.org/dc/terms/title">dcterms:title</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#ControlledVocabulary.title">https://w3id.org/dsv-dap/cv#ControlledVocabulary.title</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>title</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>A name given to the resource.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#ControlledVocabulary">Controlled Vocabulary</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="https://ofn.gov.cz/základní-datové-typy/2020-07-01/#text">Text</a> [1..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:resource_title">title</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#CatalogedResource.title">dcat-dap:CatalogedResource.title</a>)
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              profiles property <a href="http://purl.org/dc/terms/title">Title</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
+                      <br />Definition: <i>A name given to the resource.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                </table>
+              </section>
+          </section>
+          <section id="Concept">
+            <h4>Usage Expectation</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#Concept">https://w3id.org/dsv-dap/cv#Concept</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Usage Expectation</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>Usage Expectation on the assigned Controlled Vocabulary.</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class <a href="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
+                  <br />Definition: <i>An idea or notion; a unit of thought.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+              <tr>
+                <td>Controlled vocabularies</td>
+                <td>  <a href="#cv-Usage-Expectations">Usage Expectations</a> (MUST)
+          
+          </td>
+              </tr>
+              <tr>
+                <td>Controlled vocabulary usage</td>
+                <td>  <p>
+              This class profile MUST be represented in data by instances of <a href="#cv-Usage-Expectations">Usage Expectations</a> controlled vocabulary.
+            </p>
+          </td>
+              </tr>
+            </table>
+          
+              <p><strong>Backwards associations</strong></p>
+              <ul>
+                  <li>from domain <a href="#Assignment"></a> → <a href="#Assignment.usageExpectation"></a></li>
+              </ul>
+          </section>
+      </section>
+
+      <section>
+        <h2>Supportive class profiles</h2>
+
+          <section id="Distribution">
+            <h4>Distribution</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="http://www.w3.org/ns/dcat#Distribution">dcat:Distribution</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#Distribution">https://w3id.org/dsv-dap/cv#Distribution</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Distribution</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Distribution</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution">dcat-dap:Distribution</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          profiles class <a href="http://www.w3.org/ns/dcat#Distribution">Distribution</a> (<a href="http://www.w3.org/ns/dcat#Distribution">dcat:Distribution</a>)
+                  <br />Definition: <i>A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+              <tr>
+                <td>Usage note</td>
+                <td>This represents a general availability of a dataset. It implies no information about the actual access method of the data, i.e., whether by direct download, API, or through a Web page. The use of dcat:downloadURL property indicates directly downloadable distributions.</td>
+              </tr>
+            </table>
+          
+              <p><strong>Properties</strong></p>
+              <p>For this class profile the following properties are defined: <a href="#Distribution.accessUrl">access URL</a>, <a href="#Distribution.downloadUrl">download URL</a>.</p>
+              <p><strong>Backwards associations</strong></p>
+              <ul>
+                  <li>from domain <a href="#ControlledVocabulary"></a> → <a href="#ControlledVocabulary.distribution"></a></li>
+              </ul>
+              <section id="Distribution.accessUrl">
+                <h4>access URL</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://www.w3.org/ns/dcat#accessURL">dcat:accessURL</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#Distribution.accessUrl">https://w3id.org/dsv-dap/cv#Distribution.accessUrl</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>access URL</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>A URL of the resource that gives access to a distribution of the dataset. E.g., landing page, feed, SPARQL endpoint.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#Distribution">Distribution</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#rdfs-Resource">Resource</a> [0..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_access_url">access URL</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution.accessUrl">dcat-dap:Distribution.accessUrl</a>)
+                      <br />Definition: <i>A URL of the resource that gives access to a distribution of the dataset. E.g., landing page, feed, SPARQL endpoint.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              profiles property <a href="http://www.w3.org/ns/dcat#accessURL">access address</a> (<a href="http://www.w3.org/ns/dcat#accessURL">dcat:accessURL</a>)
+                      <br />Definition: <i>A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                  <tr>
+                    <td>Usage note</td>
+                    <td>dcat:accessURL SHOULD be used for the URL of a service or location that can provide access to this distribution, typically through a Web form, query or API call.
+              
+              dcat:downloadURL is preferred for direct links to downloadable resources.
+              
+              If the distribution(s) are accessible only through a landing page (i.e., direct download URLs are not known), then the landing page URL associated with the dcat:Dataset SHOULD be duplicated as access URL on a distribution (see 5.7 Dataset available only behind some Web page).</td>
+                  </tr>
+                </table>
+              </section>
+              <section id="Distribution.downloadUrl">
+                <h4>download URL</h4>
+              
+                <table class="def">
+                  <tr>
+                    <td>Profiled relationship IRI(s)</td>
+                    <td>
+                        <a href="http://www.w3.org/ns/dcat#downloadURL">dcat:downloadURL</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IRI</td>
+                    <td><a href="https://w3id.org/dsv-dap/cv#Distribution.downloadUrl">https://w3id.org/dsv-dap/cv#Distribution.downloadUrl</a></td>
+                  </tr>
+                  <tr>
+                    <td>Label</td>
+                    <td>download URL</td>
+                  </tr>
+                  <tr>
+                    <td>Definition</td>
+                    <td>The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution&#x27;s dcterms:format and/or dcat:mediaType.</td>
+                  </tr>
+                  <tr>
+                    <td>Domain</td>
+                    <td>
+                      <a href="#Distribution">Distribution</a> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Range</td>
+                    <td>
+                      <a href="#rdfs-Resource">Resource</a> [0..1]
+                  </td>
+                  </tr>
+                        <tr>
+                      <td>Hierarchy</td>
+                      <td>
+                        <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                              <li>
+                                profiles property profile <a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution_download_url">download URL</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Distribution.downloadUrl">dcat-dap:Distribution.downloadUrl</a>)
+                      <ul style="list-style-type: disclosure-closed;">
+                          <li>
+                              profiles property <a href="http://www.w3.org/ns/dcat#downloadURL">download URL</a> (<a href="http://www.w3.org/ns/dcat#downloadURL">dcat:downloadURL</a>)
+                      <br />Definition: <i>The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution&#x27;s dcterms:format and/or dcat:mediaType.</i>
+                      <ul style="list-style-type: disclosure-closed;">
+                      </ul>
+              
+                          </li>
+                      </ul>
+              
+                              </li>
+                        </ul>
+                      </td>
+                    </tr>
+              
+                  <tr>
+                    <td>Usage note</td>
+                    <td>dcat:downloadURL SHOULD be used for the URL at which this distribution is available directly, typically through a HTTP Get request.</td>
+                  </tr>
+                </table>
+              </section>
+          </section>
+          <section id="Document">
+            <h4>Document</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="http://xmlns.com/foaf/0.1/Document">foaf:Document</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#Document">https://w3id.org/dsv-dap/cv#Document</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Document</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>A document.</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class profile <a href="https://mff-uk.github.io/specifications/dcat-dap/#Document">Document</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Document">dcat-dap:Document</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          profiles class <a href="http://xmlns.com/foaf/0.1/Document">Document</a> (<a href="http://xmlns.com/foaf/0.1/Document">foaf:Document</a>)
+                  <br />Definition: <i>A document.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p><strong>Backwards associations</strong></p>
+              <ul>
+                  <li>from domain <a href="#ControlledVocabulary"></a> → <a href="#ControlledVocabulary.landingPage"></a></li>
+              </ul>
+          </section>
+          <section id="rdfs-Resource">
+            <h4>Resource</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#rdfs-Resource">https://w3id.org/dsv-dap/cv#rdfs-Resource</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Resource</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>The class resource, everything.</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class profile <a href="https://mff-uk.github.io/specifications/dcat-dap/#rdfs-Resource">Resource</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#rdfs-Resource">dcat-dap:rdfs-Resource</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          profiles class <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> (<a href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>)
+                  <br />Definition: <i>The class resource, everything.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p><strong>Backwards associations</strong></p>
+              <ul>
+                  <li>from domain <a href="#Distribution"></a> → <a href="#Distribution.accessUrl"></a></li>
+                  <li>from domain <a href="#Distribution"></a> → <a href="#Distribution.downloadUrl"></a></li>
+              </ul>
+          </section>
+          <section id="Standard">
+            <h4>Standard</h4>
+          
+            <table class="def">
+              <tr>
+                <td>Profiled class IRI(s)</td>
+                <td>
+                    <a href="http://purl.org/dc/terms/Standard">dcterms:Standard</a>
+                </td>
+              </tr>
+              <tr>
+                <td>IRI</td>
+                <td><a href="https://w3id.org/dsv-dap/cv#Standard">https://w3id.org/dsv-dap/cv#Standard</a></td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td>Standard</td>
+              </tr>
+              <tr>
+                <td>Definition</td>
+                <td>A reference point against which other things can be evaluated or compared.</td>
+              </tr>
+                    <tr>
+                  <td>Hierarchy</td>
+                  <td>
+                    <ul style="list-style-type: disclosure-closed; padding-left: 0; margin: 0;">
+                          <li>
+                            profiles class profile <a href="https://mff-uk.github.io/specifications/dcat-dap/#Standard">Standard</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap#Standard">dcat-dap:Standard</a>)
+                  <ul style="list-style-type: disclosure-closed;">
+                      <li>
+                          profiles class <a href="http://purl.org/dc/terms/Standard">Standard</a> (<a href="http://purl.org/dc/terms/Standard">dcterms:Standard</a>)
+                  <br />Definition: <i>A reference point against which other things can be evaluated or compared.</i>
+                  <ul style="list-style-type: disclosure-closed;">
+                  </ul>
+          
+                      </li>
+                  </ul>
+          
+                          </li>
+                    </ul>
+                  </td>
+                </tr>
+          
+            </table>
+          
+              <p><strong>Backwards associations</strong></p>
+              <ul>
+                  <li>from domain <a href="#ControlledVocabulary"></a> → <a href="#ControlledVocabulary.conformsTo"></a></li>
+              </ul>
+          </section>
+      </section>
+
+    <section>
+      <h2>Used prefixes</h2>
+      <table id="table-namespaces" class="simple">
+        <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+        <tbody>
+            <tr><td><code>dcterms</code></td><td><a href="http://purl.org/dc/terms/"><code>http://purl.org/dc/terms/</code></a></td></tr>
+            <tr><td><code>dcat-dap</code></td><td><a href="https://mff-uk.github.io/specifications/dcat-dap#"><code>https://mff-uk.github.io/specifications/dcat-dap#</code></a></td></tr>
+            <tr><td><code>dcat</code></td><td><a href="http://www.w3.org/ns/dcat#"><code>http://www.w3.org/ns/dcat#</code></a></td></tr>
+            <tr><td><code>dsv</code></td><td><a href="https://w3id.org/dsv#"><code>https://w3id.org/dsv#</code></a></td></tr>
+            <tr><td><code>skos</code></td><td><a href="http://www.w3.org/2004/02/skos/core#"><code>http://www.w3.org/2004/02/skos/core#</code></a></td></tr>
+            <tr><td><code>foaf</code></td><td><a href="http://xmlns.com/foaf/0.1/"><code>http://xmlns.com/foaf/0.1/</code></a></td></tr>
+            <tr><td><code>xsd</code></td><td><a href="http://www.w3.org/2001/XMLSchema#"><code>http://www.w3.org/2001/XMLSchema#</code></a></td></tr>
+            <tr><td><code>rdfs</code></td><td><a href="http://www.w3.org/2000/01/rdf-schema#"><code>http://www.w3.org/2000/01/rdf-schema#</code></a></td></tr>
+        </tbody>
+      </table>
+    </section>
+      <section>
+        <h2>Controlled vocabularies</h2>
+
+        <section>
+          <h3>List of controlled vocabularies</h3>
+          <p>
+            The list contains all controlled vocabularies used by this specification, with links to its access URL and documentation.
+          </p>
+          <table class="def cv-table cv-list">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th class="cv-center">SKOS</th>
+                <th>Concept Scheme IRI</th>
+                <th>Links</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr id="cv-Usage-Expectations">
+                  <td>Usage Expectations</td>
+                  <td class="cv-center">yes</td>
+                  <td class="cv-iri">https://w3id.org/dsv/cv/usage-expectation#ConceptScheme</td>
+                  <td>
+                    <a class="cv-link" href="https://w3id.org/dsv/cv/usage-expectation#" title="Access URL" aria-label="Access URL"><svg class="cv-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></a>          <a class="cv-link" href="https://w3id.org/dsv/cv/usage-expectation#" title="Documentation" aria-label="Documentation"><svg class="cv-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg></a>
+                  </td>
+                </tr>
+            </tbody>
+          </table>        </section>
+
+          <section>
+            <h3>Controlled vocabularies usage</h3>
+            <p>
+              The tables below show the usage of the controlled vocabularies with properties grouped by the expected qualification.
+            </p>
+
+              <section>
+                <h4>Properties with controlled vocabularies that MUST be used</h4>
+                <table class="def cv-table">
+                  <thead>
+                    <tr>
+                      <th>Property</th>
+                      <th>Property domain</th>
+                      <th>Used for class profile</th>
+                      <th>Controlled vocabulary</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td><a href="#Assignment.usageExpectation">Usage Expectation</a></td>
+                        <td><a href="#Assignment">Assignment</a></td>
+                        <td><a href="#Concept">Usage Expectation</a></td>
+                        <td>
+                            <div><a href="#cv-Usage-Expectations">Usage Expectations</a></div>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>              </section>
+
+
+
+          </section>
+      </section>
+
+    <section id="attachments">
+      <h2>Attachments</h2>
+    
+        <p>This specification includes the following attachments.</p>
+      <table class="def">
+        <thead>
+          <tr>
+            <th>Attachment</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>Application profile</td>
+              <td><a href="./dsv.ttl">./dsv.ttl</a></td>
+            </tr>
+            <tr>
+              <td>SHACL validation rules</td>
+              <td><a href="./shacl.ttl">./shacl.ttl</a></td>
+            </tr>
+            <tr>
+              <td>Controlled vocabulary catalog</td>
+              <td><a href="./controlled_vocabulary_catalog.ttl">./controlled_vocabulary_catalog.ttl</a></td>
+            </tr>
+            <tr>
+              <td>List of changes in LDES format</td>
+              <td><a href="./dsv.ldes.ttl">./dsv.ldes.ttl</a></td>
+            </tr>
+            <tr><td>Documentation</td><td><a href="">#</a></td></tr>
+        </tbody>
+      </table>
+    </section>  </body>
+</html>
