@@ -1,0 +1,29 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix prof: <http://www.w3.org/ns/dx/prof/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix : <https://w3id.org/dsv/cv#>.
+
+<https://w3id.org/dsv/cv#> a owl:Ontology, prof:Profile.
+:Assignment a owl:Class, rdfs:Class;
+    rdfs:label "Assignment"@en;
+    rdfs:comment "Assignment of a Controlled Vocabulary to a Class Profile."@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv/cv#>.
+:usageExpectation a rdf:Property, owl:ObjectProperty;
+    rdfs:label "Usage Expectation"@en;
+    rdfs:comment "Usage Expectation on the assigned Controlled Vocabulary."@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv/cv#>;
+    rdfs:domain :Assignment;
+    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept>.
+:classProfile a rdf:Property, owl:ObjectProperty;
+    rdfs:label "Class Profile"@en;
+    rdfs:comment "The Class Profile to which a Controlled Vocabulary is assigned."@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv/cv#>;
+    rdfs:domain :Assignment;
+    rdfs:range <https://w3id.org/dsv#ClassProfile>.
+:controlledvocabulary a rdf:Property, owl:ObjectProperty;
+    rdfs:label "controlledVocabulary"@en;
+    rdfs:comment "The assigned Controlled Vocabulary."@en;
+    rdfs:isDefinedBy <https://w3id.org/dsv/cv#>;
+    rdfs:domain :Assignment;
+    rdfs:range <http://www.w3.org/ns/dcat#Dataset>.

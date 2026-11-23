@@ -1,0 +1,33 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dsv-cv-ue: <https://w3id.org/dsv/cv/usage-expectation#> .
+
+dsv-cv-ue:ConceptScheme a skos:ConceptScheme;
+  skos:prefLabel "Controlled Vocabulary Usage Expectations"@en .
+
+dsv-cv-ue:must
+  a skos:Concept;
+  skos:inScheme dsv-cv-ue:ConceptScheme;
+  skos:prefLabel "Must"@en;
+  skos:definition "The property MUST use as range values codes from the controlled vocabulary. This expectation results in that the value space is closed under the codelist. Validation systems SHOULD produce errors. All profiles in the ecosystem MUST avoid conflicts by creating subproperties."@en;
+  skos:notation "must" .
+
+dsv-cv-ue:at-least-1
+  a skos:Concept;
+  skos:inScheme dsv-cv-ue:ConceptScheme;
+  skos:prefLabel "At least 1"@en;
+  skos:definition "The property MUST have at least one value from the controlled vocabulary. This expectation makes the value space minimally constrained. Validation systems SHOULD produce warnings. All profiles in the ecosystem MUST adopt this interpretation in case they want to restrict the value space. Adopting the former expectation will lead to cross-profile interpretations challenges."@en;
+  skos:notation "at-least-1" .
+
+dsv-cv-ue:recommended
+  a skos:Concept;
+  skos:inScheme dsv-cv-ue:ConceptScheme;
+  skos:prefLabel "Recommended"@en;
+  skos:definition "The property IS RECOMMENDED to use as range values codes from controlled vocabulary. The value space is closed under the codelist, but other values are tolerated. Recommending means expressing a strong preference. To make this stronger direction towards harmonisation visible in the data exchanges, validation systems SHOULD produce warnings."@en;
+  skos:notation "recommended" .
+
+dsv-cv-ue:may
+  a skos:Concept;
+  skos:inScheme dsv-cv-ue:ConceptScheme;
+  skos:prefLabel "May"@en;
+  skos:definition "The property MAY use as range values codes from controlled vocabulary. The value space is closed under the codelist, but other values are accepted. This expectation is more a hint to be used. As there is no obligation nor strongly suggestion expressed here, the use of other codelists is valid is all cases. Therefore validation systems MAY produce warnings but users are free to ignore them. No validation in this case is also acceptable."@en;
+  skos:notation "may" .
